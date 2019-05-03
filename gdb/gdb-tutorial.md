@@ -6,3 +6,5 @@ g++ -g t.cpp -o t
 	Example. Run gdb on the printch program and set the number of source lines to list at a time to 28.
 	> gdb t
 	> (gdb) set listsize 28
+
+### Setting Breakpoints
