@@ -17,7 +17,7 @@ void replaceSpace(string& str)
     n *= 2;
     n += str.size();
     string res;
-    str.resize(n);
+    res.resize(n);
     for(int i = str.size() - 1, j = n - 1; i >= 0; --i)
     {
         if(str[i] != ' ') 
