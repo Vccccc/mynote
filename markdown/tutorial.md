@@ -33,4 +33,8 @@ To create a blockquote, add a > in front of a paragraph.
 \>example
 >example
 
-### Blockquotes with Mul
+### Blockquotes with Multiple Paragraphs
+Blockquotes can contain multiple paragraphs. Add a > on the blank lines between the paragraphs.
+\> line 1
+\> 
+\> line 3
