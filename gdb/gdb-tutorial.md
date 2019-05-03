@@ -35,4 +35,7 @@ Example 1. The program is printch, which can take an optional command line argum
 
 	Example 2. Start printch running with 			command line argument A.
 	>(gdb) r A
-2.
+2. Execute a single statement. If the statement is a function call, just single step into the function.
+	>(gdb) s
+3. Execute a single statement. If the statement is a function call, execute the entire function and return to the statement just after the call; that is, step over the function.
+(gdb) n

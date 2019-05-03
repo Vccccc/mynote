@@ -35,7 +35,6 @@ bool findNumber(const vector<vector<int>>& input, const int target)
 int main()
 {
     typedef vector<vector<int>> vec;
-    vec test1{};
     vec test2{ 
         {1, 2, 8, 9},
         {2, 4, 9, 12},
@@ -43,7 +42,6 @@ int main()
         {6, 8, 11, 15}
     };
 
-    cout << findNumber(test1, 0) << endl;
     cout << findNumber(test2, 1) << endl;
     cout << findNumber(test2, 15) << endl;
     cout << findNumber(test2, 7) << endl;
