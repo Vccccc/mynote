@@ -38,4 +38,8 @@ Example 1. The program is printch, which can take an optional command line argum
 2. Execute a single statement. If the statement is a function call, just single step into the function.
 	>(gdb) s
 3. Execute a single statement. If the statement is a function call, execute the entire function and return to the statement just after the call; that is, step over the function.
-(gdb) n
+	>(gdb) n
+4. Execute from the current point up to the next breakpoint if there is one, otherwise execute until the program terminates.
+	>(gdb) c
+5. Execute the rest of the current function; that is, step out of the function.
+	>(gdb) finish
