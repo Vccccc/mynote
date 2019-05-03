@@ -13,4 +13,5 @@ To create a line break(\<br>),end a line with two or more spaces, and then type 
 ### Bold
 To bold text, add two asterisks or under scores before and after a word or phrase.
 >example
-I **love** 
+>I \**love\**
+>I **love** you.
