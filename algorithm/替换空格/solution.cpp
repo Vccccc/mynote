@@ -23,7 +23,6 @@ void replaceSpace(string& str)
         if(str[i] != ' ') 
         {
             res[j--] = str[i];
-            continue;
         }
         else
         {
@@ -32,4 +31,5 @@ void replaceSpace(string& str)
             res[j--] = '%';
         }
     }
+    str = res;
 }
