@@ -8,3 +8,7 @@ g++ -g t.cpp -o t
 	> (gdb) set listsize 28
 
 ### Setting Breakpoints
+1. Set a breakpoint at the beginning of a function.
+Example. Set a breakpoint at the beginning of main.
+	>(gdb) b main
+2.
