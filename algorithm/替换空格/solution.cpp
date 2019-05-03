@@ -22,6 +22,7 @@ void replaceSpace(string& str)
     {
         if(str[i] != ' ') 
         {
+            res[j--] = str[i];
             continue;
         }
         else
