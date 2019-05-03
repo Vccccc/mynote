@@ -28,3 +28,7 @@ Num Type　　　Disp Enb Address　　What
 Example. Delete the breakpoint at line 35.
 	>(gdb) delete 2
 
+### Running the Program being Debugged
+1. Start the program being debugged.
+Example 1. The program is printch, which can take an optional command line argument. Start it running with no command line argument.
+	>(gdb) r
