@@ -14,5 +14,13 @@ Example. Set a breakpoint at the beginning of main.
 2. Set a breakpoint at a line of the current file during debugging.
 Example. Set a breakpoint at line 35 while in file t.cpp.
 	>(gdb) b 35
-3. 
+3. Set a breakpoint at the beginning of a class member function.
+Example. Set a breakpoint at the beginning of member function erase of the class list.
+	>(gdb) b list::erase
+4. Listing breakpoints.
+Example. List all breakpoints which have been set so far in a debugging session.
 
+(gdb) info b
+Num Type           Disp Enb Address    What
+1   breakpoint     keep y   0x0040104f in main at printch.cpp:27
+2   breakpoint     keep y   0x004010a7 in main at printch.cpp:35
