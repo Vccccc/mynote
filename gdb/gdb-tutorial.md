@@ -11,4 +11,8 @@ g++ -g t.cpp -o t
 1. Set a breakpoint at the beginning of a function.
 Example. Set a breakpoint at the beginning of main.
 	>(gdb) b main
-2.
+2. Set a breakpoint at a line of the current file during debugging.
+Example. Set a breakpoint at line 35 while in file t.cpp.
+	>(gdb) b 35
+3. 
+
