@@ -34,6 +34,6 @@ bool findNumber(const vector<vector<int>>& input, const int target)
 
 int main()
 {
-    typedef vec vector<vector<int>>;
+    typedef vector<vector<int>> vec;
     return 0;
 }
