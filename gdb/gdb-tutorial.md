@@ -32,3 +32,8 @@ Example. Delete the breakpoint at line 35.
 1. Start the program being debugged.
 Example 1. The program is printch, which can take an optional command line argument. Start it running with no command line argument.
 	>(gdb) r
+
+	Example 2. Start printch running with 			command line argument A.
+
+(gdb) r A
+2.
