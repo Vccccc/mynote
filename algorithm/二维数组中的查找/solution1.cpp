@@ -42,5 +42,12 @@ int main()
         {4, 7, 10, 13},
         {6, 8, 11, 15}
     };
+
+    cout << findNumber(test1, 0) << endl;
+    cout << findNumber(test2, 1) << endl;
+    cout << findNumber(test2, 15) << endl;
+    cout << findNumber(test2, 7) << endl;
+    cout << findNumber(test2, 0) << endl;
+    cout << findNumber(test2, 16) << endl;
     return 0;
 }
