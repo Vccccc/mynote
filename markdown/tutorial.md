@@ -24,3 +24,6 @@ To italicize text, add one asterisk or underscore before and after a word or phr
 
 ### Bold and Italic
 To emphasize text with bold and italics at the same time, add three asterisks or underscores before and after a word or phrase.
+>example
+>I \*\*\*love\*\*\* you or I \_\_\_love\_\_\_ you.
+>I ***love*** you
