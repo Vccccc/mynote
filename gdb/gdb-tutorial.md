@@ -27,3 +27,4 @@ Num Type　　　Disp Enb Address　　What
 5. Deleting a breakpoint.
 Example. Delete the breakpoint at line 35.
 	>(gdb) delete 2
+
