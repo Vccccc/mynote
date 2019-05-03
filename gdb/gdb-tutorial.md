@@ -20,7 +20,7 @@ Example. Set a breakpoint at the beginning of member function erase of the class
 4. Listing breakpoints.
 Example. List all breakpoints which have been set so far in a debugging session.
 
-(gdb) info b
+	>(gdb) info b
 Num Type           Disp Enb Address    What
 1   breakpoint     keep y   0x0040104f in main at printch.cpp:27
 2   breakpoint     keep y   0x004010a7 in main at printch.cpp:35
