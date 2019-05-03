@@ -1,10 +1,10 @@
 ### Preparation
 1. Compile with the -g option.
-	Example. Compile the program t.cpp:
-g++ -g t.cpp -o t
+	Example. Compile the program printch.cpp:
+g++ -g printch.cpp -o t
 2. Start gdb and set the number of source lines to list.
 	Example. Run gdb on the printch program and set the number of source lines to list at a time to 28.
-	> gdb t
+	> gdb printch
 	> (gdb) set listsize 28
 
 ### Setting Breakpoints
@@ -12,7 +12,7 @@ g++ -g t.cpp -o t
 Example. Set a breakpoint at the beginning of main.
 	>(gdb) b main
 2. Set a breakpoint at a line of the current file during debugging.
-Example. Set a breakpoint at line 35 while in file t.cpp.
+Example. Set a breakpoint at line 35 while in file printch.cpp.
 	>(gdb) b 35
 3. Set a breakpoint at the beginning of a class member function.
 Example. Set a breakpoint at the beginning of member function erase of the class list.
@@ -34,6 +34,5 @@ Example 1. The program is printch, which can take an optional command line argum
 	>(gdb) r
 
 	Example 2. Start printch running with 			command line argument A.
-
-(gdb) r A
+	>(gdb) r A
 2.
