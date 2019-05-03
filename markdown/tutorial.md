@@ -6,3 +6,6 @@ To create a heading, add number signs \# in front of a word or phrase.
 
 ### Paragraphs
 To create paragraphs, use a blank line to separate one or more lines of text.
+
+### Line Breaks
+To create a line break(\<br>),end a line with two or more spaces, and
