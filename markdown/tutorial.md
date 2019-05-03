@@ -15,3 +15,8 @@ To bold text, add two asterisks or under scores before and after a word or phras
 >example
 >I \*\*love\*\* you or I \_\_love\_\_ you 
 >I **love** you.
+
+### Italic
+To italicize text, add one asterisk or underscore before and after a word or phrase.
+>example
+>
