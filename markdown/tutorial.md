@@ -51,7 +51,7 @@ Blockquotes can be nested. Add a >> in front of the paragraph you want to nest.
 
 ### Blockquotes with Other Elements
 Blockquotes can contain other Markdown formatted elements. Not all elements can be used — you’ll need to experiment to see which ones work.
-\> ### The quarterly results look great!
+\> #### The quarterly results look great!
 \>
 \> - Revenue was off the chart.
 \> - Profits were higher than ever.
