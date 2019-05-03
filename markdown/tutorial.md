@@ -26,4 +26,9 @@ To italicize text, add one asterisk or underscore before and after a word or phr
 To emphasize text with bold and italics at the same time, add three asterisks or underscores before and after a word or phrase.
 >example
 >I \*\*\*love\*\*\* you or I \_\_\_love\_\_\_ you.
->I ***love*** you
+>I ***love*** you.
+
+### Blockquotes
+To create a blockquote, add a > in front of a paragraph.
+>example
+>
