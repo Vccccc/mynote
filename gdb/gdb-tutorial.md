@@ -63,5 +63,6 @@ Example 1. The program is printch, which can take an optional command line argum
 	>(gdb) where
 #0  mystrcpy (copyto=0x259fc6c "*", copyfrom=0x259fddc "ABC") at printch.cpp:27
 #1  0x4010c8 in main (argc=3, argv=0x25b0cb8) at printch.cpp:40
-The statement at line 27 of the function mystrcpy is the next statement and the function mystrcpy was called by main.
+	
+	The statement at line 27 of the function mystrcpy is the next statement and the function mystrcpy was called by main.
 
