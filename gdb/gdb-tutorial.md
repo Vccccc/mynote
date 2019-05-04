@@ -43,3 +43,5 @@ Example 1. The program is printch, which can take an optional command line argum
 	>(gdb) c
 5. Execute the rest of the current function; that is, step out of the function.
 	>(gdb) finish
+
+### Examining Variables
