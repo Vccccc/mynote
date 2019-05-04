@@ -51,3 +51,9 @@ Example 1. The program is printch, which can take an optional command line argum
 
 	Example 2. Print the value of the expression fname[i+1]
 	>(gdb) p fname[i+1]
+
+### List Source Code and the Next Statement
+1. List lines of source code.
+	Example. List the next listsize number of lines of code. Note that listsize's value can be change with the set command.
+	>(gdb) l
+2.
