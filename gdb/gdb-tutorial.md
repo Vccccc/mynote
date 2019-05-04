@@ -48,5 +48,6 @@ Example 1. The program is printch, which can take an optional command line argum
 1. Print the value of a variable or expression.
 	Example 1. Print the value of a variable count
 	>(gdb) p count
-Example 2. Print the value of the expression fname[i+1]
+
+	Example 2. Print the value of the expression fname[i+1]
 	>(gdb) p fname[i+1]
