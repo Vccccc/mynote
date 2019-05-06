@@ -77,7 +77,7 @@ QueryResult::QueryResult(MYSQL_RES *result, uint64_t rowCount, uint32_t fieldCou
  : mFieldCount(fieldCount), mRowCount(rowCount)
 {
     mResult = result;
-	mCurrentRow = new Field[mFieldCount];
+    mCurrentRow = new Field[mFieldCount];
     assert(mCurrentRow);
 
     MYSQL_FIELD *fields = mysql_fetch_fields(mResult);
@@ -85,7 +85,7 @@ QueryResult::QueryResult(MYSQL_RES *result, uint64_t rowCount, uint32_t fieldCou
     for (uint32_t i = 0; i < mFieldCount; i++)
     {
         //TODO: 这个地方要不要判断为NULL？
-		if (fields[i].name != NULL)
+	if (fields[i].name != NULL)
         {
             mFieldNames[i] = fields[i].name;
             m_vtFieldNames.push_back(fields[i].name);
