@@ -1,6 +1,7 @@
 ### 封装Field（字段）信息
 
->
+>字段信息包含数据类型(DataTypes)、字段名称(
+
 >Field.h
 ```cpp
 #pragma once
