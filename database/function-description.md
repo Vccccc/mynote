@@ -2,14 +2,21 @@
 ### mysql\_init()
 ```c
 MYSQL *mysql_init(MYSQL *mysql)
-    Returns: An initialized MYSQL* handler. NULL if there was insufficient memory to allocate a new object
+    Returns: An initialized MYSQL* handler. NULL if there was insufficient memory to 
+allocate a new object
 Description:
   Allocates or initializes a MYSQL object suitable for mysql_real_connect(). 
 If mysql is a NULL pointer, the function allocates, initializes, and returns 
 a new object. Otherwise, the object is initialized and the address of the object 
-is returned. If mysql_init() allocates a new object, it is freed when mysql_close() is called to close the connection.
+is returned. If mysql_init() allocates a new object, it is freed when mysql_close() 
+is called to close the connection.
 
-In a nonmultithreaded environment, mysql_init() invokes mysql_library_init() automatically as necessary. However, mysql_library_init() is not thread-safe in a multithreaded environment, and thus neither is mysql_init(). Before calling mysql_init(), either call mysql_library_init() prior to spawning any threads, or use a mutex to protect the mysql_library_init() call. This should be done prior to any other client library call.
+In a nonmultithreaded environment, mysql_init() invokes mysql_library_init() 
+automatically as necessary. However, mysql_library_init() is not thread-safe in a 
+multithreaded environment, and thus neither is mysql_init(). Before calling 
+mysql_init(), either call mysql_library_init() prior to spawning any threads, or use 
+a mutex to protect the mysql_library_init() call. This should be done prior to any 
+other client library call.
 ```
 ### mysql\_real\_connect()
 ```C
