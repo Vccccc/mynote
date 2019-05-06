@@ -29,7 +29,7 @@ public:
 	QueryResult* Query(const string& sql)
 	{
 	    return Query(sql.c_str());
-    }
+   	}
 
 	QueryResult* PQuery(const char *format,...);
 	bool Execute(const char* sql);
@@ -88,7 +88,7 @@ bool CDatabaseMysql::Initialize(const string& host, const string& user, const st
 		mysql_close(m_Mysql);
 	}
 
-    m_Mysql = mysql_init(m_Mysql);
+    	m_Mysql = mysql_init(m_Mysql);
 	m_Mysql = mysql_real_connect(m_Mysql, host.c_str(), user.c_str(),
         pwd.c_str(), dbname.c_str(), 0, NULL, 0);
 
@@ -102,21 +102,21 @@ bool CDatabaseMysql::Initialize(const string& host, const string& user, const st
 	m_DBInfo.strPwd = pwd;
 
 	if (m_Mysql)
-    {
+    	{
 		//LOG_INFO << "m_Mysql address " << (long)m_Mysql;
 		//LOG_INFO << "CDatabaseMysql::Initialize, set names utf8";
         mysql_query(m_Mysql, "set names utf8");
         //mysql_query(m_Mysql, "set names latin1");
 		m_bInit = true;
         return true;
-    }
-    else
-    {
-        LOG_ERROR << "Could not connect to MySQL database at " << host.c_str()
+   	 }
+   	 else
+   	 {
+     	   LOG_ERROR << "Could not connect to MySQL database at " << host.c_str()
             << ", " << mysql_error(m_Mysql);
-        mysql_close(m_Mysql);
-        return false;
-    }
+   	    mysql_close(m_Mysql);
+    	    return false;
+   	}
 
 	LOG_INFO << "CDatabaseMysql::Initialize, init failed!";
 	return false;
