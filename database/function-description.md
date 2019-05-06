@@ -2,6 +2,8 @@
 ### mysql\_init()
 ```c
 MYSQL *mysql_init(MYSQL *mysql)
+    Return
+Description:
 ```
 ### mysql\_real\_connect()
 ```C
