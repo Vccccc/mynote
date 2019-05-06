@@ -2,7 +2,7 @@
 ### mysql\_init()
 ```c
 MYSQL *mysql_init(MYSQL *mysql)
-    Return
+    Returns: An initialized MYSQL* handler. NULL if there was insufficient memory to allocate a new object
 Description:
 ```
 ### mysql\_real\_connect()
