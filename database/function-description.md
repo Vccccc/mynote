@@ -1,4 +1,8 @@
 # C API Function Descriptions
+### mysql\_init()
+```c
+MYSQL *mysql_init(MYSQL *mysql)
+```
 ### mysql\_real\_connect()
 ```C
 MYSQL *mysql_real_connect(MYSQL *mysql, const char *host, const char *user,
