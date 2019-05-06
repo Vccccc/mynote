@@ -112,11 +112,11 @@ bool CDatabaseMysql::Initialize(const string& host, const string& user, const st
    	 }
    	 else
    	 {
-     	   LOG_ERROR << "Could not connect to MySQL database at " << host.c_str()
+     	    LOG_ERROR << "Could not connect to MySQL database at " << host.c_str()
             << ", " << mysql_error(m_Mysql);
    	    mysql_close(m_Mysql);
     	    return false;
-   	}
+   	 }
 
 	LOG_INFO << "CDatabaseMysql::Initialize, init failed!";
 	return false;
