@@ -64,7 +64,7 @@ class  QueryResult
         FieldNames          mFieldNames;
         std::vector<string> m_vtFieldNames;
 
-		MYSQL_RES*          mResult;
+	MYSQL_RES*          mResult;
 };
 ```
 
