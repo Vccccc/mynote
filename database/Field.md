@@ -1,6 +1,6 @@
 ### 封装Field（字段）信息
 
->字段信息包含数据类型(DataTypes)、字段名称(
+>字段信息包含数据类型(DataTypes)、字段名称(m_strFieldName)、字段值(m_strValue)。
 
 >Field.h
 ```cpp
