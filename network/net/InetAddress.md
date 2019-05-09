@@ -2,4 +2,5 @@
 **Description**
 InetAddress封装了sockaddr_in
 构造函数有四个：
-1. 传入ip地址
+1. ip、port
+2. 
