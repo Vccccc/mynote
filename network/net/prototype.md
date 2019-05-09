@@ -1,6 +1,6 @@
 ##  #include <arpa/inet.h>
 >主要是与网络地址相关定义和函数
-#### inet_pton
+#### inet_pton inet
 ```c
 #include <arpa/inet.h>
 int inet_pton(int af, const char* src, void* dst);
