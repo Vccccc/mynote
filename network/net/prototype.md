@@ -4,13 +4,14 @@
 ```c
 #include <arpa/inet.h>
 int inet_pton(int af, const char* src, void* dst);
-	Returns:1 on success. 0 if src does not contain a character string 
+	Returns: 1 on success. 0 if src does not contain a character string 
 representing a valid network address in the specified address family. -1 if af does 
 not contain a valid address family.
 
 const char *inet_ntop(int af, const void *src,
                              char *dst, socklen_t size);
-
+	Returns: On success, inet_ntop() returns a non-null pointer  to  dst. NULL
+ is returned if there was an error, with errno set to indicate the error
 ```
 
 #### htonl htons ntohl ntohs
