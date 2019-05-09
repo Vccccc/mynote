@@ -2,5 +2,5 @@
 ```c
 #include <arpa/inet.h>
 int inet_pton(int af, const char* src, void* dst);
-	Returns:1 on success, 0 if src doe
+	Returns:1 on success, 0 if src does not contain a character string representing a valid network address in the specified address family.
 ```
