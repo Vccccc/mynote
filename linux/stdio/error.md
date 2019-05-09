@@ -1,5 +1,5 @@
 #### perror
 ```c
 #include <stdio.h>
-void 
+void perror(const char* s);
 ```
