@@ -69,15 +69,16 @@ int getsockname(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
 and errno is set appropriately.
 
 Description: getsockname() returns the current address to which the socket sockfd is
-bound, in the buffer pointed to by addr.
+bound, in the buffer pointed to by addr. The addrlen argument  should be  
+initialized to indicate the amount of space pointed to by addr.
 
 int getpeername(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
 	Returns: On  success,  zero is returned.  On error, -1 is returned, 
 and errno is set appropriately.
 
 Description: getpeername()  returns  the address of the peer connected to the socket
-       sockfd, in the buffer pointed to by addr.  The addrlen argument  should
-       be  initialized to indicate the amount of space pointed to by addr..
+sockfd, in the buffer pointed to by addr.  The addrlen argument  should be  
+initialized to indicate the amount of space pointed to by addr.
 ```
 
 ####  connect
