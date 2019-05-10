@@ -58,7 +58,11 @@ int socket(int domain, int type, int protocol);
 Description: domain常用AF_INET。type常用SOCK_STREAM、SOCK_DGRAM。protocol常置为0。
 
 #include <sys/socket.h>
-int shut
+int shutdown(int sockfd, int how)
+	Returns: On  success,  zero is returned.  On error, -1 is returned, 
+and errno is set appropriately.
+
+Description: 
 ```
 
 ####  connect
