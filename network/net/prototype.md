@@ -79,4 +79,5 @@ and errno is set appropriately.
 
 Description: backlog参数描述的是服务器端TCP ESTABLISHED 状态对应的全连接队列长度，somaxconn是内核定义的最大长度。
 
+int accept(int sockfd, struct sockaddr* addr, socklen_t addrlen);
 ```
