@@ -77,6 +77,6 @@ int listen(int sockfd, int backlog);
 	Returns: On  success,  zero is returned.  On error, -1 is returned, 
 and errno is set appropriately.
 
-Description:
+Description: backlog参数描述的是服务器端TCP ESTABLISHED 状态对应的全连接队列长度，so
 
 ```
