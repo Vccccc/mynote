@@ -74,5 +74,8 @@ int bind(int sockfd, const struct sockaddr* addr, socklen_t addrlen);
  is set appropriately.
 
 int listen(int sockfd, int backlog);
+	Returns: On  success,  zero is returned.  On error, -1 is returned, 
+and errno is set appropriately.
+
 
 ```
