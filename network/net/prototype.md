@@ -54,5 +54,7 @@ uint16_t ntohs(uint16_t netshort);
 int socket(int domain, int type, int protocol);
 	Returns: On  success,  a  file  descriptor  for  the new socket is returned. 
  On error, -1 is returned, and errno is set appropriately.
-Description: domain常用AF_INET, type常用SOCK_STREAM、SOCK_DGRAM
+Description: domain常用AF_INET。type常用SOCK_STREAM、SOCK_DGRAM。protocol常置为0。
 ```
+
+#### bind connect
