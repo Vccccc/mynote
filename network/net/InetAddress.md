@@ -1,4 +1,5 @@
-# InetAddress
+# InetAddress.h 
+>cv/network/examples/include
 **Description**
 InetAddress封装了sockaddr_in
 构造函数有四个：
@@ -7,4 +8,4 @@ InetAddress封装了sockaddr_in
 3. (port, bool loopbackOnly false)， 如(5678, false)，用于listening
 4. (sockaddr_in)
 
-提供相应的对sockaddr_in操作的方法
+提供相应的对sockaddr_in操作的方法：
