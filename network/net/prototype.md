@@ -66,7 +66,7 @@ int bind(int sockfd, const struct sockaddr* addr, socklen_t addrlen);
  is set appropriately.
 
 int connect(int sockfd, const struct sockaddr* addr, socklen_t addrlen);
-	Returns: If  the connection or binding succeeds, zero is returned.  On error, -1
-       is returned, and errno is set appropriately.
+	Returns: If  the connection or binding succeeds, zero is returned.  
+On error, -1 is returned, and errno is set appropriately.
 
 ```
