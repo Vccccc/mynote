@@ -51,5 +51,5 @@ uint16_t ntohs(uint16_t netshort);
 ```c
 #include <sys/types.h> // 在linux下不是必须的
 #include <sys/socket.h>
-int sock
+int socket(int domain, int type, int protocol);
 ```
