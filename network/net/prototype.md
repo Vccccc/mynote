@@ -47,14 +47,18 @@ uint16_t ntohs(uint16_t netshort);
 
 ## #include <sys/socket.h>
 >主要是与socket相关函数
-#### socket 
+#### socket shutdown
 ```c
 #include <sys/types.h> // 在linux下不是必须的
 #include <sys/socket.h>
 int socket(int domain, int type, int protocol);
 	Returns: On  success,  a  file  descriptor  for  the new socket is returned. 
  On error, -1 is returned, and errno is set appropriately.
+
 Description: domain常用AF_INET。type常用SOCK_STREAM、SOCK_DGRAM。protocol常置为0。
+
+#include <sys/socket.h>
+int shut
 ```
 
 ####  connect
