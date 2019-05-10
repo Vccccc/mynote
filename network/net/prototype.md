@@ -47,3 +47,4 @@ uint16_t ntohs(uint16_t netshort);
 
 ## #include <sys/socket.h>
 >主要是与socket相关函数
+#### socket 
