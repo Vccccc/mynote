@@ -59,7 +59,6 @@ Description: domain常用AF_INET。type常用SOCK_STREAM、SOCK_DGRAM。protocol
 
 ####  connect
 ```c
-
 int connect(int sockfd, const struct sockaddr* addr, socklen_t addrlen);
 	Returns: If  the connection or binding succeeds, zero is returned.  
 On error, -1 is returned, and errno is set appropriately.
@@ -67,8 +66,13 @@ On error, -1 is returned, and errno is set appropriately.
 ```
 
 #### bind listen accept
+```c
 #include <sys/types.h> // 在linux下不是必须的
 #include <sys/socket.h>
 int bind(int sockfd, const struct sockaddr* addr, socklen_t addrlen);
 	Returns: On  success,  zero is returned.  On error, -1 is returned, and errno
  is set appropriately.
+
+int listen(int sockfd, int backlog);
+
+```
