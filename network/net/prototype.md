@@ -47,7 +47,7 @@ uint16_t ntohs(uint16_t netshort);
 
 ## #include <sys/socket.h>
 >主要是与socket相关函数
-#### socket shutdown getsock
+#### socket shutdown getsockname
 ```c
 #include <sys/types.h> // 在linux下不是必须的
 #include <sys/socket.h>
@@ -65,6 +65,11 @@ and errno is set appropriately.
 Description: 参数how可指定为SHUT_RD、SHUT_WR或SHUT_RDWR。
 
 int getsockname(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
+	Returns: On  success,  zero is returned.  On error, -1 is returned, 
+and errno is set appropriately.
+
+Description: getsockname() returns the current address to which the socket sockfd is
+bound, in the buffer pointed to by addr.
 ```
 
 ####  connect
