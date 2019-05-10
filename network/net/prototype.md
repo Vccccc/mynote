@@ -70,6 +70,13 @@ and errno is set appropriately.
 
 Description: getsockname() returns the current address to which the socket sockfd is
 bound, in the buffer pointed to by addr.
+
+int getsockname(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
+	Returns: On  success,  zero is returned.  On error, -1 is returned, 
+and errno is set appropriately.
+
+Description: getsockname() returns the current address to which the socket sockfd is
+bound, in the buffer pointed to by addr.
 ```
 
 ####  connect
