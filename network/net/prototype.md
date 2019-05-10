@@ -48,3 +48,8 @@ uint16_t ntohs(uint16_t netshort);
 ## #include <sys/socket.h>
 >主要是与socket相关函数
 #### socket 
+```c
+#include <sys/types.h> // 在linux下不是必须的
+#include <sys/socket.h>
+int sock
+```
