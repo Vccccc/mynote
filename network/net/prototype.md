@@ -62,7 +62,7 @@ int shutdown(int sockfd, int how)
 	Returns: On  success,  zero is returned.  On error, -1 is returned, 
 and errno is set appropriately.
 
-Description: 
+Description: 参数how可指定为SHUT_RD、SHUT_WR或SHUT_RDWR。
 ```
 
 ####  connect
