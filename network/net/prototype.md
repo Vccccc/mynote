@@ -86,5 +86,5 @@ int accept4(int sockfd, struct sockaddr* addr, socklen_t addrlen, int flags);
 that is a descriptor for the accepted socket.  On  error,  -1  is  returned, 
 and errno is set appropriately.
 
-Decription: accept4和accept区别在于提供了参数flag，
+Decription: accept4和accept区别在于提供了参数flag，flag可置为SOCK_NONBLOCK、SOCK_CLOEXEC
 ```
