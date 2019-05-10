@@ -9,3 +9,6 @@ InetAddress封装了sockaddr_in
 4. (sockaddr_in)
 
 提供相应的对sockaddr_in操作的方法：
+1. setPort(uint16_t)
+2. ipNetEndian()
+3. 
