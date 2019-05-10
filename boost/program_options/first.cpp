@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
 
     if(vm.count("compression"))
     {
-        cout << "Compression level was set to"
+        cout << "Compression level was set to "
             << vm["compression"].as<int>() << ".\n";
     }
     else
