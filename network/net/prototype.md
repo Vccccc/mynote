@@ -62,5 +62,8 @@ Description: domain常用AF_INET。type常用SOCK_STREAM、SOCK_DGRAM。protocol
 #include <sys/types.h> // 在linux下不是必须的
 #include <sys/socket.h>
 int bind(int sockfd, const struct sockaddr* addr, socklen_t addrlen);
-	Returns:
+	Returns: On  success,  zero is returned.  On error, -1 is returned, and errno
+ is set appropriately.
+
+
 ```
