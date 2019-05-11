@@ -13,6 +13,9 @@ find_package(<PackageName> [version] [EXACT] [QUIET] [MODULE]
 PackageName: 外部project名
 version: project 版本
 REQUIRED: 如果project未找到，则停止程序并打印错误信息。
-COMPONENTS: project的
+COMPONENTS: 指定project的组件列表
+
+**eg.**
+find_pack
 
 
