@@ -10,5 +10,6 @@ find_package(<PackageName> [version] [EXACT] [QUIET] [MODULE]
              [OPTIONAL_COMPONENTS components...]
              [NO_POLICY_SCOPE])
 ```
-
+PackageName: 外部project名
+version: project 
 
