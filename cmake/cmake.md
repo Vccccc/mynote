@@ -38,4 +38,4 @@ add_executable(<name> [WIN32] [MACOSX_BUNDLE]
 ```
 
 **eg.**
-add_executable(my
+add_executable(my_project 1.cpp 2.cpp)
