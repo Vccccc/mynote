@@ -20,6 +20,8 @@ COMPONENTS: 指定project的组件列表
 find_package(Boost 1.69 COMPONENTS program_options REQUIRED)
 
 #### include_directories
-
+```c
+include_directories([AFTER|BEFORE] [SYSTEM] dir1 [dir2 ...])
+```
 
 
