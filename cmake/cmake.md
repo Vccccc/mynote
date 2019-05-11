@@ -27,7 +27,7 @@ Relative paths are interpreted as relative to the current source directory.
 include_directories([AFTER|BEFORE] [SYSTEM] dir1 [dir2 ...])
 ```
 **eg.**
-include_directories
+include_directories(${Boost_INCLUDE_DIR})
 
 
 
