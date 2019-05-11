@@ -36,3 +36,6 @@ add_executable(<name> [WIN32] [MACOSX_BUNDLE]
                [EXCLUDE_FROM_ALL]
                [source1] [source2 ...])
 ```
+
+**eg.**
+add_executable(my
