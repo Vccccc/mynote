@@ -29,5 +29,10 @@ include_directories([AFTER|BEFORE] [SYSTEM] dir1 [dir2 ...])
 **eg.**
 include_directories(${Boost_INCLUDE_DIR})
 
-
-
+#### add_executable
+Add an executable to the project using the specified source files.
+```c
+add_executable(<name> [WIN32] [MACOSX_BUNDLE]
+               [EXCLUDE_FROM_ALL]
+               [source1] [source2 ...])
+```
