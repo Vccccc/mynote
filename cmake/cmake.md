@@ -12,6 +12,6 @@ find_package(<PackageName> [version] [EXACT] [QUIET] [MODULE]
 ```
 PackageName: 外部project名
 version: project 版本
-REQUIRED:
+REQUIRED: 如果project未找到，则停止程序
 
 
