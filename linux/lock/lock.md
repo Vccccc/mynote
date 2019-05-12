@@ -21,5 +21,5 @@ int main()
   cond_.notify_all(); // 唤醒等待线程
   thrd.join();
 }
-
 ```
+cond_.wait()，首先
