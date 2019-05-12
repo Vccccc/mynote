@@ -8,15 +8,17 @@ void threadFunc()
 {
   unique_lock<mutex> lk(mutex_); // 申请锁
   while(!flag)
-    cond_.notify_all();
+    cond_.wait(); // 等待条件满足
 }
 
 int main()
 {
   thead thrd(threadFunc);
-  unique_lock<mutex> lk(mutex_); // 申请锁
-  flag = true;
-  cond_.notify_all(); // 
+  {
+    unique_lock<mutex> lk(mutex_); // 申请锁
+    flag = true;
+  }
+  cond_.notify_all(); // 唤醒等待线程
   thrd.join();
 }
 
