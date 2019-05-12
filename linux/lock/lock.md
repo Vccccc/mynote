@@ -14,7 +14,10 @@ void threadFunc()
 int main()
 {
   thead thrd(threadFunc);
-  unique_lock
+  unique_lock<mutex> lk(mutex_); // 申请锁
+  flag = true;
+  cond_.notify_all(); // 
+  thrd.join();
 }
 
 ```
