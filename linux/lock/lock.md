@@ -6,8 +6,15 @@ condition_variable cond_;
 
 void threadFunc()
 {
+  unique_lock<mutex> lk(mutex_); // 申请锁
+  while(!flag)
+    cond_.notify_all();
 }
-unique_lock<mutex> lk(mutex_); // 申请锁
-while(!flag)
-  cond
+
+int main()
+{
+  thead thrd(threadFunc);
+  unique_lock
+}
+
 ```
