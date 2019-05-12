@@ -22,4 +22,4 @@ int main()
   thrd.join();
 }
 ```
-cond_.wait()，首先
+cond_.wait()，首先将线程置于等待线程列表中(此时已获得锁)，
