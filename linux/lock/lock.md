@@ -2,6 +2,12 @@
 ```c
 bool flag = fasle;
 mutex mutex_;
+condition_variable cond_;
+
+void threadFunc()
+{
+}
 unique_lock<mutex> lk(mutex_); // 申请锁
-while(flag
+while(!flag)
+  cond
 ```
