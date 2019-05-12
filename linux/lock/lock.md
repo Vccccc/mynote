@@ -1,3 +1,4 @@
 ## 锁的使用
-#### C++
-<mutex>，定义互斥锁。<condition_variables>
+#### lock_guard  unique_lock  
+<mutex>，定义互斥锁。<condition_variable>，定义条件变量。
+
