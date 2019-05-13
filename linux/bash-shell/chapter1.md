@@ -9,4 +9,6 @@
 #### Using the set construct wildcards
 **Expression** | **Matches** |
 |:------:|:------------:|
-| [abc] | a, b, or
+| [abc] | a, b, or c |
+| [.,;] | Perioad, comma, or semicolon |
+| [-_] | Dash or undersco
