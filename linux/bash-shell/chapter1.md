@@ -28,3 +28,8 @@ sort | Sort lines in the input
 cut | Extract columns from input 
 sed | Perform editing operations on input 
 tr | Translate characters in the input to other characters
+
+cat cut sort 指令的使用<br>
+![](photo/cat-cut-sort.png)<br>
+cut 指令的使用:cut作用于每一行 -d:用:作为分隔域(field), -f配合-d使用，-f1是第一域。-b指定第几字节<br>
+![](photo/cut.png)
