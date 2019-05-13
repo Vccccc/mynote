@@ -11,4 +11,8 @@
 |:------:|:------------:|
 | [abc] | a, b, or c |
 | [.,;] | Perioad, comma, or semicolon |
-| [-_] | Dash or undersco
+| [-_] | Dash or underscore |
+| [a-c] | a, b, or c |
+| [a-z] | All lowercase letters |
+| [!0-9] | All non-digits |
+| [0-
