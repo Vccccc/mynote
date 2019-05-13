@@ -2,4 +2,7 @@
 **Wildcard** | **Matches**
 |:--------:|:------------|
 | ? | Any single character|
-| * | Any string of chara
+| * | Any string of characters|
+| [set] | Any character in set |
+| [!set] | Any character not in set |
+
