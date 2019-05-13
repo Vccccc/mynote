@@ -20,4 +20,7 @@
 | [a-zA-Z0-9_-] | All letters, all digits, underscore, and dash |
 
 #### Popular UNIX data filtering utilities
-**
+**Utility** | **Purpose** |
+|:----------|:-----------|
+| cat | Copy input to output |
+| grep | Search for strings in the 
