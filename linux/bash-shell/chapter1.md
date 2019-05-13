@@ -6,3 +6,5 @@
 | [set] | Any character in set |
 | [!set] | Any character not in set |
 
+#### Using the set construc
+
