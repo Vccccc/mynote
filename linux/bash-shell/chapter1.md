@@ -22,5 +22,8 @@
 #### Popular UNIX data filtering utilities
 **Utility** | **Purpose** |
 |:----------|:-----------|
-| cat | Copy input to output |
-| grep | Search for strings in the 
+| cat | Copy input to output 
+| grep | Search for strings in the input
+| sort | Sort lines in the input 
+| cut | Extract columns from input 
+| 
