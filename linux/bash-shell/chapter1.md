@@ -15,4 +15,6 @@
 | [a-c] | a, b, or c |
 | [a-z] | All lowercase letters |
 | [!0-9] | All non-digits |
-| [0-
+| [0-9!] | All digits and exclamation point |
+| [a-zA-Z] | All lower-and uppercase letters |
+| [a-zA-Z]
