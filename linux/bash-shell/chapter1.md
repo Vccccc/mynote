@@ -1,3 +1,4 @@
+[
 #### Basic wildcards
 **Wildcard** | **Matches**
 |:--------|:------------|
