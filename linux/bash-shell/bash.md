@@ -76,3 +76,5 @@ $ | Variable expression | Chapter 3
 ### Aliases
 alias name=command
 This syntax specifies that name is an alias for command.
+
+alias cd
