@@ -1,3 +1,3 @@
 **Command** | **Desrciptor**
 :---------|:---------------
-getwindowfocus | 
+getwindowfocus [-f] | Prints the window id of the currently focused window
