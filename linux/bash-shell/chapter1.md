@@ -44,5 +44,9 @@ command **jobs**: For each background job, **jobs** prints a line to show an ind
 #### Special characters
 **Character** | **Meaning** | **See** **Chapter**
 :-----------|:-------------|:-----------------
-~ | Home directory
-` | Command substitution
+~ | Home directory | Chapter 1
+` | Command substitution | Chatper 4
+# | Comment | Chapter 4
+$ | Variable expression | Chapter 3
+& | Background job | Chapter 1
+* | String wildcard | Chatper 1
