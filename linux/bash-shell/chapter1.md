@@ -41,7 +41,7 @@ tr | Translate characters in the input to other characters
 
 command **jobs**: For each background job, **jobs** prints a line to show an indication of the job's status.
 
-TODO: 将See Chapter
+TODO: 将See Chapter改成超链接
 #### Special characters
 **Character** | **Meaning** | **See** **Chapter**
 :-----------|:-------------|:-----------------
