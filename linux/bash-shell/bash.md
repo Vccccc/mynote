@@ -74,4 +74,5 @@ $ | Variable expression | Chapter 3
 **source** executes the commands in the specified file.
 
 ### Aliases
-alias name=co
+alias name=command
+This syntax specifies that name is an alias for command.
