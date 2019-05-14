@@ -1,1 +1,3 @@
-**Command** | 
+**Command** | **Desrciptor**
+:---------|:---------------
+getwindowfocus | 
