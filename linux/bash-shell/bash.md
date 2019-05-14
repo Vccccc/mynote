@@ -70,5 +70,5 @@ $ | Variable expression | Chapter 3
 ! | Pipeline logical NOT | Chapter 5
 
 # Chapter 3
-#### 3.1 source 
+#### source 
 **source** executes the commands in the specified file.
