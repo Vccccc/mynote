@@ -77,4 +77,8 @@ $ | Variable expression | Chapter 3
 alias name=command
 This syntax specifies that name is an alias for command.
 
-alias cd
+alias cdcv='cd ./cv'
+Notice the quotes around the full cd command; these are
+necessary if the string being aliased consists of more than
+one word.
+
