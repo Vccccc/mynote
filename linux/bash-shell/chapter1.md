@@ -39,4 +39,4 @@ tr | Translate characters in the input to other characters
 1. background job, put an ampersand(&) after the command
 2. foreground job, a job run the normal way 
 
-command **jobs**, prints a line similar to the above 
+command **jobs**, prints a line to show an indication of the job's status:
