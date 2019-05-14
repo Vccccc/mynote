@@ -50,3 +50,7 @@ command **jobs**: For each background job, **jobs** prints a line to show an ind
 $ | Variable expression | Chapter 3
 & | Background job | Chapter 1
 * | String wildcard | Chatper 1
+( | Start subshell | Chapter 8
+) | End subshell | Chapter 8
+\ | Quote next character | chatper 1
+\| | Pipe Chapter 1
