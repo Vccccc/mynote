@@ -55,4 +55,7 @@ $ | Variable expression | Chapter 3
 \ | Quote next character | chatper 1
 \| | Pipe | Chapter 1
 [ | Start character-set wildcard | Chapter 1
-] | End cha
+] | End character-set wildcard | Chapter 1
+{ | Start command block | Chapter 7
+} | End command block | Chapter 7
+; | Shell command separator | Chapter 3
