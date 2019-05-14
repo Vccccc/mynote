@@ -1,3 +1,4 @@
+# Chapter 1
 #### Basic wildcards
 **Wildcard** | **Matches**
 |:--------|:------------|
@@ -67,3 +68,5 @@ $ | Variable expression | Chapter 3
 / | Pathname directory separator | Chapter 1
 ? | Single-character wildcard | Chapter 1
 ! | Pipeline logical NOT | Chapter 5
+
+# Chapter 3
