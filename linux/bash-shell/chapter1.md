@@ -35,7 +35,7 @@ tr | Translate characters in the input to other characters
 #### cut 指令的使用:cut作用于每一行，-d: 表示用:作为分隔域(field), -f配合-d使用，-f1是第一域。-b指定第几字节
 ![](photo/cut.png)
 
-
+[./chapter1.md](#background/foreground jobs);
 #### background/foreground jobs
 1. background job, put an ampersand(&) after the command
 2. foreground job, a job run the normal way 
