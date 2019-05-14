@@ -63,6 +63,6 @@ $ | Variable expression | Chapter 3
 <"> | Weak quote | Chapter 1
 < | Input redirect | Chapter 1 
 > | Output redirect | Chapter 1
-// | Pathname directory separator | Chapter 1
+/ | Pathname directory separator | Chapter 1
 ? | Single-character wildcard | Chapter 1
-! | Pipeline logical NOT | 
+! | Pipeline logical NOT | Chapter 5
