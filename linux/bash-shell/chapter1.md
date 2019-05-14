@@ -59,3 +59,7 @@ $ | Variable expression | Chapter 3
 { | Start command block | Chapter 7
 } | End command block | Chapter 7
 ; | Shell command separator | Chapter 3
+' | Strong quote | Chapter 1
+<"> | Weak quote | Chapter 1
+< | Input redirect | Chapter 1 
+> | 
