@@ -72,3 +72,6 @@ $ | Variable expression | Chapter 3
 # Chapter 3
 #### source 
 **source** executes the commands in the specified file.
+
+### Aliases
+alias name=co
