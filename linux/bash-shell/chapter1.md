@@ -42,6 +42,7 @@ tr | Translate characters in the input to other characters
 command **jobs**: For each background job, **jobs** prints a line to show an indication of the job's status.
 
 
+
 #### Special characters
 **Character** | **Meaning** | **See** **Chapter**
 :-----------|:-------------|:-----------------
