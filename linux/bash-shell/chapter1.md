@@ -1,4 +1,4 @@
-[TOC
+[TOC]
 #### Basic wildcards
 **Wildcard** | **Matches**
 |:--------|:------------|
