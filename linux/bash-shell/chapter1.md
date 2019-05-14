@@ -53,4 +53,6 @@ $ | Variable expression | Chapter 3
 ( | Start subshell | Chapter 8
 ) | End subshell | Chapter 8
 \ | Quote next character | chatper 1
-\| | Pipe Chapter 1
+\| | Pipe | Chapter 1
+[ | Start character-set wildcard | Chapter 1
+] | End cha
