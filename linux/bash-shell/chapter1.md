@@ -1,4 +1,3 @@
-[
 #### Basic wildcards
 **Wildcard** | **Matches**
 |:--------|:------------|
@@ -20,6 +19,7 @@
 | [a-zA-Z] | All lower-and uppercase letters |
 | [a-zA-Z0-9_-] | All letters, all digits, underscore, and dash |
 
+[Basi](#Basic-wildcards)
 #### Popular UNIX data filtering utilities
 **Utility** | **Purpose** |
 |:----------|:-----------|
