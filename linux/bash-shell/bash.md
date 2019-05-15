@@ -83,5 +83,6 @@ necessary if the string being aliased consists of more than
 one word.
 
 ### 3.4 Command search path
-PATH是一个变脸， 
+PATH是一个变量，shell通过它保存的地址来找到输入的命令 
+echo $PATH
 
