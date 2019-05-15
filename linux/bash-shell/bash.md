@@ -83,5 +83,5 @@ necessary if the string being aliased consists of more than
 one word.
 
 ### 3.4 Command search path
-PA 
+PATH是一个变脸， 
 
