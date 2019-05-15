@@ -125,7 +125,11 @@ $@: arg1 arg2 arg3
 
 ### String Operators
 define in: ./string-operators.sh
-1. 
+1. ${varname:-word}
+2. ${varname:=word}
+3. ${varname:+word}
+4. ${varname:offset:length}
+5. ${varname:?message}
 ```c
 function test
 {
