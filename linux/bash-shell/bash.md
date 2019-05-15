@@ -95,3 +95,4 @@ PATH=$PATH":/home/cv/whatever"
 ### 4.2 Shell Variables
 1. **$#**, 表示命令行参数个数(不包括命令本身)
 2. **$\***, 表示一个由所有命令行参数(除了第0个参数)组成的，由被环境变量IFS(internal field separator)里的第一个字符的值分隔的字符串组成。
+3. **$@**，由空格分离的
