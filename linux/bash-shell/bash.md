@@ -98,7 +98,7 @@ PATH=$PATH":/home/cv/whatever"
 3. **$@**，表示一个由空格分隔所有命令行参数组成的字符串
 4. **$N**，表示第N个参数的值，$0为命令，N > $#则为null。
 
-alice.sh 1 2 3
+./alice.sh 1 2 3
 ```c
  1 echo "$# arguments"
  2 echo "$0: $1 $2 $3"
