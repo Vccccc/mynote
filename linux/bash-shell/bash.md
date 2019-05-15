@@ -125,6 +125,7 @@ $@: arg1 arg2 arg3
 
 ### String Operators
 define in: ./string-operators.sh
+1. 
 ```c
 function test
 {
