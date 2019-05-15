@@ -124,6 +124,7 @@ $@: arg1 arg2 arg3
 ```
 
 ### String Operators
+define in: ./string-operators.sh
 ```c
 function test
 {
@@ -176,5 +177,46 @@ function test
 test
 
 output:
+v1=hello v2=frogfootman empty=
+
+
+test: ${varname:-word}
+if varname exists and isn't null, return its value.
+${v1:-"don't exit."}: hello
+otherwise return word. 
+${empty:-"don't exit."}: don't exit.
+
+
+test: ${varname:=word}
+if varname exists and isn't null, return its value.
+${v1:="don't exit."}: hello
+otherwise set it to word and then return its value.
+before, empty=
+${empty:="return this."}: return this.
+after, empty=return this.
+
+
+test: ${varname:+word}
+if varname exists and isn't null, return word.
+${v1:+"exit."}: exit.
+otherwise return null. 
+${v100:+"don't exit."}: 
+
+
+test: ${varname:offset:length}
+It returns the substring of $varname starting at offset and up to length characters.
+The first character in $varname is position 0.
+If length is omitted, the substring starts at offset and continues to the end of $varname.
+test: ${varname:length}, v2=frogfootman
+${v2:4}: footman
+${v2:4:4}: foot
+${v2:-1:4}: frogfootman
+
+
+test: ${varname:?message}
+if varname exists and isn't null, return its value.
+${v1:?"undefined!"}: hello
+otherwise print varname: followed by message, and abort the current command.
+./test.sh: 行 46: v100: undefined!
 
 ```
