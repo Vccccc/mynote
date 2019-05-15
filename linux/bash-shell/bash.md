@@ -111,12 +111,14 @@ output:
 1 2 3
 1 2 3
 ```
-$*和$@的区别
+$*和$@的区别:
 ./test.sh arg1 arg2 arg3
-
 ```c
 1 IFS=,
 2 echo "\$*: $*"
 3 echo "\$@: $@"
-                    
+
+output:
+$*: arg1,arg2,arg3
+$@: arg1 arg2 arg3                
 ```
