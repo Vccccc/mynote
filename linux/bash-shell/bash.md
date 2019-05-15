@@ -90,5 +90,5 @@ PATH=$PATH":/home/cv/whatever"
 ### 3.4.25 Command hashing
 每次通过PATH搜索命令会花费许多时间，所以bash有一个hash table用于
 存储最近使用过的命令。
-在终端输入**hash**，就可以
+在终端输入**hash**，就可以查看最近使用过的命令
 
