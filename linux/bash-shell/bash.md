@@ -92,3 +92,4 @@ PATH=$PATH":/home/cv/whatever"
 存储最近使用过的命令。
 在终端输入**hash**，就可以查看最近使用过的命令
 
+### 4.2 Shell 
