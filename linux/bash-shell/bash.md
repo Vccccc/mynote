@@ -82,5 +82,6 @@ Notice the quotes around the full cd command; these are
 necessary if the string being aliased consists of more than
 one word.
 
-### 3.
+### 3.4 Command search path
+PA 
 
