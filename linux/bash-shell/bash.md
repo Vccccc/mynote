@@ -73,7 +73,7 @@ $ | Variable expression | Chapter 3
 #### source 
 **source** executes the commands in the specified file.
 
-### Aliases
+### 3.2 Aliases
 alias name=command
 This syntax specifies that name is an alias for command.
 
@@ -81,4 +81,6 @@ alias cdcv='cd ./cv'
 Notice the quotes around the full cd command; these are
 necessary if the string being aliased consists of more than
 one word.
+
+### 3.
 
