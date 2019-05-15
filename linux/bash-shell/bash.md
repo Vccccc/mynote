@@ -97,6 +97,8 @@ PATH=$PATH":/home/cv/whatever"
 2. **$\***, 表示一个被环境变量IFS(internal field separator)里的第一个字符的值分隔所有命令行参数(除了第0个参数)组成的字符串。
 3. **$@**，表示一个由空格分隔所有命令行参数组成的字符串
 4. **$N**，表示第N个参数的值，$0为命令，N > $#则为null。
+
+source alice.sh 1 2 3
 ```c
  1 echo "$# arguments"
  2 echo "$0: $1 $2 $3"
@@ -104,5 +106,9 @@ PATH=$PATH":/home/cv/whatever"
  4 echo "$@"
 
 output:
+3 arguments
+bash: 1 2 3
+1 2 3
+1 2 3
 
 ```
