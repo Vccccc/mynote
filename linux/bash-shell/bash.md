@@ -85,5 +85,5 @@ one word.
 ### 3.4 Command search path
 PATH是一个变量，shell通过它保存的地址来找到输入的命令 
 **echo** **$PATH**，可以回显PATH的值
-
+在~/.bashrc
 
