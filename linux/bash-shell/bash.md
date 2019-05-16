@@ -246,6 +246,6 @@ $path | <p style=line-height:0 align="left">/home/cam/book/long.file.name</p>
 ${path%.*} | <p style=line-height:0 align="left">/home/cam/book/long.file</p>
 ${path%%.*} | <p style=line-height:0 align="left">/home/cam/book/long</p>
 
-/*/: mathches anyting between two slashes
-.*: matches dot followed by anything.
+/\*/: mathches anyting between two slashes
+.\*: matches dot followed by anything.
 
