@@ -261,4 +261,5 @@ ${#v1}则等于5
 :---------|:-----------
 *(patternlist) | Matches zero or more occurrences of the given patterns.
 +(patternlist) | Matches one or more occurrences of the given patterns.
-?(patternlist)
+?(patternlist) | Matches zero or one occurrences of the given patterns.
+@(patternlist) | Matches exactly one 
