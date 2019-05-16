@@ -254,8 +254,7 @@ ${#varname}: Return the length of the value of the variable
 as a character string.
 
 ```c
-v1=hello
-${#v1} :5
+
 
 output:
 v1=hello
