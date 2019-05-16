@@ -289,3 +289,6 @@ standard output of a command as if it were the value of a
 variable.
 The syntax of command substitution is:
 $(UNIX command)
+The command inside the parentheses is run, and anything
+the command writes to standard output is returned as the
+value of the expression.
