@@ -266,4 +266,9 @@ ${#v1}则等于5
 !(patternlist) | Matches anything except one of the given patterns
 
 Some examples of these include:
-- *(alice|hatter|hare
+- *(alice|hatter|hare) would match zero or more
+occurrences of alice, hatter, and hare. So it
+would match the null string, alice, alicehatter,
+etc.
+- +(alice|hatter|hare) would do the same except
+not match the null string.
