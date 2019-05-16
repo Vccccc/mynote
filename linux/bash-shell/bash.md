@@ -259,4 +259,6 @@ ${#v1}则等于5
 ##### Table 4-3. Pattern-matching operators
 **Operator** | **Meaning**
 :---------|:-----------
-*(patternlist)
+*(patternlist) | Matches zero or more occurrences of the given patterns.
++(patternlist) | Matches one or more occurrences of the given patterns.
+?(patternlist)
