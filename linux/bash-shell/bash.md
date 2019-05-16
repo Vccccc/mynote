@@ -228,4 +228,11 @@ otherwise print varname: followed by message, and abort the current command.
 
 ### 4.3.2 Patternsand Pattern Matching
 ##### Pattern-matching operators
-**Operator** | **Meaning*
+**Operator** | **Meaning**
+:---------|:-----------
+${variable#pattern} | If the pattern matches the
+beginning of the variable's value,
+delete the shortest part that
+matches and return the rest.
+${variable##pattern} | If the pattern matches the
+beginning of the variable's value,
