@@ -284,3 +284,7 @@ hatter, or hare.
 alice, hatter, and hare.
 
 ### 4.4 Command Substitution
+command substitution, which allows you to use the
+standard output of a command as if it were the value of a
+variable.
+The syntax of command substitution is:
