@@ -264,3 +264,6 @@ ${#v1}则等于5
 ?(patternlist) | Matches zero or one occurrences of the given patterns.
 @(patternlist) | Matches exactly one of the given patterns.
 !(patternlist) | Matches anything except one of the given patterns
+
+Some examples of these include:
+- *(alice|hatter|hare
