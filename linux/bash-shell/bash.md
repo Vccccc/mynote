@@ -227,4 +227,5 @@ otherwise print varname: followed by message, and abort the current command.
 ```
 
 ### 4.3.2 Patternsand Pattern Matching
-**
+##### Pattern-matching operators
+**Operator** | **Meaning*
