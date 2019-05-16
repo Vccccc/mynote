@@ -242,7 +242,7 @@ Assume that the variable path has the value /home/cam/book/long.file.name; then:
 :-----------|------------------:
 ${path##/*/} | long.file.name
 ${path#/*/} | cam/book/long.file.name
-$path | <p style=line-height:0 align="left">/home/cam/book/long.file.name</p>
+$path | <p style=line-height:1 align="left">/home/cam/book/long.file.name</p>
 ${path%.*} | <p style=line-height:0 align="left">/home/cam/book/long.file</p>
 ${path%%.*} | <p style=line-height:0 align="left">/home/cam/book/long</p>
 
