@@ -254,3 +254,6 @@ ${#varname}: Return the length of the value of the variable
 as a character string.
 v1="hello"
 ${#v1}则等于5
+
+### 4.3.4 Extended Patter Matching
+####
