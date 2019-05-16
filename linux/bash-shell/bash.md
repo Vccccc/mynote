@@ -241,4 +241,7 @@ Assume that the variable path has the value /home/cam/book/long.file.name; then:
 **Expression** | **Result**
 :-----------|------------------:
 ${path##/*/} | long.file.name
+${path#/*/} | cam/book/long.file.name
+:-
+$path |
 
