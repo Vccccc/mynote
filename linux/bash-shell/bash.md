@@ -282,3 +282,5 @@ string, alice, hatter, or hare.
 hatter, or hare.
 - !(alice|hatter|hare) matches everything except
 alice, hatter, and hare.
+
+### 4.4 Command Substitution
