@@ -242,7 +242,6 @@ Assume that the variable path has the value /home/cam/book/long.file.name; then:
 :-----------|------------------:
 ${path##/*/} | long.file.name
 ${path#/*/} | cam/book/long.file.name
-:-----------:----------------
 $path | /home/cam/book/long.file.name
 ${path%.*} | /home/cam/book/long.file
 ${path%%.*} | /home/cam/book/long
