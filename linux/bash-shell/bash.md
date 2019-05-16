@@ -237,3 +237,6 @@ ${variable%pattern} | If the pattern matches the end of the variable's value, de
 ${variable%%pattern} | If the pattern matches the end of the variable's value, delete the longest part that matches and return the rest. 
 ${variable/pattern/string} ${variable//pattern/string} | The longest match to pattern in variable is replaced by string. In the first form, only the first match is replaced. In the second form, all matches are replaced. If the pattern begins with a #, it must match at the start of the variable. If it begins with a %, it must match with the end of the variable. If string is null, the matches are deleted. If variable is @ or *, the operation is applied to each positional parameter in turn and the expansion is the resultant list.
 
+Assume that the variable path has the value /home/cam/book/long.file.name; then:
+Ex
+
