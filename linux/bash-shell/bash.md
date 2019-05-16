@@ -252,12 +252,5 @@ ${path%%.*} | <p style=line-height:0 align="left">/home/cam/book/long</p>
 #### 4.3.3 Length Operators
 ${#varname}: Return the length of the value of the variable
 as a character string.
-
-```c
-
-
-output:
-v1=hello
+v1="hello"
 ${#v1} :5
-
-```
