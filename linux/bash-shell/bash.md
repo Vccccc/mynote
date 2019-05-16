@@ -250,11 +250,14 @@ ${path%%.*} | <p style=line-height:0 align="left">/home/cam/book/long</p>
 .\*: matches dot followed by anything.
 
 #### 4.3.3 Length Operators
+
 ${#varname}: Return the length of the value of the variable
 as a character string.
 v1="hello"
 ${#v1}则等于5
+
 -------------------------------------
+
 ### 4.3.4 Extended Patter Matching
 ##### Table 4-3. Pattern-matching operators
 **Operator** | **Meaning**
