@@ -272,3 +272,9 @@ would match the null string, alice, alicehatter,
 etc.
 - +(alice|hatter|hare) would do the same except
 not match the null string.
+- ?(alice|hatter|hare) would only match the null
+string, alice, hatter, or hare.
+- @(alice|hatter|hare) would only match alice,
+hatter, or hare.
+- !(alice|hatter|hare) matches everything except
+alice, hatter, and hare.
