@@ -256,4 +256,7 @@ v1="hello"
 ${#v1}则等于5
 
 ### 4.3.4 Extended Patter Matching
-####
+##### Table 4-3. Pattern-matching operators
+**Operator** | **Meaning**
+:---------|:-----------
+*(patternlist)
