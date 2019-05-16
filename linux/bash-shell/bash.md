@@ -253,4 +253,4 @@ ${path%%.*} | <p style=line-height:0 align="left">/home/cam/book/long</p>
 ${#varname}: Return the length of the value of the variable
 as a character string.
 v1="hello"
-${#v1} :5
+${#v1}则等于5
