@@ -150,5 +150,7 @@ array[index] = t2
 ```c
 movl index, %ecx	; value of index to ecx
 addl $4, %ecx		; ecx = ecx + 4
-mul
+mull $8, %ecx		; ecx = ecx * 8
+movl index, %eax	; value of index to eax
+movl %ecx, array(,eax,4); arrau
 ```
