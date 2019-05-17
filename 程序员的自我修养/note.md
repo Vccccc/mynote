@@ -28,4 +28,5 @@ linux查看分页大小：getconf PAGE_SIZE。Ubuntu 16.0为 4096字节(4KB)。
 状态的转移如图：
 !["线程状态切换"](./photo/schedule.png)
 
-
+##### 双重检查锁定模式
+!["
