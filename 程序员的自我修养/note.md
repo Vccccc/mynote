@@ -71,3 +71,6 @@ GCC编译过程分解如下图所示：
 - $as hello.s -o hello.o
 - $gcc -c hello.s -o hello.o
 - $gcc -c hello.c -o hello.o
+
+### 2.1.4 链接
+链接将所有
