@@ -147,3 +147,8 @@ array[index] = t2
 编译器后端主要包括代码生成器（Code Generator）和目标代码优化器（Target Code Optimizer）。
 
 代码生成器将中间代码转换成目标机器代码，这个过程十分依赖于目标机器，因为不同的机器有着不同的字长、寄存器、整数数据类型和浮点数数据类型等。对于上面例子中的中间代码，代码生成器可能会产生下面的代码序列（用x86的汇编语言来表示，并且假设index的类型为int型，array的类型为int型数组）：
+```c
+movl index, %ecx	; value of index to ecx
+addl $4, %ecx		; ecx = ecx + 4
+mul
+```
