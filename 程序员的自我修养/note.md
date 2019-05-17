@@ -29,4 +29,4 @@ linux查看分页大小：getconf PAGE_SIZE。Ubuntu 16.0为 4096字节(4KB)。
 !["线程状态切换"](./photo/schedule.png)
 
 ##### 双重检查锁定模式
-!["双重检查锁定模式"](https://zh.wikipedia.org/wiki/%E5%8F%8C%E9%87%8D%E6%A3%80%E6%9F%A5%E9%94%81%E5%AE%9A%E6%A8%A1%E5%BC%8F)[](https://zh.wikipedia.org/wiki/%E5%8F%8C%E9%87%8D%E6%A3%80%E6%9F%A5%E9%94%81%E5%AE%9A%E6%A8%A1%E5%BC%8F)
+["双重检查锁定模式"](https://zh.wikipedia.org/wiki/%E5%8F%8C%E9%87%8D%E6%A3%80%E6%9F%A5%E9%94%81%E5%AE%9A%E6%A8%A1%E5%BC%8F)
