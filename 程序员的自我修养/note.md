@@ -154,4 +154,4 @@ mull $8, %ecx		; ecx = ecx * 8
 movl index, %eax	; value of index to eax
 movl %ecx, array(,eax,4); array[index] = ecx
 ```
-最后目标代码优化器对上述的目标代码进行优化，比如选择合适的寻址方式、使用位移来代替乘法运算、删除多余的指令等。
+最后目标代码优化器对上述的目标代码进行优化，比如选择合适的寻址方式、使用位移来代替乘法运算、删除多余的指令等。上面的例子中，乘法由一条相对复杂的基址比例变址寻址（Base Index Scale 
