@@ -70,3 +70,4 @@ GCC编译过程分解如下图所示：
 汇编器将汇编代码转变成机器可以执行的指令。汇编过程可以调用汇编器as来完成：
 - $as hello.s -o hello.o
 - $gcc -c hello.s -o hello.o
+- $gcc -c hello.c -o hello.o
