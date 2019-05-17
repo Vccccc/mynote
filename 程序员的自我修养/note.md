@@ -44,3 +44,6 @@ GCC编译过程分解如下图所示：
 
 ### 2.1.1 预处理
 首先将源代码文件和相关的头文件，如stdio.h等被预编译器cpp预编译成一个.i文件或者.ii文件。
+可以使用如下命令进行预编译：
+- $gcc -E hello.c -o hello.i
+- $cpp hello.c > hello.i
