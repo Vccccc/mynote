@@ -47,3 +47,5 @@ GCC编译过程分解如下图所示：
 可以使用如下命令进行预编译：
 - $gcc -E hello.c -o hello.i
 - $cpp hello.c > hello.i
+
+预编译过程主要处理那些源代码文件中的以"#"开始的预编译指令。比如"#include"、"#define"等，主要处理规则如下：
