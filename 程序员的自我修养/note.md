@@ -165,4 +165,4 @@ movl %eax, array(,%edx,4)
 ## 2.4 静态链接
 人们把每个源代码模块独立地编译，然后按照需要将它们“组装”起来，这个组装模块的过程就是**链接(Linking)**。链接的过程主要包括了**地址和空间分配(Address and Storage Allocation)**、**符号决议(Symbol Resolution)**、和**重定位(Relocation)**等步骤。
 
-每个模块的
+每个模块的源代码文件(如.c)文件经过编译器编译成目标文件(Object File，一般扩展名为.o或.obj)，目标文件和库(Liba
