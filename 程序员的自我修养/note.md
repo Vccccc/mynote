@@ -83,5 +83,6 @@ GCC编译过程分解如下图所示：
 首先源代码程序被输入到扫描器(Scanner)，扫描器只是简单的进行词法分析，运用一种类似于有限状态机(Finite State Machine)的算法将源代码的字符序列分割成一系列的记号(Token)。
 比如源代码如下：
 ```c
-array[index] = 
+array[index] = (index + 4) * (2 + 6)
 ```
+经过扫猫后
