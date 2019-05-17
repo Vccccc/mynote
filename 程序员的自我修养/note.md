@@ -41,3 +41,5 @@ linux查看分页大小：getconf PAGE_SIZE。Ubuntu 16.0为 4096字节(4KB)。
 
 GCC编译过程分解如下图所示：
 !["编译过程分解"](./photo/compilation.png)
+
+### 2.1.1 预处理
