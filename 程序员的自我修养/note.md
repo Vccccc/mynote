@@ -160,5 +160,5 @@ movl index, %edx
 leal 32(,%edx,8), %eax
 movl %eax, array(,%edx,4)
 ```
-当源代码最终被编译成了目标代码时，还有一个问题是：index和array的地址还没有确定。
+当源代码最终被编译成了目标代码时，还有一个问题是：index和array的地址还没有确定。如果index和array的定义在跟上面的源代码同一
 
