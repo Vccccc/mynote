@@ -7,4 +7,6 @@ struct s{ char ch; int a; }; sizeof(int) = 4; sizeof(s) = 8;
 struct s{ char ch; int a; } __attribute__ ((__packed__));  sizeof(int) = 4; sizeof(s) = 5;
 
 #### __attribute__ ((section("name")))
-在全局变量或者函数之前加上__attribute__ ((section("name"))) 属性就可以把相应的变量或者函数放到以name作为段名的段中
+在全局变量或者函数之前加上__attribute__ ((section("name"))) 属性就可以把相应的变量或者函数放到以name作为段名的段中。
+比如：
+__attribute__ ((section("Foo"))) int global = 42;
