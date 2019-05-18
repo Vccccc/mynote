@@ -13,7 +13,7 @@ Options:
 
 ## readelf: Displays information about ELF files.
 Options:
-- -h:
+- -h: Displays the information contained in the ELF header at the start of the file.
 
 # Chapter 1 温故而知新
 ### 1.5 使用虚拟内存的原因
