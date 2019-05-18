@@ -179,4 +179,4 @@ PC平台流行的可执行文件格式（Executable）主要是Windows下的PE�
 **ELF文件类型** | **说明** | **实例**
 :-----------|:----------|:------------
 可重定位文件（Relocatable File）| 这类文件包含了代码和数据，可以被用来链接成可执行文件或共享目标文件，静态链接库也可以归为这一类 | Linux的.o、Windows的.obj
-可执行文件（Executable File） | 这类文件
+可执行文件（Executable File） | 这类文件包含了可以直接执行的程序，它的代表就是ELF可执行文件，它们一般都没有扩展名 | 比如/bin/bash文件、Windows的.exe
