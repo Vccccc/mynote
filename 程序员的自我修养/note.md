@@ -339,7 +339,8 @@ e_phentsize | 程序头大小：0 (字节)<br>Program header table entry size
 e_phnum | Number of program headers:  0<br>Program header table entry count
 e_shentsize | 节头大小：64 (字节)<br>Section header table entry size<br>段表描述符的大小，这个一般等于sizeof(Elf64_Shdr)
 e_shnum | 节头数量：13<br>Section header table entry count<br>段表描述符数量。这个值等于ELF文件中有用的段的数量，上面那个例子里面为13
-e_shstrndx | 
+e_shstrndx | 字符串表索引节头：10<br>Section header string table index<br>段表字符串表所在的段在段表中的下标
+
 
 
 
