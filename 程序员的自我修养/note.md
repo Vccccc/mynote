@@ -243,3 +243,6 @@ SimpleSection.o的段除了最基本的代码段、数据段、BSS段以外，�
 ### 3.3.1 代码段
 可以使用 objdump -s -d SimpleSection.o 查看代码段内容。
 ![](./chapter3/3.3.1.png)
+可以观察到.text段的大小正好为0x55。
+
+### 3.3.2 数据段和只读数据段
