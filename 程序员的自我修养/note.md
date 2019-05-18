@@ -4,6 +4,7 @@ objdump: display information from object files.
 Options:
 - -h: Display summary information from the section headers of the object file.
 - -x: Display all available header information, including the symbol table and relocation entries.  Using -x is equivalent to specifying all of -a -f -h -p -r -t.
+- -s: 
 
 ## size
 size: list section sizes and total size.
