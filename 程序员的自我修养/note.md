@@ -178,4 +178,4 @@ PC平台流行的可执行文件格式（Executable）主要是Windows下的PE�
 动态链接库（DLL，Dynamic Linking Library）（Windows的.dll和Linux的.so）及静态链接库（Static Linking Library）（Windows的.lib和Linux的.a）文件都按照可执行文件格式存储。静态链接库稍有不同，它是把很多目标文件捆绑在一起，再加上一些索引形成一个文件。ELF文件标准里面把系统中采用ELF格式的文件归为下表所列举的四类：
 **ELF文件类型** | **说明** | **实例**
 :-----------|:----------|:------------
-可重定位文件（Relocatable File）| 
+可重定位文件（Relocatable File）| 这类文件包含了代码和数据，可以被用来链接成可执行文件或共享目标文件，静态链接库也可以归为这一类 | 
