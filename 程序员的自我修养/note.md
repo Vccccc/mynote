@@ -259,4 +259,4 @@ SimpleSection.c里面调用"printf"的时候，用到了一个字符串常量"%d
 static int x1 = 0;
 static int x2 = 1;
 ```
-x1会被存放在.bss中，而x2会被存放在.data中
+x1会被存放在.bss中，而x2会被存放在.data中。因为x1为0,可以被认为是未初始化的，因为未初始化的都是0,所以被优化掉了可以放。
