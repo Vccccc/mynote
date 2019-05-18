@@ -341,7 +341,8 @@ e_shentsize | 节头大小：64 (字节)<br>Section header table entry size<br>�
 e_shnum | 节头数量：13<br>Section header table entry count<br>段表描述符数量。这个值等于ELF文件中有用的段的数量，上面那个例子里面为13
 e_shstrndx | 字符串表索引节头：10<br>Section header string table index<br>段表字符串表所在的段在段表中的下标
 
-
+Magic： 7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
+字节序
 
 
 
