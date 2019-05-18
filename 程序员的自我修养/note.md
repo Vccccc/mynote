@@ -323,4 +323,7 @@ typedef struct
    Elf64_Half    e_shstrndx;     /* Section header string table index */
 } Elf64_Ehdr;
 ```
-下表是ELF文件
+下表是ELF文件头中各个成员的含义与readelf输出结果的对照表：
+**成员** | **readelf输出结果与含义**
+:----|:--------
+e_
