@@ -185,5 +185,6 @@ PC平台流行的可执行文件格式（Executable）主要是Windows下的PE�
 
 ## 3.2 目标文件是什么样的
 !["ELF"](./photo/ELF.png)
-代码段（Code Section）：程序源代码编译后的机器指令经常被放在代码段里，代码段常见的名字有".code"
+- File Header：它描述了整个文件的
+- 代码段（Code Section）：程序源代码编译后的机器指令经常被放在代码段里，代码段常见的名字有".code"或".text"。
 
