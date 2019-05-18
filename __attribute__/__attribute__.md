@@ -5,3 +5,5 @@
 struct s{ char ch; int a; }; sizeof(int) = 4; sizeof(s) = 8;
 在GCC紧凑模式下：
 struct s{ char ch; int a; } __attribute__ ((__packed__));  sizeof(int) = 4; sizeof(s) = 5;
+
+#### __attribute__ ((section("name")))
