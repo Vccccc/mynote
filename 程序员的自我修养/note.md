@@ -1,7 +1,9 @@
 # 常用工具介绍
-## objdump: display information from object files.
+## objdump
+objdump: display information from object files.
+Options:
+-
 
-objdump
 # Chapter 1 温故而知新
 ### 1.5 使用虚拟内存的原因
 不使用虚拟内存的缺点：
