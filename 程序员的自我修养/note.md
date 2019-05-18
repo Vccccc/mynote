@@ -372,4 +372,4 @@ EM_SPARC | 2 | SPARC
 EM_386 | 3 | Intel x86
 
 ### 3.4.2 段表
-ELF
+ELF文件中有很多各种各样的段，段表（Section Header Table）就是保存这些段的基本属性的结构。段表是ELF文件中除了文件头以外最重要的结构
