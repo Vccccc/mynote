@@ -232,4 +232,4 @@ int main(void)
 }
 ```
 !["SimpleSection.o"](./photo/SimpleSection.o.png)
-SimpleSection.o的段除了最基本的代码段、数据段、BSS段以外，还有只读数据段(.rodata)、注释数据段(.comment)和堆栈提示段(.note.GNU-stack)
+SimpleSection.o的段除了最基本的代码段、数据段、BSS段以外，还有只读数据段(.rodata)、注释数据段(.comment)和堆栈提示段(.note.GNU-stack)等。"CONTENTS"、"ALLOC"等表示段的各种属性，"CONTENTS"表示该段在文件中存在
