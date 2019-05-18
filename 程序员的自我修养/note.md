@@ -396,4 +396,7 @@ typedef struct
   Elf64_Xword	sh_entsize;		/* Entry size if section holds table */
 } Elf64_Shdr;
 ```
-Elf64_Shdr
+Elf64_Shdr的各个成员的含义如下表所示：
+**成员** | **含义**
+:----|:-----
+sh_name | 
