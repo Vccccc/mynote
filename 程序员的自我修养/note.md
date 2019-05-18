@@ -11,6 +11,9 @@ Options:
 size: list section sizes and total size.
 Options:
 
+## readelf: Displays information about ELF files.
+Options:
+- -h:
 
 # Chapter 1 温故而知新
 ### 1.5 使用虚拟内存的原因
@@ -283,4 +286,4 @@ ELF文件基本结构如下图所示：
 ELF目标文件格式的最前部是ELF文件头(ELF Header)，它包含了描述整个文件的基本属性，比如ELF文件版本、目标机器型号、程序入口地址等。紧接着是ELF文件各个段。其中ELF文件中与段有关的重要结构就是段表(Section Header Table)，该表描述了ELF文件包含的所有段的信息，比如每个段的段名、段的长度、在文件中的偏移、读写权限及段的其他属性。
 
 ### 3.4.1 文件头（ELF Header）
-可以用**readelf**命令来详细查看ELF文件
+可以用**readelf**命令来详细查看ELF文件：
