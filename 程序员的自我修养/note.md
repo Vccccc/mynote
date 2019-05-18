@@ -297,7 +297,7 @@ Elf32_Off | 32位版本的偏移地址 | uint32_t | 4
 Elf32_Sword | 32位版本有符号整型 | uint32_t | 4 
 Elf_32_Word | 32位版本无符号整型 | int32_t | 4
 Elf64_Addr | 64位版本程序地址 | uint64_t | 8
-Elf32_Half | 32位版本程序的无符号短整型 | uint16_t | 2
-Elf32_Off | 32位版本的偏移地址 | uint32_t | 4
-Elf32_Sword | 32位版本有符号整型 | uint32_t | 4 
-Elf_32_Word | 32位版本无符号整型 | int32_t | 4
+Elf64_Half | 64位版本程序的无符号短整型 | uint16_t | 2
+Elf64_Off | 64位版本的偏移地址 | uint64_t | 4
+Elf64_Sword | 64位版本有符号整型 | uint32_t | 4 
+Elf_64_Word | 64位版本无符号整型 | int32_t | 4
