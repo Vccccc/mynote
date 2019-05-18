@@ -184,5 +184,6 @@ PC平台流行的可执行文件格式（Executable）主要是Windows下的PE�
 核心转储文件（Core Dump File） | 当进程意外终止时，系统可以将该进程的地址空间的内容以及终止时的一些其他信息转储到核心转储文件 | Linux下的core dump
 
 ## 3.2 目标文件是什么样的
-!["ELF"](./photo/ELF.png
+!["ELF"](./photo/ELF.png)
+代码段
 
