@@ -288,4 +288,4 @@ ELF目标文件格式的最前部是ELF文件头(ELF Header)，它包含了描�
 ### 3.4.1 文件头（ELF Header）
 可以用**readelf**命令来详细查看ELF文件：
 !["ELF文件头"](./chapter3/3.4.1.png)
-ELF文件头结构及相关常数被定义在"/usr/include/elf.h"里，因为ELF文件在各种平台下都通用，ELF文件有32位版本和64位版本。64位版本
+ELF文件头结构及相关常数被定义在"/usr/include/elf.h"里，因为ELF文件在各种平台下都通用，ELF文件有32位版本和64位版本。它的文件头结构也有这两种版本，分别叫做"Elf32_Ehdr"和"Elf64_E
