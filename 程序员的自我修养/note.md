@@ -408,5 +408,5 @@ sh_link<br>sh_info | Section Link and Section Information 段链接信息
 sh_addralign | Section Address Alignment 段地址对齐<br>有些段对段地址对齐有要求，比如假设有个段刚开始的位置包含了一个double变量，因为Intel x86系统要求浮点数的存储地址必须是本身的整数倍，也就是说保存double变量的地址必须是8字节的整数倍。这样对一个段来说，它的sh_addr必须是8的整数倍。<br>由于地址对齐的数量都是2的指数倍，sh_addralign表示是地址对齐数量中的指数，即sh_addralign=3表示对齐为2的3次方倍，即8倍，以此类推。如果sh_addralign为0或1，则表示该段没有对齐要求
 sh_entsize | Section Entry Size 项的长度<br>有些段包含了一些固定大小的项，比如符号表，它包含的每个字符所占的大小都是一样的。对于这种段，sh_entsize表示每个项的大小。如果为0，则表示该段不包含固定的大小项
 
-[^1]: 
+[^1]: 事实上段的名字对于编译器、链接器来说是有意义的，但是对于操作系统来说并没有什么实质的意义，对于操作系统来说，一个段该如何处理
 
