@@ -403,5 +403,7 @@ sh_name | Section name 段名[^1]<br>段名是个字符串，它位于一个叫�
 sh_type | Section type 段的类型
 sh_flags | Section flag 段的标志位
 sh_addr | Section Address 段虚拟地址[^2]<br>如果该段可以被加载，则sh_addr为该段被加载后在进程地址空间中的虚拟地址，否则sh_addr为0
-sh_offset | Section Offset 段偏移<br>如果该段存在于文件中，则表示该段在文件中的偏移;否则无意义。比如sh_offset
+sh_offset | Section Offset 段偏移<br>如果该段存在于文件中，则表示该段在文件中的偏移;否则无意义。比如sh_offset对于BSS段来说就没有意义
+sh_link<br>sh_info | Section Link and Section Information 段链接信息
+
 
