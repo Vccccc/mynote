@@ -265,7 +265,7 @@ x1会被存放在.bss中，而x2会被存放在.data中。因为x1为0,可以被
 除了.text、.data、.bss这三个最常用的段之外，ELF文件也有可能包含其他的段，用来保存和程序相关的其他信息。下表列举了ELF的一些常见的段：
 **常用段名** | **说明**
 :----|:---
-.rodata1 | Read only Data，这中种段里存放的是只读数据，比如字符串常量、全局const变量。跟.rodata一样
+.rodata1 | Read only Data，这种段里存放的是只读数据，比如字符串常量、全局const变量。跟.rodata一样
 .comment | 存放的是编译器版本信息，比如字符串："GCC:(GNU)4.2.0"
 .debug | 调试信息
 .dynamic | 动态链接信息
