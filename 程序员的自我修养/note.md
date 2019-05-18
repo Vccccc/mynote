@@ -307,10 +307,10 @@ Elf_64_Word | 64位版本无符号整型 | int32_t | 4
 ```c
 typedef struct
 {
-  87   unsigned char e_ident[EI_NIDENT]; /* Magic number and other info */
-  88   Elf64_Half    e_type;         /* Object file type */
-  89   Elf64_Half    e_machine;      /* Architecture */
-  90   Elf64_Word    e_version;      /* Object file version */
+   unsigned char e_ident[EI_NIDENT]; /* Magic number and other info */	   
+   Elf64_Half    e_type;         /* Object file type */
+   Elf64_Half    e_machine;      /* Architecture */
+   Elf64_Word    e_version;      /* Object file version */
    Elf64_Addr    e_entry;        /* Entry point virtual address */
    Elf64_Off e_phoff;        /* Program header table file offset */
    Elf64_Off e_shoff;        /* Section header table file offset */
@@ -322,5 +322,4 @@ typedef struct
    Elf64_Half    e_shnum;        /* Section header table entry count */
    Elf64_Half    e_shstrndx;     /* Section header string table index */
 } Elf64_Ehdr;
-
 ```
