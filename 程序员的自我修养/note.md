@@ -396,3 +396,4 @@ typedef struct
   Elf64_Xword	sh_entsize;		/* Entry size if section holds table */
 } Elf64_Shdr;
 ```
+Elf64_Shdr
