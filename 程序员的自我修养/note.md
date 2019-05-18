@@ -378,4 +378,4 @@ ELF文件中有很多各种各样的段，段表（Section Header Table）就是
 
 使用 readelf -S SimpleSection.o 输出完整的段表结构，如下图所示：
 !["Section Header Table"](./chapter3/3.4.2.png)
-
+段表结构是一个以"Elf
