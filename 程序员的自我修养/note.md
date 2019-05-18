@@ -231,4 +231,5 @@ int main(void)
     return a;
 }
 ```
-!["SimpleSecion.o"](./photo/SimpleSection.o.png)
+!["SimpleSection.o"](./photo/SimpleSection.o.png)
+SimpleSection.o的段除了最基本的代码段、数据段、BSS段
