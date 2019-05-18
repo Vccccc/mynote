@@ -288,3 +288,4 @@ ELF目标文件格式的最前部是ELF文件头(ELF Header)，它包含了描�
 ### 3.4.1 文件头（ELF Header）
 可以用**readelf**命令来详细查看ELF文件：
 !["ELF文件头"](./chapter3/3.4.1.png)
+ELF文件头结构及相关
