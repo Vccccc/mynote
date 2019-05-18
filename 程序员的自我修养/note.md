@@ -254,3 +254,9 @@ SimpleSection.c里面调用"printf"的时候，用到了一个字符串常量"%d
 
 ### 3.3.3 BSS段
 .bss段存放的是未初始化的全局变量和局部静态变量，如上述代码中global_uninit_var和static_var2就是被存放在.bss段。但有些编译器不会把全局未初始化变量存放在.bss段，而是预留一个未定义的全局变量符号，等到最终链接成可执行文件时再在.bss段分配空间。所以可以看到.bss段目前只有4个字节大小。编译单元内部可见的静态变量（比如给global_uninit_var加上static修饰）的确是存放在.bss段的。
+
+```c
+static int x1 = 0;
+static int x2 = 1;
+```
+x1会被存放在.bss中，而x2会被存放在.data中
