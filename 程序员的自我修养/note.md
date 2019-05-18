@@ -242,3 +242,4 @@ SimpleSection.o的段除了最基本的代码段、数据段、BSS段以外，�
 
 ### 3.3.1 代码段
 可以使用 objdump -s -d SimpleSection.o 查看代码段内容。
+![](./chatper3/3.3.1.png)
