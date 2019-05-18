@@ -231,4 +231,4 @@ int main(void)
     return a;
 }
 ```
-!["
+!["SimpleSecion.o"](./photo/SimpleSection.o.png)
