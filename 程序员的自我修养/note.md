@@ -378,4 +378,4 @@ ELF文件中有很多各种各样的段，段表（Section Header Table）就是
 
 使用 readelf -S SimpleSection.o 输出完整的段表结构，如下图所示：
 !["Section Header Table"](./chapter3/3.4.2.png)
-段表结构是一个以"Elf64_Shdr"结构体为元素的数组。数组元素的个数等于段的个数，每个"Elf6
+段表结构是一个以"Elf64_Shdr"结构体为元素的数组。数组元素的个数等于段的个数，每个"Elf64_Shdr"结构体对应一个段。"Elf64_Shdr"又称为段描述符（Section Descriptor）。对于SimpleSection.o
