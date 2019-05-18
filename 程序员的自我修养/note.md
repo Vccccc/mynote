@@ -268,4 +268,6 @@ x1会被存放在.bss中，而x2会被存放在.data中。因为x1为0,可以被
 .rodata1 | Read only Data，这中种段里存放的是只读数据，比如字符串常量、全局const变量。跟.rodata一样
 .comment | 存放的是编译器版本信息，比如字符串："GCC:(GNU)4.2.0"
 .debug | 调试信息
-.dyna
+.dynamic | 动态链接信息
+.hash | 符号哈希表
+.line | 调试时的行号
