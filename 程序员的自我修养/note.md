@@ -302,3 +302,25 @@ Elf64_Half | 64位版本程序的无符号短整型 | uint16_t | 2
 Elf64_Off | 64位版本的偏移地址 | uint64_t | 8
 Elf64_Sword | 64位版本有符号整型 | uint32_t | 4 
 Elf_64_Word | 64位版本无符号整型 | int32_t | 4
+
+64位版本的文件头结构"Elf64_Ehdr"的定义如下：
+```c
+typedef struct
+  86 {
+  87   unsigned char e_ident[EI_NIDENT]; /* Magic number and other info */
+  88   Elf64_Half    e_type;         /* Object file type */
+  89   Elf64_Half    e_machine;      /* Architecture */
+  90   Elf64_Word    e_version;      /* Object file version */
+  91   Elf64_Addr    e_entry;        /* Entry point virtual address */
+  92   Elf64_Off e_phoff;        /* Program header table file offset */
+  93   Elf64_Off e_shoff;        /* Section header table file offset */
+  94   Elf64_Word    e_flags;        /* Processor-specific flags */
+  95   Elf64_Half    e_ehsize;       /* ELF header size in bytes */
+  96   Elf64_Half    e_phentsize;        /* Program header table entry size */
+  97   Elf64_Half    e_phnum;        /* Program header table entry count */
+  98   Elf64_Half    e_shentsize;        /* Section header table entry size */
+  99   Elf64_Half    e_shnum;        /* Section header table entry count */
+   Elf64_Half    e_shstrndx;     /* Section header string table index */
+ } Elf64_Ehdr;
+
+```
