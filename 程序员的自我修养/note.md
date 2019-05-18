@@ -326,4 +326,9 @@ typedef struct
 下表是ELF文件头中各个成员的含义与readelf输出结果的对照表：
 **成员** | **readelf输出结果与含义**
 :----|:--------
-e_
+e_ident | Magic：   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
+  类别:                              ELF64
+  数据:                              2 补码，小端序 (little endian)
+  版本:                              1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI 版本:                          0
