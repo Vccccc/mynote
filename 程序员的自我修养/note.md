@@ -372,4 +372,4 @@ EM_SPARC | 2 | SPARC
 EM_386 | 3 | Intel x86
 
 ### 3.4.2 段表
-
+ELF
