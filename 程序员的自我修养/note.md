@@ -246,4 +246,6 @@ SimpleSection.o的段除了最基本的代码段、数据段、BSS段以外，�
 可以观察到.text段的大小正好为0x55。
 
 ### 3.3.2 数据段和只读数据段
-.data段保存的是哪些已经初始化了的全局变量和局部静态变量。SimpleSection.c代码里一共有两个这样的变量，分别是global_init_var和static_var。这两个变量每个4个字节，一个刚好8个字节，所以.data
+.data段保存的是哪些已经初始化了的全局变量和局部静态变量。SimpleSection.c代码里一共有两个这样的变量，分别是global_init_var和static_var。这两个变量每个4个字节，一个刚好8个字节，所以.data段的大小为8个字节。
+
+SimpleSection.c里面调用"printf"的时候，用到了
