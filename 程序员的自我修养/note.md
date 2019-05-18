@@ -399,5 +399,6 @@ typedef struct
 Elf64_Shdr的各个成员的含义如下表所示：
 **成员** | **含义**
 :----|:-----
-sh_name | Section name 段名[^1]<br>段名是个字符串，它位于一个叫做.shstrtab的
+sh_name | Section name 段名[^1]<br>段名是个字符串，它位于一个叫做.shstrtab的字符串表。sh_name是段名字符串在.shstrtab中的偏移
+sh_type | Section type 段的类型
 
