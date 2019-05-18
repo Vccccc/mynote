@@ -249,3 +249,5 @@ SimpleSection.o的段除了最基本的代码段、数据段、BSS段以外，�
 .data段保存的是哪些已经初始化了的全局变量和局部静态变量。SimpleSection.c代码里一共有两个这样的变量，分别是global_init_var和static_var。这两个变量每个4个字节，一个刚好8个字节，所以.data段的大小为8个字节。
 
 SimpleSection.c里面调用"printf"的时候，用到了一个字符串常量"%d\n"，它是一种只读数据，所以它被放在了.rodata段。可以从输出结果看到"%d\n"这个段的4个字节刚好是这个字符串常量的ASCII字节序，最后以\0结尾。
+
+.rodata段存放的是只读数据，一般是程序里面的只读变量(如const修饰的变量)和字符串常量。单独设立.rodata段有很多好处
