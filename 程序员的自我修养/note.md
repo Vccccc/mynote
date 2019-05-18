@@ -173,3 +173,4 @@ movl %eax, array(,%edx,4)
 
 # Chatper 3 目标文件里有什么
 ## 3.1 目标文件的格式
+PC平台流行的可执行文件格式（Executable）主要是Windows下的PE
