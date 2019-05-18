@@ -327,3 +327,6 @@ typedef struct
 **成员** | **readelf输出结果与含义**
 :----|:--------
 e_ident | Magic：   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00<br>类别:                            ELF64<br> 数据: 2<br> 补码，小端序 (little endian)<br>版本: 1 (current)<br>OS/ABI:                          UNIX - System V<br>ABI 版本: 0
+e_type | 类型: REL (可重定位文件)<br>Object file type
+e_machine | 
+
