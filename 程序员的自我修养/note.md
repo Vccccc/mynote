@@ -5,7 +5,7 @@ Options:
 - -h: Display summary information from the section headers of the object file.
 - -x: Display all available header information, including the symbol table and relocation entries.  Using -x is equivalent to specifying all of -a -f -h -p -r -t.
 - -s: Display the full contents of any sections requested.  By default all non-empty sections are displayed.
-- -d: Display the assembler mnemonics for the machine instructions from           objfile.  This option only disassembles those sections which are expected to contain instructions.
+- -d: Display the assembler mnemonics for the machine instructions from objfile.  This option only disassembles those sections which are expected to contain instructions.
 
 ## size
 size: list section sizes and total size.
