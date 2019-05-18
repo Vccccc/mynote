@@ -371,3 +371,5 @@ EM_M32 | 1 | AT&T WE 32100
 EM_SPARC | 2 | SPARC
 EM_386 | 3 | Intel x86
 
+### 3.4.2 段表
+
