@@ -336,6 +336,8 @@ e_shoff | Start of section headers: 1072 (bytes into file)<br>Section header tab
 e_flags | 标志：0x0<br>Processor-specific flags<br>ELF文件标志位，用来标识一些ELF文件平台相关的属性。相关常量的格式一般为ELF_machine_flag，machine为平台，flag为标志
 e_ehsize | 本头的大小：64 (字节)<br>ELF header size in bytes<br>即ELF文件头本身的大小，这个例子里面为64字节
 e_phentsize | 程序头大小：0 (字节)<br>Program header table entry size
+e_phnum | Number of program headers:  0<br>Program header table entry count
+e_shnum | 
 
 
 
