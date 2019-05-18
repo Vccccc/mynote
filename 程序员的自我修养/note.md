@@ -337,7 +337,8 @@ e_flags | 标志：0x0<br>Processor-specific flags<br>ELF文件标志位，用�
 e_ehsize | 本头的大小：64 (字节)<br>ELF header size in bytes<br>即ELF文件头本身的大小，这个例子里面为64字节
 e_phentsize | 程序头大小：0 (字节)<br>Program header table entry size
 e_phnum | Number of program headers:  0<br>Program header table entry count
-e_shentsize | 
+e_shentsize | 节头大小：64 (字节)<br>Section header table entry size
+
 e_shnum | 
 
 
