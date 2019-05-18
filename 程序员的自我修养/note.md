@@ -175,4 +175,4 @@ movl %eax, array(,%edx,4)
 ## 3.1 目标文件的格式
 PC平台流行的可执行文件格式（Executable）主要是Windows下的PE（Portable Executable）和Linux的ELF（Executable Linkable Format），它们都是COFF（Common file format）的变种。
 
-动态链接库（DLL，Dynamic Linking Library）（Windows的.dll和Linux的.so）及静态链接库（Static Linking Library）（Windows的.lib和Linux的.a）文件都按照可执行文件格式存储。静态链接库稍有不同，它是把很多目标文件捆绑在一起形成
+动态链接库（DLL，Dynamic Linking Library）（Windows的.dll和Linux的.so）及静态链接库（Static Linking Library）（Windows的.lib和Linux的.a）文件都按照可执行文件格式存储。静态链接库稍有不同，它是把很多目标文件捆绑在一起，再加上一些索引形成一个文件。ELF文件标准
