@@ -332,7 +332,7 @@ e_machine | 系统架构:  Advanced Micro Devices X86-64<br>Architecture
 e_version | 版本:  0x1<br>Object file version
 e_entry | 入口点地址：0x0<br>Entry point virtual address<br>操作系统在加载完该程序后从这个地址开始执行进程的指令。可重定位文件一般没有入口地址，则这个值为0
 e_phoff | 程序头起点：0 (bytes into file)<br>Program header table file offset
-e_shoff | Start of section headers: 1072 (bytes into file)<br>Section header table file offset<br>段表在文件中的偏移，上面这个例子是1
+e_shoff | Start of section headers: 1072 (bytes into file)<br>Section header table file offset<br>段表在文件中的偏移，上面这个例子的值是1072，也就是段表从文件的第1073个字节开始
 
 
 
