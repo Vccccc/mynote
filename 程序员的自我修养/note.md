@@ -586,5 +586,29 @@ SHN_UNDEF | 0 | 表示该符号未定义。这个符号表示该符号在本目�
 
 可以直接在程序中使用这些符号：
 ```c
+/*
+ * SpecialSymbol.c
+ */
+#include <stdio.h>
 
+extern char __executable_start[];
+extern char etext[], _etext[], __etext[];
+extern char edata[], _edata[];
+extern char end[], _end[];
+
+int main()
+{
+    printf("Executable Start %X\n", __executable_start);
+    printf("Text End %X %X %X \n", etext, _etext, __etext);
+    printf("Data End %X %X\n", edata, _edata);
+    printf("Executable End %X %X\n", end, _end);
+    return 0;
+}
+
+Output:
+Executable Start 400000
+Text End 40061D 40061D 40061D 
+Data End 601038 601038
+Executable End 601040 601040
 ```
+
