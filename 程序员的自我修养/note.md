@@ -568,4 +568,5 @@ SHN_UNDEF | 0 | 表示该符号未定义。这个符号表示该符号在本目�
 !["符号表"](./chapter3/3.5.1.png)
 第一行Num表示符号表数组的下标，从0开始，共15个字符;第二列Value就是符号值，即st_value;第三列Size为符号大小，即st_size;第四列和第五列分别为符号类型和绑定信息，即对应st_info的底4位和高28位;第六列Vis目前在C/C++语言中未使用;第七列Ndx，即st_shndx，表示该符号所属的段;最后一列是符号名称。第一个符号，即下标为0的符号，永远是一个未定义的符号。
 - func1和main函数都是定义在SimpleSection.c里面的，它们所在的位置都为代码段，所以Ndx为1,即SimpleSection.o里面，.text段的下标为1.它们是函数，所以类型为STT_FUNC;它们是全局可见的，所以是STB_GLOBAL;Size表示函数指令所占的字节数;Value表示相对于代码段起始位置的偏移量。
-- printf
+- printf这个符号在SimpleSection.c里面被引用，但是没有被定义。所以它的Ndx是SHN_UNDEF。
+- global_init_var是已初始化的全局变量，它被定义在.
