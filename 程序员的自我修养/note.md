@@ -447,4 +447,9 @@ SHF_EXECINSTR | 4 | 表示该段在进程空间中可以被执行，一般指代
 .data1 | SHT_PROGBITS | SHF_ALLOC + SHF_WRITE
 .debug | SHT_PROGBITS | none
 .dynamic | SHT_DYNAMIC | SHF_ALLOC + SHF_WRITE<br>在有些系统下.dynamic段可能是只读的，所以没有SHF_WRITE标志位
-.hash | SHT_HASH
+.hash | SHT_HASH | SHF_ALLOC
+.line | SHT_PROGBITS | none
+.note | SHT_NOTE | none
+.rodata | SHT_PROGBITS | SHF_ALLOC
+.rodata1 | SHT_PROGBITS | SHF_ALLOC
+.shstrtab | 
