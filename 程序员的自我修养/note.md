@@ -555,5 +555,6 @@ STT_TLS | 6 | Symbol is thread-local data object
 **宏定义名** | **值** | **说明**
 :----|:---|:----
 SHN_ABS | 0xfff1 | 表示该符号包含了一个绝对的值。比如表示文件名的符号就属于这种类型。
-SHN_COMMON | 0xfff2 | 表示该符号是一个“COMMON”类型的符号，一般来说，未初始化的全局符号定义
+SHN_COMMON | 0xfff2 | 表示该符号是一个“COMMON”类型的符号，一般来说，未初始化的全局符号定义就是这种类型的。比如SimpleSection.o里面的global_uninit_var
+SHN_UNDEF | 0 | 表示该符号未定义。这个符号表示该符号在本目标文件
 
