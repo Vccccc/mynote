@@ -411,6 +411,5 @@ sh_entsize | Section Entry Size 项的长度<br>有些段包含了一些固定�
 [^1]: 事实上段的名字对于编译器、链接器来说是有意义的，但是对于操作系统来说并没有什么实质的意义，对于操作系统来说，一个段该如何处理取决于它的属性和权限，即由段的类型和段的标志位这两个成员决定。
 [^2]: 涉及映像文件的加载的概念。
 
-
-下图为SimpleSection各个段的位置和长度。SectionTable长度为
+下图为SimpleSection各个段的位置和长度。SectionTable长度为832个字节，它包含了
 !["Section Table及所有段的位置和长度"](./chapter3/3.4.2.2.png)
