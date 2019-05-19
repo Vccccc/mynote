@@ -456,3 +456,5 @@ SHF_EXECINSTR | 4 | 表示该段在进程空间中可以被执行，一般指代
 .strtab | SHT_STRTAB | 如果该ELF文件中有可装载的段需要用到该字符串表，那么该字符串表也将被装载到进程空间，则有SHF_ALLOC标志位
 .symtab | SHT_SYNTAB | 同字符串表
 .text | SHT_PROGBITS | SHF_ALLOC + SHF_EXECINSTR
+
+段的链接信息（sh_link、sh_info）：如果段的类型是与链接相关的，比如重定位表、符号表等，那么sh_link和sh_info这两个成员所包含的
