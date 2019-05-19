@@ -423,4 +423,7 @@ SHT_SYMTAB | 2 | 表示该段的内容为符号表
 SHT_STRTAB | 3 | 表示该段的内容为字符串表
 SHT_RELA | 4 | 重定位表。该段包含了重定位信息
 SHT_HASH | 5 | 符号表的哈希表
-SHT_DYNAMIC | 
+SHT_DYNAMIC | 6 | 动态链接信息
+SHT_NOTE | 7 | 提示性信息
+SHT_NOBITS | 8 | 
+SHT_REL | 9 | 
