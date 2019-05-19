@@ -467,4 +467,4 @@ SHT_SYMTAB<br>SHT_DYNSYM  | 操作系统相关的 | 操作系统相关的
 other | SHN_UNDEF | 0
 
 ### 3.4.3 重定位表
-SimpleSection中有一个叫做.rel.text的段，它的类型(sh_type)为"RELA"，说明它是一个重定位表（Relocation Table）。链接器在处理目标文件时，
+SimpleSection中有一个叫做.rel.text的段，它的类型(sh_type)为"RELA"，说明它是一个重定位表（Relocation Table）。链接器在处理目标文件时，要处理那些代码段和数据段中对绝地地址的引用做重定位。
