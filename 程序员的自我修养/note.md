@@ -559,5 +559,5 @@ SHN_COMMON | 0xfff2 | 表示该符号是一个“COMMON”类型的符号，一�
 SHN_UNDEF | 0 | 表示该符号未定义。这个符号表示该符号在本目标文件被引用了，但是定义在其他目标文件中
 
 符号值（st_value）：每个符号都有一个对应的值：
-- 在目标文件中，如果是符号的定义并且该符号不是“COMMON”类型的(即st_shndx不为SHN_COMMON)，则st_value表示该符号在段中的偏移。即符号对应的函数或者
+- 在目标文件中，如果是符号的定义并且该符号不是“COMMON”类型的(即st_shndx不为SHN_COMMON)，则st_value表示该符号在段中的偏移。即符号对应的函数或者变量位于由st_shndx指定的段，偏移st_value的位置。这是目标文件中定义全局变量的符号的最常见情况，比如SimpleSection.o中的“func1
 
