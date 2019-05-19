@@ -572,4 +572,8 @@ SHN_UNDEF | 0 | 表示该符号未定义。这个符号表示该符号在本目�
 - global_init_var是已初始化的全局变量，它被定义在.data段，即下标为3.
 - global_uninit_var是未初始化的全局变量，它是一个SHN_COMMON类型的符号，它本身并没有存在于BSS段。
 - static_var.1840和static_var2.1841是两个静态变量，它们的绑定属性是STB_LOCAL，即只是编译单元内部可见。它们的变量名由static_var和static_var2变成了static_var.1840和static_var2.1841是因为符号修饰机制。
-- 对于那些STT_SECTION类型的符号，它们表示下标为Ndx的段的段名。比如二号符号的Ndx为1,那么它就是表示.text段的段名，该符号的符号名应该就是“.t
+- 对于那些STT_SECTION类型的符号，它们表示下标为Ndx的段的段名。比如二号符号的Ndx为1,那么它就是表示.text段的段名，该符号的符号名应该就是“.text”。
+- “SimpleSection.c”这个符号表示编译单元的源文件名。
+
+# 3.5.2 特殊符号
+
