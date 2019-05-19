@@ -548,5 +548,6 @@ STT_OBJECT | 1 | 该符号是个数据对象，比如变量、数组等
 STT_FUNC  | 2 | 该符号是个函数或其他可执行代码
 STT_SECTION | 3 | 该符号表示一个段，这种符号必须是STB_LOCAL的
 STT_FILE | 4 | 该符号表示文件名，一般都是该目标文件所对应的源文件名，它一定是STB_LOCAL类型的，并且它的st_shndx一定是SHN_ABS
+STT_COMMON | 
 
 
