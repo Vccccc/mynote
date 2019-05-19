@@ -452,4 +452,5 @@ SHF_EXECINSTR | 4 | 表示该段在进程空间中可以被执行，一般指代
 .note | SHT_NOTE | none
 .rodata | SHT_PROGBITS | SHF_ALLOC
 .rodata1 | SHT_PROGBITS | SHF_ALLOC
-.shstrtab | 
+.shstrtab | SHT_STRTAB | none
+.strtab | SHT_STRTAB | 如果该ELF文件中有可装载的段需要用到
