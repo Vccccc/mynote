@@ -15,7 +15,7 @@ Options:
 readelf: Displays information about ELF files.
 Options:
 - -h: Displays the information contained in the ELF header at the start of the file.
-- -s: 
+- -s:  Displays the entries in symbol table section of the file, if it has one.
 - -S: Displays the information contained in the file's section headers, if it has any.
 
 ## nm list symbols from object files
