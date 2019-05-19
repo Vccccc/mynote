@@ -442,4 +442,8 @@ SHF_EXECINSTR | 4 | 表示该段在进程空间中可以被执行，一般指代
 **Name** | **sh_type** | **sh_flag**
 :------|:---------|:-----------
 .bss | SHT_NOBITS | SHF_ALLOC + SHF_WRITE
-.comment | SHT_PROGBITS | non
+.comment | SHT_PROGBITS | none
+.data | SHT_PROGBITS | SHF_ALLOC + SHF_WRITE
+.data1 | SHT_PROGBITS | SHF_ALLOC + SHF_WRITE
+.debug | SHT_PROGBITS | none
+.dyna
