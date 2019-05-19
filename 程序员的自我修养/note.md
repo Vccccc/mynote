@@ -467,3 +467,4 @@ SHT_SYMTAB<br>SHT_DYNSYM  | 操作系统相关的 | 操作系统相关的
 other | SHN_UNDEF | 0
 
 ### 3.4.3 重定位表
+SimpleSection中有一个叫做.rel.t
