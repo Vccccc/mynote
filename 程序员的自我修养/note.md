@@ -462,4 +462,5 @@ SHF_EXECINSTR | 4 | 表示该段在进程空间中可以被执行，一般指代
 :------|:---------|:-----------
 SHT_DYNAMIC | 该段所使用的字符串表在段表中的下标 | 0
 SHT_HASH | 该段所使用的符号表在段表中的下标 | 0
-SHT_REL<br>SHT_
+SHT_REL<br>SHT_RELA | 该段所使用的相应符号表在段表中的下标 | 该重定位表所作用的段在段表中的下标
+SHT_SYMTAB<SHT_DYNSYM
