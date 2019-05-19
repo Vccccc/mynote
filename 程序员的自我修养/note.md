@@ -414,4 +414,4 @@ sh_entsize | Section Entry Size 项的长度<br>有些段包含了一些固定�
 下图为SimpleSection各个段的位置和长度。SectionTable长度为0x340,也就是832(64*13)个字节，它包含了13个段描述符，每个描述符为64字节，这个长度刚好等于sizeof(Elf64_Shdr)。整个文件以SectionTable结束，长度为0x770，即1904字节，刚好是整个SimpleSection.o的文件长度。
 !["Section Table及所有段的位置和长度"](./chapter3/3.4.2.2.png)
 
-段的类型（sh_type）：段的名字只是在链接和编译过程中有意义，但它不能表示真正地表示段的类型。我们也可以命名一个数据段名为.text
+段的类型（sh_type）：段的名字只是在链接和编译过程中有意义，但它不能表示真正地表示段的类型。我们也可以命名一个数据段名为.text，但对于编译器和链接器来说，主要决定段的属性的是段的类型(sh_type)和段的标志位(sh_falgs)。段的类型相关
