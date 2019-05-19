@@ -421,4 +421,6 @@ SHT_NULL | 0 | 无效段
 SHT_PROGBITS | 1 | 程序段。代码段、数据段都是这种类型
 SHT_SYMTAB | 2 | 表示该段的内容为符号表
 SHT_STRTAB | 3 | 表示该段的内容为字符串表
-SHT_REAL | 4 | 
+SHT_RELA | 4 | 重定位表。该段包含了重定位信息
+SHT_HASH | 5 | 符号表的哈希表
+SHT_DYNAMIC | 
