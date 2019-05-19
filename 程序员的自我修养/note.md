@@ -470,4 +470,5 @@ other | SHN_UNDEF | 0
 SimpleSection中有一个叫做.rel.text的段，它的类型(sh_type)为"RELA"，说明它是一个重定位表（Relocation Table）。链接器在处理目标文件时，要处理那些代码段和数据段中对绝地地址的引用做重定位。这些重定位信息都记录在ELF文件的重定位表里。对于每个需要重定位的代码段或数据段，都会有一个相应的重定位表。比如SimpleSection.o中的“.rel.text”就是针对“.text”段的重定位表，因为“.text”段中至少有一个绝对地址的引用，那就是对“printf”函数的调用;而“.data”段则没有绝对地址的引用，它只包含了几个常量，所以SimpleSection.o中没有针对“.data”段的重定位表“.rel.data”。
 一个重定位表同时也是ELF的一个段，那么这个段的类型（sh_type）就是“SHT_REL”类型，它的“sh_link”表示符号表的下标，它的“sh_info”表示它作用于哪个段。比如“.rel.text”作用于“.text”段，而“.text”段的下标为“1”，那么“.rel.text”的“sh_info”为“1”。
 
-#
+### 3.4.4 字符串表
+ELF文件中用到了很多字符串，比如段名、
