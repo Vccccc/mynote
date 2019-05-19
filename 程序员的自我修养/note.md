@@ -412,4 +412,4 @@ sh_entsize | Section Entry Size 项的长度<br>有些段包含了一些固定�
 [^2]: 涉及映像文件的加载的概念。
 
 
-
+!["Section Table及所有段的位置和长度"](./chapter3/3.4.2.2.png)
