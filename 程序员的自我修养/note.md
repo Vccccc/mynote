@@ -522,4 +522,7 @@ typedef struct
   Elf64_Xword	st_size;		/* Symbol size */
 } Elf64_Sym;
 ```
+成员的定义如下表：
+**成员** | 
+:------------|:---------------
 
