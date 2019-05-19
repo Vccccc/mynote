@@ -17,6 +17,8 @@ Options:
 - -h: Displays the information contained in the ELF header at the start of the file.
 - -S: Displays the information contained in the file's section headers, if it has any.
 
+## nm
+
 # Chapter 1 温故而知新
 ### 1.5 使用虚拟内存的原因
 不使用虚拟内存的缺点：
@@ -503,4 +505,5 @@ ELF文件中用到了很多字符串，比如段名、变量等。因为字符�
 - 行号信息，即目标文件指令与源代码中代码行的对应关系，它也是可选的。
 
 可以通过使用“nm”来查看ELF文件的符号表，比如“SimpleSection.o”的符号表：
-!["
+!["符号表"](./chapter3/3.5.png)
+
