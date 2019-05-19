@@ -564,5 +564,6 @@ SHN_UNDEF | 0 | 表示该符号未定义。这个符号表示该符号在本目�
 - 在目标文件中，如果符号是“COMMOM”类型的(即st_shndx为SHN_COMMON)，则st_value表示该符号的对齐属性。比如SimpleSection.o中的“global_uninit_var”。
 - 在可执行文件中，st_value表示符号的虚拟地址。这个虚拟地址对于动态链接器来说十分有用。
 
-
+可以通过使用readelf工具查看ELF文件的符号：
 !["符号表"](./chapter3/3.5.1.png)
+第一行
