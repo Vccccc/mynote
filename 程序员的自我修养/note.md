@@ -425,5 +425,7 @@ SHT_RELA | 4 | 重定位表。该段包含了重定位信息
 SHT_HASH | 5 | 符号表的哈希表
 SHT_DYNAMIC | 6 | 动态链接信息
 SHT_NOTE | 7 | 提示性信息
-SHT_NOBITS | 8 | 
-SHT_REL | 9 | 
+SHT_NOBITS | 8 | 表示该段在文件中没有内容，比如.bss段
+SHT_REL | 9 |  该段包含了重定位信息
+SHT_SHLIB | 10 | 保留
+SHT_DNYSYM | 11 | 动态链接的符号表
