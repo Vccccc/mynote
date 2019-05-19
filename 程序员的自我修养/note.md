@@ -429,3 +429,5 @@ SHT_NOBITS | 8 | 表示该段在文件中没有内容，比如.bss段
 SHT_REL | 9 |  该段包含了重定位信息
 SHT_SHLIB | 10 | 保留
 SHT_DNYSYM | 11 | 动态链接的符号表
+
+段的标志位
