@@ -570,4 +570,4 @@ SHN_UNDEF | 0 | 表示该符号未定义。这个符号表示该符号在本目�
 - func1和main函数都是定义在SimpleSection.c里面的，它们所在的位置都为代码段，所以Ndx为1,即SimpleSection.o里面，.text段的下标为1.它们是函数，所以类型为STT_FUNC;它们是全局可见的，所以是STB_GLOBAL;Size表示函数指令所占的字节数;Value表示相对于代码段起始位置的偏移量。
 - printf这个符号在SimpleSection.c里面被引用，但是没有被定义。所以它的Ndx是SHN_UNDEF。
 - global_init_var是已初始化的全局变量，它被定义在.data段，即下标为3.
-- global_uninit_var是未初始化
+- global_uninit_var是未初始化的全局变量，它是一个SHN_COMMON类型的符号，它本身并没有存在于BSS段;关于未初始化的全局变量
