@@ -485,4 +485,4 @@ ELF文件中用到了很多字符串，比如段名、变量等。因为字符�
 6 | world
 12 | Myvariable
 
-通过这种方法，在ELF文件中引用字符串只需给出一个数字下标即可，不用考虑字符串长度的问题。一般字符串表在ELF文件中也以段的形式保存，常见的段名为“.strtab”或“.shstrtab”。这两个字符串表分别为字符串表（String Table）和段表字符串表（Section Header String Table）
+通过这种方法，在ELF文件中引用字符串只需给出一个数字下标即可，不用考虑字符串长度的问题。一般字符串表在ELF文件中也以段的形式保存，常见的段名为“.strtab”或“.shstrtab”。这两个字符串表分别为字符串表（String Table）和段表字符串表（Section Header String Table）。顾名思义，字符串表用来保存最普通的字符串，比如符号的名字;段表字符串表用来保存段表中用到的字符串，最常见的就是段名(sh_name)。
