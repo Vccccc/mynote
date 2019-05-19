@@ -15,6 +15,7 @@ Options:
 readelf: Displays information about ELF files.
 Options:
 - -h: Displays the information contained in the ELF header at the start of the file.
+- -s: 
 - -S: Displays the information contained in the file's section headers, if it has any.
 
 ## nm list symbols from object files
@@ -561,5 +562,7 @@ SHN_UNDEF | 0 | 表示该符号未定义。这个符号表示该符号在本目�
 符号值（st_value）：每个符号都有一个对应的值：
 - 在目标文件中，如果是符号的定义并且该符号不是“COMMON”类型的(即st_shndx不为SHN_COMMON)，则st_value表示该符号在段中的偏移。即符号对应的函数或者变量位于由st_shndx指定的段，偏移st_value的位置。这是目标文件中定义全局变量的符号的最常见情况，比如SimpleSection.o中的“func1”、“main”和“global_init_var”。
 - 在目标文件中，如果符号是“COMMOM”类型的(即st_shndx为SHN_COMMON)，则st_value表示该符号的对齐属性。比如SimpleSection.o中的“global_uninit_var”。
-- 在可执行文件中，st_value表示符号的虚拟地址。这个虚拟地址对于动态链接器
+- 在可执行文件中，st_value表示符号的虚拟地址。这个虚拟地址对于动态链接器来说十分有用。
+
+
 
