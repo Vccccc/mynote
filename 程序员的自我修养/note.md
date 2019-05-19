@@ -571,4 +571,4 @@ SHN_UNDEF | 0 | 表示该符号未定义。这个符号表示该符号在本目�
 - printf这个符号在SimpleSection.c里面被引用，但是没有被定义。所以它的Ndx是SHN_UNDEF。
 - global_init_var是已初始化的全局变量，它被定义在.data段，即下标为3.
 - global_uninit_var是未初始化的全局变量，它是一个SHN_COMMON类型的符号，它本身并没有存在于BSS段。
-- static_var.1840和static_var2.1841是两个静态变量，它们的绑定属性是STB_LOCAL，即只是编译单元内部可见。
+- static_var.1840和static_var2.1841是两个静态变量，它们的绑定属性是STB_LOCAL，即只是编译单元内部可见。它们的变量名由static_var和static_var2变成static_var.1840static_var2.1841
