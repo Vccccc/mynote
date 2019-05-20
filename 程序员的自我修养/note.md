@@ -617,4 +617,8 @@ Executable End 601040 601040
 
 #### C++符号修饰
 因为C\++拥有类、继承、虚机制、重载、名称空间等特性，它们使得符号管理更为复杂。最简单的例子，两个相同名字的函数func(int)和func(double)，尽管函数名相同，但是参数列表不同。为了编译器和链接器在链接过程中区分这些符号，人们发明了符号修饰(Name Decoration)或符号改编(Name Mangling)的机制。
-
+比如下面的代码：
+```c
+int func(int);
+float func(flo
+```
