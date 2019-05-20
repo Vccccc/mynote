@@ -620,5 +620,19 @@ Executable End 601040 601040
 比如下面的代码：
 ```c
 int func(int);
-float func(flo
+float func(float);
+
+class C
+{
+  int func(int);
+  class C2
+  {
+    int func(int);
+  };
+};
+
+namespace N
+{
+  int func(int
+}
 ```
