@@ -650,4 +650,4 @@ int C::C2::func(int) | _ZN1C2C24funcEi
 int N::func(int) | _ZN1N4funcEi
 int N::C::func(int) | _ZN1N1C4funcEi
 
-GCC的基本C\++名称修饰方法如下：
+GCC的基本C\++名称修饰方法如下：所有的符号都以“_Z”开头，对于嵌套的名字（在名称空间或者类里面的），后面紧跟“N”，然后是各个名称空间和类的
