@@ -21,7 +21,8 @@ Options:
 ## nm list symbols from object files
 Options:
 
-
+## c++filt
+c++filt: Demangle C++ and Java symbols.
 # Chapter 1 温故而知新
 ### 1.5 使用虚拟内存的原因
 不使用虚拟内存的缺点：
