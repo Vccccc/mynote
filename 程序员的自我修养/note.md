@@ -647,4 +647,7 @@ int func(int) | _Z4funci
 float func(float) | _Z4funcf
 int C::func(int) | _ZN1C4funcEi
 int C::C2::func(int) | _ZN1C2C24funcEi
-int N::func(int) | Z_
+int N::func(int) | _ZN1N4funcEi
+int N::C::func(int) | _ZN1N1C4funcEi
+
+GCC的基本C\++名称修饰方法如下：
