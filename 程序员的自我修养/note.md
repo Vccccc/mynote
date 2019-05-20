@@ -633,6 +633,11 @@ class C
 
 namespace N
 {
-  int func(int
+  int func(int);
+  class C
+  {
+    int func(int);
+  }
 }
 ```
+代码中共有6个同名函数叫func，只不过它们的返回类型
