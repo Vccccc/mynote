@@ -677,4 +677,4 @@ C\++编译器会将extern "C"的大括号内部的代码当作C语言代码处�
 
 很多时候会碰到有些头文件声明了一些C语言的函数和全局变量，但是这个头文件可能会被C语言代码或者C\++代码包含。比如很常见的，C语言库函数中的string.h中声明了memset函数，它如原型如下：
 void* memset(void*, int, size_t);
-如果不加任何处理，当C语言程序包含string.h时，并且用到了memset这个函数，编译器会将memset符号引用正确处理;但是在C\++语言中，编译器会认为这个memset函数是一个C\++函数，将memset的符号修成_Z6memsetPvii，这样链接器就无法与C语言库中的memset符号进行链接。所以对于C\++来说，必须使用extern "C"来声明memset这个函数。但是C语言又不支持extern "C"语法，如果为了兼容C
+如果不加任何处理，当C语言程序包含string.h时，并且用到了memset这个函数，编译器会将memset符号引用正确处理;但是在C\++语言中，编译器会认为这个memset函数是一个C\++函数，将memset的符号修成_Z6memsetPvii，这样链接器就无法与C语言库中的memset符号进行链接。所以对于C\++来说，必须使用extern "C"来声明memset这个函数。但是C语言又不支持extern "C"语法，如果为了兼容C语言和C\++语言定义两套头文件，未免过于麻烦。所以有一种方法可以解决上述问题，
