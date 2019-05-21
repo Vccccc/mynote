@@ -782,5 +782,6 @@ void swap(int* a, int* b)
 
 使用gcc将“a.o”和“b.o”链接起来：
 $gcc a.o b.o -nostartfiles -e main -o ab
-- -e main，表示将main函数作为程序入口，ld链接器默认的程序入口为_start。
+- -nostartfiles -e main，表示将main函数作为程序入口，ld链接器默认的程序入口为_start。
 - -o ab，表示链接输出文件名为ab，默认为a.out。
+- 
