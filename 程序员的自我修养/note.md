@@ -732,4 +732,5 @@ int main()
 
 在Linux程序的设计中，如果一个程序被设计成可以支持单线程或者多线程的模式，就可以通过弱引用的方法来判断当前的程序是链接到了单进程的Glibc库还是多进程的Glibc库（是否在编译时有-lpthread选项），从而执行单线程版本的程序或多线程版本的程序。可以通过在程序中定义一个pthread_create函数的弱引用，然后程序在运行时动态判断是否链接到pthread库从而决定执行多线程版本还是单线程版本：
 ```c
-#include <
+#include <stdio.h>
+#include <pthread.h>
