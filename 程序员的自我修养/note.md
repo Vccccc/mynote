@@ -796,4 +796,21 @@ Idx Name          Size      VMA               LMA               File off  Algn
 ...
 
 $ objdump -h b.o
+...
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         0000004b  0000000000000000  0000000000000000  00000040  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000004  0000000000000000  0000000000000000  0000008c  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+...
+
+$ objdump -h ab
+...
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+ 9 .text         0000009a  0000000000400350  0000000000400350  00000350  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+...
 ```
