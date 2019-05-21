@@ -676,4 +676,5 @@ extern "C"
 C\++编译器会将extern "C"的大括号内部的代码当作C语言代码处理。所以以上代码中，C\++的名称修饰机制不会起作用。
 
 很多时候会碰到有些头文件声明了一些C语言的函数和全局变量，但是这个头文件可能会被C语言代码或者C\++代码包含。比如很常见的，C语言库函数中的string.h中声明了memset函数，它如原型如下：
-void* memset(void*, int, size_t
+void* memset(void*, int, size_t);
+如果不加任何处理，当C语言程序包含string.h时，并且用到了memset这个函数，编译器会将memset符号引用正确处理;但是在C
