@@ -14,3 +14,7 @@ __attribute__ ((section("Foo"))) int global = 42;
 #### __attribute__ ((weak))
 定义任何一个强符号为弱符号
 __attribute__((weak)) weak2 = 2;
+
+
+#### __attribute__ ((weakref))
+声明一个外部
