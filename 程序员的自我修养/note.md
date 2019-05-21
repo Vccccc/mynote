@@ -784,4 +784,16 @@ void swap(int* a, int* b)
 $gcc a.o b.o -nostartfiles -e main -o ab
 - -nostartfiles -e main，表示将main函数作为程序入口，ld链接器默认的程序入口为_start。
 - -o ab，表示链接输出文件名为ab，默认为a.out。
-- 
+```c
+$ objdump -h a.o
+...
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         0000004f  0000000000000000  0000000000000000  00000040  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  0000000000000000  0000000000000000  0000008f  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+...
+
+$ objdump -h b.o
+```
