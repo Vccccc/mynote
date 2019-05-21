@@ -686,5 +686,7 @@ extern "C" {
 void* memset(void*, int, size_t);
 
 #ifdef __cplusplus
-
+}
+#endif
 ```
+如果当前编译单元是C\++代码，那么memset会在extern "C"里面被声明;如果是C代码，就直接声明。上面这段
