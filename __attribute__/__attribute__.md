@@ -17,4 +17,5 @@ __attribute__((weak)) weak2 = 2;
 
 
 #### __attribute__ ((weakref))
-声明一个外部
+声明一个外部的引用为弱引用
+__attribute__((weakref)) void foo();
