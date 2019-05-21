@@ -12,5 +12,5 @@ struct s{ char ch; int a; } __attribute__ ((__packed__));  sizeof(int) = 4; size
 __attribute__ ((section("Foo"))) int global = 42;
 
 #### __attribute__ ((weak))
-定义任何一个强符号编程弱符号
+定义任何一个强符号为弱符号
 __attribute__((weak)) weak2 = 2;
