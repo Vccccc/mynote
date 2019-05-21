@@ -783,4 +783,4 @@ void swap(int* a, int* b)
 使用ld链接器将“a.o”和“b.o”链接起来：
 $ld a.o b.o -e main -o ab
 - -e main，表示将main函数作为程序入口，ld链接器默认的程序入口为_start。
-- -o ab
+- -o ab，表示链接输出文件名为ab，默认为a.out。
