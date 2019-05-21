@@ -702,6 +702,7 @@ __attribute__((weak)) weak2 = 2;
 
 int main()
 {
-  reutnr
-
+  return 0;
+}
 ```
+上面这段程序中，“weak”和“weak2”是弱符号，“strong”和“main”是强符号，而“ext”既非强符号也非弱符号，
