@@ -35,5 +35,8 @@ ForwardIt upper_bound(ForwardIt first, ForwardIt last, const T& value)
 
 # iterator
 ### advance
-Prop
+Prototype: 
+template< class InputIt, class Distance >
+constexpr void advance( InputIt& it, Distance n );
+
 Description:
