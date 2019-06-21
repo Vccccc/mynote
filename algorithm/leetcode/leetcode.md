@@ -10,4 +10,11 @@ extra memory?
 
 代码：
 ```c
+int singleNumber(const vector<int> & nums)
+	{
+		int x = 0;
+		for (auto i& nums)
+			x ^= i;
+		return x;
+	}
 ```
