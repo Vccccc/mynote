@@ -44,7 +44,7 @@ Implementation:
 ```c
 template<typename ForwardIt first, ForwardIt last, const T& value)
 {
-  
+  typename iterator_traits<ForwardIt>::diffrence_type count, step;
 }
 ```
 
