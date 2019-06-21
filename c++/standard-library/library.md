@@ -40,3 +40,5 @@ template< class InputIt, class Distance >
 constexpr void advance( InputIt& it, Distance n );
 
 Description:
+Increments given iterator it by n elements.
+If n is negative, the iterator is decremented.
