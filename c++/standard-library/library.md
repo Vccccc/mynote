@@ -24,6 +24,7 @@ ForwardIt upper_bound(ForwardIt first, ForwardIt last, const T& value)
     {
       count = step;
     }
-  
+  }
+  return first;
 }
 ```
