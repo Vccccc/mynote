@@ -18,6 +18,7 @@ ForwardIt upper_bound(ForwardIt first, ForwardIt last, const T& value)
   while(count > 0)
   {
     it = first;
+    step = count / 2;
     std::advance(it, step);
     if(!(value < *it))
     {
