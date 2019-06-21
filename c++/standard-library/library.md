@@ -1,4 +1,4 @@
-# Algorithms
+# algorithm
 ### sort
 template< class RandomIt >
 constexpr void sort( RandomIt first, RandomIt last );
@@ -34,3 +34,6 @@ ForwardIt upper_bound(ForwardIt first, ForwardIt last, const T& value)
 ```
 
 # iterator
+### advance
+Prop
+Description:
