@@ -4,7 +4,6 @@ template< class RandomIt >
 constexpr void sort( RandomIt first, RandomIt last );
 
 ### upper_bound  lower_bound 
-```c
 Description:
 Returns an iterator pointing to the first element in the range [first, last) that is greater than value, or last if no such element is found.
 
