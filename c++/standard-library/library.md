@@ -8,5 +8,6 @@ constexpr void sort( RandomIt first, RandomIt last );
 template<typename ForwardIt, typename T>
 ForwardIt upper_bound(ForwardIt first, ForwardIt last, const T& value)
 {
+
 }
 ```
