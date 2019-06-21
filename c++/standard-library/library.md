@@ -46,9 +46,12 @@ template<typename ForwardIt first, ForwardIt last, const T& value)
 {
   typename iterator_traits<ForwardIt>::diffrence_type count, step;
   Forward it;
+  count = std::distance(first, last);
   while(count > 0)
   {
-    
+    it = first;
+    step = count / 2;
+    std::advance(it, step);
 }
 ```
 
