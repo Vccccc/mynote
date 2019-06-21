@@ -55,7 +55,14 @@ template<typename ForwardIt first, ForwardIt last, const T& value)
     if(value < *it)
     {
       first = ++it;
-      
+      count -= step + 1;
+    }
+    else
+    {
+      count = step;
+    }
+  }
+  return first;
 }
 ```
 
