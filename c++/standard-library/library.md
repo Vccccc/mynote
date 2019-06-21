@@ -9,6 +9,6 @@ template<typename ForwardIt, typename T>
 ForwardIt upper_bound(ForwardIt first, ForwardIt last, const T& value)
 {
   ForwardIt it;
-  typename typetraits
+  typename std::iterator_traits<ForwardIt>::difference_type count, step;
 }
 ```
