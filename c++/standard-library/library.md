@@ -3,7 +3,7 @@
 template< class RandomIt >
 constexpr void sort( RandomIt first, RandomIt last );
 
-### upper_bound 
+### upper_bound  lower_bound 
 ```c
 Description:
 Returns an iterator pointing to the first element in the range [first, last) that is greater than value, or last if no such element is found.
@@ -34,6 +34,11 @@ ForwardIt upper_bound(ForwardIt first, ForwardIt last, const T& value)
 }
 ```
 
+Description:
+
+Implementation:
+template< class ForwardIt, class T >
+constexpr ForwardIt lower_bound( ForwardIt first, ForwardIt last, const T& value );
 
 
 # iterator
