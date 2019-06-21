@@ -52,7 +52,7 @@ template<typename ForwardIt first, ForwardIt last, const T& value)
     it = first;
     step = count / 2;
     std::advance(it, step);
-    if(value < *it)
+    if(*it < value)
     {
       first = ++it;
       count -= step + 1;
