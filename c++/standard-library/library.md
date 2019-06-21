@@ -15,6 +15,8 @@ ForwardIt upper_bound(ForwardIt first, ForwardIt last, const T& value)
   {
     it = first;
     std::advance(it, step);
-    if(!(*VAL
+    if(!(value < *it))
+    {
+      
 }
 ```
