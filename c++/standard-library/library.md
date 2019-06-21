@@ -6,5 +6,7 @@ constexpr void sort( RandomIt first, RandomIt last );
 ### upper_bound 
 ```c
 template<typename ForwardIt, typename T>
-Forwar
+ForwardIt upper_bound(ForwardIt first, ForwardIt last, const T& value)
+{
+}
 ```
