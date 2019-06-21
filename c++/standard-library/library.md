@@ -13,6 +13,7 @@ ForwardIt upper_bound(ForwardIt first, ForwardIt last, const T& value)
   count = std::distance(first, last);
   while(count > 0)
   {
-    
+    it = first;
+    step = std::advance(it, step);
 }
 ```
