@@ -2,3 +2,4 @@
 
 ## Chapter 2 Introduction to Operating Systems
 #### What did the processor do?
+The processor **fetches** an instructions
