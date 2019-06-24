@@ -14,4 +14,5 @@ Design goals of OS:
 - **Reliability**. OS strive to provide a high degree of reliability.
 - **Energy-efficiency**
 - **Security**. An extension of protection. Against malicious applications is critical, especially in these highly-networked times.
-- **Mobility**. Mobility is increasingly import
+- **Mobility**. Mobility is increasingly important as OSes are run on smaller and smaller
+devices.
