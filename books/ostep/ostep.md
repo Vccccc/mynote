@@ -6,4 +6,4 @@ The processor **fetches** an instruction from memory, **decodes** it, and **exec
 
 ### 2.5 Design goals
 - **Virtualization**. OS takes physical resources, such as a CPU, memory, or disk, and **virtualizes** them.
-- 
+- **Concurrency**. OS handles tough
