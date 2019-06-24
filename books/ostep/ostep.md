@@ -9,5 +9,6 @@ Design goals of OS:
 - **Virtualization**. OS takes physical resources, such as a CPU, memory, or disk, and **virtualizes** them.
 - **Concurrency**. OS handles tough and tricky issues related to **concurrency**.
 - **Persistence**. OS stores files persistently.
-- High performance. 
-- Protection. OS provides **protection** between   applications, as well as between the OS and applications. **isolating** processes from one another is the key to protection and thus underlies much of what an OS must do.
+- **High performance**. 
+- **Protection**. OS provides **protection** between   applications, as well as between the OS and applications. **isolating** processes from one another is the key to protection and thus underlies much of what an OS must do.
+- 
