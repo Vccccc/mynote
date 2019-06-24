@@ -11,4 +11,4 @@ Design goals of OS:
 - **Persistence**. OS stores files persistently.
 - **High performance**. 
 - **Protection**. OS provides **protection** between   applications, as well as between the OS and applications. **isolating** processes from one another is the key to protection and thus underlies much of what an OS must do.
-- 
+- **Reliability**. 
