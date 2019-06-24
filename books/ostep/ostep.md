@@ -5,3 +5,4 @@
 The processor **fetches** an instruction from memory, **decodes** it, and **executes** it.
 
 ### 2.5 Design goals
+- OS takes physics
