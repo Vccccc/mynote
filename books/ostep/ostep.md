@@ -12,5 +12,6 @@ Design goals of OS:
 - **High performance**. 
 - **Protection**. OS provides **protection** between applications, as well as between the OS and applications. **isolating** processes from one another is the key to protection and thus underlies much of what an OS must do.
 - **Reliability**. OS strive to provide a high degree of reliability.
-- **energy-efficiency**
-- **security**. An extension of protection. Against malicious applications is critical, especially in these high
+- **Energy-efficiency**
+- **Security**. An extension of protection. Against malicious applications is critical, especially in these highly-networked times.
+- **Mo
