@@ -10,4 +10,4 @@ Design goals of OS:
 - **Concurrency**. OS handles tough and tricky issues related to **concurrency**.
 - **Persistence**. OS stores files persistently.
 - High performance. 
-- Protect
+- Protection. OS provides **prot
