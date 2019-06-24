@@ -3,3 +3,5 @@
 ## Chapter 2 Introduction to Operating Systems
 ##### What did the processor do?
 The processor **fetches** an instruction from memory, **decodes** it, and **executes** it.
+
+### 2.5 Design goals
