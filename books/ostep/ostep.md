@@ -17,4 +17,4 @@ Design goals of OS:
 - **Mobility**. Mobility is increasingly important as OSes are run on smaller and smaller
 devices.
 
-## Chapter 3 Virtualization
+## Chapter 4 Virtualization
