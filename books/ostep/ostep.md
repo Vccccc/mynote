@@ -18,4 +18,4 @@ Design goals of OS:
 devices.
 
 ## 4 The Abstraction: The Process
-To virtualization of the CPU, the OS will need both some 
+To virtualization of the CPU, the OS will need both some low-level machinery and high-level intelligence.
