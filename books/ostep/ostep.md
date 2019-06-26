@@ -18,3 +18,4 @@ Design goals of OS:
 devices.
 
 ## 4 The Abstraction: The Process
+For virtualization
