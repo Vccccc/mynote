@@ -22,6 +22,6 @@ To virtualization of the CPU, the OS will need both some low-level machinery and
 
 **context switch** is a mechanism, which gives the OS the ability to stop running one program and start running another on a given CPU. this **time-sharing** mechanism is employed by all modern OSes.
 
-On top of these mechanisms resides some of the intelligence in the OS, in the form of policies. Policies are algorithms for making some kind of decision within the OS. For example, given a number of possible programs to run on a CPU, which program should the OS run? A scheduling policy in the OS will make this decision, likely using historical information (e.g., which program has run more over the last minute?),
+On top of these mechanisms resides some of the intelligence in the OS, in the form of policies. **Policies** are algorithms for making some kind of decision within the OS. For example, given a number of possible programs to run on a CPU, which program should the OS run? A scheduling policy in the OS will make this decision, likely using historical information (e.g., which program has run more over the last minute?),
 workload knowledge (e.g., what types of programs are run), and performance metrics (e.g., is the system optimizing for interactive performance,
 or throughput?) to make its decision.
