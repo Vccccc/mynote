@@ -17,4 +17,4 @@ Design goals of OS:
 - **Mobility**. Mobility is increasingly important as OSes are run on smaller and smaller
 devices.
 
-## 4 The Abstraction CPU
+## 4 The Abstraction: The Process
