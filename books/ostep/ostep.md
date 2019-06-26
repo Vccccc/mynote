@@ -18,4 +18,4 @@ Design goals of OS:
 devices.
 
 ## 4 The Abstraction: The Process
-To virtualization of the CPU, the OS will need both some low-level machinery and high-level intelligence. We call low-level machinery mechanisms; mechanisms are low-level methods or protocols that implement a needed piece of functiona
+To virtualization of the CPU, the OS will need both some low-level machinery and high-level intelligence. We call low-level machinery mechanisms; **mechanisms** are low-level methods or protocols that implement a needed piece of functionality.
