@@ -20,4 +20,4 @@ devices.
 ## 4 The Abstraction: The Process
 To virtualization of the CPU, the OS will need both some low-level machinery and high-level intelligence. We call low-level machinery mechanisms; **mechanisms** are low-level methods or protocols that implement a needed piece of functionality.
 
-**context switch** is a mechanism, which gives the OS the ability to stop running one program 
+**context switch** is a mechanism, which gives the OS the ability to stop running one program and start running another on a given CPU. this **time-sharing** mechanism is 
