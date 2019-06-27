@@ -17,7 +17,7 @@ Design goals of OS:
 - **Mobility**. Mobility is increasingly important as OSes are run on smaller and smaller
 devices.
 
-## 4 
+## 4 The Abstraction: The Process 
 To virtualization of the CPU, the OS will need both some low-level machinery and high-level intelligence. We call low-level machinery mechanisms; **mechanisms** are low-level methods or protocols that implement a needed piece of functionality.
 
 **context switch** is a mechanism, which gives the OS the ability to stop running one program and start running another on a given CPU. this **time-sharing** mechanism is employed by all modern OSes.
@@ -26,4 +26,4 @@ On top of these mechanisms resides some of the intelligence in the OS, in the fo
 workload knowledge (e.g., what types of programs are run), and performance metrics (e.g., is the system optimizing for interactive performance,
 or throughput?) to make its decision.
 
-## 4 The Abstraction: The Process
+## 4.1 The Abstraction: A Process
