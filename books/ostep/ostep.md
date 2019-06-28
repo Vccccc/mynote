@@ -53,4 +53,4 @@ By loading the code and static data into memory, by creating and initializing a 
 ### 4.4 Process State
 A process can be in one of three states:
 >**Running**: In the running state, a process is running on processor. This means it is executing  instructions.
->**Ready**: In the ready state, a process is ready to run but for some reson
+>**Ready**: In the ready state, a process is ready to run but for some reason the OS has chosen not to run it at the given moment
