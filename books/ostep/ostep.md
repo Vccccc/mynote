@@ -47,3 +47,8 @@ The first thing that the OS must do to run a program is to **load** its code and
 Some memroy must be allocated for the program's **run-time stack**(or just **stack**). C programs use the stack for local variables, function parameters, and return address; the OS allocates this memory and gives it to the process.
 
 The OS will also do some other initialization tasks, particularly as related to input/output (I/O). For example, in UNIX systems, each process by default has three open file descriptors, for standard input, output, and error; these descriptors let programs easily read input from the terminal and print output to the screen.
+
+By loading the code and static data into memory, by creating and initializing a stack, and by doing other work as related to I/O setup, the OS
+has now (finally) set the stage for program execution. It thus has one last
+task: to start the program running at the entry point, namely main(). By
+jumping to the main() routine (through a specialized mechanism that we will discuss next chapter), the OS transfers control of the CPU to the newly-created process, and thus the program begins its execution.
