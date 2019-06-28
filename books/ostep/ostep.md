@@ -32,5 +32,5 @@ What constitutes a process?
 
 **machine state**: What a program can read or update when it is running.
 
-What parts of 
+What parts of the machine are important to the execution 
 
