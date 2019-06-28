@@ -42,4 +42,4 @@ Note that there are some particularly special registers that form part of this m
 Finally, programs often access persistent storage devices too. Such **I/O information** might include a list of the files the process currently has open.
 
 ### 4.3 Process Creation
-The first thing that the OS must do to run a program is to **load** its code and any static data(e.g., initialievariables
+The first thing that the OS must do to run a program is to **load** its code and any static data(e.g., initialized variables) into memory, into the address space of the process
