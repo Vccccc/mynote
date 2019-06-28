@@ -27,4 +27,5 @@ workload knowledge (e.g., what types of programs are run), and performance metri
 or throughput?) to make its decision.
 
 ### 4.1 The Abstraction: A Process
-#### What co
+#### What constitutes a process?
+
