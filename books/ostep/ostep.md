@@ -30,5 +30,5 @@ or throughput?) to make its decision.
 What constitutes a process?
 >**machine state**
 
-**machine state**: What a 
+**machine state**: What a program can read or update when it is running.
 
