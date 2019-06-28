@@ -51,4 +51,5 @@ The OS will also do some other initialization tasks, particularly as related to 
 By loading the code and static data into memory, by creating and initializing a stack, and by doing other work as related to I/O setup, the OS has now (finally) set the stage for program execution. It thus has one last task: to start the program running at the entry point, namely main(). By jumping to the main() routine (through a specialized mechanism that we will discuss next chapter), the OS transfers control of the CPU to the newly-created process, and thus the program begins its execution.
 
 ### 4.4 Process State
-A process can be on one of three
+A process can be in one of three states:
+>**Running**: In running state
