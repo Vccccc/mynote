@@ -29,5 +29,6 @@ or throughput?) to make its decision.
 ### 4.1 The Abstraction: A Process
 What constitutes a process?
 >**machine state**
-machinestate
+
+**machine state**: What a 
 
