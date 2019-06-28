@@ -37,6 +37,7 @@ or throughput?) to make its decision.
 of the process.
 >2. **Registers**. Also part of the process's machine state are **registers**; many instructions explicitly read or update registers and thus clearly they are important to the execution of the process.
 
-  Note that there are some particularly special registers that form part of this machine state. For example, the **program counter(PC)**(sometimes called the **instruction pointer or IP**) tell us which instruction of the program is currently being executed; similarly a **stack pointer** and associated **frame pointer** are used to manage the stack for function parameters, local variables, and return address.
+Note that there are some particularly special registers that form part of this machine state. For example, the **program counter(PC)**(sometimes called the **instruction pointer or IP**) tell us which instruction of the program is currently being executed; similarly a **stack pointer** and associated **frame pointer** are used to manage the stack for function parameters, local variables, and return address.
 
+Finally, programs often access persistent storage devices too. Such I/O information might include a list of the files the process currently has open.
 
