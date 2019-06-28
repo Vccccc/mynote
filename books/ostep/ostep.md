@@ -52,4 +52,4 @@ By loading the code and static data into memory, by creating and initializing a 
 
 ### 4.4 Process State
 A process can be in one of three states:
->**Running**: In running state
+>**Running**: In running state, a process is running on processor. This means it is executing  instructions.
