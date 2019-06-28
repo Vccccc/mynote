@@ -33,5 +33,6 @@ What constitutes a process?
 **machine state**: What a program can read or update when it is running.
 
 What parts of the machine are important to the execution of this program?
->- **Memory**. One obvious component of machine state that comprises a process is its **memeory**. The memeory that the process can address(
+>- **Memory**. One obvious component of machine state that comprises a process is its **memeory**. The memeory that the process can address(called its **address space**) is part 
+of the process.
 
