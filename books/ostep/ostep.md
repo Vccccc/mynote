@@ -43,3 +43,5 @@ Finally, programs often access persistent storage devices too. Such **I/O inform
 
 ### 4.3 Process Creation
 The first thing that the OS must do to run a program is to **load** its code and any static data(e.g., initialized variables) into memory, into the address space of the process.
+
+s
