@@ -45,3 +45,5 @@ Finally, programs often access persistent storage devices too. Such **I/O inform
 The first thing that the OS must do to run a program is to **load** its code and any static data(e.g., initialized variables) into memory, into the address space of the process.
 
 Some memroy must be allocated for the program's **run-time stack**(or just **stack**). C programs use the stack for local variables, function parameters, and return address; the OS allocates this memory and gives it to the process.
+
+The OS will also do some other initialization tasks, particularly as related to input/output (I/O). For example, in UNIX systems, each process by default has three open file descriptors, for standard input, output, and error; these descriptors let programs easily read input from the terminal and print output to the screen.
