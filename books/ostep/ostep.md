@@ -60,4 +60,5 @@ A process can be in one of three states:
 !["Figure 4.2: Process: State Transitions"](./photo/Figure4.2.png)
 
 ### 4.5 Data Structures
-The OS has some key data structures that track various relevant pieces of information. To track the state of each process, for example, the OS likely keep some kind of **process list** for all process that are ready and some additional information to track which process currently running.
+The OS has some key data structures that track various relevant pieces of information. To track the state of each process, for example, the OS likely keep some kind of **process list** for all process that are ready and some additional information to track which process is currently running. The OS must also track, in some way, blocked processes; when an I/O event completes, the OS
+should make sure to wake the correct process and ready it to run again.
