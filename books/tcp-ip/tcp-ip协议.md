@@ -7,7 +7,7 @@ IP提供不可靠、无连接的数据报传送服务。
 
 ### 3.2 IP首部
 IP数据报的格式如图3-1所示。普通的IP首部长为20个字节，除非含有选项字段。
-!["IP header"](
+!["IP header"](./photo/ipheader.jpg)
 ## Chapter 10 动态选路协议
 **RIP(Routing Information Protocol)**: 选路信息协议。
 **OSPF**:
