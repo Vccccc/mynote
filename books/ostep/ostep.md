@@ -100,5 +100,5 @@ struct proc {
 	// current interrupt
 };
 ```
-From the code, you can see a couple of important pieces of information the OS tracks about a process. The register context will hold, for astopped process, the contents of its registers.When a process is stopped,
-its registers will be saved to this memory location; by restoring these registers(i.e., placing their values back into the actual physical registers), theOS can resume running the process. 
+From the code, you can see a couple of important pieces of information the OS tracks about a process. The **register context** will hold, for astopped process, the contents of its registers.When a process is stopped,
+its registers will be saved to this memory location; by restoring these registers(i.e., placing their values back into the actual physical registers), the OS can resume running the process. 
