@@ -102,3 +102,13 @@ struct proc {
 ```
 From the code, you can see a couple of important pieces of information the OS tracks about a process. The **register context** will hold, for astopped process, the contents of its registers.When a process is stopped,
 its registers will be saved to this memory location; by restoring these registers(i.e., placing their values back into the actual physical registers), the OS can resume running the process. 
+
+>ASIDE: DATA STRUCTURE — THE PROCESS LIST
+Operating systems are replete with various important data structures
+that we will discuss in these notes. The process list (also called the task
+list) is the first such structure. It is one of the simpler ones, but certainly
+any OS that has the ability to run multiple programs at once will have
+something akin to this structure in order to keep track of all the running
+programs in the system. Sometimes people refer to the individual structure that stores information about a process as a Process Control Block
+(PCB), a fancy way of talking about a C structure that contains information about each process (also sometimes called a process descriptor).
+
