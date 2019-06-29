@@ -60,4 +60,4 @@ A process can be in one of three states:
 !["Figure 4.2: Process: State Transitions"](./photo/Figure4.2.png)
 
 ### 4.5 Data Structures
-
+The OS has some key data structures that track various relevant 
