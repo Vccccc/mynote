@@ -6,7 +6,8 @@ Repository: 仓库区(或本地仓库)
 Remote: 远程仓库
 
 ## git commands
-##### config [--global] usename
+##### config [--global] user.name
+git config user.name "cv": 将cv设置为该仓库的
 
 ##### init
 git init:将当前目录初始化为一个
