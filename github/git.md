@@ -25,6 +25,12 @@ git commit [-m]: 将暂存区的文件提交到仓库。-m 参数用于注释。
 git status: 检查仓库状态。
 
 ##### diff
-git diff: 
+git diff: 查看修改比对。
+
+##### log
+git log: 查看历史纪录
+
+##### reflog
+git reflog: 查看所有历史
 ##### Create a Branch
 **Branching** is the way to work on different versions of a repository at one time.
