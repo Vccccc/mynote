@@ -31,6 +31,6 @@ git diff: 查看修改比对。
 git log: 查看历史纪录
 
 ##### reflog
-git reflog: 查看所有历史
+git reflog: 查看所有历史纪录。
 ##### Create a Branch
 **Branching** is the way to work on different versions of a repository at one time.
