@@ -21,5 +21,8 @@ git add file: 将file添加到暂存区。
 ##### commit
 git commit [-m]: 将暂存区的文件提交到仓库。-m 参数用于注释。
 
+##### status
+git status: 检查
+
 ##### Create a Branch
 **Branching** is the way to work on different versions of a repository at one time.
