@@ -2,7 +2,9 @@
 !["git"](./git.jpg)
 WorkSpace: 工作区
 Index/Stage: 暂存区
-Repository
+Repository: 仓库区(或本地仓库)
+Remote: 远程仓库
+
 ## git commands
 ##### init
 git init:将当前目录初始化为一个
