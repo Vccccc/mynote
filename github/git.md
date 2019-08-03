@@ -34,5 +34,7 @@ git log: 查看历史纪录
 git reflog: 查看所有历史纪录。
 
 ##### reset --hard HEAD
+git reset --hard HEAD~n: 回滚到第n个版本。
+git reset --hard 版本号: 回滚到版本号
 ##### Create a Branch
 **Branching** is the way to work on different versions of a repository at one time.
