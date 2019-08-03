@@ -41,6 +41,6 @@ git reset --hard 版本号: 回滚到版本号。
 git checkout -- file: 撤销对file的改动。
 
 ##### ssh-keygen -t rsa –C 
-ssh-keygen -t rsa –C “youremail@example.com”: 创建 SSH Key。因为本地Git仓库和github仓库之间的传输是通过SSH加密的，所有要创建 SSH Key。id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
+ssh-keygen -t rsa –C “youremail@example.com”: 创建 SSH Key。因为本地Git仓库和github仓库之间的传输是通过SSH加密的，所有要创建 SSH Key。id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。登录github,打开” settings”中的SSH Keys页面，然后点击“Add SSH Key”,填上任意title，在Key文本框里黏贴id_rsa.pub文件的内容
 ##### Create a Branch
 **Branching** is the way to work on different versions of a repository at one time.
