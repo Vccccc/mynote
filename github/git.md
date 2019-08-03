@@ -6,7 +6,8 @@ Repository: 仓库区(或本地仓库)
 Remote: 远程仓库
 
 ## git commands
-##### config [--glo
+##### config [--global] usename
+
 ##### init
 git init:将当前目录初始化为一个
 
