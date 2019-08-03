@@ -13,7 +13,10 @@ git config user.name "cv": 将"cv"设置为该仓库的用户名。使用 --glob
 git config user.email "xxx@qq.com": 将"xxx@qq.com"设置为该仓库的用户email。使用 --global 参数表示使用"xxx@qq.com"作为该机器下所有仓库的用户email。
 
 ##### init
-git init:将当前目录初始化为一个
+git init:将当前目录初始化为一个仓库。
+
+##### add
+git add file: 将file
 
 ##### Create a Branch
 **Branching** is the way to work on different versions of a repository at one time.
