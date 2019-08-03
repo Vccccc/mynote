@@ -19,7 +19,7 @@ git init:将当前目录初始化为一个仓库。
 git add file: 将file添加到暂存区。
 
 ##### commit
-git commit [-m]: 
+git commit [-m]: 将暂存区的文件提交到仓库。-m 参数用于注释。
 
 ##### Create a Branch
 **Branching** is the way to work on different versions of a repository at one time.
