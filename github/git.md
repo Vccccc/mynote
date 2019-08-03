@@ -16,7 +16,10 @@ git config user.email "xxx@qq.com": 将"xxx@qq.com"设置为该仓库的用户em
 git init:将当前目录初始化为一个仓库。
 
 ##### add
-git add file: 将file
+git add file: 将file添加到暂存区。
+
+##### commit
+git commit [-m]: 
 
 ##### Create a Branch
 **Branching** is the way to work on different versions of a repository at one time.
