@@ -46,6 +46,7 @@ ssh-keygen -t rsa –C “youremail@example.com”: 创建 SSH Key。因为本�
 ##### remote add origin 
 git remote add origin xxx.git: 将远程仓库xxx.git与本地仓库关联。
 
-##### 
+##### push [-u] origin master
+git push -u origin master: 将本地仓库推送到远程仓库。使用 -u是将
 ##### Create a Branch
 **Branching** is the way to work on different versions of a repository at one time.
