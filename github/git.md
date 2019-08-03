@@ -1,6 +1,9 @@
-##### Create a Branch
-**Branching** is the way to work on different versions of a repository at one time.
+## git 工作原理
+[]
 
 ## git commands
 ##### init
-git init:将当前目录初始化为一个仓库
+git init:将当前目录初始化为一个
+
+##### Create a Branch
+**Branching** is the way to work on different versions of a repository at one time.
