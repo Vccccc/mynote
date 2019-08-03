@@ -7,7 +7,7 @@ Remote: 远程仓库
 
 ## git commands
 ##### config [--global] user.name
-git config user.name "cv": 将cv设置为该仓库的用户名。使用 --global 参数则表示该
+git config user.name "cv": 将cv设置为该仓库的用户名。使用 --global 参数则表示使用"cv"作为该机器下所有仓库的用户名。
 
 ##### init
 git init:将当前目录初始化为一个
