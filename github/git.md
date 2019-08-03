@@ -1,5 +1,5 @@
 ## git 工作原理
-[]
+!["git"](./git.jpg)
 
 ## git commands
 ##### init
