@@ -37,5 +37,7 @@ git reflog: 查看所有历史纪录。
 git reset --hard HEAD~n: 回滚到第n个版本。
 git reset --hard 版本号: 回滚到版本号。
 
+##### checkout
+git checkout -- file: 撤销对file的改动。
 ##### Create a Branch
 **Branching** is the way to work on different versions of a repository at one time.
