@@ -39,5 +39,8 @@ git reset --hard 版本号: 回滚到版本号。
 
 ##### checkout
 git checkout -- file: 撤销对file的改动。
+
+##### ssh-keygen -t rsa –C 
+ssh-keygen -t rsa –C “youremail@example.com”
 ##### Create a Branch
 **Branching** is the way to work on different versions of a repository at one time.
