@@ -1,6 +1,8 @@
 ## git 工作原理
 !["git"](./git.jpg)
-
+WorkSpace: 工作区
+Index/Stage: 暂存区
+Repository
 ## git commands
 ##### init
 git init:将当前目录初始化为一个
