@@ -52,6 +52,9 @@ git push -u origin master: 将本地master分支的最新修改推送到远程�
 git push origin master: 将本地master分支的最新修改推送到远程仓库。
 
 ##### checkout -b
-git checkout -b 分支名: 创建
+git checkout -b 分支名: 创建并切换到分支。
+
+##### branch
+git branch: 显示当前所有分支，*号表示当前所在分支。
 ##### Create a Branch
 **Branching** is the way to work on different versions of a repository at one time.
