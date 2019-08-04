@@ -57,5 +57,8 @@ git checkout -b 分支名: 创建并切换到分支。
 ##### branch
 git branch: 显示当前所有分支，*号表示当前所在分支。
 git branch 分支名: 创建分支。
+git branch -d 分支明: 删除分支。
+
+#####
 ##### Create a Branch
 **Branching** is the way to work on different versions of a repository at one time.
