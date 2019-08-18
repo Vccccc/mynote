@@ -1,3 +1,4 @@
 # vim note
 ## vim configuration
-### YouCompleteMe
+### Install YouCompleteMe
+通过安装llvm二进制包来完成C
