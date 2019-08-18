@@ -8,6 +8,8 @@
 在YCM的目录下运行安装脚本：
 ![](./ycm.png)
 可以新建一个目录用于构建make文件:
+cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=~/ycm_temp/clang+llvm-8.0.1-powerpc64le-linux-ubuntu-16.04/ . ~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/
+![](came.
 
 
 
