@@ -14,5 +14,10 @@ AX | AX可拆分为AH,AL
 BX | BC可拆分为BH,BL
 CX | CX可拆分为CH,CL
 DX | DX可拆分为DH,DL
-
+SI | 不可拆分
+DI | 不可拆分
+BP | 
+SP |
+CS | Code Segment
+DS | Data Sege
 
