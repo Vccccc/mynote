@@ -8,10 +8,10 @@
 一个指令需要多少周期依赖于CPU的模式。
 
 #### 寄存器
-16寄存器 | 说明
+16位寄存器 | 说明
 :----|:----
 AX | AX可拆分为AH,AL
-BX | BC可拆分为BH,BL
+BX | BX可拆分为BH,BL
 CX | CX可拆分为CH,CL
 DX | DX可拆分为DH,DL
 SI | 不可拆分
@@ -24,3 +24,9 @@ SS | Stack Segment
 ES | Extra Segment
 IP | Instruction Pointer
 
+32位寄存器(E:extend) | 说明
+:----|:----
+EAX | EAX可拆分为EAH,EAL
+EBX | EBX可拆分为EBH,EBL
+ECX | ECX可拆分为ECH,ECL
+EDX | EDX可拆分为EDH,EDL
