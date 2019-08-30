@@ -19,5 +19,8 @@ DI | 不可拆分
 BP | 
 SP |
 CS | Code Segment
-DS | Data Sege
+DS | Data Segment
+SS | Stack Segment
+ES | Extra Segment
+IP | Instruction Pointer
 
