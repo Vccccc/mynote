@@ -11,7 +11,8 @@
 寄存器 | 说明
 :----|:----
 AX | AX可拆分为AH,AL
-BX | AB可拆分为AH,AL
-CX | AC可拆分为AH,AL
-DX | AD可拆分为AH,AL
+BX | BC可拆分为BH,BL
+CX | CX可拆分为CH,CL
+DX | DX可拆分为DH,DL
+
 
