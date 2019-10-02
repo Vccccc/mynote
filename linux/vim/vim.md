@@ -13,6 +13,7 @@ cmake --build . --target ycm_core
 ![](./build.png)
 
 最后在YCM的目录下运行安装脚本：
+python3 install.py --clang-completer
 ![](./ycm.png)
 
 
