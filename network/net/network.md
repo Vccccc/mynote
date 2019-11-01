@@ -292,4 +292,9 @@ just once, at the time specified by new_value.it_value. By default, the initial
 expiration time specified in new_value is interpreted relative to the current time  on 
 the  timer's  clock at the time of the call (i.e., new_value.it_value specifies a time 
 relative to the current value of the clock specified by clockid).
+
+The it_value field returns the amount of time until the timer will next expire.  If both
+ fields of this structure are zero, then the timer is currently disarmed.  This field 
+always contains a relative value
 ```
+#### Operating on a timer file descriptor
