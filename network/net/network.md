@@ -298,4 +298,11 @@ The it_value field returns the amount of time until the timer will next expire. 
 always contains a relative value
 ```
 #### Operating on a timer file descriptor
-- **read**：如果 timer 自从最后一次使用 timerfd_settime() 设置 timer 后 timer 到期一次及以上，或者上一次成功 **read**，
+- **read**：If the timer has already expired one or  more  times  since  its  settings  
+were  last  modified  using timerfd_settime(),  or  since  the last successful read(2),
+then the buffer given to read(2) returns an unsigned 8-byte integer (uint64_t) 
+containing the number  of  expirations  that  have  occurred.   (The returned value is 
+in host byte order—that is, the native byte order for integers on the host machine.) If
+no timer expirations have occurred at the time of the read(2), then the call either 
+blocks until the next timer expiration, or fails with the error EAGAIN if the file 
+descriptor has been made  nonblocking (via the use of the fcntl(2) F_SETFL operation to set the O_NONBLOCK flag).
