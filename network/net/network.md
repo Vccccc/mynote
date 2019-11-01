@@ -306,5 +306,4 @@ in host byte order—that is, the native byte order for integers on the host mac
 no timer expirations have occurred at the time of the read(2), then the call either 
 blocks until the next timer expiration, or fails with the error EAGAIN if the file 
 descriptor has been made  nonblocking (via the use of the fcntl(2) F_SETFL operation to set the O_NONBLOCK flag).
-- **poll(2), select(2) (and similar)**
-The file descriptor is readable (the select(2) readfds argument; the poll(2) POLLIN  flag)  if  one  or more timer expirations have occurred.
+- **poll(2), select(2) (and similar)**：The file descriptor is readable (the select(2) readfds argument; the poll(2) POLLIN  flag)  if  one  or more timer expirations have occurred.
