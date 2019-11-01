@@ -152,3 +152,18 @@ If n is negative, the iterator is decremented.
 用途：
 - 翻转一个数中的某些位。如x = 1001，翻转后两位。x ^ 0011 = 1010
 - 与0相异或，保留原值。如x = 1001，x ^ 0 = x。
+
+
+### First-class citizen 头等公民
+在程序语言设计里，头等公民(通常为 type, object, entity, or value)作为一种 entity，支持任何其他 entities 所支持的操作。这些操作通常包括可作为参数传递、可被函数返回、可修改、可被变量赋值。
+
+### First-class function 头等函数
+头等函数是指视 function 为头等公民。这意味着 function 可作为参数传递、可被函数返回、可修改、可被变量赋值或存储在数据结构中。
+
+
+### offsetof(type, member)
+Defined in header \<cstddef>
+offsetof 是由编译器定义，是一个返回 size_t 的宏。它返回 type 的 member 的偏移，包括任何填充的内存。如果 member 是 static member 或者是 member funtion，则行为未定义。
+
+# (void)变量
+编译器会对未使用的变量提示警告，使用 (void) 变量，可以屏蔽掉这个警告。
