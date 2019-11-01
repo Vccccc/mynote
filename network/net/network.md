@@ -300,7 +300,7 @@ always contains a relative value
 #### Operating on a timer file descriptor
 - **read**：If the timer has already expired one or  more  times  since  its  settings  
 were  last  modified  using timerfd_settime(),  or  since  the last successful read(2),
-then the buffer given to read(2) returns an unsigned 8-byte integer (uint64_t) 
+then the buffer given to read(2) returns an unsigned 8-byte integer (**uint64_t**) 
 containing the number  of  expirations  that  have  occurred.   (The returned value is 
 in host byte order—that is, the native byte order for integers on the host machine.) If
 no timer expirations have occurred at the time of the read(2), then the call either 
