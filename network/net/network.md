@@ -282,4 +282,13 @@ TFD_CLOEXE: Set the close-on-exec (FD_CLOEXEC) flag on the new file descriptor.
 
 timerfd_settime() arms (starts) or disarms (stops) the timer referred to by the file 
 descriptor fd.
+new_value.it_value specifies the initial expiration of the timer, in seconds and nanoseconds.  Setting  either field  of  new_value.it_value to a nonzero value arms the 
+timer.  Setting both fields of new_value.it_value to zero disarms the timer. Setting one
+ or both fields of new_value.it_interval to nonzero values specifies the  period,  in  
+seconds  and nanoseconds,   for   repeated   timer   expirations   after   the  initial
+  expiration.   If  both  fields  of new_value.it_interval are zero, the timer expires 
+just once, at the time specified by new_value.it_value. By default, the initial 
+expiration time specified in new_value is interpreted relative to the current time  on 
+the  timer's  clock at the time of the call (i.e., new_value.it_value specifies a time 
+relative to the current value of the clock specified by clockid).
 ```
