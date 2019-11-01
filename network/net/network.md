@@ -251,6 +251,16 @@ Example:
 ## 定时器
 ### #include <time.h>
 ```c
+ struct timespec {
+               time_t tv_sec;                /* Seconds */
+               long   tv_nsec;               /* Nanoseconds */
+           };
+
+           struct itimerspec {
+               struct timespec it_interval;  /* Interval for periodic timer */
+               struct timespec it_value;     /* Initial expiration */
+           };
+
 #include <sys/timerfd.h>
 int timerfd_create(int clockid, int flags);
 int timerfd_settime(int fd, int flags,
@@ -270,4 +280,6 @@ CLOCK_MONOTONIC: 一个不可设置的单调递增时钟，它用于测量从过
 TFD_NONBLOCK: Set  the  O_NONBLOCK  file  status flag on the new open file description.
 TFD_CLOEXE: Set the close-on-exec (FD_CLOEXEC) flag on the new file descriptor.
 
+timerfd_settime() arms (starts) or disarms (stops) the timer referred to by the file 
+descriptor fd.
 ```
