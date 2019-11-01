@@ -298,4 +298,4 @@ The it_value field returns the amount of time until the timer will next expire. 
 always contains a relative value
 ```
 #### Operating on a timer file descriptor
-- **read**：自从最后一次使用 timerfd_settime() 设置 timer 
+- **read**：如果 timer 自从最后一次使用 timerfd_settime() 设置 timer 后触发了 expired 
