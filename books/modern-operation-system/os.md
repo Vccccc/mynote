@@ -202,3 +202,4 @@ mutex_unlock:
     MOVE MUTEX,#0 | store a 0 in mutex
     RET | return to caller
 ```
+mutex\_lock 和 enter\_region的实现有个关键的
