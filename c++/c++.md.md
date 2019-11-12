@@ -1,23 +1,23 @@
-## 转型操作符
+# 转型操作符
 1. static_cast
 2. const_cast
 3. dynamic_cast
 4. reinterpret_cast
 
-### 使用转型操作符的好处
+## 使用转型操作符的好处
 使用转型操作符可以使转型操作意图更准确，便于诸如grep之类的工具区分。
 
-#### 1. static_cast
+### 1. static_cast
 static_cast可以将int转型成double，但不能将struct转型成int，或者将double转型成指针。static_cast不能够移除表达式的常量性(constness)
 
-#### 2. const_cast
+### 2. const_cast
 const_cast用于改变表达式中的常量性(constness)或易变性(volatileness)
 
-#### 3. dynamic_cast
+### 3. dynamic_cast
 dynamic_cast用来执行继承体系中“安全的向下转型或跨系转型动作”。可以用dynamic_cast，将“指向base class objects的pointers或references”转型为指向“derived(或sibling base)class objects
 的pointers或references”，并得知转型是否成功。如果转型失败，会以一个null指针(当转型对象是指针)或一个exception(当转型对象是reference)表现出来。
 
-#### 4. reinterpret_cast
+### 4. reinterpret_cast
 reinterpret_cast转型结果与编译平台相关，所以reinterpret_cast不具移植性。reinterpret_cast的最常用用途是转换“函数指针”类型。
 ```c
 typedef void(*FuncPtr)();
@@ -153,17 +153,49 @@ If n is negative, the iterator is decremented.
 - 翻转一个数中的某些位。如x = 1001，翻转后两位。x ^ 0011 = 1010
 - 与0相异或，保留原值。如x = 1001，x ^ 0 = x。
 
-
-### First-class citizen 头等公民
+# 闭包
+## First-class citizen 头等公民
 在程序语言设计里，头等公民(通常为 type, object, entity, or value)作为一种 entity，支持任何其他 entities 所支持的操作。这些操作通常包括可作为参数传递、可被函数返回、可修改、可被变量赋值。
 
-### First-class function 头等函数
+## First-class function 头等函数
 头等函数是指视 function 为头等公民。这意味着 function 可作为参数传递、可被函数返回、可修改、可被变量赋值或存储在数据结构中。
 
 
-### offsetof(type, member)
+# offsetof(type, member)
 Defined in header \<cstddef>
 offsetof 是由编译器定义，是一个返回 size_t 的宏。它返回 type 的 member 的偏移，包括任何填充的内存。如果 member 是 static member 或者是 member funtion，则行为未定义。
 
 # (void)变量
 编译器会对未使用的变量提示警告，使用 (void) 变量，可以屏蔽掉这个警告。
+
+# pointer to member
+```c
+#include <iostream>
+using namespace std;
+
+class Car
+{
+    public:
+    int speed;
+};
+
+int main()
+{
+    int Car::*pSpeed = &Car::speed;
+
+    Car c1;
+    c1.speed = 1;       // direct access
+    cout << "speed is " << c1.speed << endl;
+    c1.*pSpeed = 2;     // access via pointer to member
+    cout << "speed is " << c1.speed << endl;
+    return 0;
+}
+```
+
+```c
+void Apply( SomeClass * c, void (SomeClass::*func)() ) {
+    // do hefty pre-call processing
+    (c->*func)();  // call user specified function
+    // do hefty post-call processing
+}
+```
