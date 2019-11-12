@@ -202,4 +202,4 @@ mutex_unlock:
     MOVE MUTEX,#0 | store a 0 in mutex
     RET | return to caller
 ```
-mutex\_lock 和 enter\_region的实现有个关键的地方不同。enter\_region 会进入 **busy waiting**，直到时间片用完或者其他进程被调度。
+mutex\_lock 和 enter\_region的实现有个关键的地方不同。enter\_region 会进入 **busy waiting**，直到时间片用完或者其他进程被调度。但在用户空间又有些不同，因为线程
