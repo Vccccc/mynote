@@ -192,4 +192,14 @@ void consumer(void)
 full 记录有多少槽有 item。empty 记录有多少空的槽。使用 mutex 确保生产者、消费者不会同一时间访问槽。**semaphore** 初始化为 1 用来保证多个进程在某个时刻只能有一个进程进入临界区，这称为 **binary semaphore**。
 
 ```c
+mutex_lock:
+    TSL REGISTER,MUTEX | copy mutex to register and set mutex to 1
+    CMP REGISTER,#0 | was mutex zero?
+    JZE ok | if it was zero, mutex was unlocked, so return
+    CALL thread yield | mutex is busy; schedule another thread
+    JMP mutex lock | tr y again
+    ok: RET | retur n to caller; critical region entered
+mutex unlock:
+    MOVE MUTEX,#0 | store a 0 in mutex
+    RET | retur n to caller
 ```
