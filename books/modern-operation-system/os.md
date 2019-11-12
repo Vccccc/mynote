@@ -189,4 +189,4 @@ void consumer(void)
     }
 }
 ```
-full 记录有多少槽有 item。empty 记录有多少空的槽。使用 mutex 确保生产者、消费者不会同一时间访问槽。
+full 记录有多少槽有 item。empty 记录有多少空的槽。使用 mutex 确保生产者、消费者不会同一时间访问槽。**semaphore** 初始化为 1 
