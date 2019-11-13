@@ -203,7 +203,7 @@ mutex_unlock:
     RET | return to caller
 ```
 mutex\_lock 和 enter\_region的实现有个关键的地方不同。enter\_region 会进入 **busy waiting**，直到时间片用完或者其他进程被调度。但在用户空间又有些不同，因为线程没有 clock 会导致它停止。这会导致线程一直在 **busy waiting** 而又拿不到锁，因为其他线程没有机会运行并释放锁。
-mutex\_lock 不同于 enter\_region 是当 mutex\_lock  请求锁失败后，它会调用 thread\_yield 放弃 CPU 给其他线程。作为一个结论，无论时 mutex\_lock 或者 mutex\unlock 都不需要任何系统调用。使用它们，在 user-level 
+mutex\_lock 不同于 enter\_region 是当 mutex\_lock  请求锁失败后，它会调用 thread\_yield 放弃 CPU 给其他线程。作为一个结论，无论时 mutex\_lock 或者 mutex\unlock 都不需要任何系统调用。user-level 的线程可以使用它们在用户空间实现同步。
 
 #### Futexes
 随着越来越多的并发编程，同步和锁的效率对于性能十分重要。**spin lock** 如果等待时间短就快，反之则会浪费 CPU 时间。如果存在很多竞争，通过 block 进程和在 lock 释放时通知内核 unblock 进程会提高效率。这需要频繁的切换到内核，当竞争激烈时它很有效，但竞争不激烈时切换到内核的代价就很昂贵了。
