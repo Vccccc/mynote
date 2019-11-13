@@ -207,4 +207,4 @@ mutex\_lock 不同于 enter\_region 是当 mutex\_lock  请求锁失败后，它
 
 #### Futexes
 随着越来越多的并发编程，同步和锁的效率对于性能十分重要。**spin lock** 如果等待时间短就快，反之则会浪费 CPU 时间。如果存在很多竞争，通过 block 进程和当 lock 可以获取时通过内核 unblock 进程会提高效率。这需要频繁的切换到内核，当竞争激烈时它很有效，但竞争不激烈时切换到内核的代价就很昂贵了。
-一个解决的办法是使用 **futex(fast user space mutex)**。**futex**
+一个解决的办法是使用 **futex(fast user space mutex)**。**futex** 是 linux 实现的一种基础
