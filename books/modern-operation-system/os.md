@@ -206,4 +206,4 @@ mutex\_lock 和 enter\_region的实现有个关键的地方不同。enter\_regio
 mutex\_lock 不同于 enter\_region 是当 mutex\_lock  请求锁失败后，它会调用 thread\_yield 放弃 CPU 给其他线程。
 
 #### Futexes
-随着并发编程
+随着越来越多的并发编程，同步和锁的效率对于性能十分重要。**spin lock** 
