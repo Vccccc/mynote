@@ -203,7 +203,7 @@ mutex_unlock:
     RET | return to caller
 ```
 mutex\_lock 和 enter\_region的实现有个关键的地方不同。enter\_region 会进入 **busy waiting**，直到时间片用完或者其他进程被调度。但在用户空间又有些不同，因为线程没有 clock 会导致它停止。这会导致线程一直在 **busy waiting** 而又拿不到锁，因为其他线程没有机会运行并释放锁。
-mutex\_lock 不同于 enter\_region 是当 mutex\_lock  请求锁失败后，它会调用 thread\_yield 放弃 CPU 给其他线程。作为一个结论，无论时 mutex\_lock 或者 mutex\unlock 都不需要任何系统调用。user-level 的线程可以使用它们在用户空间实现同步。
+mutex\_lock 不同于 enter\_region 是当 mutex\_lock  请求锁失败后，它会调用 thread\_yield 放弃 CPU 给其他线程。作为一个结论，无论时 mutex\_lock 或者 mutex\unlock 都不需要任何系统调用，效率高。user-level 的线程可以使用它们在用户空间实现同步。
 但进程比较微妙，因为线程是共享一个进程空间地址的，线程可以访问同一个 mutex 。如果进程空间地址不相交，怎么才能做到共享同一个 mutex 或者 semaphore 呢？
 一般有两种方法。第一种，将一些需要共享的数据，比如 semaphore 存储在内核空间，然后通过系统调用去访问。第二种，大多数现代操作系统(Windows and Unix)提供一个方法给进程，让其将进程的一部分空间地址分享给其他进程。
 
@@ -211,5 +211,7 @@ mutex\_lock 不同于 enter\_region 是当 mutex\_lock  请求锁失败后，它
 #### Futexes
 随着越来越多的并发编程，同步和锁的效率对于性能十分重要。**spin lock** 如果等待时间短就快，反之则会浪费 CPU 时间。如果存在很多竞争，通过 block 进程和在 lock 释放时通知内核 unblock 进程会提高效率。这需要频繁的切换到内核，当竞争激烈时它很有效，但竞争不激烈时切换到内核的代价就很昂贵了。
 一个解决的办法是使用 **futex(fast user space mutex)**。**futex** 是 linux 实现的一种基础锁（像 mutex）除非很必要否则避免切换到内核。**futex** 由两部分组成：kernel service and user library。kernel sevice 提供一个 "wait queue" 给进程等待一个 lock。这些进程不会运行，除非 kernel unblocked 进程。应该避免将一个进程放入 "wait queue"，因为这需要调用一个系统调用（切换到内核开销大）。所以在**竞争不激烈**的情况下，**futex** 完全运行在用户空间。特别地，进程之间共享一个 lock variable--一个 32-bit 整数。假设这个 lock 初始化为 1，表示 lock is free。进程通过原子操作 "decrement and test" 获取这个 lock。然后检查这个 lock 是否可获取。如果这个 lock 可以获取，则这个进程拿到这个 lock。但如果这个 lock 早被其他进程获取，那么当前进程需要进 "wait queue"。在这个情况下，**futex library** 不使用 **busy waiting**，而是使用系统调用将进程放入内核的 "wait queue"。因为进程无论如何都是要被 blocked 的，所以这里的开销是合适的。当一个进程不需要 lock 时，它释放 lock 并且执行原子操作 "decrement and test"，然后检查 lock variable，看看是否还有其他进程 blocked 在内核的 "wait queue"。如果有，它就会通知内核去 unblock 进程。如果此时没有竞争，则不会被涉及内核。
+
+#### Mutexes in Pthreads
 
 ### 2.3.7 Monitors
