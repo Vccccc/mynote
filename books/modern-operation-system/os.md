@@ -205,7 +205,7 @@ mutex_unlock:
 mutex\_lock 和 enter\_region的实现有个关键的地方不同。enter\_region 会进入 **busy waiting**，直到时间片用完或者其他进程被调度。但在用户空间又有些不同，因为线程没有 clock 会导致它停止。这会导致线程一直在 **busy waiting** 而又拿不到锁，因为其他线程没有机会运行并释放锁。
 mutex\_lock 不同于 enter\_region 是当 mutex\_lock  请求锁失败后，它会调用 thread\_yield 放弃 CPU 给其他线程。作为一个结论，无论时 mutex\_lock 或者 mutex\unlock 都不需要任何系统调用。user-level 的线程可以使用它们在用户空间实现同步。
 但进程比较微妙，因为线程是共享一个进程空间地址的，线程可以访问同一个 mutex 。如果进程空间地址不相交，怎么才能做到共享同一个 mutex 或者 semaphore 呢？
-一般有两种方法。第一种将一些需要共享的数据，比如 semaphore 存储在内核空间，然后通过系统调用去访问。
+一般有两种方法。第一种，将一些需要共享的数据，比如 semaphore 存储在内核空间，然后通过系统调用去访问。第二种，大多数现代操作系统(Windows and Unix)提供一个方法
 
 #### Futexes
 随着越来越多的并发编程，同步和锁的效率对于性能十分重要。**spin lock** 如果等待时间短就快，反之则会浪费 CPU 时间。如果存在很多竞争，通过 block 进程和在 lock 释放时通知内核 unblock 进程会提高效率。这需要频繁的切换到内核，当竞争激烈时它很有效，但竞争不激烈时切换到内核的代价就很昂贵了。
