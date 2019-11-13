@@ -207,6 +207,6 @@ mutex\_lock 不同于 enter\_region 是当 mutex\_lock  请求锁失败后，它
 
 #### Futexes
 随着越来越多的并发编程，同步和锁的效率对于性能十分重要。**spin lock** 如果等待时间短就快，反之则会浪费 CPU 时间。如果存在很多竞争，通过 block 进程和在 lock 释放时通知内核 unblock 进程会提高效率。这需要频繁的切换到内核，当竞争激烈时它很有效，但竞争不激烈时切换到内核的代价就很昂贵了。
-一个解决的办法是使用 **futex(fast user space mutex)**。**futex** 是 linux 实现的一种基础锁（像 mutex）除非很必要否则避免切换到内核。**futex** 由两部分组成：kernel service and user library。kernel sevice 提供一个 "wait queue" 给进程等待一个 lock。这些进程不会运行，除非 kernel unblocked 进程。应该避免将一个进程放入 "wait queue"，因为这需要调用一个系统调用（切换到内核开销大）。所以在**竞争不激烈**的情况下，**futex** 完全运行在用户空间。特别地，进程之间共享一个 lock variable--一个 32-bit 整数。假设这个 lock 初始化为 1，表示 lock is free。进程通过原子操作 "decrement and test" 获取这个 lock。然后检查这个 lock 是否可获取。如果这个 lock 可以获取，则这个进程拿到这个 lock。但如果这个 lock 早被其他进程获取，那么当前进程需要进 "wait queue"。在这个情况下，**futex library** 不使用 **busy waiting**。
+一个解决的办法是使用 **futex(fast user space mutex)**。**futex** 是 linux 实现的一种基础锁（像 mutex）除非很必要否则避免切换到内核。**futex** 由两部分组成：kernel service and user library。kernel sevice 提供一个 "wait queue" 给进程等待一个 lock。这些进程不会运行，除非 kernel unblocked 进程。应该避免将一个进程放入 "wait queue"，因为这需要调用一个系统调用（切换到内核开销大）。所以在**竞争不激烈**的情况下，**futex** 完全运行在用户空间。特别地，进程之间共享一个 lock variable--一个 32-bit 整数。假设这个 lock 初始化为 1，表示 lock is free。进程通过原子操作 "decrement and test" 获取这个 lock。然后检查这个 lock 是否可获取。如果这个 lock 可以获取，则这个进程拿到这个 lock。但如果这个 lock 早被其他进程获取，那么当前进程需要进 "wait queue"。在这个情况下，**futex library** 不使用 **busy waiting**，而是使用系统调用将进程放入内核的 "wait queue"。因为进程无论如何
 
 ### 2.3.7 Monitors
