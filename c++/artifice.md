@@ -45,5 +45,6 @@ void func(StringArg arg);
 传引用的方式
 ```c
 void fun(string* target);
-void fun(string& target)
+void fun(string& target);
 ```
+当 target 会在函数中
