@@ -16,6 +16,7 @@ size\_t writableBytes();
 使用驼峰命名法，首字符使用小写，最后的字符为\_。
 int data\_;
 
+## 技巧
 ## StringArg
 ```c
 class StringArg // copyable
