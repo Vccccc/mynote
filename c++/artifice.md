@@ -13,4 +13,5 @@ class Base
 size\_t writableBytes();
 
 ##### 成员变量
-使用驼峰命名法，首字符使用\_。
+使用驼峰命名法，首字符使用小写，最后的字符为\_。
+int data\_;
