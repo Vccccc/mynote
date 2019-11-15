@@ -42,6 +42,8 @@ void func(StringArg arg);
 ### 参数
 参数顺序为，输入、可能改变、输出。
 #### 传引用 | 传值
-
+传引用的方式
 ```c
+void fun(string* target);
+void fun(string& target)
 ```
