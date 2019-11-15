@@ -35,4 +35,4 @@ class StringArg // copyable
   const char* str_;
 };
 ```
-用于一些参数为 C-Style string
+用于一些参数为 C-style string 的函数。避免需要重载 string 
