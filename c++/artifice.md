@@ -46,5 +46,7 @@ void func(StringArg arg);
 ```c
 void fun(string* target);
 void fun(string& target);
+void fun(const string* target);
+void fun(const string& target);
 ```
-当 target 会在函数中
+当 target 会在函数中改变时，使用方式 1。
