@@ -10,4 +10,4 @@ const int kMaxSize = 1024;
 class Base
 ##### 成员函数
 使用驼峰命名法，首字符使用小写。
-printF
+size\_t writeableBytes();
