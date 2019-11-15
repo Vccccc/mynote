@@ -17,7 +17,7 @@ size\_t writableBytes();
 int data\_;
 
 ## 技巧
-## StringArg
+### StringArg
 ```c
 class StringArg // copyable
 {
@@ -38,3 +38,6 @@ class StringArg // copyable
 ```
 用于一些参数为 C-style string 的函数。避免需要重载 string 和 char *。
 void func(StringArg arg);
+
+### 参数
+参数顺序为
