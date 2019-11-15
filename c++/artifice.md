@@ -10,4 +10,7 @@ const int kMaxSize = 1024;
 class Base
 ##### 成员函数
 使用驼峰命名法，首字符使用小写。
-size\_t writeableBytes();
+size\_t writableBytes();
+
+##### 成员变量
+使用驼峰命名法，首字符使用\_。
