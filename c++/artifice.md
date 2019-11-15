@@ -18,5 +18,20 @@ int data\_;
 
 ## StringArg
 ```c
+class StringArg // copyable
+{
+ public:
+  StringArg(const char* str)
+    : str_(str)
+  { }
 
+  StringArg(const string& str)
+    : str_(str.c_str())
+  { }
+
+  const char* c_str() const { return str_; }
+
+ private:
+  const char* str_;
+};
 ```
