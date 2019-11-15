@@ -40,4 +40,4 @@ class StringArg // copyable
 void func(StringArg arg);
 
 ### 参数
-参数顺序为
+参数顺序为，输入、可能改变、输出。
