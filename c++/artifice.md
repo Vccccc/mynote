@@ -17,7 +17,7 @@ size\_t writableBytes();
 int data\_;
 
 ##### 类常量
-定义方式同 常量。但声明为 
+定义方式同 常量。但声明为 static。因为常量只有一个实体就够了。
 
 ## 技巧
 ### StringArg
