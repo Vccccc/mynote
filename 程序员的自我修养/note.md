@@ -62,7 +62,7 @@ linux查看分页大小：getconf PAGE_SIZE。Ubuntu 16.0为 4096字节(4KB)。
 # Chatper 2 编译和链接
 ## 2.1 编译过程
 编译过程可分为四个步骤：
-1. 预处理（Prepressing）
+1. 预处理（Preprocessing）
 2. 编译（Compilation）
 3. 汇编（Assembly）
 4. 链接（Linking）
