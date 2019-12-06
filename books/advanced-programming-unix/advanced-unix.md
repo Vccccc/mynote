@@ -6,6 +6,8 @@ Every process has a unique process ID, a non-negative integer.
 
 Although unique, process IDs are reused. As processes terminate, their IDs become candidates for reuse. Most UNIX systems implement algorithms to delay reuse, however, so that newly created processes are assigned IDs different from those used by processes that terminated recently.
 
+In addition to the process ID, there are other identifiers for every process. The
+following functions return these identifiers.
 ```c
 #include <unistd.h>
 pid_t getpid(void);
