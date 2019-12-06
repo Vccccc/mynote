@@ -30,4 +30,14 @@ An existing process can create a new one by calling the fork function.
 #include <unistd.h>
 pid_t fork(void);
 Returns: 0 in child, process ID of child in parent, −1 on error
+
+There are two uses for fork:
+1. When a process wants to duplicate itself so that the parent and the child can
+each execute different sections of code at the same time. This is common for
+network servers—the parent waits for a service request from a client. When the
+request arrives, the parent calls fork and lets the child handle the request. The
+parent goes back to waiting for the next service request to arrive.
+2. When a process wants to execute a different program. This is common for
+shells. In this case, the child does an exec (which we describe in Section 8.10)
+right after it returns from the fork.
 ```
