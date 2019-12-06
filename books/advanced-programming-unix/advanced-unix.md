@@ -23,3 +23,11 @@ Returns: real group ID of calling process
 gid_t getegid(void);
 Returns: effective group ID of calling process
 ```
+
+### 8.3 fork Function
+An existing process can create a new one by calling the fork function.
+```c
+#include <unistd.h>
+pid_t fork(void);
+Returns: 0 in child, process ID of child in parent, −1 on error
+```
