@@ -17,6 +17,10 @@ python3 install.py --clang-completer
 ![](./ycm.png)
 
 
+### vim 命令
+verbose map \<key>: 查询 key 的映射
+
+
 
 
 
