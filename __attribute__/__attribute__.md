@@ -19,7 +19,3 @@ __attribute__((weak)) weak2 = 2;
 #### __attribute__ ((weakref))
 声明一个外部的引用为弱引用
 __attribute__((weakref)) void foo();
-
-#### -Wold-style-cast
-#pragma GCC diagnostic ignored "-Wold-style-cast" ： 编译时忽略 C style cast 警告
-#pragma GCC diagnostic error "-Wold-style-cast"：编译时视 C style cast 警告为错误
