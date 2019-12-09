@@ -113,3 +113,6 @@ private:
     size_t length_;
 };
 ```
+
+## 枚举
+### 
