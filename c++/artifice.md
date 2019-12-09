@@ -138,4 +138,14 @@ enum LogLevel
   FATAL,
   NUM_LOG_LEVELS,
 };
+
+const char* LogLevelName[LogLevel::NUM_LOG_LEVELS] =
+{
+  "TRACE ",
+  "DEBUG ",
+  "INFO  ",
+  "WARN  ",
+  "ERROR ",
+  "FATAL ",
+};
 ```
