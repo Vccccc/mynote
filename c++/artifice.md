@@ -59,5 +59,57 @@ void fun(const string& target);
 ### BINARY_PREDICATE
 重载二元操作符时，将重复部分抽象出来。
 ```
+class String 
+{
+public:
+    String(const char* str)
+        : str_(str), length(strlen(str))
+        {
 
+        }
+   
+public:
+    bool operator==(const String& x) const
+    {
+        return ((length_ == x.length_) && (memcmp(str_, x.str_, length_) == 0));
+    }
+
+    bool operator!=(const String& x) const
+    {
+        return !(*this == x);
+    }
+
+    bool operator<(const String& x) const 
+    {
+        int length = length_ < x.length_ ? length_ : x.length_;
+        int ret = memcmp(str_, x.str_, length);
+        if(ret < 0) // 这步 (ret auxcmp 0)只要满足条件则结果为 true, 如仍不满足条件且 (ret != 0)，则结果为 false。
+        {
+            return true;
+        }
+        else if(ret == 0)
+        {
+            return length_ < x.length_;   
+        }
+        else
+        {
+            return false;
+        }
+    }
+#define STRING_BINARY_PREDICATE(cmp, auxcmp)                                        \
+    bool operator cmp(const String& x) const                                        \
+    {                                                                               \
+        int r = memcpm(str_, x.str_, length_ < x.length_ ? length_ : x.length_);    \
+        return ((r auxcmp 0) || ((r == 0) && (length_ cmp x.length_)));             \
+    } 
+
+    STRING_BINARY_PREDICATE(<, <);
+    STRING_BINARY_PREDICATE(<=, <);
+    STRING_BINARY_PREDICATE(>, >);
+    STRING_BINARY_PREDICATE(>=, >);
+#undef STRING_BINARY_PREDICATE
+private:
+    const char* str_;
+    size_t length_;
+};
 ```
