@@ -17,7 +17,10 @@ int lastSecond;
 首字符使用小写字母 g 标识为全局，然后使用 \_ 分隔首字母和变量命，剩余变量名使用使用驼峰命名法。
 void g\_flush();
 
-####
+##### typedef
+**定义类型**
+使用驼峰命名法，首字符使用大写。
+typedef void (*FlushFunction)();
 
 #### 类
 ##### 类名
