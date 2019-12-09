@@ -56,4 +56,5 @@ void fun(const string& target);
 
 ## 宏
 一些有趣的宏使用技巧
-### PRED
+### BINARY_PREDICATE
+重载二元操作符时，将
