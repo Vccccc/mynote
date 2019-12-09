@@ -57,13 +57,13 @@ void fun(const string& target);
 ## 宏
 一些有趣的宏使用技巧
 ### BINARY_PREDICATE
-重载二元操作符时，将重复部分抽象出来。
+重载二元谓词(predicate)时，将重复部分抽象出来。
 ```
 class String 
 {
 public:
     String(const char* str)
-        : str_(str), length(strlen(str))
+        : str_(str), length_(strlen(str))
         {
 
         }
