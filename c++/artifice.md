@@ -75,7 +75,9 @@ void fun(const string& target);
 
 
 ### 精度
-#### target * accuracy / accura
+#### target * accuracy / accuracy
+先乘以一个
+target = target * accuracy / accuracy
 
 ## 宏
 一些有趣的宏使用技巧
