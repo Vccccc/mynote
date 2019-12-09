@@ -7,7 +7,10 @@ const int kMaxSize = 1024;
 ##### 变量
 **普通变量**
 使用驼峰命名法，首字符使用小写。
-int
+int lastSecond;
+**线程变量**
+使用驼峰命名法，首字符使用小写字母't。
+int lastSecond;
 
 
 #### 类
