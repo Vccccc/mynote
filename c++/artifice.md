@@ -76,7 +76,7 @@ void fun(const string& target);
 
 ### 精度
 #### target * accuracy / accuracy
-目标数先乘以一个数，再除以一个相同的数，可获得一个 target - (target % accuracy)
+目标数先乘以一个数，再除以一个相同的数，可获得一个 target - [0, accuracy - 1]
 target = target * accuracy / accuracy
 
 ## 宏
