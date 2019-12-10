@@ -23,8 +23,9 @@ void g\_flush();
 typedef void (*FlushFunction)();
 
 ##### pair
-将 pair 的成员赋予有意义的命名，用 \_ 
+将 pair 的成员赋予有意义的命名，用 \_ 分隔 和 and 连接
 pair<string, int> name\_and\_age
+const string name = name\_and\_age.first
 
 #### 类
 ##### 类名
