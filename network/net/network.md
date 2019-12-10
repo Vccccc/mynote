@@ -57,7 +57,8 @@ int socket(int domain, int type, int protocol);
 	Returns: On  success,  a  file  descriptor  for  the new socket is returned. 
  On error, -1 is returned, and errno is set appropriately.
 
-Description: domain常用AF_INET。type常用SOCK_STREAM、SOCK_DGRAM、SOCK_NONBLOCK、SOCK_CLOEXEC。protocol常置为0。
+Description: domain常用AF_INET。type常用SOCK_STREAM、SOCK_DGRAM、SOCK_NONBLOCK、SOCK_CLOEXEC。
+protocol常置为0。
 
 #include <sys/socket.h>
 int shutdown(int sockfd, int how)
