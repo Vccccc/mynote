@@ -23,7 +23,8 @@ void g\_flush();
 typedef void (*FlushFunction)();
 
 ##### pair
-
+使用
+pair<string, int> name\_and\_age
 
 #### 类
 ##### 类名
