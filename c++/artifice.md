@@ -23,7 +23,7 @@ void g\_flush();
 typedef void (*FlushFunction)();
 
 ##### pair
-使用
+将 pair 的成员赋予有意义的命名，用 \_ 
 pair<string, int> name\_and\_age
 
 #### 类
