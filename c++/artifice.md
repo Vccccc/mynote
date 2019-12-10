@@ -87,9 +87,9 @@ void fun(const string& target);
 目标数先乘以一个数，再除以一个相同的数，可获得一个 target - [0, accuracy - 1]
 target = target * accuracy / accuracy
 
-## 宏
+### 宏
 一些有趣的宏使用技巧
-### BINARY_PREDICATE
+#### BINARY_PREDICATE
 重载二元谓词(predicate)时，将重复部分抽象出来。
 ```
 class String 
@@ -147,7 +147,7 @@ private:
 };
 ```
 
-## 枚举
+### 枚举
 枚举命名使用驼峰命名法，首字符使用大写，成员全使用大写字母，单词之间使用\_分隔。
 最后可使用一个枚举量 NUM\_LOG\_LEVELS 记录枚举数。
 ```c
