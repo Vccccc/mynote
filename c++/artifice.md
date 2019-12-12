@@ -172,3 +172,27 @@ const char* LogLevelName[LogLevel::NUM_LOG_LEVELS] =
   "FATAL ",
 };
 ```
+
+## 概念
+### shared_from_this
+通过继承 std::enable_shared_from_this<T> 获得 shared_from_this 方法。该方法返回一个共享 *this 的 std::shared_ptr<T>。一般用作回调函数的参数，通常在 object 内部需要获取std::shared_ptr<T> 时用到，
+```c
+typedef function<void(shared_ptr<Y>)> Callback;
+class Y : public std::shared_from_this<Y>
+{
+private:
+  Callback cb_;
+
+public;
+  Y(Callback cb) : cb_(cb) {}
+  void fun()
+  {
+    // example 1
+    shared_ptr<Y> badPtr(this); // bad! 当 badPtr 生命周期结束可能将 this 释放掉 
+    shared_ptr<Y> goodPtr = shared_from_this();  // good!
+
+   // example 2
+   cp(shared_from_this());
+  } 
+};
+```

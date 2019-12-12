@@ -322,4 +322,33 @@ descriptor has been made  nonblocking (via the use of the fcntl(2) F_SETFL opera
 - **poll(2), select(2) (and similar)**：The file descriptor is readable (the select(2) readfds argument; the poll(2) POLLIN  flag)  if  one  or more timer expirations have occurred.
 
 
-## #include <pthread.h>
+## #include <eventfd.h>
+```c
+#include <sys/eventfd.h>
+int eventfd(unsigned int initval, int flags);
+	Returns:On  success,  eventfd()  returns  a new eventfd file descriptor.  On 
+error, -1 is returned and errno is set to indicate the error.
+
+Description: eventfd()  creates an "eventfd object" that can be used as an event
+ wait/notify mechanism by user-space applications, and by the kernel to notify user-space
+ applications of  events.   The  object  contains  an  unsigned 64-bit  integer 
+(uint64_t)  counter  that  is maintained by the kernel.  This counter is initialized with
+ the value specified in the argument initval.
+```
+参数 flags 可以按位或改变 eventfd 的行为：
+- **EFD_CLOEXEC**
+- **EFD_NONBLOCK**
+- **EFD_SEMAPHORE**:Provide semaphore-like semantics for reads from the new file descriptor
+
+**Operating on a eventfd file descriptor**
+- **read(2)**: Each  successful  read(2) returns an 8-byte integer.  A read(2) fails with the error EINVAL if the size of the supplied buffer is less than 8 bytes.The  semantics  of  read(2)  depend  on  whether  the eventfd counter currently has a nonzero value and
+whether the EFD_SEMAPHORE flag was specified when creating the eventfd file descriptor:
+	1. If EFD_SEMAPHORE was not specified and the eventfd counter has  a  nonzero  value,  then  a  read(2) returns 8 bytes containing that value, and the counter's value is reset to zero.
+	2. If EFD_SEMAPHORE was specified and the eventfd counter has a nonzero value, then a read(2) returns 8 bytes containing the value 1, and the counter's value is decremented by 1.
+	3. If the eventfd counter is zero at the time of the call to read(2), then the call either blocks until the  counter  becomes nonzero (at which time, the read(2) proceeds as described above) or fails with the error EAGAIN if the file descriptor has been made nonblocking.
+- **write(2)**:A write(2) call adds the 8-byte integer value supplied in its buffer to the counter.  The maximum value that   may   be   stored  in  the  counter  is  the  largest  unsigned  64-bit  value  minus  1  (i.e., 0xfffffffffffffffe).  If the addition would cause the counter's value to exceed the maximum,  then  the write(2)  either  blocks  until  a read(2) is performed on the file descriptor, or fails with the errorEAGAIN if the file descriptor has been made nonblocking.
+A write(2) fails with the error EINVAL if the size of the supplied buffer is less than 8 bytes,  or  if an attempt is made to write the value 0xffffffffffffffff.
+- **poll(2), select(2) (and similar)**:The returned file descriptor supports poll(2) (and analogously epoll(7)) and select(2), as follows:
+	1. The  file  descriptor  is  readable (the select(2) readfds argument; the poll(2) POLLIN flag) if the counter has a value greater than 0.
+	2. The file descriptor is writable (the select(2) writefds argument; the poll(2) POLLOUT flag) if it is possible to write a value of at least "1" without blocking.
+	3. If  an  overflow  of the counter value was detected, then select(2) indicates the file descriptor as being both readable and writable, and poll(2) returns a POLLERR event.  As noted above, write(2) can never  overflow the counter.  However an overflow can occur if 2^64 eventfd "signal posts" were performed by the KAIO subsystem (theoretically possible, but practically unlikely).  If an overflow has occurred, then read(2) will return that maximum uint64_t value (i.e., 0xffffffffffffffff).
