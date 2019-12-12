@@ -355,4 +355,4 @@ A write(2) fails with the error EINVAL if the size of the supplied buffer is les
 
 # Muduo
 ## IP 地址的抽象
-IP 地址由三个字段
+IP 地址由三个字段组成，family, port, address。IP 地址是其他
