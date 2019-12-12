@@ -352,3 +352,5 @@ A write(2) fails with the error EINVAL if the size of the supplied buffer is les
 	1. The  file  descriptor  is  readable (the select(2) readfds argument; the poll(2) POLLIN flag) if the counter has a value greater than 0.
 	2. The file descriptor is writable (the select(2) writefds argument; the poll(2) POLLOUT flag) if it is possible to write a value of at least "1" without blocking.
 	3. If  an  overflow  of the counter value was detected, then select(2) indicates the file descriptor as being both readable and writable, and poll(2) returns a POLLERR event.  As noted above, write(2) can never  overflow the counter.  However an overflow can occur if 2^64 eventfd "signal posts" were performed by the KAIO subsystem (theoretically possible, but practically unlikely).  If an overflow has occurred, then read(2) will return that maximum uint64_t value (i.e., 0xffffffffffffffff).
+
+# Muduo
