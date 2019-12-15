@@ -1,6 +1,9 @@
 ## Ubuntu 配置
 ### 中文显示异常
 ![""](./photo/font.png)
+原因：
+当系统使用的是英文环境时，Ubuntu默认采用的字体Noto Sans CJK优先显示日文汉字，这一问题可以通过修改配置文件/etc/fonts/conf.avail/64-language-selector-prefer.conf来修复
+64-language-selector-prefer.conf原文件内容：
 
 ## syscall
 ```c
