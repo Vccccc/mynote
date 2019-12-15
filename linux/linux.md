@@ -1,5 +1,6 @@
 ## Ubuntu 配置
-[""](./photo/font.png)
+### 中文显示异常
+![""](./photo/font.png)
 
 ## syscall
 ```c
