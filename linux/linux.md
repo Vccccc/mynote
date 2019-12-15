@@ -51,6 +51,10 @@ TC <---> 繁体中文
 
 
 
+## vim
+下载vim 
+>> git clone https://github.com/vim/vim.git
+安装vim
 
 
 
