@@ -47,7 +47,7 @@ TC <---> 繁体中文
 ### ssr
 
 #### 检测服务器是否被墙
-["ping.pe"](ping.pe
+网站: ping.pe
 ## syscall
 ```c
 #define _GNU_SOURCE         /* See feature_test_macros(7) */
