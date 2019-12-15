@@ -1,5 +1,5 @@
 ## Ubuntu 配置
-
+[](photo/)
 
 ## syscall
 ```c
