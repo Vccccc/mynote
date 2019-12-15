@@ -48,6 +48,28 @@ TC <---> 繁体中文
 
 #### 检测服务器是否被墙
 网站: ping.pe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## syscall
 ```c
 #define _GNU_SOURCE         /* See feature_test_macros(7) */
@@ -62,6 +84,16 @@ general, a 0 return value indicates success. A -1 return value indicates an erro
 Description:
   syscall 是库函数，可以用于调用一些汇编接口的系统调用，这些系统调用没有C语言包装函数。
 ```
+
+
+
+
+
+
+
+
+
+
 
 ## gettid
 ```c
