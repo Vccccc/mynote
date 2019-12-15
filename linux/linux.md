@@ -1,5 +1,5 @@
 ## Ubuntu 配置
-[](photo/)
+[](photo/font.png)
 
 ## syscall
 ```c
