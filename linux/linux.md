@@ -56,9 +56,9 @@ TC <---> 繁体中文
 >> git clone https://github.com/vim/vim.git
 
 ### 安装vim
->> cd vim
-./configure --with-features=huge --enable-gui=gtk2 --enable-cscope --prefix=/usr
-sudo make install
+1. cd vim
+2.  ./configure --with-features=huge --enable-python3interp --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --enable-rubyinterp --enable-luainterp --enable-perlinterp  --enable-multibyte --enable-cscope      --prefix=/usr/local/vim/
+3. sudo make install
 
 ### 配置vim
 
