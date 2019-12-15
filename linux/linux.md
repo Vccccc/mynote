@@ -1,4 +1,5 @@
-## Ubuntu 
+## Ubuntu 配置
+
 
 ## syscall
 ```c
