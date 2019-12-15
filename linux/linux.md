@@ -52,15 +52,15 @@ TC <---> 繁体中文
 
 
 ## vim
-###下载vim 
+### 下载vim 
 >> git clone https://github.com/vim/vim.git
 
-###安装vim
+### 安装vim
 >> cd vim
 ./configure --with-features=huge --enable-gui=gtk2 --enable-cscope --prefix=/usr
 sudo make install
 
-配置vim
+### 配置vim
 
 
 
