@@ -43,6 +43,9 @@ SC <---> 简体中文
 TC <---> 繁体中文
 
 修改上面的文件，将顺序改成SC TC JP KR
+
+### ssr
+
 ## syscall
 ```c
 #define _GNU_SOURCE         /* See feature_test_macros(7) */
