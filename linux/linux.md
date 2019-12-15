@@ -51,7 +51,9 @@ TC <---> 繁体中文
 
 #### 代理设置
 ##### 终端走代理
+export http_proxy=http://proxyAddress:port
 export http_proxy=http://127.0.0.1:12333
+export https_proxy=http://127.0.0.1:12333
 
 
 
