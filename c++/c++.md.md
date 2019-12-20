@@ -209,5 +209,8 @@ The action to perform on the input.
 - **-S, --assemble**: Only run preprocess and compilation steps
 - **-c, --compile**: Only run preprocess, compile, and assemble steps
 ## Preprocessor flags
+Flags controlling the behavior of the Clang preprocessor.
+### Include path management
+
 - **-isystem<directory>**: add directory to SYSTEM include search path
 -
