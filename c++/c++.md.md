@@ -201,5 +201,7 @@ void Apply( SomeClass * c, void (SomeClass::*func)() ) {
 ```
 
 # clang++ 编译指令
-· **-isystem<directory>**: add directory to SYSTEM include search path
+
+## Preprocessor flags
+- **-isystem<directory>**: add directory to SYSTEM include search path
 -
