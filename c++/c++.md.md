@@ -212,7 +212,7 @@ The action to perform on the input.
 Flags controlling the behavior of the Clang preprocessor.
 ### Include path management
 Flags controlling how #includes are resolved to files.
-- **\-I<dir>, --include-directory <arg>, --include-directory=<arg>**: Add directory to include search path
+- **-I\<dir>, --include-directory \<arg>, --include-directory=\<arg>**: Add directory to include search path
 
 
 - **-isystem<directory>**: add directory to SYSTEM include search path
