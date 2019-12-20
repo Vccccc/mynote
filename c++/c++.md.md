@@ -203,6 +203,9 @@ void Apply( SomeClass * c, void (SomeClass::*func)() ) {
 # clang++ 编译指令
 ["官方文档"](https://clang.llvm.org/docs/ClangCommandLineReference.html)
 
+## Actions
+- E, --preprocess: Only run the preprocessor
+- -S, --assemble: 
 ## Preprocessor flags
 - **-isystem<directory>**: add directory to SYSTEM include search path
 -
