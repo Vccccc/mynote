@@ -67,6 +67,8 @@ export https_proxy=http://127.0.0.1:12333
 3. sudo make install
 
 ### 配置vim
+插件
+#### YouCompleteMe
 
 
 
