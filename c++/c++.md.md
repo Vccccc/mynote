@@ -199,3 +199,5 @@ void Apply( SomeClass * c, void (SomeClass::*func)() ) {
     // do hefty post-call processing
 }
 ```
+
+# clang++ 编译指令
