@@ -201,7 +201,7 @@ void Apply( SomeClass * c, void (SomeClass::*func)() ) {
 ```
 
 # clang++ 编译指令
-["docs"](https://clang.llvm.org/docs/ClangCommandLineReference.html)
+["官方文档"](https://clang.llvm.org/docs/ClangCommandLineReference.html)
 
 ## Preprocessor flags
 - **-isystem<directory>**: add directory to SYSTEM include search path
