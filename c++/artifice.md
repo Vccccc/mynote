@@ -174,7 +174,7 @@ const char* LogLevelName[LogLevel::NUM_LOG_LEVELS] =
 ```
 
 ### 指针
-
+当指针不再需要指向对象时，应该置空。
 
 ## 概念
 ### shared_from_this
