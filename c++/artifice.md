@@ -173,6 +173,9 @@ const char* LogLevelName[LogLevel::NUM_LOG_LEVELS] =
 };
 ```
 
+### 指针
+
+
 ## 概念
 ### shared_from_this
 通过继承 std::enable_shared_from_this<T> 获得 shared_from_this 方法。该方法返回一个共享 *this 的 std::shared_ptr<T>。一般用作回调函数的参数，通常在 object 内部需要获取std::shared_ptr<T> 时用到，
