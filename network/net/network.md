@@ -46,6 +46,7 @@ dump traffic on a network
 - -c ++count++: 读取 count 个 packet.
 - -w ++file++: 将 packet 写入 file
 - -r ++file++: 从 file 读取 packet 而不是网络
+- -i: 接口
 
 
 
