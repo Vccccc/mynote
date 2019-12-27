@@ -110,6 +110,11 @@ IPv4最后一个选项字段(option)是可变长的可选信息。这部分最�
 - 时间戳(timestamp)，告诉每个路由器都将数据报被转发的时间（或时间与IP地址对）填入IP头部选项部分，这样就可以测量途经路由之间数据报传输的时间
 - 松散路由选择(loose source routing)，指定一个路由器IP地址列表，数据报发送过程中必须经过其中的所有路由器
 - 严格路由选择(strict source routing)，和松散路由选择类似，不过数据报只能经过被指定的路由器
+
+### 3.3 IP路由选择
+
+
+
 ## Chapter 10 动态选路协议
 **RIP(Routing Information Protocol)**: 选路信息协议。
 **OSPF**:
