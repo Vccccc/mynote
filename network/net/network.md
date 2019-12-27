@@ -43,6 +43,7 @@ send ICMP ECHO_REQUEST to network hosts
 
 ### tcpdump
 dump traffic on a network
+- -c ++count++: 读取count
 
 
 
