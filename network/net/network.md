@@ -22,6 +22,31 @@
 //         uint32_t        sin6_scope_id; /* IPv6 scope-id */
 //     };
 ```
+
+## Unix 网络相关命令
+### netstat
+ Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.
+- -r: 显示内核路由表
+- -i: 显示所有网络接口
+- -n: Show numerical addresses instead of trying to determine symbolic host, port or user names.
+
+### ifconfig
+configure a network interface.
+
+### ping
+send ICMP ECHO_REQUEST to network hosts
+- -b: Allow pinging a broadcast address.
+
+### arp
+ manipulate the system ARP cache
+- -a: Use alternate BSD style output format (with no fixed columns)
+
+
+
+
+
+
+
 ##  #include <arpa/inet.h>
 >主要是与网络地址相关定义和函数
 #### inet_pton inet_ntop
@@ -356,3 +381,13 @@ A write(2) fails with the error EINVAL if the size of the supplied buffer is les
 # Muduo
 ## IP 地址的抽象
 IP 地址由三个字段组成，family, port, address。IP 地址是其他 API 的参数（如 socket 用到 family， bind 用到整个地址信息），所以单独抽象出来一个 InetAddress 类。
+
+
+
+
+
+
+
+
+
+
