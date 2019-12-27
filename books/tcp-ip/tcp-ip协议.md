@@ -43,10 +43,9 @@ T C P和U D P采用16 bit的端口号来识别应用程序。
 
 
 ## chapter 2 链路层
-在T C P / I P协议族中，链路层主要有三个目的：（1）为I P模块发送和
-接收I P数据报；（2）为A R P模块发送A R P请求和接收A R P应答；（3）为R A R P发送R A R P请
-求和接收R A R P应答。
+在T C P / I P协议族中，链路层主要有三个目的：（1）为I P模块发送和接收I P数据报；（2）为ARP模块发送ARP请求和接收ARP应答；（3）为RARP发送RARP请求和接收RARP应答。
 
+### 2.2
 
 ## chapter 3 IP: 网际协议
 ### 3.1 引言
