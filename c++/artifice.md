@@ -231,5 +231,38 @@ cond_.wait()，首先将当前线程置于等待线程列表中(此时已获得�
 ### vector
 #### 删除
 ```c
+#include <iostream>
+#include <iterator>
+#include <vector>
+#include <algorithm>
+using namespace std;
 
+int main()
+{
+    vector<int> v{1, 2, 3, 2, 5, 2, 6, 2, 4, 8};
+    const auto new_end = remove(begin(v), end(v), 2);
+    v.erase(new_end, end(v));
+
+    for(auto i : v)
+    {
+        cout << i << ", ";
+    }
+    cout << endl;
+
+    const auto odd([](int i) { return i % 2 != 0; });
+    v.erase(remove_if(begin(v), end(v), odd), end(v));
+    v.shrink_to_fit();
+
+    for(auto i : v)
+    {
+        cout << i << ", ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+output: 
+1, 3, 5, 6, 4, 8,
+6, 4, 8,
 ```
