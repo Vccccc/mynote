@@ -111,7 +111,7 @@ Other more specific prepositions of movement include: *through*, *across*, *off*
 **Up**, **over**, **down**, **past** and **around** indicate directions of movement:
 - Jack went **up** the hill.
 - Jill came tumbling **down** after.
-- We will trave **over** ro
+- We will trave **over** rough terrain on our way to Grandma's house.
 
 
 
