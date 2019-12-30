@@ -149,7 +149,9 @@ I P路由选择主要完成以下这些功能：
 >  ftp bsdi
 
 都会进行以下这些步骤。这些步骤的序号如图 4-2所示
-1) 应用程序FTP客户端调用函数gethostbyname(3)把主机名（bsdi）转换成32 bit的IP地址。这个函数在D N S（域名系统）中称作解析器，我们将在第 1 4章对它进行介绍。这个转换过程或者使用DNS，或者在较小网络中使用一个静态的主机文件（/etc/hosts）。
+1) 应用程序FTP客户端调用函数gethostbyname(3)把主机名（bsdi）转换成32 bit的IP地址。这个函数在D N S（域名系统）中称作解析器。这个转换过程或者使用DNS，或者在较小网络中使用一个静态的主机文件（/etc/hosts）。
+2) F T P客户端请求T C P用得到的I P地址建立连接。
+3) T C P发送一个连接请求分段到远端的主机，即用上述 I P地址发送一份 I P数据报
 
 ## Chapter 10 动态选路协议
 **RIP(Routing Information Protocol)**: 选路信息协议。
