@@ -108,4 +108,7 @@ Other more specific prepositions of movement include: *through*, *across*, *off*
 - James went **into** the room.
 - They stare **into** the darkness.
 
+**Up**, **over**, **down**, **past** and **arou
+
+
 
