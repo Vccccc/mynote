@@ -112,6 +112,7 @@ Other more specific prepositions of movement include: *through*, *across*, *off*
 - Jack went **up** the hill.
 - Jill came tumbling **down** after.
 - We will trave **over** rough terrain on our way to Grandma's house.
+- The horse runs **arou
 
 
 
