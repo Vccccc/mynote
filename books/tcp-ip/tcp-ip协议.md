@@ -185,6 +185,9 @@ A R P高效运行的关键是由于每个主机上都有一个 A R P高速缓存
 
 
 ### 4.6 ARP代理
+如果A R P请求是从一个网络的主机发往另一个网络上的主机，那么连接这两个网络的路由器就可以回答该请求，这个过程称作委托 A R P或A R P代理(Proxy ARP)。
+
+
 
 ## Chapter 10 动态选路协议
 **RIP(Routing Information Protocol)**: 选路信息协议。
