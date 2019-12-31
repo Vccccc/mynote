@@ -50,6 +50,7 @@ dump traffic on a network
 - -S: Print absolute, rather than relative, TCP sequence numbers
 - -n: Don't convert addresses (i.e., host addresses, port numbers, etc.) to names.
 - -X: When parsing and printing, in addition to printing the headers of each packet, print the data of each packet (minus its link level header) in hex and ASCII.  This is very handy for analysing new protocols.
+- -e: Print  the  link-level  header  on  each  dump line.  This can be used, for example, to print MAC layer addresses for protocols such as Ethernet and IEEE 802.11.
 
 
 
