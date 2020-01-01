@@ -73,10 +73,7 @@ Output:
 0x100
 256
 ```
-输出不同进制
-```c
 
-```
 ### StringArg
 ```c
 class StringArg // copyable
