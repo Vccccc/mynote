@@ -6,7 +6,7 @@
 #### 打开文件
 ```c
 // int open(const char *pathname, int flags, mode_t mode)
-// 如果不是创建文件， mode 
+// 如果不是创建文件， mode 不用指定
 void create_c()
 {
     int fd = open("create.txt", O_CREAT, S_IRUSR | S_IWUSR);
@@ -17,7 +17,7 @@ void create_c()
     }
     close(fd);
 }
-
+// 如果文件存在，打开文件会失败
 void open_c()
 {
     int fd = open("open.txt", O_TRUNC |O_RDWR | O_APPEND);
