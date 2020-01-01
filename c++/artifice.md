@@ -62,7 +62,6 @@ int data\_;
     int i = 0400;
     printf("0x%x\n", i);
     printf("%d\n", i);
-
     return 0;
 }
 
@@ -74,6 +73,7 @@ Output:
 0x100
 256
 ```
+
 ### StringArg
 ```c
 class StringArg // copyable
