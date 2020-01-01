@@ -49,7 +49,30 @@ int data\_;
 ## 技巧
 
 ### 进制
-```
+以 0 k
+```c
+#define A 0400
+    printf("0x%x\n", A);
+    printf("%d\n", A);
+
+#define B 400
+    printf("0x%x\n", B);
+    printf("%d\n", B);
+
+    int i = 0400;
+    printf("0x%x\n", i);
+    printf("%d\n", i);
+
+    return 0;
+}
+
+Output:
+0x100
+256
+0x190
+400
+0x100
+256
 ```
 ### StringArg
 ```c
