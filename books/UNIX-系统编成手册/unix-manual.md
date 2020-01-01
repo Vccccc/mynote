@@ -5,10 +5,10 @@
 打开或者创建文件。
 #### 打开文件
 ```c
-    // int open(const char *__file, int __oflag, ...)
+// int open(const char *pathname, int flags, mode_t mode)
+// 如果不是创建文件， mode 
 void create_c()
 {
-
     int fd = open("create.txt", O_CREAT, S_IRUSR | S_IWUSR);
     if (fd < 0)
     {
