@@ -36,14 +36,14 @@ class Base
 使用驼峰命名法，首字符使用小写。
 size\_t writableBytes();
 
-当成员函数不修改对象时，声明为 const
+当成员函数不修改对象时，应声明为 const 。
 ```c
 template<typename T>
 class Vector
 {
     public:
     Vector(int length) : length_(length) { }
-    int length()  { return length_;}
+    int length()  { return length_;} // 应为 const
     
 private:
     int length_;
