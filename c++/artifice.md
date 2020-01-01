@@ -47,6 +47,10 @@ int data\_;
 
 
 ## 技巧
+
+### 进制
+```
+```
 ### StringArg
 ```c
 class StringArg // copyable
