@@ -4,3 +4,35 @@
 ### open
 打开或者创建文件。
 #### 打开文件
+```c
+    // int open(const char *__file, int __oflag, ...)
+void create_c()
+{
+
+    int fd = open("create.txt", O_CREAT, S_IRUSR | S_IWUSR);
+    if (fd < 0)
+    {
+        perror("failed to open file");
+        return;
+    }
+    close(fd);
+}
+
+void open_c()
+{
+    int fd = open("open.txt", O_TRUNC |O_RDWR | O_APPEND);
+    if (fd < 0)
+    {
+        perror("failed to open file");
+        return;
+    }
+    close(fd);
+}
+
+int main(int argc, char *argv[])
+{
+    create_c();
+    open_c();
+    return 0;
+}
+```
