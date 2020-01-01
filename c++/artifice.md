@@ -38,7 +38,23 @@ size\_t writableBytes();
 
 当成员函数不修改对象时，声明为 const
 ```c
-
+template<typename T>
+class Vector
+{
+    public:
+    Vector(int length) : length_(length) { }
+    int length()  { return length_;}
+    
+private:
+    int length_;
+};
+int main(int argc, char *argv[])
+{
+    const Vector<int> v(10);
+    v.length(); // 编译错误，该方法应为 const
+    
+    return 0;
+}
 ```
 ##### 成员变量
 使用驼峰命名法，首字符使用小写，最后的字符为\_。
