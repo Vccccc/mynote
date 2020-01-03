@@ -403,7 +403,7 @@ public:
 ```
 
 ##### 思路
-根据 Solution 1 可观察到 left 和 right 之间的 difference 都相同，所以用一个辅助
+根据 Solution 1 可观察到 left 和 right 之间的 difference 都相同，所以用一个辅助函数计算 left 和 right 之间能组成的 slice，从而避免重复计算。
 ##### Solution 2
 ```cpp
 class Solution {
