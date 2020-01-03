@@ -139,7 +139,7 @@ void PrintList(ListNode* pHead)
     }
 }
 ```
-
+### 快速排序
 **题目描述**
 >实现快排
 
@@ -152,9 +152,8 @@ void PrintList(ListNode* pHead)
 
 
 -----
-### 思路
 
-### Solution
+#### Solution
 ```cpp
 int Partition(int data[], int length, int start, int end)
 {
@@ -197,7 +196,7 @@ void QuickSort(int data[], int length, int start, int end)
     
 }
 ```
-
+### 替换空格
 **题目描述**
 >请实现一个函数,把字符串中的每个空格替换成“%20”。例如输入“We are happy.”，则输出“We%20are%20happy.”
 
@@ -237,7 +236,7 @@ void replaceSpace(string& str)
 }
 
 ```
-
+### 用两个栈实现队列
 **题目描述**
 >用两个栈实现一个队列。队列声明如下，请实现它的两个函数appendTail和deleteHead，分别完成在队列尾部插入结点和在队列头部删除结点的功能
 
