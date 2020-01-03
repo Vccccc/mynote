@@ -446,4 +446,37 @@ public:
         return total;
     }
 };
+
+##### 思路
+
+##### Solution 3
+```c
+class Solution {
+public:
+    int numberOfArithmeticSlices(vector<int>& A) {
+        if(A.size() < 3)
+        {
+            return 0;
+        }
+
+        vector<int> dp(A.size(), 0);
+        if(A[1] - A[0] == A[2] - A[1]) 
+        {
+            dp[2] = 1;
+        }
+        
+        int result = dp[2];
+        for(int left = 3; left < A.size(); left++)
+        {
+            if(A[left-1] - A[left-2] == A[left] - A[left-1])
+            {
+                dp[left] = dp[left-1] + 1;
+            }
+            result += dp[left];
+        }
+
+        return result;
+    }
+};
+```
 ```
