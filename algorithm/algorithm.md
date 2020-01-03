@@ -375,7 +375,7 @@ Node* ConstructCore(int* startPreorder, int* endPreorder,
 -----
 ##### 思路
 
-##### Solution
+##### Solution 1
 ```cpp
 class Solution {
 public:
