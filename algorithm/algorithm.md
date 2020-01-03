@@ -9,9 +9,9 @@
 >
 
 -----
-#### 思路
+##### 思路
 
-#### Solution
+##### Solution
 ```cpp
 ```
 
@@ -52,7 +52,7 @@ int singleNumber(const vector<int> & nums)
 ![题目](./photo/find.jpg)
 
 ____
-#### Solution
+##### Solution
 ```cpp
 bool findNumber(const vector<vector<int>>& input, const int target)
 {
@@ -101,7 +101,7 @@ struct ListNode
 };
 ```
 ---------
-#### 思路
+##### 思路
 链表是从头到尾的顺序访问的，与从尾到头的顺序相反。这时可以想到使用栈，来暂存节点数据。当遍历完整个链表后，再从栈顶依次打输出节点的值。
 ##### 使用栈
 ```cpp
@@ -124,7 +124,7 @@ void PrintList(ListNode* pHead)
 }
 ```
 
-##### 使用递归
+###### 使用递归
 递归本质上就是一个栈结构，所以可以使用递归代替栈。
 
 ```cpp
@@ -154,7 +154,7 @@ void PrintList(ListNode* pHead)
 
 -----
 
-#### Solution
+##### Solution
 ```cpp
 int Partition(int data[], int length, int start, int end)
 {
@@ -258,9 +258,9 @@ private:
 };
 ```
 
-#### 思路
+##### 思路
 stack是先进后出，而queue是先进先出。出入顺序刚好相反，所以再借助一个stack再反一次，就是queue的顺序了。注意queue为空时的判空处理。
-#### Solution
+##### Solution
 ```cpp
 template<typename T>
 void Queue<T>::appendTail(const T& node)
