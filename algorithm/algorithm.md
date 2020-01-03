@@ -8,9 +8,9 @@
 >
 
 -----
-### 思路
+#### 思路
 
-### Solution
+#### Solution
 ```cpp
 ```
 
@@ -257,9 +257,9 @@ private:
 };
 ```
 
-### 思路
+#### 思路
 stack是先进后出，而queue是先进先出。出入顺序刚好相反，所以再借助一个stack再反一次，就是queue的顺序了。注意queue为空时的判空处理。
-### Solution
+#### Solution
 ```cpp
 template<typename T>
 void Queue<T>::appendTail(const T& node)
@@ -289,7 +289,7 @@ T Queue<T>::deleteHead()
     return head;
 }
 ```
-
+### 重建二叉树
 **题目描述**
 >输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。
 
@@ -308,11 +308,11 @@ struct Node
 >inorder: 中序遍历序列
 >length: 序列长度
 
-### 思路
+#### 思路
 由前序遍历序列找出root结点，根据root结点的值找出root结点在中序遍历序列的位置，用root结点划分root结点的左右子树。
 构建树的过程是找出根结点、构建左子树、构建右子树。可以发现，这是由一个大的问题，不断划分成同样的小问题。可以使用递归解决，递归基是当子树没有左右结点时停止。
 
-### Solution
+#### Solution
 ```cpp
 Node* Construct(int* preorder, int* inorder, int length)
 {
