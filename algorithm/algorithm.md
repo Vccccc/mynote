@@ -368,3 +368,13 @@ Node* ConstructCore(int* startPreorder, int* endPreorder,
     return root;
 }
 ```
+
+### 题目
+!["题目"](./photo/413.png)
+
+-----
+#### 思路
+
+#### Solution
+```cpp
+```
