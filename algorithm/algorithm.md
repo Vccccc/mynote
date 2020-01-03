@@ -35,7 +35,116 @@ int singleNumber(const vector<int> & nums)
 		return x;
 	}
 ```
+### Arithmetic Slices
+!["题目"](./photo/413.png)
 
+-----
+##### 思路
+从左往右开始计算，每次计算以 left 为起点的 slice 数，直到遇到第一个 difference 不同的数，则 left + 1，继续计算。
+##### Solution 1
+```cpp
+class Solution {
+public:
+    int numberOfArithmeticSlices(vector<int>& A) {
+        if(A.size() < 3)
+        {
+            return 0;
+        }
+
+        int result = 0;
+        for(int left = 0; left <= A.size() - 3;)
+        {
+            int right = left + 1;
+            int difference = A[right] - A[left];
+            while(right < A.size() - 1 && A[right + 1] - A[right] == difference)
+            {
+              result++;
+              right++;
+            }
+            left++;
+        }
+        return result;
+    }
+};
+```
+
+##### 思路
+根据 Solution 1 可观察到 left 和 right 之间的 difference 都相同，所以用一个辅助函数计算 left 和 right 之间能组成的 slice，从而避免重复计算。
+##### Solution 2
+```cpp
+class Solution {
+public:
+    int numberOfArithmeticSlices(vector<int>& A) {
+        if(A.size() < 3)
+        {
+            return 0;
+        }
+
+        int result = 0;
+        for(int left = 0; left <= A.size() - 3;)
+        {
+            int right = left + 1;
+            int difference = A[right] - A[left];
+            while(right < A.size() - 1 && A[right + 1] - A[right] == difference)
+            {
+              right++;
+            }
+            result += cacul(left, right);
+            left = right;
+        }
+        return result;
+    }
+
+    int cacul(int left, int right)
+    {
+        if(right - left + 1 < 3)
+        {
+            return 0;
+        }
+
+        int max = right - left + 1 - 2;
+        int total = 0;
+        while(max >= 1)
+        {
+            total += max;
+            max--;
+        }
+        return total;
+    }
+};
+```
+##### 思路 动态规划
+Solution 1 是计算以 left 为起点的 slice，但如果计算以某一个位置作为结尾的 slice 则可通过动态规划去解决问题。dp[tail] 记录以 A[tail] 为结尾的 slice 数量，当计算 dp[tail+1] 时，只需简单计算 A[tail+1] 与 A[tail], A[tail-1] 是否能组成一个 slice 即可。
+##### Solution 3
+```c
+class Solution {
+public:
+    int numberOfArithmeticSlices(vector<int>& A) {
+        if(A.size() < 3)
+        {
+            return 0;
+        }
+
+        vector<int> dp(A.size(), 0);
+        if(A[1] - A[0] == A[2] - A[1]) 
+        {
+            dp[2] = 1;
+        }
+        
+        int result = dp[2];
+        for(int tail = 3; tail < A.size(); tail++)
+        {
+            if(A[tail-1] - A[tail-2] == A[tail] - A[tail-1])
+            {
+                dp[tail] = dp[tail-1] + 1;
+            }
+            result += dp[tail];
+        
+
+        return result;
+    }
+};
+```
 # 其他
 ### 二维数组中的查找
 **题目描述**
@@ -369,113 +478,3 @@ Node* ConstructCore(int* startPreorder, int* endPreorder,
 }
 ```
 
-### Arithmetic Slices
-!["题目"](./photo/413.png)
-
------
-##### 思路
-从左往右开始计算，每次计算以 left 为起点的 slice 数，直到遇到第一个 difference 不同的数，则 left + 1，继续计算。
-##### Solution 1
-```cpp
-class Solution {
-public:
-    int numberOfArithmeticSlices(vector<int>& A) {
-        if(A.size() < 3)
-        {
-            return 0;
-        }
-
-        int result = 0;
-        for(int left = 0; left <= A.size() - 3;)
-        {
-            int right = left + 1;
-            int difference = A[right] - A[left];
-            while(right < A.size() - 1 && A[right + 1] - A[right] == difference)
-            {
-              result++;
-              right++;
-            }
-            left++;
-        }
-        return result;
-    }
-};
-```
-
-##### 思路
-根据 Solution 1 可观察到 left 和 right 之间的 difference 都相同，所以用一个辅助函数计算 left 和 right 之间能组成的 slice，从而避免重复计算。
-##### Solution 2
-```cpp
-class Solution {
-public:
-    int numberOfArithmeticSlices(vector<int>& A) {
-        if(A.size() < 3)
-        {
-            return 0;
-        }
-
-        int result = 0;
-        for(int left = 0; left <= A.size() - 3;)
-        {
-            int right = left + 1;
-            int difference = A[right] - A[left];
-            while(right < A.size() - 1 && A[right + 1] - A[right] == difference)
-            {
-              right++;
-            }
-            result += cacul(left, right);
-            left = right;
-        }
-        return result;
-    }
-
-    int cacul(int left, int right)
-    {
-        if(right - left + 1 < 3)
-        {
-            return 0;
-        }
-
-        int max = right - left + 1 - 2;
-        int total = 0;
-        while(max >= 1)
-        {
-            total += max;
-            max--;
-        }
-        return total;
-    }
-};
-```
-##### 思路 动态规划
-Solution 1 是计算以 left 为起点的 slice，但如果计算以某一个位置作为结尾的 slice 则可通过动态规划去解决问题。dp[tail] 记录以 A[tail] 为结尾的 slice 数量，当计算 dp[tail+1] 时，只需简单计算 A[tail+1] 与 A[tail], A[tail-1] 是否能组成一个 slice 即可。
-##### Solution 3
-```c
-class Solution {
-public:
-    int numberOfArithmeticSlices(vector<int>& A) {
-        if(A.size() < 3)
-        {
-            return 0;
-        }
-
-        vector<int> dp(A.size(), 0);
-        if(A[1] - A[0] == A[2] - A[1]) 
-        {
-            dp[2] = 1;
-        }
-        
-        int result = dp[2];
-        for(int tail = 3; tail < A.size(); tail++)
-        {
-            if(A[tail-1] - A[tail-2] == A[tail] - A[tail-1])
-            {
-                dp[tail] = dp[tail-1] + 1;
-            }
-            result += dp[tail];
-        
-
-        return result;
-    }
-};
-```
