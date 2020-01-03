@@ -83,7 +83,7 @@ bool findNumber(const vector<vector<int>>& input, const int target)
     return found; 
 }
 ```
-
+### 从尾到头打印链表 
 **题目描述**
 >输入一个链表的头节点，从尾到头反过来打印出每个节点的值
 
@@ -100,9 +100,9 @@ struct ListNode
 };
 ```
 ---------
-### 思路
+#### 思路
 链表是从头到尾的顺序访问的，与从尾到头的顺序相反。这时可以想到使用栈，来暂存节点数据。当遍历完整个链表后，再从栈顶依次打输出节点的值。
-### 使用栈
+##### 使用栈
 ```cpp
 void PrintList(ListNode* pHead)
 {
@@ -123,7 +123,7 @@ void PrintList(ListNode* pHead)
 }
 ```
 
-### 使用递归
+##### 使用递归
 递归本质上就是一个栈结构，所以可以使用递归代替栈。
 
 ```cpp
