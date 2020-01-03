@@ -290,3 +290,81 @@ T Queue<T>::deleteHead()
     return head;
 }
 ```
+
+**题目描述**
+>输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。
+
+**结点**
+```cpp
+struct Node
+{
+    int value_;
+    Node* left_;
+    Node* right_;
+}
+```
+
+**输入描述**
+>preorder: 前序遍历序列
+>inorder: 中序遍历序列
+>length: 序列长度
+
+### 思路
+由前序遍历序列找出root结点，根据root结点的值找出root结点在中序遍历序列的位置，用root结点划分root结点的左右子树。
+构建树的过程是找出根结点、构建左子树、构建右子树。可以发现，这是由一个大的问题，不断划分成同样的小问题。可以使用递归解决，递归基是当子树没有左右结点时停止。
+
+### Solution
+```cpp
+Node* Construct(int* preorder, int* inorder, int length)
+{
+    if(preorder == NULL || inorder == NULL || length <= 0)
+        return NULL;
+
+    return ConstructCore(preorder, preorder + length - 1,
+            inorder, inorder + length - 1);
+}
+
+Node* ConstructCore(int* startPreorder, int* endPreorder,
+        int* startInoder, int* endInorder)
+{
+    // 前序遍历序列的第一个数字是根结点的值
+    int rootValue = startPreorder[0];
+    Node* root = new Node();
+    root->value_ = rootValue;
+    root->left_ = root->right_ = NULL;
+
+    if(startPreorder == endPreorder)
+    {
+        if(startInoder == endInorder && *startPreorder == *startInoder)
+            return root;
+        else
+            throw std::exception("Invalid input.");
+    }
+
+    // 在中序遍历中找到根结点的值
+    int* rootInorder = startInoder;
+    while(rootInorder <= endInorder && *rootInorder != rootValue)
+        ++rootInorder;
+
+    if(rootInorder == endInorder && *rootInorder != rootValue)
+        throw std::exception("Invalid input.");
+
+    int leftLength = rootInorder - startInoder;
+    int* leftPreorderEnd = startPreorder + leftLength;
+    if(leftLength > 0)
+    {
+        // 构建左子树
+        root->left_ = ConstructCore(startPreorder + 1,
+                leftPreorderEnd, startInoder, rootInorder - 1);
+    }
+
+    if(leftLength < endPreorder - startPreorder)
+    {
+        // 构建右子树
+        root->right_ = ConstructCore(leftPreorderEnd + 1, endPreorder,
+                rootInorder + 1, endInorder);
+    }
+    
+    return root;
+}
+```
