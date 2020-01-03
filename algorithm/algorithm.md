@@ -403,7 +403,7 @@ public:
 ```
 
 ##### 思路
-Solution 1 可以
+
 ##### Solution 2
 ```cpp
 ```
