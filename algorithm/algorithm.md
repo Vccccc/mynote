@@ -309,11 +309,11 @@ struct Node
 >inorder: 中序遍历序列
 >length: 序列长度
 
-#### 思路
+##### 思路
 由前序遍历序列找出root结点，根据root结点的值找出root结点在中序遍历序列的位置，用root结点划分root结点的左右子树。
 构建树的过程是找出根结点、构建左子树、构建右子树。可以发现，这是由一个大的问题，不断划分成同样的小问题。可以使用递归解决，递归基是当子树没有左右结点时停止。
 
-#### Solution
+##### Solution
 ```cpp
 Node* Construct(int* preorder, int* inorder, int length)
 {
@@ -373,8 +373,31 @@ Node* ConstructCore(int* startPreorder, int* endPreorder,
 !["题目"](./photo/413.png)
 
 -----
-#### 思路
+##### 思路
 
-#### Solution
+##### Solution
 ```cpp
+class Solution {
+public:
+    int numberOfArithmeticSlices(vector<int>& A) {
+        if(A.size() < 3)
+        {
+            return 0;
+        }
+
+        int result = 0;
+        for(int left = 0; left <= A.size() - 3;)
+        {
+            int right = left + 1;
+            int difference = A[right] - A[left];
+            while(right < A.size() - 1 && A[right + 1] - A[right] == difference)
+            {
+              result++;
+              right++;
+            }
+            left++;
+        }
+        return result;
+    }
+};
 ```
