@@ -448,7 +448,8 @@ public:
 };
 ```
 ##### 思路 动态规划
-Solution 1 是计算以 left 为起点的 slice，但如果计算以某一个位置作为结尾的 slice 则可通过动态规划去解决问题。dp[idx] 记录以 A[idx] 为结尾的 slice 数量，A[idx]
+Solution 1 是计算以 left 为起点的 slice，但如果计算以某一个位置作为结尾的 slice 则可通过动态规划去解决问题。dp[idx] 记录以 A[idx] 为结尾的 slice 数量，当
+dp[idx+1]
 ##### Solution 3
 ```c
 class Solution {
