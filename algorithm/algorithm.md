@@ -374,7 +374,7 @@ Node* ConstructCore(int* startPreorder, int* endPreorder,
 
 -----
 ##### 思路
-从左往右开始计算，如果遇到 difference 相同则前进，否则更新 difference ，缩小左边窗口从新计算。
+从左往右开始计算，如果遇到 difference 相同则前进，否则更新 difference ，缩小左边窗口重新计算。
 ##### Solution 1
 ```cpp
 class Solution {
@@ -400,4 +400,10 @@ public:
         return result;
     }
 };
+```
+
+##### 思路
+Solution 1 可以
+##### Solution 2
+```cpp
 ```
