@@ -374,7 +374,7 @@ Node* ConstructCore(int* startPreorder, int* endPreorder,
 
 -----
 ##### 思路
-从左往右开始计算，从 left 开始所能找到的 splice 数，直到
+从左往右开始计算，每次计算以 left 为起点的 splice ，直到
 ##### Solution 1
 ```cpp
 class Solution {
