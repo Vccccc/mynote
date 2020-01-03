@@ -374,7 +374,7 @@ Node* ConstructCore(int* startPreorder, int* endPreorder,
 
 -----
 ##### 思路
-从左往右开始计算，每次计算以 left 为起点的 slice 数，直到
+从左往右开始计算，每次计算以 left 为起点的 slice 数，直到遇到第一个 difference 不同的数，则 left + 1，继续计算。
 ##### Solution 1
 ```cpp
 class Solution {
