@@ -83,3 +83,210 @@ bool findNumber(const vector<vector<int>>& input, const int target)
     return found; 
 }
 ```
+
+**题目描述**
+>输入一个链表的头节点，从尾到头反过来打印出每个节点的值
+
+**输入描述**
+>pHead: 头节点
+
+
+结构体定义如下：
+```cpp
+struct ListNode
+{
+  int m_nKey;
+  ListNode* m_pNext;
+};
+```
+---------
+### 思路
+链表是从头到尾的顺序访问的，与从尾到头的顺序相反。这时可以想到使用栈，来暂存节点数据。当遍历完整个链表后，再从栈顶依次打输出节点的值。
+### 使用栈
+```cpp
+void PrintList(ListNode* pHead)
+{
+    std::stack<ListNode*> nodes;
+    
+    ListNode* pNode = pHead;
+    while(pNode != NULL)
+    {
+	nodes.push(pNode);
+	pNode = pNode->m_pNext;
+    }
+
+    while(!nodes.empty())
+    {
+	pNode = nodes.top();
+	printf("%d\t", pNode->m_nKey);
+     	nodes.pop();
+}
+```
+
+### 使用递归
+递归本质上就是一个栈结构，所以可以使用递归代替栈。
+
+```cpp
+void PrintList(ListNode* pHead)
+{
+    if(pHead != NULL)
+    {
+        if(pHead->m_pNext != NULL)
+	{
+	    PrintList(pHead->m_pNext);
+	}
+	printf("%d\t", pHead->m_nkey);
+    }
+}
+```
+
+**题目描述**
+>实现快排
+
+**输入描述**
+>data: 序列
+>length: 序列长度
+>start: 序列起始位置
+>end: 序列结束位置
+
+
+
+-----
+### 思路
+
+### Solution
+```cpp
+int Partition(int data[], int length, int start, int end)
+{
+    if(data == NULL || length <= 0 || start < 0 || end >= length)
+        throw new std::exception("Invalid Parameters");
+
+    std::random_device rd;
+    std::uniform_int_distribution<> dis(start, end);
+    int index = dis(rd);
+
+    swap(&data[index], &data[end]);
+
+    int small = start - 1;
+    for(index = start; index < end; ++index)
+    {
+        if(data[index] < data[end])
+        {
+            ++small;
+            if(small != index)
+                swap(&data[index], &data[small]);
+        }
+    }
+
+    ++small;
+    swap(&data[small], &data[end]);
+
+    return small;
+}
+
+void QuickSort(int data[], int length, int start, int end)
+{
+    if(start == end)
+        return;
+
+    int index = Partition(data, length, start, end);
+    if(index > start)
+        QuickSort(data, length, start, index - 1);
+    if(index < end)
+        QuickSort(data, length, index + 1, end);
+    
+}
+```
+
+**题目描述**
+>请实现一个函数,把字符串中的每个空格替换成“%20”。例如输入“We are happy.”，则输出“We%20are%20happy.”
+
+**输入描述**
+>str: 被替换的字符串
+
+```cpp
+void replaceSpace(string& str)
+{
+    int n = 0;
+    for(auto& i : str)
+    {
+        if(i == ' ')
+        {
+            ++n;
+        }
+    }
+    
+    n *= 2;
+    n += str.size();
+    string res;
+    res.resize(n);
+    for(int i = str.size() - 1, j = n - 1; i >= 0; --i)
+    {
+        if(str[i] != ' ') 
+        {
+            res[j--] = str[i];
+        }
+        else
+        {
+            res[j--] = '0';
+            res[j--] = '2';
+            res[j--] = '%';
+        }
+    }
+    str = res;
+}
+
+```
+
+**题目描述**
+>用两个栈实现一个队列。队列声明如下，请实现它的两个函数appendTail和deleteHead，分别完成在队列尾部插入结点和在队列头部删除结点的功能
+
+```cpp
+template<typename T>
+class Queue
+{
+public:
+    Queue();
+    ~Queue();
+
+    void appendTail(const T& node);
+    T deleteHead();
+
+private:
+    stack<T> stack1;
+    stack<T> stack2;
+};
+```
+
+### 思路
+stack是先进后出，而queue是先进先出。出入顺序刚好相反，所以再借助一个stack再反一次，就是queue的顺序了。注意queue为空时的判空处理。
+### Solution
+```cpp
+template<typename T>
+void Queue<T>::appendTail(const T& node)
+{
+    stack1.push(node);
+}
+
+template<typename T>
+T Queue<T>::deleteHead()
+{
+    if(stack2.size() <= 0)
+    {
+        while(stack1.size() > 0)
+        {
+            T& data = stack1.top();
+            stack1.pop();
+            stack2.push(data);
+        }
+    }
+
+    if(stack2.size() == 0)
+        throw new exception("queue is empty");
+
+    T head = stack2.top();
+    stack2.pop();
+
+    return head;
+}
+```
