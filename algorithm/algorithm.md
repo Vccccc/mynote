@@ -406,4 +406,44 @@ public:
 
 ##### Solution 2
 ```cpp
+class Solution {
+public:
+    int numberOfArithmeticSlices(vector<int>& A) {
+        if(A.size() < 3)
+        {
+            return 0;
+        }
+
+        int result = 0;
+        for(int left = 0; left <= A.size() - 3;)
+        {
+            int right = left + 1;
+            int difference = A[right] - A[left];
+            while(right < A.size() - 1 && A[right + 1] - A[right] == difference)
+            {
+              right++;
+            }
+            result += cacul(left, right);
+            left = right;
+        }
+        return result;
+    }
+
+    int cacul(int left, int right)
+    {
+        if(right - left + 1 < 3)
+        {
+            return 0;
+        }
+
+        int max = right - left + 1 - 2;
+        int total = 0;
+        while(max >= 1)
+        {
+            total += max;
+            max--;
+        }
+        return total;
+    }
+};
 ```
