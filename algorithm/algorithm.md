@@ -369,7 +369,7 @@ Node* ConstructCore(int* startPreorder, int* endPreorder,
 }
 ```
 
-### 题目
+### Arithmetic Slices
 !["题目"](./photo/413.png)
 
 -----
