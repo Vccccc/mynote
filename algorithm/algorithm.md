@@ -374,7 +374,7 @@ Node* ConstructCore(int* startPreorder, int* endPreorder,
 
 -----
 ##### 思路
-
+从左往右开始计算。
 ##### Solution 1
 ```cpp
 class Solution {
