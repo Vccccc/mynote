@@ -403,7 +403,7 @@ public:
 ```
 
 ##### 思路
-
+根据 Solution 1 可观察到 left 和 right 之间的 difference 都相同，所以用一个辅助
 ##### Solution 2
 ```cpp
 class Solution {
