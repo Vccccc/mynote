@@ -22,7 +22,7 @@ Given an array of integers, every element appears twice except for one. Find tha
 Note: Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
 
 ##### 思路
-元素出现偶数次，则元素的 bit 也应为偶数次，因为 x^x = 0, x^0 = x
+元素出现偶数次，则元素的 bit 也应为偶数次，因为 x^x = 0, x^0 = x，(0 ^ 1) ^ 1  == 0 ^ (1  ^ 1)  == 0（组合顺序无关），所以
 
 ##### Solution
 代码：
