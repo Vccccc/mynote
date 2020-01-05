@@ -18,4 +18,4 @@ public:
   int length() const;
 };
 ```
-那么除非用户调用
+那么除非用户调用函数 length，否则类 Vecotr 都不必计算长度。
