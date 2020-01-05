@@ -98,6 +98,9 @@ class Thing
 {
 public:
   // ...
-  Thing(const Thing&)
+  Thing(const Thing&) = delete;
+  Thing& operator=(const Thing&) = delete;
 };
 ```
+
+### 
