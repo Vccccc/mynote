@@ -61,8 +61,8 @@ struct D : B
 
 int main()
 {
-  B* bp = new D;
-  delete
+  B* bp = new D; // 这里没有问题
+  delete dp; 	// 除非 B 有一个虚析构函数，否则将调用错误的析构函数！
 }
 
 ```
