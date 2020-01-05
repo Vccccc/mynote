@@ -84,6 +84,9 @@ class String
 {
 public:
   String();
-  
+  String(const char* s);
+  // 其他成员函数
+private: 
+  char* data;
 };
 ```
