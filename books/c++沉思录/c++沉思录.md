@@ -27,6 +27,9 @@ public:
 class Point
 {
 public:
-  Point(int p, int q): x(p), y(1) 
+  Point(int p, int q): x(p), y(q) {}
+private:
+  int x, y;
 };
 ```
+这里定义了一个
