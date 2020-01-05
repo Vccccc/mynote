@@ -6,4 +6,8 @@
 ```c
 template<typename T> class Vector
 {
+public: 
+  int length;
 };
+```
+如果类设计者将矢量的长度
