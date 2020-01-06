@@ -150,7 +150,7 @@ public:
 !["题目"](./photo/446.png)
 
 ##### 思路
-枚举所有序列
+枚举所有序列。通过两条线路，分别枚举
 ##### Solution 1 Brute Force 
 ```c
 class Solution {
@@ -179,9 +179,9 @@ public:
             return;
         }
 
-        dfs(dep+1, A, cur);
+        dfs(dep+1, A, cur); // 不包含 A[dep] 的线路
         cur.push_back(A[dep]);
-        dfs(dep+1, A, cur);
+        dfs(dep+1, A, cur);  // 包含 A[dep] 的线路
         return;
     }
 
