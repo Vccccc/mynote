@@ -150,7 +150,7 @@ public:
 !["题目"](./photo/446.png)
 
 ##### 思路
-
+枚举所有序列
 ##### Solution 1 Brute Force 
 ```c
 class Solution {
