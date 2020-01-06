@@ -114,7 +114,7 @@ public:
 };
 ```
 ##### 思路 动态规划
-Solution 1 是计算以 left 为起点的 slice，但如果计算以某一个位置作为结尾的 slice 则可通过动态规划去解决问题。dp[tail] 记录以 A[tail] 为结尾的 slice 数量，当计算 dp[tail+1] 时，只需简单计算 A[tail+1] 与 A[tail], A[tail-1] 是否能组成一个 slice 即可，如果可以，则多增加一个 A[tail+1]， A[tail], A[tail-1] 的 slice。
+Solution 1 是计算以 left 为起点的 slice，但如果计算以某一个位置作为结尾的 slice 则可通过动态规划去解决问题。dp[tail] 记录以 A[tail] 为结尾的 slice 数量，当计算 dp[tail+1] 时，只需简单计算 A[tail+1] 与 A[tail], A[tail-1] 是否能组成一个 slice 即可，如果能，则多增加一个 A[tail-1] ，A[tail], A[tail+1] 的 slice。
 ##### Solution 3
 ```c
 class Solution {
