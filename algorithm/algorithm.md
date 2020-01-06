@@ -151,7 +151,7 @@ public:
 
 ##### 思路
 枚举所有序列。通过两条线路来枚举所有序列，序列中存在或不存在 A[dep]。
-时间复杂度为 O(2^n)，空间复杂度为
+时间复杂度为 O(2^n)，空间复杂度为 O(n)。
 ##### Solution 1 Brute Force 
 ```c
 class Solution {
