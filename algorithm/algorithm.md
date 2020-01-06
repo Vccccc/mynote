@@ -38,7 +38,6 @@ int singleNumber(const vector<int> & nums)
 ### Arithmetic Slices
 !["题目"](./photo/413.png)
 
------
 ##### 思路
 从左往右开始计算，每次计算以 left 为起点的 slice 数，直到遇到第一个 difference 不同的数，则 left + 1，继续计算。
 ##### Solution 1
@@ -147,7 +146,11 @@ public:
 ```
 
 ##  depth-first search
+### Arithmetic Slices II - Subsequence
+!["题目"](./photo/446.png)
 
+##### 思路
+##### Solution 1 
 # 其他
 ### 二维数组中的查找
 **题目描述**
