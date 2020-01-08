@@ -200,7 +200,9 @@ public:
 ##### 思路
 用 f[i][d] 记录以 A[i] 为结尾，距离为 d 的 arithmetic subsequences。但如果 arithmetic subsequences 长度至少为 3 的话，那么前两个数不能形成 arithmetic subsequences。所以 f[i][d] 都为 0，无法利用 f[i][d] 的信息。但假设定义 weak arithmetic subsequences 为长度至少 2
 且任意两个相邻的数的距离相同。此时用 f[i][d] 记录以 A[i] 为结尾，距离为 d 的 weak arithmetic subsequences。此时就可以利用 f[i][d] 的信息进行推导。
->> f[i][A[i]-A[j]] = f[j][A[i]-A[j]] + 1 // 这里 +1 是因为 A[i]
+> f[i][A[i]-A[j]] = f[j][A[i]-A[j]] + 1 // 这里 +1 是因为 pair(i, j)组成了一个weak arithmetic subsequence
+
+
 ##### Solution 2 动态规划
 ```c
 class Solution {
