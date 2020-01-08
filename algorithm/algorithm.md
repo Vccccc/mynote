@@ -202,7 +202,7 @@ public:
 且任意两个相邻的数的距离相同。此时用 f[i][d] 记录以 A[i] 为结尾，距离为 d 的 weak arithmetic subsequences。此时就可以利用 f[i][d] 的信息进行推导。
 > f[i][A[i]-A[j]] = f[j][A[i]-A[j]] + 1 // 这里 +1 是因为 pair(i, j)组成了一个weak arithmetic subsequence
 
-因为
+如果 f[i][d] 不为 0 则说明 f[i][d] 至少存在一个 weak 
 ##### Solution 2 动态规划
 ```c
 class Solution {
