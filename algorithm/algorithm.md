@@ -198,7 +198,7 @@ public:
 ```
 
 ##### 思路
-直觉用 f[i][j] 记录
+直觉用 f[i][j] 记录以 A[i] 为结尾
 ##### Solution 2 动态规划
 ```c
 class Solution {
