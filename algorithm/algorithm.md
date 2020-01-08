@@ -199,7 +199,7 @@ public:
 
 ##### 思路
 用 f[i][j] 记录以 A[i] 为结尾，距离为 j 的 arithmetic subsequences。但如果 arithmetic subsequences 长度至少为 3 的话，那么前两个数不能形成 arithmetic subsequences。所以 f[i][j] 都为 0，无法利用 f[i][j] 的信息。但假设定义 weak arithmetic subsequences 为长度至少 2
-且任意
+且任意两个相邻的数的距离相同。此时用 f[i][j] 记录以 A[i] 为结尾，距离为 j 的 weak arithmetic subsequences。此时就可以
 ##### Solution 2 动态规划
 ```c
 class Solution {
