@@ -199,7 +199,7 @@ public:
 
 ##### 思路
 用 f[i][d] 记录以 A[i] 为结尾，距离为 d 的 arithmetic subsequences。但如果 arithmetic subsequences 长度至少为 3 的话，那么前两个数不能形成 arithmetic subsequences。所以 f[i][d] 都为 0，无法利用 f[i][d] 的信息。但假设定义 weak arithmetic subsequences 为长度至少 2
-且任意两个相邻的数的距离相同。此时用 f[i][d] 记录以 A[i] 为结尾，距离为 d 的 weak arithmetic subsequences。此时就可以利用 f[i][d] 的信息进行推导。
+且任意两个相邻的数的距离相同的序列。此时用 f[i][d] 记录以 A[i] 为结尾，距离为 d 的 weak arithmetic subsequences。此时就可以利用 f[i][d] 的信息进行推导。
 > f[i][A[i]-A[j]] = f[j][A[i]-A[j]] + 1 // 这里 +1 是因为 pair(i, j)组成了一个weak arithmetic subsequence
 
 如果 f[i][d] 不为 0 则说明 f[i][d] 至少存在一个 weak arithmetic subsequences。在一个 weak arithmetic subsequence 追加一个数必定能组成一个 arithmetic subsequence。所以 f[i+1][d] 的 arithmetic subsequences 等于 f[i][d] 的 weak arithmetic subsequences。
