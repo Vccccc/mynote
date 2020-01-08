@@ -198,7 +198,7 @@ public:
 ```
 
 ##### 思路
-用 f[i][j] 记录以 A[i] 为结尾，距离为 j 的 arithmetic subsequences。但如果 arithmetic subsequences 长度至少为 3 的话，那么前两个数的 f[i][j] 都为 0，所以无法通过 f[i]
+用 f[i][j] 记录以 A[i] 为结尾，距离为 j 的 arithmetic subsequences。但如果 arithmetic subsequences 长度至少为 3 的话，那么前两个数不能形成 arithmetic subsequences。所以 f[i][j] 都为 0，无法通过 f[i][j] 求出第
 ##### Solution 2 动态规划
 ```c
 class Solution {
