@@ -383,4 +383,4 @@ parking_lot[num_vehicles++] = x;
 ```c
 parking_lot[num_vehicles++] = VehicleSurrogate(x);
 ```
-这个语句创建了一个关于对象 x 的副本
+这个语句创建了一个关于对象 x 的副本，并将 VehicleSurrogate 对象绑定到该副本，然后将这个对象赋值给 parking_lot 的一个元素。当最后销毁 parking_lot 数组时，所有这些副本也将被
