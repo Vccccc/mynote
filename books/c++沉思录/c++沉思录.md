@@ -147,5 +147,10 @@ String& String::operator=(const String& s)
 另一种可行的方法是将旧值保存起来，直到将源值复制完成：
 ```c
 // 正确的实现方法2
-
+String& String::operator=(const String& s)
+{
+  char* newdata = new char[strlen(s.data)+1];
+  strcpy(newdata, s.data)
+  return *this;
+}
 ```
