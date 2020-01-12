@@ -219,5 +219,8 @@ Vehicle parking_lot[1000];
 Automobile x = /* ... */
 Parking_lot[num_vehicles++] = x;
 ```
-答案是：把 x 赋给 parking_lot 的元素，会把 x  转换成一个 Vehicle 对象，同时会丢失所有在 Vehicle 类中没有的成员。该赋值语句还会把这个被剪裁了的对象复制到 parking_lot 数组中去。
+答案是：把 x 赋给 parking_lot 的元素，会把 x  转换成一个 Vehicle 对象，同时会丢失所有在 Vehicle 类中没有的成员。该赋值语句还会把这个被剪裁了的对象复制到 parking_lot 数组中去。这样子 parking_lot 是 Vehicles 的集合，而不是所有继承自 Vehicle 的对象的集合。
+
+### 5.2 经典解决方案
+这种倾胯
 
