@@ -275,4 +275,16 @@ Vehicle* Trunk::copy() const
     return new Trunk(*this);
 }
 ```
-当然，处理完一个对象后，则需要清楚该对象。要做到这一点
+当然，处理完一个对象后，则需要清楚该对象。要做到这一点，就必须确保类 Vehicle 有一个虚析构函数：
+```c
+class Vehicle
+{
+public:
+    virtual double weight() const = 0;
+    virtual void start() = 0;
+    virtual Vehicle* copy() = 0;
+    vritual ~Vehicle() {}
+```
+
+
+### 5.4 定义代理类
