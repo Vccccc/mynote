@@ -125,5 +125,7 @@ private:
 String& String::operator=(const String& s)
 {
   delete [] data;
-  data = new char[strlen(s.data),+1
+  data = new char[strlen(s.data)+1];
+  strcpy(data, s.data);
+  return *this;
 ```
