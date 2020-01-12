@@ -169,5 +169,5 @@ String& String::operator=(const String& s)
 只有当函数想改变参数时，它才应该有不用 const 声明的引用参数。
 
 ### 记得适当声明成员函数为 const 了吗
-
+如果确信一个成员函数不用修改它的对象，就可以声明它为 const，这样就把它用于 const 对象了。
 
