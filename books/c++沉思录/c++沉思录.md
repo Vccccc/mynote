@@ -215,7 +215,9 @@ Vehicle parking_lot[1000];
 没有产生预期的效果，为什么？
 表明上看是由于 Vehicle 是一个抽象基类，所以类 Vehicle 本身不会有对象。既然 Vehicle 对象不存在，当然也就不可能有其对象数组了。
 但还有更深层次的原因。即便是存在类 Vehicle 对象，写类似于下面的语句会导致什么结果呢？
+```c
 Automobile x = /* ... */
 Parking_lot[num_vehicles++] = x;
-答案是
+```
+答案是：把 x 赋给 parking_lot 的元素，会把 x  转换成一个 Vehicle 对象，同时会丢失所有在
 
