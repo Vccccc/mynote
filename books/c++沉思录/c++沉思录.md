@@ -307,4 +307,5 @@ private:
     Vehicle* vp;
 };
 ```
-上述代理类有一个以 const Vehicle& 为参数的构造函数，这样就能为任意继承自 Vehicle 的类的对象
+上述代理类有一个以 const Vehicle& 为参数的构造函数，这样就能为任意继承自 Vehicle 的类的对象创建代理了。同时，代理类还有一个缺省构造函数，所以我们能够创建 VehicleSurrogate 对象的数组。
+
