@@ -236,7 +236,8 @@ Parking_lot[num_vehicles++] = &x;
 我们可以变通一下，放入 parking_lot 中的值，不是指向原对象的指针，而是指向它们的副本的指针。然后，可以采用一个约定，就是当释放 parking_lot 时，也释放其中所指向的全部对象。因此，可以把前面的例子改成：
 ```c
 Automobile x = /* ... */
-Parking_lot[num_vehicles++] = new 
+Parking_lot[num_vehicles++] = new Automobile(x);
 ```
+尽管这样修改可以不用存储指向本地对象的指针，它也带来了动态内存管理的
 
 
