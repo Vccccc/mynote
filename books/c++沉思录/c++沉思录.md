@@ -375,4 +375,12 @@ void VehicleSurrogate::start()
 ```
 一旦完成了这些工作，就很容易定义我们的停车场（parking_lot）了：
 ```c
+VehicleSurrogate parking_lot[1000];
+Automobile x;
+parking_lot[num_vehicles++] = x;
 ```
+最后一条语句等价于
+```c
+parking_lot[num_vehicles++] = VehicleSurrogate(x);
+```
+这个语句创建了一个关于对象 x 的副本
