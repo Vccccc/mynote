@@ -158,3 +158,4 @@ String& String::operator=(const String& s)
 ```
 
 ### 类需要定义关系操作符吗
+通用库的容器类提供了诸如列表
