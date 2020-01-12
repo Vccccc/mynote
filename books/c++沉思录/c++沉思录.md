@@ -383,4 +383,7 @@ parking_lot[num_vehicles++] = x;
 ```c
 parking_lot[num_vehicles++] = VehicleSurrogate(x);
 ```
-这个语句创建了一个关于对象 x 的副本，并将 VehicleSurrogate 对象绑定到该副本，然后将这个对象赋值给 parking_lot 的一个元素。当最后销毁 parking_lot 数组时，所有这些副本也将被
+这个语句创建了一个关于对象 x 的副本，并将 VehicleSurrogate 对象绑定到该副本，然后将这个对象赋值给 parking_lot 的一个元素。当最后销毁 parking_lot 数组时，所有这些副本也将被清除。
+
+### 5.5 小结
+将继承和容器共用，迫使要处理两个问题：控制内存分配和把不同类型的对象
