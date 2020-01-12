@@ -219,5 +219,5 @@ Vehicle parking_lot[1000];
 Automobile x = /* ... */
 Parking_lot[num_vehicles++] = x;
 ```
-答案是：把 x 赋给 parking_lot 的元素，会把 x  转换成一个 Vehicle 对象，同时会丢失所有在
+答案是：把 x 赋给 parking_lot 的元素，会把 x  转换成一个 Vehicle 对象，同时会丢失所有在 Vehicle 类中没有的成员。该赋值语句还会把这个被剪裁了的对象复制到 parking_lot 数组中去。
 
