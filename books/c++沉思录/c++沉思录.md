@@ -208,4 +208,4 @@ class AutoVehicle : public RoadVehicle { };
 class Aircraft : public Vehicle { };
 class Helicopter : public Aircraft { };
 ```
-所有 Vehicle 都有一些
+所有 Vehicle 都有一些类 Vehicle 中的成员声明的公共属性。但是，有的 Vehicle 具有一些其他 Vehicle 所没有的属性。
