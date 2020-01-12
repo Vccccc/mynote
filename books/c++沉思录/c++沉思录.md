@@ -266,6 +266,7 @@ class Vehicle
 public:
     virtual double weight() const = 0;
     virtual void start() = 0;
+    virtual Vehicle* copy() = 0;
 ```
-
+接下来，在每个派生自 Vehicle 的类中添加一个新的成员函数
 
