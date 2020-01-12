@@ -352,5 +352,5 @@ public:
 private:
     Vehicle* vp;
 };
-};
 ```
+注意这些函数都不是虚拟的：这里所使用的对象都是类 VehicleSurrogate 的对象；没有继承自该类的对象。当然，函数本身可以调用相应 Vehicle
