@@ -181,4 +181,11 @@ public:
 ```
 否则，会遇到类似的问题：
 ```c
+template<typename T>
+int padded_length(const Vector<T>& v, int n)
+{
+  int k = v.length();  // oops!
+  return k > n ? k : n;
+}
+```
 
