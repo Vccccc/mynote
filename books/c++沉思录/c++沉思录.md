@@ -373,3 +373,6 @@ void VehicleSurrogate::start()
     return vp->start();
 }
 ```
+一旦完成了这些工作，就很容易定义我们的停车场（parking_lot）了：
+```c
+```
