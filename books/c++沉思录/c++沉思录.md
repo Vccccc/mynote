@@ -334,4 +334,7 @@ VehicleSurrogate& VehicleSurrogate::operator=(const VehicleSurrogate& v)
 
 再次，注意对赋值操作符进行检测，确保没有将代理赋值给它自身。
 
-下面剩下的工作只是令该代理类指出类 Vehicle 
+下面剩下的工作只是令该代理类指出类 Vehicle 所能支持的其他操作了。在前面的例子中，有 weight 和 start，所以要将它们加入到类 VehicleSurrogate 中：
+```c
+
+```
