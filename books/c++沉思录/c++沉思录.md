@@ -196,4 +196,16 @@ int padded_length(const Vector<T>& v, int n)
 有一种方法，通过定义名为代理（surrogate)的对象来解决该问题。代理运行起来和它所代表的对象基本相同，但是允许将整个派生层次压缩在一个对象类型中。surrogate 是 handle 类中最简单的一种。
 
 ### 5.1 问题
-
+```c
+class Vehicle
+{
+public:
+    virtual double weight() const = 0;
+    virtual void start() = 0;
+};
+class RoadVehicle : public Vehicle { };
+class AutoVehicle : public RoadVehicle { };
+class Aircraft : public Vehicle { };
+class Helicopter : public Aircraft { };
+```
+所有 Vehicle 都有一些
