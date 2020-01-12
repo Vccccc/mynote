@@ -129,3 +129,4 @@ String& String::operator=(const String& s)
   strcpy(data, s.data);
   return *this;
 ```
+一旦把一个
