@@ -259,4 +259,13 @@ if(p != q)
 ### 5.3 虚复制函数
 想一个办法来复制编译时类型未知的对象。C++ 中处理未知类型的对象的方法就是使用虚函数。
 
+由于想能够复制任何类型的 Vehicle，所以应该在 Vehicle 类中增加一个合适的虚函数：
+```c
+class Vehicle
+{
+public:
+    virtual double weight() const = 0;
+    virtual void start() = 0;
+```
+
 
