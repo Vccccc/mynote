@@ -246,6 +246,11 @@ if(p != q)
   parking_lot[p] = parking_lot[q];
 }
 ```
-
+因为接下来 parking_lot[p] 和 parking_lot[q] 将指向相同的对象。我们也不能使用这样的语句
+```c
+if(p != q)
+{
+  delete parking_lot[p];
+```
 
 
