@@ -166,5 +166,8 @@ String& String::operator=(const String& s)
 赋值构造函数应该像 X::X(const X&) 这样。赋值操作符应该像 X::operator=(const X&)。
 
 ### 参数有引用参数时应该是 const 引用吗
-只有当函数想改变参数时，它才应该有不用 const 声明的
+只有当函数想改变参数时，它才应该有不用 const 声明的引用参数。
+
+### 记得适当声明成员函数为 const 了吗
+
 
