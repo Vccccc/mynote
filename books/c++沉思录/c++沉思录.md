@@ -268,5 +268,11 @@ public:
     virtual void start() = 0;
     virtual Vehicle* copy() = 0;
 ```
-接下来，在每个派生自 Vehicle 的类中添加一个新的成员函数 copy。指导思想就是，如果 vp 指向某个继承自 Vehicle 的不确定类的对象，则 vp->copy() 会获得一个指针，该指针指向该对象的一个新建的副本。例如，如果 Truck 继承自（直接或间接地）类 Vehicle，则它的 copy 函数
-
+接下来，在每个派生自 Vehicle 的类中添加一个新的成员函数 copy。指导思想就是，如果 vp 指向某个继承自 Vehicle 的不确定类的对象，则 vp->copy() 会获得一个指针，该指针指向该对象的一个新建的副本。例如，如果 Truck 继承自（直接或间接地）类 Vehicle，则它的 copy 函数就类似于：
+```c
+Vehicle* Trunk::copy() const
+{
+    return new Trunk(*this);
+}
+```
+当然，处理完一个对象后，则需要清楚该对象。要做到这一点
