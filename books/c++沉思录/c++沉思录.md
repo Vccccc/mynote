@@ -144,3 +144,8 @@ String& String::operator=(const String& s)
   return *this;
 }
 ```
+另一种可行的方法是将旧值保存起来，直到将源值复制完成：
+```c
+// 正确的实现方法2
+
+```
