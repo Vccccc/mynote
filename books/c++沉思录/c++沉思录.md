@@ -188,4 +188,4 @@ int padded_length(const Vector<T>& v, int n)
   return k > n ? k : n;
 }
 ```
-
+除非对 length 的声明中出现了前面所说的 const，否则标注了 oops！的行不会
