@@ -254,6 +254,9 @@ if(p != q)
   parking_lot[p] = new Vehicle(parking_lot[q]);
 }
 ```
-因为这样又会回到之前的问题
+因为这样又会回到前面的问题：没有 Vehicle 类型的对象，即使有，也不是我们想要的！
+
+### 5.3 虚复制函数
+
 
 
