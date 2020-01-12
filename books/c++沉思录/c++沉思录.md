@@ -336,5 +336,21 @@ VehicleSurrogate& VehicleSurrogate::operator=(const VehicleSurrogate& v)
 
 下面剩下的工作只是令该代理类指出类 Vehicle 所能支持的其他操作了。在前面的例子中，有 weight 和 start，所以要将它们加入到类 VehicleSurrogate 中：
 ```c
+class VehicleSurrogate
+{
+public:
+    VehicleSurrogate();
+    VehicleSurrogate(const Vehicle&):
+    ~VehicleSurrogate();
+    VehicleSurrogate(const VehicleSurrogate&);
+    VehicleSurrogate& operator=(const VehicleSurrogate&);
 
+    // 来自类 Vehicle 的操作
+    double weight();
+    void start();
+
+private:
+    Vehicle* vp;
+};
+};
 ```
