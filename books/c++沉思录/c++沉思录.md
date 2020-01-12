@@ -209,3 +209,5 @@ class Aircraft : public Vehicle { };
 class Helicopter : public Aircraft { };
 ```
 所有 Vehicle 都有一些类 Vehicle 中的成员声明的公共属性。但是，有的 Vehicle 具有一些其他 Vehicle 所没有的属性。例如，只有 Aircraft 能飞，也只有 Helicopter 能盘旋。
+
+假设要跟踪处理一系列不同类型的 Vehicle
