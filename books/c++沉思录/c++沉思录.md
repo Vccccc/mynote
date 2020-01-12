@@ -136,5 +136,11 @@ String& String::operator=(const String& s)
 String& String::operator=(const String& s)
 {
   if(&s != this)
-  
+  {
+    delete [] data;
+    data = new char[strlen(s.data)+1];
+    strcpy(data, s.data);
+  }
+  return *this;
+}
 ```
