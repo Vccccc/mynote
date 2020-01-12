@@ -191,4 +191,4 @@ int padded_length(const Vector<T>& v, int n)
 除非对 length 的声明中出现了前面所说的 const，否则标注了 oops！的行不会编译，因为 v 是 const 引用。
 
 ## chapter 5 代理类
-
+怎样才能设计一个 C++ 容器，使它有能力包含类型不同而彼此相关的对象呢？容器通常只能包含一种类型的对象，所以很难在容器中存储对象本身。存储
