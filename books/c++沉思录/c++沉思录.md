@@ -328,4 +328,4 @@ VehicleSurrogate& VehicleSurrogate::operator=(const VehicleSurrogate& v)
 }
 ```
 这里有三个技巧值得注意。
-首先，注意每次对 copy 的调用都是一个虚拟调用。这些调用只能是虚拟的，别无选择，因为类 Vehicle 的对象不存在。即使是在那个只接受
+首先，注意每次对 copy 的调用都是一个虚拟调用。这些调用只能是虚拟的，别无选择，因为类 Vehicle 的对象不存在。即使是在那个只接收一个 const Vehicle& 参数的复制构造函数中，它所进行的 v.copy 调用也是一次虚拟调用，因为 v 是一个引用而不是一个普通对象。
