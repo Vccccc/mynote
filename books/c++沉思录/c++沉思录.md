@@ -238,6 +238,6 @@ Parking_lot[num_vehicles++] = &x;
 Automobile x = /* ... */
 Parking_lot[num_vehicles++] = new Automobile(x);
 ```
-尽管这样修改可以不用存储指向本地对象的指针，它也带来了动态内存管理的
+尽管这样修改可以不用存储指向本地对象的指针，它也带来了动态内存管理的负担。另外只有当我们知道要放到 parking_lot 中的对象是静态类型后，这种方法才能起作用。如果
 
 
