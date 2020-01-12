@@ -171,7 +171,14 @@ String& String::operator=(const String& s)
 ### 记得适当声明成员函数为 const 了吗
 如果确信一个成员函数不用修改它的对象，就可以声明它为 const，这样就把它用于 const 对象了。
 取回长度值不改变该值的函数应被声明为 const:
+```c
 template<class T> Vector
 {
-public
+public:
+  int length() const;
+  int length(int);  
+}
+```
+否则，会遇到类似的问题：
+```c
 
