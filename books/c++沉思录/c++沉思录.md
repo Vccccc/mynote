@@ -354,3 +354,22 @@ private:
 };
 ```
 注意这些函数都不是虚拟的：这里所使用的对象都是类 VehicleSurrogate 的对象；没有继承自该类的对象。当然，函数本身可以调用相应 Vehicle 对象中的虚函数。它们也应该检查确保 vp 不为零：
+```c
+double VehicleSurrogate::weight()
+{
+    if(vp == 0)
+    {
+        throw "empty VehicleSurrogate.weight()";
+    }
+    return vp->weight();
+}
+
+void VehicleSurrogate::start()
+{
+    if(vp == 0)
+    {
+        throw "empty VehicleSurrogate.weight()";
+    }
+    return vp->start();
+}
+```
