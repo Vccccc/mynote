@@ -238,6 +238,14 @@ Parking_lot[num_vehicles++] = &x;
 Automobile x = /* ... */
 Parking_lot[num_vehicles++] = new Automobile(x);
 ```
-尽管这样修改可以不用存储指向本地对象的指针，它也带来了动态内存管理的负担。另外只有当我们知道要放到 parking_lot 中的对象是静态类型后，这种方法才能起作用。如果不知道又会怎么样？例如，假设我们想让 parking_lot[p] 指向一个新建的 Vehicle，这个 Vehicle 的类型和值与由 parking_lot[q] 指向的对象
+尽管这样修改可以不用存储指向本地对象的指针，它也带来了动态内存管理的负担。另外只有当我们知道要放到 parking_lot 中的对象是静态类型后，这种方法才能起作用。如果不知道又会怎么样？例如，假设我们想让 parking_lot[p] 指向一个新建的 Vehicle，这个 Vehicle 的类型和值与由 parking_lot[q] 指向的对象相同，情况会怎样？我们不能使用这样的语句
+```c
+if(p != q)
+{
+  delete parking_lot[p];
+  parking_lot[p] = parking_lot[q];
+}
+```
+
 
 
