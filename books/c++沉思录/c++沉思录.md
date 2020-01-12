@@ -188,4 +188,7 @@ int padded_length(const Vector<T>& v, int n)
   return k > n ? k : n;
 }
 ```
-除非对 length 的声明中出现了前面所说的 const，否则标注了 oops！的行不会
+除非对 length 的声明中出现了前面所说的 const，否则标注了 oops！的行不会编译，因为 v 是 const 引用。
+
+## chapter 5 代理类
+
