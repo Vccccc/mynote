@@ -150,7 +150,11 @@ String& String::operator=(const String& s)
 String& String::operator=(const String& s)
 {
   char* newdata = new char[strlen(s.data)+1];
-  strcpy(newdata, s.data)
+  strcpy(newdata, s.data);
+  delete [] data;
+  data = newdata;
   return *this;
 }
 ```
+
+### 类需要定义关系操作符吗
