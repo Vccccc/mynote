@@ -313,5 +313,19 @@ private:
 
 为了得到一个更好的方法，要引入行为类似于零指针的空代理（empty surrogate）的概念。能够创建、销毁和复制这样的代理，但是进行其他错作就视为出错。成员定义如下：
 ```c
-
+VehicleSurrogate::VehicleSurrogate() : vp(0) {}
+VehicleSurrogate::VehicleSurrogate(const Vehicle& v) : vp(v.copy()) {}
+VehicleSurrogate::~VehicleSurrogate() { delete vp; }
+VehicleSurrogate::VehicleSurrogate(const VehicleSurrogate& v) : vp(v.vp ? v.vp->copy() : 0) {}
+VehicleSurrogate& VehicleSurrogate::operator=(const VehicleSurrogate& v)
+{
+    if(this != &v)
+    {
+        delete vp;
+        vp = (v.vp ? v.vp->copy() : 0);
+    }
+    return *this;
+}
 ```
+这里有三个技巧值得注意。
+首先，注意每次对copy
