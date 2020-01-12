@@ -251,6 +251,9 @@ if(p != q)
 if(p != q)
 {
   delete parking_lot[p];
+  parking_lot[p] = new Vehicle(parking_lot[q]);
+}
 ```
+因为这样又会回到之前的问题
 
 
