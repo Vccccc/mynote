@@ -128,6 +128,13 @@ String& String::operator=(const String& s)
   data = new char[strlen(s.data)+1];
   strcpy(data, s.data);
   return *this;
+}
 ```
 一旦把一个 String 对象赋值给它本身，这个方法就会彻底失败，因为 s 和 this 同指向同样的对象。避免这个问题可以显式地加以预防：
 ```c
+// 正确的实现方法1
+String& String::operator=(const String& s)
+{
+  if(&s != this)
+  
+```
