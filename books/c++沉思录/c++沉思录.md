@@ -122,5 +122,8 @@ private:
 很容易就用下面的方法来实现赋值：
 ```c
 // 很明显但不正确的实现
-String& 
+String& String::operator=(const String& s)
+{
+  delete [] data;
+  data = new char[strlen(s.data),+1
 ```
