@@ -233,6 +233,10 @@ Parking_lot[num_vehicles++] = &x;
 
 首先，存储在 parking_lot 中的是指向 x 的指针，在本例中是一个局部变量。这样，一旦变量 x 没有了，parking_lot 就不知道指向什么东西了。
 
-我们可以变通一下，放入 parking_lot 中的值，不是指向原对象的指针，而是指向它们的副本的指针。然后，可以采用一个约定，就是当释放 park
+我们可以变通一下，放入 parking_lot 中的值，不是指向原对象的指针，而是指向它们的副本的指针。然后，可以采用一个约定，就是当释放 parking_lot 时，也释放其中所指向的全部对象。因此，可以把前面的例子改成：
+```c
+Automobile x = /* ... */
+Parking_lot[num_vehicles++] = new 
+```
 
 
