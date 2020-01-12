@@ -212,4 +212,5 @@ class Helicopter : public Aircraft { };
 
 假设要跟踪处理一系列不同类型的 Vehicle。在实际中，可能会要用到某种容器类；这里使用数组来实现：
 Vehicle parking_lot[1000];
-没有产生
+没有产生预期的效果，为什么？
+表明上看是由于 Vehicle 是一个抽象基类，所以类 Vehicle 本身不会有
