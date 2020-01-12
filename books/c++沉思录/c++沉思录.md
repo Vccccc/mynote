@@ -229,6 +229,8 @@ Vehicle* parking_lot[1000];
 Automobile x = /* ... */
 Parking_lot[num_vehicles++] = &x;
 ```
-的
+的语句。这种方法解决了迫切的问题，但也带来了两个新的问题。
+
+首先，存储在 parking_lot 中的是指向 x 的指针，在本例中
 
 
