@@ -294,5 +294,17 @@ public:
 
 每个 Vehicle 代理都代表某个继承自 Vehicle 类的对象。只要该代理关联着这个对象，该对象就存在。因此，复制代理就会复制相对应的对象，而给代理赋值新值也会先删除就对象、在复制新对象。所幸的是，我们在类 Vehicle 中已经有了虚函数 copy 来完成这些复制工作。所以，我们可以开始定义自己的代理了：
 ```c
+class VehicleSurrogate
+{
+public:
+    VehicleSurrogate();
+    VehicleSurrogate(const Vehicle&):
+    ~VehicleSurrogate();
+    VehicleSurrogate(const VehicleSurrogate&);
+    VehicleSurrogate& operator=(const VehicleSurrogate&);
 
+private:
+    Vehicle* vp;
+};
 ```
+上述代理类有一个以 const Vehicle& 为参数的构造函数，这样就能为任意继承自 Vehicle 的类的对象
