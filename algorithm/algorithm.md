@@ -145,6 +145,50 @@ public:
 };
 ```
 
+### Longest Substring with At Least K Repeating Characters
+!["题目"](./photo/395.png)
+##### 思路
+找出满足条件的区间，然后取最大那个。为了找出满足条件的区间，可以通过找出分隔区间的字符。统计出哪些字符不满足条件，提供一个方法去判断当前下标的字符是否满足条件。
+##### Solution 1  
+```c
+class Solution {
+public:
+    int to_idx(const char& c) { return c - 'a';}
+    int longestSubstring(string s, int k) {
+        return aux(s, 0, (int)s.size(), k);
+    }
+
+    int aux(const string& str, int start, int end, int k)
+    {
+        vector<int> dp(26, 0);
+        for(int i = start; i < end; i++)
+        {
+            dp[to_idx(str[i])]++;
+        }
+
+        int idx = start;
+	// 注意！会导致溢出
+        // while(dp[to_idx(str[idx])] >= k && idx < end) idx++;
+        while( idx < end && dp[to_idx(str[idx])] >= k) 
+        {
+            idx++;
+        }
+        if(idx == end)
+        {
+            return idx - start;
+        }
+
+        int right_start = idx + 1;
+	// 注意！会导致溢出
+        // while(dp[to_idx(str[right_start])] < k && right_start < end) right_start++;
+	while(right_start < end && dp[to_idx(str[right_start])] < k) 
+        {
+            right_start++;
+        }
+        return max(aux(str, start, idx, k), aux(str, right_start, end, k));
+    }
+};
+```
 ##  depth-first search
 ### Arithmetic Slices II - Subsequence
 !["题目"](./photo/446.png)
