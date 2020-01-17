@@ -84,7 +84,7 @@ one word.
 
 ### 3.4.2.4 Command search path
 PATH是一个变量，shell通过它保存的地址来找到输入的命令 
-**echo** **$PATH**，可以回显PATH的值
+**echo** $PATH**，可以回显PATH的值
 可以添加路径在PATH中，在~/.bashrc写入如下指令
 PATH=$PATH":/home/cv/whatever"
 ### 3.4.25 Command hashing
