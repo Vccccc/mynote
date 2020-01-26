@@ -137,9 +137,8 @@ public:
             {
                 dp[tail] = dp[tail-1] + 1;
             }
-            result += dp[tail];
-        
-
+            result += dp[tail];      
+	}
         return result;
     }
 };
