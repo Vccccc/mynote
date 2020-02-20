@@ -76,7 +76,7 @@ The guidelines can be broken down as follows:
 - He stood **at** bus stop **at** the corner of Water and High streets.
 - We will meet **at** the airport.
 
-Lot's of other prepositions of place, such as *under*, *over*, *inside*, *outsied*, *above* and *below* are used in English. There is, however, a lot less confusion as they refer to rigid positions rather than abstract ones.
+Lot's of other prepositions of place, such as *under*, *over*, *inside*, *outside*, *above* and *below* are used in English. There is, however, a lot less confusion as they refer to rigid positions rather than abstract ones.
 - The cat is **under** the table.
 - Put the sandwich **over** there.
 - The key is locked **inside** the car.
