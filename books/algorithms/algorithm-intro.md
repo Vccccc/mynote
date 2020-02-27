@@ -33,8 +33,8 @@ for j = 2 to A.length
 
 
 #### 练习
-##### 2.1-2 重写过程 INSERTION-SORT
-使之按非升序(而不是非降序)排序。
+##### 2.1-2 
+使重写过程 INSERTION-SORT 使之按非升序(而不是非降序)排序。
 ```c
 INSERTION-SORT(A)
 for j=2 to A.length
@@ -44,4 +44,30 @@ for j=2 to A.length
         A[i+1] = A[i]
         i--
     A[i+1] = key
+```
+##### 2.1-3 
+考虑以下查找问题：
+输入：n 个数的一个序列A={a1, a2, a3, ..., an}和一个值 v。
+输出：下标 i 使得 v=A[i] 或者当 v 不存在 A 中时，v 为特殊值 NIL。
+写出伪代码，并使用循环不变式来证明算法正确。
+```c
+FIND(A, v)
+for j=1 to A.length
+    if v == A[j]
+        return i
+return NIL
+```
+证明：
+循环不变式：在 for 循环每次迭代，包含元素A[1..j-1]的子数组不存在 v。
+- 初始化：第一次循环之前，循环不变式成立。子数组为空。
+- 保持：for 循环每次判断一下 A[j] 是否等于 v。如果不等于，那么下一次循环迭代子数组A[1..j-1]不存在 v。保持循环不变式。
+- 终止：导致 for 循环终止的条件是，A[j] 等于 v，或者 j > A.length。此时已符合条件，所以终止循环。
+
+
+##### 2.2-2
+写出选择算法，及其循环不变式。
+```c
+SELECT-SORT(A)
+for i = 2 to A.length
+    for j = i-1 and 
 ```
