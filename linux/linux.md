@@ -88,6 +88,7 @@ cmake --build . --target ycm_core
 python3 install.py --clang-completer
 ![](./photo/ycm.png)
 
+### 查询 include path
 
 ### vim 命令
 verbose map \<key>: 查询 key 的映射
