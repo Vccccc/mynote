@@ -90,7 +90,7 @@ python3 install.py --clang-completer
 
 ### 查询 include path
 > echo | cpp -xc++ -Wp,-v
-
+The cpp -Wp,-v command waits for some input. The echo | saves the user needing Ctrl + D or Ctrl + C to return to shell
 ### vim 命令
 verbose map \<key>: 查询 key 的映射
 
