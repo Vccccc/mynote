@@ -65,7 +65,7 @@ return NIL
 
 
 ##### 2.2-2
-写出选择算法，及其循环不变式。
+写出选择排序算法，及其循环不变式。
 ```c
 SELECT-SORT(A)
 for i = 2 to A.length
