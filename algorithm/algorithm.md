@@ -603,3 +603,30 @@ Node* ConstructCore(int* startPreorder, int* endPreorder,
 }
 ```
 
+
+## 回文字符串
+### 判断是否为回文字符串
+##### 思路
+```c
+bool isPalindrome(string str)
+{
+    if(str.size() < 2)
+    {
+        return false;
+    }
+    int left = 0;
+    int right = str.size() - 1;
+
+    while(left < right)
+    {
+        if(str[left] != str[right])
+        {
+            return false;
+        }
+        left--;
+        right--;
+    }
+
+    return true;
+}
+```
