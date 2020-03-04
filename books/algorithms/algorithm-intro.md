@@ -102,4 +102,13 @@ for j = 1 to n2
     R[j] = A[q+j]
 L[n1+1] = infinite // 哨兵
 L[n2+1] = infinite // 哨兵
+i = 1
+j = 1
+for k = p to r
+    if L[i] <= R[j]
+        A[k] = L[i]
+        i++
+    else
+        A[k] = R[j]
+        j++
 ```
