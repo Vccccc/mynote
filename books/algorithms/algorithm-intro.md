@@ -68,6 +68,11 @@ return NIL
 写出选择排序算法，及其循环不变式。
 ```c
 SELECT-SORT(A)
-for i = 2 to A.length
-    for j = i-1 and 
+for i = 1 to A.length
+    min = i
+    for j = i+1 to A.length 
+        if(A[j] < A[min])
+            min = j
+    swap(A[i], A[min])
+        
 ```
