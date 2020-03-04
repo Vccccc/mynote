@@ -111,4 +111,12 @@ for k = p to r
     else
         A[k] = R[j]
         j++
+
+
+MERGER-SORT(A, p, r)
+if p < r
+    q = (p+r)/2
+    MERGER-SORT(A, p, q)
+    MERGER-SORT(A, q+1, r)
+    MERGER(A, p, q, r)
 ```
