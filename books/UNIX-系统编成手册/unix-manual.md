@@ -219,7 +219,7 @@ mktime() 都会将其调整回有效范围之内，并适当调整其他参数�
 
 ```c
 #include <time.h>
-char* asctime(const struct* timeptr);
+char* asctime(const struct tm* timeptr);
     Returns pointer to statically allocated string terminated by newline
     and \0 on success, or NULL on error
 ```
