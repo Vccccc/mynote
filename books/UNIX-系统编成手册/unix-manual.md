@@ -180,13 +180,13 @@ struct tm
 {
     int tm_sec;         /* Seconds (0-60) */ 
     int tm_min;         /* Minutes (0-59) */ 
-    int tm_sec;         /* Hours   (0-23) */ 
-    int tm_sec;         /* Day of the month (1-31)*/ 
-    int tm_sec;         /* Month   (0-11) */ 
-    int tm_sec;         /* Year since 1900 */ 
-    int tm_sec;         /* Day of the week (Sunday = 0) (0-60) */ 
-    int tm_sec;         /* Day in the year (0-6=365; 1 Jan = 0)*/ 
-    int tm_sec;         /* Daylight saving time flah
+    int tm_hour;        /* Hours   (0-23) */ 
+    int tm_mday;        /* Day of the month (1-31)*/ 
+    int tm_mon;         /* Month   (0-11) */ 
+    int tm_year;        /* Year since 1900 */ 
+    int tm_wday;        /* Day of the week (Sunday = 0) (0-60) */ 
+    int tm_yday;        /* Day in the year (0-6=365; 1 Jan = 0)*/ 
+    int tm_isdst;       /* Daylight saving time flah
                             > 0: DST is in effect;
                             = 0: DST is not effect;
                             < 0: DST information not available*/ 
