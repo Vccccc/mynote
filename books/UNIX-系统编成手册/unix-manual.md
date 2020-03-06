@@ -135,3 +135,37 @@ time_t time(time_t* timeep);
 由于 time() 会以两种方式返回相同值，而使用时唯一可能出错的地方是赋予 timep 参数一个无效地址，因此
 往往会简单地采用如下调用（不做错误检查）：t = time(NULL)
 
+### 10.2 时间转换函数
+
+如下图所示，用于在 time\_t 值和其他时间格式之间相互转换的函数，其中包括打印输出。
+
+![获取和使用日历时间的函数](./photo/10-1.png)
+
+### 10.2.1 将 time\_t 转换为可打印格式
+为了将 time\_t 转换为可打印格式，ctime() 函数提供了一个简单方法。
+
+```c
+#include <time.h>
+char* ctime(const time_t* timep);
+    Returns pointer to statically allocated string terminated by newline 
+    and \0 on success, or NULL on error
+```
+
+把一个指向 time\_t 的指针为 timep 参数传入函数 ctime()，将返回一个长达 26 字节的字符串，
+内含标准格式的日期和时间，如下所示：Thu Mar  5 17:24:33 2020
+
+SUSv3 规定，调用 Ctime(), gmtime(), localTime() 或 asctime() 中的任一函数，都可能会覆盖
+由其他函数返回，且经静态分配的数据结构。
+
+### 10.2.2 time\_t 和分解时间之间的转换
+
+函数 gmtime() 和 localtime() 可将一 time\_t 值转换为一个所谓的分解时间（broken-down time)。
+分解时间被置于一个经由静态分配的结构中，其地址则作为函数结果返回。
+
+```c
+#include <time.h>
+struct tm* gmtime(const time_t* timep);
+struct tm* localtime(const time_t* timep);
+    Both return a pointer to a statically allocated broken-down time structure
+    on success, or NULL on error
+```
