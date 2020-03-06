@@ -210,3 +210,16 @@ mktime() 都会将其调整回有效范围之内，并适当调整其他参数�
 例如，如果输入字段 tm\_sec 的值为 123，那么在返回时此字段的值将为 3，且 tm\_min 字段值
 会在其之前值的基础上加 2。（如果这一改动造成 tm\_min 溢出，那么将调整 tm\_min 的值，并且递增 tm\_hour 字段，以此类推）这些调整甚至适用于字段负值。例如，
 指定 tm\_sec 为 -1 即意味着前一分钟的第 59 秒。此功能允许以分解时间来计算日期和时间，故而非常有用。
+
+### 10.2.3 分解时间和打印格式之间的转换
+
+**从分解时间转换为打印格式**
+
+在参数 tm 中提供一个指向分解时间结构的指针，asctime() 则会返回一个指针，指向经由静态分配的字符串，内含时间，格式则与 ctime() 相同。
+
+```c
+#include <time.h>
+char* asctime(const struct* timeptr);
+    Returns pointer to statically allocated string terminated by newline
+    and \0 on success, or NULL on error
+```
