@@ -192,3 +192,21 @@ struct tm
                             < 0: DST information not available*/ 
 };
 ```
+
+函数 mktime() 将一个本地时区的分解时间翻译为 time\_t 值，并将其作为函数结果返回。
+
+```c
+#include <time.h>
+time_t mktime(struct tm* timeptr);
+    Returns seconds since the Epoch corresponding to timeptr on success, or(time_t) -1 on error
+```
+
+函数 mktime() 可能会修改 timeptr 所指向的结构体，至少会确保对 tm\_wday 和 tm\_yday 字段值的设置，会与其他输入
+字段的值能对应起来。
+
+此外，mktime() 不要求 tm 结构体的其他字段受到前述范围的限制。任何一个字段的值超出范围，
+mktime() 都会将其调整回有效范围之内，并适当调整其他参数。
+
+例如，如果输入字段 tm\_sec 的值为 123，那么在返回时此字段的值将为 3，且 tm\_min 字段值
+会在其之前值的基础上加 2。（如果这一改动造成 tm\_min 溢出，那么将调整 tm\_min 的值，并且递增 tm\_hour 字段，以此类推）这些调整甚至适用于字段负值。例如，
+指定 tm\_sec 为 -1 即意味着前一分钟的第 59 秒。此功能允许以分解时间来计算日期和时间，故而非常有用。
