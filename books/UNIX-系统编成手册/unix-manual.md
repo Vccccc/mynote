@@ -169,3 +169,26 @@ struct tm* localtime(const time_t* timep);
     Both return a pointer to a statically allocated broken-down time structure
     on success, or NULL on error
 ```
+
+函数 gmtime() 能够把日历时间转换为一个对应于 UTC 的分解时间。（字母 GM 源于格林威治标准时间）。相形之下，函数 localtime() 
+需要考虑时区和夏令时设置，返回对应于系统本地时间的一个分解时间。
+
+在这些函数所返回的 tm 结构中，日期和时间被分解为多个独立字段，其形式如下：
+
+```c
+struct tm
+{
+    int tm_sec;         /* Seconds (0-60) */ 
+    int tm_min;         /* Minutes (0-59) */ 
+    int tm_sec;         /* Hours   (0-23) */ 
+    int tm_sec;         /* Day of the month (1-31)*/ 
+    int tm_sec;         /* Month   (0-11) */ 
+    int tm_sec;         /* Year since 1900 */ 
+    int tm_sec;         /* Day of the week (Sunday = 0) (0-60) */ 
+    int tm_sec;         /* Day in the year (0-6=365; 1 Jan = 0)*/ 
+    int tm_sec;         /* Daylight saving time flah
+                            > 0: DST is in effect;
+                            = 0: DST is not effect;
+                            < 0: DST information not available*/ 
+};
+```
