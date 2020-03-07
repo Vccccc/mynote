@@ -215,7 +215,7 @@ mutex\_lock 不同于 enter\_region 是当 mutex\_lock  请求锁失败后，它
 #### Mutexes in Pthreads
 Pthread 提供了一些函数用于同步线程。
 
-| Thread\_call          | Description               |
+| Thread_call          | Description               |
 |-----------------------|---------------------------|
 | pthread_mutex_init    | Create a mutex            |
 | pthread_mutex_destroy | Destroy an existing mutex |
@@ -224,6 +224,13 @@ Pthread 提供了一些函数用于同步线程。
 | pthread_mutex_unlock  | Release a lock            |
 
 
+| Thread_call             | Description                                  |
+|-------------------------|----------------------------------------------|
+| pthread_cond_init       | Create a condition variable                  |
+| pthread_cond_destroy    | Destroy an condition variable                |
+| pthread_cond_wait       | Block waiting for a signal                   |
+| pthread_mutex_signal    | Signal another thread and wake it up         |
+| pthread_mutex_broadcast | Signal multiple threads and wake all of them |
 
 ### 2.3.7 Monitors
 
