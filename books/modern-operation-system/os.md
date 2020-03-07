@@ -213,6 +213,7 @@ mutex\_lock 不同于 enter\_region 是当 mutex\_lock  请求锁失败后，它
 一个解决的办法是使用 **futex(fast user space mutex)**。**futex** 是 linux 实现的一种基础锁（像 mutex）除非很必要否则避免切换到内核。**futex** 由两部分组成：kernel service and user library。kernel sevice 提供一个 "wait queue" 给进程等待一个 lock。这些进程不会运行，除非 kernel unblocked 进程。应该避免将一个进程放入 "wait queue"，因为这需要调用一个系统调用（切换到内核开销大）。所以在**竞争不激烈**的情况下，**futex** 完全运行在用户空间。特别地，进程之间共享一个 lock variable--一个 32-bit 整数。假设这个 lock 初始化为 1，表示 lock is free。进程通过原子操作 "decrement and test" 获取这个 lock。然后检查这个 lock 是否可获取。如果这个 lock 可以获取，则这个进程拿到这个 lock。但如果这个 lock 早被其他进程获取，那么当前进程需要进 "wait queue"。在这个情况下，**futex library** 不使用 **busy waiting**，而是使用系统调用将进程放入内核的 "wait queue"。因为进程无论如何都是要被 blocked 的，所以这里的开销是合适的。当一个进程不需要 lock 时，它释放 lock 并且执行原子操作 "decrement and test"，然后检查 lock variable，看看是否还有其他进程 blocked 在内核的 "wait queue"。如果有，它就会通知内核去 unblock 进程。如果此时没有竞争，则不会被涉及内核。
 
 #### Mutexes in Pthreads
+Pthread 提供了一些函数用于同步线程。
 
 ### 2.3.7 Monitors
 
