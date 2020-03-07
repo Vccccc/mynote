@@ -234,4 +234,22 @@ Pthread 提供了一些函数用于同步线程。
 
 ### 2.3.7 Monitors
 
+### 2.3.8 Message Passing
+进程间通信的方法是通过两个原语，send 和 receive。
 
+#### Design Issues for Message-Passing Systems
+Message-Passing system 有着许多问题和设计要求是 semaphore 和 monitor 没有的。
+尤其是通信的进程处于通过网络连接的不同机器。比如，messages 可能在网络中丢失。
+为了不丢失 messages，发送者和接收者应协商，一旦 message 被接收，发送者应返回一个
+特别的 **acknowledgement** message。如果发送者一定时间内没接收到这个 acknowledgement，
+那么它就要从新发送 message。
+
+如果 message 被正确接收，但返回给发送者的 acknowledgement 丢失了。这时发送者会再次发送 message，
+所以接收者会接收到两次相同的 message。这表明接收者要有区分 message 和 重发送的 message 的能力。
+这个问题一般同过将一个连续的序号放入每个 message 中。如果接收到两个相同序号的 message，说明重复发送了，
+此时就可以丢弃重复的 message。
+
+Message system 还要处理进程命名的问题，如何区分不同的进程。验证方式也是 Message system 的一个问题：
+客户端怎么知道它正在通信的是一个真正的服务器，而不是一个假冒的。
+
+还有许多重要的问题，如果发送者和接收者在同一机器。性能怎么提升。从一个进程复制 message 到另一个进程总是比使用 semaphore operation 和 进入 monitor 慢。
