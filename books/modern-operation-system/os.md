@@ -224,13 +224,13 @@ Pthread 提供了一些函数用于同步线程。
 | pthread_mutex_unlock  | Release a lock            |
 
 
-| Thread_call             | Description                                  |
-|-------------------------|----------------------------------------------|
-| pthread_cond_init       | Create a condition variable                  |
-| pthread_cond_destroy    | Destroy an condition variable                |
-| pthread_cond_wait       | Block waiting for a signal                   |
-| pthread_mutex_signal    | Signal another thread and wake it up         |
-| pthread_mutex_broadcast | Signal multiple threads and wake all of them |
+| Thread_call            | Description                                  |
+|------------------------|----------------------------------------------|
+| pthread_cond_init      | Create a condition variable                  |
+| pthread_cond_destroy   | Destroy an condition variable                |
+| pthread_cond_wait      | Block waiting for a signal                   |
+| pthread_cond_signal    | Signal another thread and wake it up         |
+| pthread_cond_broadcast | Signal multiple threads and wake all of them |
 
 ### 2.3.7 Monitors
 
