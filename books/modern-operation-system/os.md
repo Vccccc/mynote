@@ -255,7 +255,27 @@ Message system 还要处理进程命名的问题，如何区分不同的进程�
 还有许多重要的问题，如果发送者和接收者在同一机器。性能怎么提升。从一个进程复制 message 到另一个进程总是比使用 semaphore operation 和 进入 monitor 慢。
 
 #### The Producer-Consumer Problem with Message Passing
+如何通过非共享内存和 message passing 解决 producer-consumer problem。
+假设所有 message 的大小都一样，所有发送且未被接收的 message 自动地被操作系统缓存。
+一种解决方法如下代码所示。如同共享内存缓冲区 N 个 slot 一样，N 个 message 被使用。
+consumer 一开始发送 N 个 empty message 到 producer。无论何时，当 producer 有一个 item 发送给 consumer，
+它将取出一个 empty message 然后返回一个 full message。In this way, the total number of messages in the system remains constant in time,
+so they can be stored in a given amount of memory known in advance.
 
+如果 producer 工作地比 consumer 快，所有的 message 都为 full，然后等待 consumer 消耗，这时 producer 就会被阻塞，等待 empty message。
+
+
+Many variants are possible with message passing. For starters, let us look at how messages are addressed. One way is to assign each process
+a unique address and have message be addressed to processes. A different way is to invent a new
+data structure, called a **mailbox**. A mailbox is a place to buffer a certain number of messages, typically specified when 
+the mailbox is created. When mailboxes are used, the address parameters in the 
+send and receive calls are mailboxes, not processes. When a process tries to send to a mailbox that is full, it is suspended until a 
+message is removed from that mailbox, making room for a new one.
+
+For the producer-consumer problem, both the produce and consumer would create mailboxes large enough to hold N messages.
+The producer would send messages containing actual data to the consumer's mailbox, and the consumer would send empty 
+message to the producer's mailbox. When mailboxes are used, the buffering mechanism is clear: the destination mailbox holds
+messages that have been sent to the destination process but hav not yet been accepted.
 ```c
 #define N 100   // number of slots in the buffer
 
