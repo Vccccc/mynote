@@ -215,7 +215,77 @@ mutex\_lock 不同于 enter\_region 是当 mutex\_lock  请求锁失败后，它
 #### Mutexes in Pthreads
 Pthread 提供了一些函数用于同步线程。
 
+| Thread_call          | Description               |
+|-----------------------|---------------------------|
+| pthread_mutex_init    | Create a mutex            |
+| pthread_mutex_destroy | Destroy an existing mutex |
+| pthread_mutex_lock    | Acquire a lock or block   |
+| pthread_mutex_trylock | Acquire a lock or fail    |
+| pthread_mutex_unlock  | Release a lock            |
+
+
+| Thread_call            | Description                                  |
+|------------------------|----------------------------------------------|
+| pthread_cond_init      | Create a condition variable                  |
+| pthread_cond_destroy   | Destroy an condition variable                |
+| pthread_cond_wait      | Block waiting for a signal                   |
+| pthread_cond_signal    | Signal another thread and wake it up         |
+| pthread_cond_broadcast | Signal multiple threads and wake all of them |
 
 ### 2.3.7 Monitors
- 
 
+### 2.3.8 Message Passing
+进程间通信的方法是通过两个原语，send 和 receive。
+
+#### Design Issues for Message-Passing Systems
+Message-Passing system 有着许多问题和设计要求是 semaphore 和 monitor 没有的。
+尤其是通信的进程处于通过网络连接的不同机器。比如，messages 可能在网络中丢失。
+为了不丢失 messages，发送者和接收者应协商，一旦 message 被接收，发送者应返回一个
+特别的 **acknowledgement** message。如果发送者一定时间内没接收到这个 acknowledgement，
+那么它就要从新发送 message。
+
+如果 message 被正确接收，但返回给发送者的 acknowledgement 丢失了。这时发送者会再次发送 message，
+所以接收者会接收到两次相同的 message。这表明接收者要有区分 message 和 重发送的 message 的能力。
+这个问题一般同过将一个连续的序号放入每个 message 中。如果接收到两个相同序号的 message，说明重复发送了，
+此时就可以丢弃重复的 message。
+
+Message system 还要处理进程命名的问题，如何区分不同的进程。验证方式也是 Message system 的一个问题：
+客户端怎么知道它正在通信的是一个真正的服务器，而不是一个假冒的。
+
+还有许多重要的问题，如果发送者和接收者在同一机器。性能怎么提升。从一个进程复制 message 到另一个进程总是比使用 semaphore operation 和 进入 monitor 慢。
+
+#### The Producer-Consumer Problem with Message Passing
+
+```c
+#define N 100   // number of slots in the buffer
+
+void producer(void)
+{
+    int item;
+    message m;  // message buffer
+    while(TRUE)
+    {
+        item = produce_item();      // generate something to pu in buffer
+        receive(consumer, &m);      // wait for an empty to arrive
+        build_messagek(&m, item);   // construct a message to send
+        send(consumer, &m);         // send item to consumer
+    }
+}
+
+void consumer(void)
+{
+    int item, i;
+    message m;  // message buffer
+    for(i = 0; i < N; i++)
+    {
+        send(producer, &m); // send N empties
+    }
+
+    while(TRUE)
+    {
+        receive(producer, &m);      // get message containing item
+        item = extract_item(&m);    // extract item from message
+        send(producer, &m);         // send back empty reply
+        consume_item(item);         // do something with the item
+    }
+}```
