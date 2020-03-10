@@ -120,3 +120,6 @@ if p < r
     MERGER-SORT(A, q+1, r)
     MERGER(A, p, q, r)
 ```
+
+## chapter 4 分治策略
+
