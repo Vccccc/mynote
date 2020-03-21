@@ -16,6 +16,264 @@
 ```
 
 # LeetCode原题
+### Binary Tree Inorder traversal
+!["题目"](./photo/94.png)
+##### 使用递归
+递归地中序遍历，将值存储到数组中。
+##### solution 1
+```c
+class Solution {
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> res;
+        inorderTraversalAux(root, res);
+        return res;
+    }
+
+    void inorderTraversalAux(TreeNode* root, vector<int>& res)
+    {
+        if(root != NULL)
+        {
+            if(root->left != NULL)
+            {
+                inorderTraversalAux(root->left, res);
+            }
+            res.push_back(root->val);
+            if(root->right != NULL)
+            {
+                 inorderTraversalAux(root->right, res);
+            }    
+        }
+    }
+};
+```
+
+##### 使用迭代
+通过 stack 模拟递归遍历。
+##### solution 2
+```c
+class Solution {
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> res;
+        stack<TreeNode*> treeStack;
+
+        TreeNode* cur = root;
+        while(cur != NULL || !treeStack.empty())
+        {
+            while(cur != NULL)
+            {
+                treeStack.push(cur);
+                cur = cur->left;
+            }
+            cur = treeStack.top();
+            treeStack.pop();
+            res.push_back(cur->val);
+            cur = cur->right;
+        }
+        return res;
+    } 
+};
+```
+
+### Unique Binary Search Trees II
+![](./photo/95.png)
+##### 思路
+构建树需要 root，left，right 节点。观察题目，可以知道数值 1-n 都可以成为 root 节点。每次取[start,end]其中一个值为 root 节点时，它的左子节点的值必须比 root 节点小，它的右子节点的值必须比 root 节点大，所以子树[start, end]的范围可以不断缩小。
+##### solution
+```c
+class Solution {
+public:
+    vector<TreeNode*> generateTrees(int n) {
+        if(n <= 0)
+        {
+            return vector<TreeNode*>{};
+        }
+
+        return createTree(1, n);
+    }
+
+    vector<TreeNode*> createTree(int start, int end)
+    {
+        if(end < start)
+        {
+            return vector<TreeNode*>{nullptr};
+        }
+
+        vector<TreeNode*> ans;
+        for(int i = start; i <= end; i++)
+        {
+            vector<TreeNode*> left_subtrees, right_subtrees;
+            left_subtrees = createTree(start, i-1);
+            right_subtrees = createTree(i+1, end);
+
+            for(auto& leftSubtree : left_subtrees)
+            {
+                for(auto& rightSubtree : right_subtrees)
+                {
+                    TreeNode* root = new TreeNode;
+                    root->val = i;
+                    root->left = leftSubtree;
+                    root->right = rightSubtree;
+                    ans.push_back(root);
+                }
+            }
+        }
+
+        return ans;
+    }
+```
+
+### Validate Binary Search Tree
+![](./photo/98.png)
+
+##### 思路 递归
+画图可以看出，每个节点都有一个范围值 [lower, upper] 限制，左子节点 lower 取父节点的 lower，左子节点 upper 取父节点的值。右子节点 lower 取父节点的值，右子节点 upper 取父节点的 upper。
+
+##### sulotion 1
+```c
+class Solution
+{
+public:
+    bool isValidBST(TreeNode *root)
+    {
+        if (root == NULL)
+        {
+            return true;
+        }
+
+        return help(root, LONG_LONG_MIN, LONG_LONG_MAX);
+    }
+    bool help(TreeNode* node, long long lower, long long upper)
+    {
+        if(node == NULL)
+        {
+            return true;
+        }
+
+        int val = node->val;
+        if(val <= lower)
+        {
+            return false;
+        }
+        if(val >= upper)
+        {
+            return false;
+        }
+
+        if(!help(node->left, lower, val))
+        {
+            return false;
+        }
+        if(!help(node->right, val, upper))
+        {
+            return false;                                                 
+        }
+
+        return true;
+    }
+};
+```
+##### 使用迭代
+通过迭代模拟递归，可以观察到每次递归都会更新 [lower, upper]，所以模拟递归的时候每个节点携带的信息也要有 [lower, upper]，分别通过两个 stack 去缓存就行了。
+##### solotion
+```c
+class Solution
+{
+public:
+    bool isValidBST(TreeNode *root)
+    {
+        if(root == NULL)
+        {
+            return true;
+        }
+        stack<TreeNode*> stacks;
+        stack<long long> lowers, uppers;
+        auto update = [&stacks, &lowers, &uppers](TreeNode* node, long long lower, long long upper)
+        {
+            stacks.push(node);
+            lowers.push(lower);
+            uppers.push(upper);
+        };
+        
+        update(root, LONG_LONG_MIN, LONG_LONG_MAX);
+        while(!stacks.empty())
+        {
+            TreeNode* root = stacks.top();
+            long long lower = lowers.top();
+            long long upper = uppers.top();
+            stacks.pop();
+            lowers.pop();
+            uppers.pop();
+
+            if(root == NULL)
+            {
+                continue;
+            }
+            int val = root->val;
+            if(val <= lower || val >= upper)
+            {
+                return false;
+            }
+
+            if (root->left != NULL)
+            {
+                update(root->left, lower, val);
+            }
+            if (root->right != NULL)
+            {
+                update(root->right, val, upper);
+            }
+        }
+        return true;
+    }
+};
+```
+### Same Tree
+![](./photo/100.png)
+
+##### 思路
+通过递归遍历节点，判断节点是否相同。每一次递归的作用都是，判断当前节点是否相同，如果不相同则说明树不相同，如果相同，则要继续判断当前节点的左右节点是否相同。
+
+##### solution
+```c
+class Solution {
+public:
+    bool isSameTree(TreeNode* p, TreeNode* q) {
+        if(p == NULL)
+        {
+            if(q == NULL)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            if(q == NULL)
+            {
+                return false;
+            }
+            else if(p->val != q->val)
+            {
+                return false;
+            }
+        }
+
+        return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
+    }
+};
+```
+
+### Symmetric Tree
+![](./photo/101.png)
+
+##### 使用递归
+画图观察可以发现规律
+
 ### Single Number
 Description:
 Given an array of integers, every element appears twice except for one. Find that single one.
