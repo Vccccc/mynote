@@ -332,4 +332,5 @@ TCP 首部中的 RST 比特是用于 “复位”的，一般来说，无论何�
 Trying 140.252.13.34...
 telnet: Unable to connect to remote host: Connection refused
 
-
+Telnet 客户程序会立即显示这个差错信息。下图显示了对应这个命令的分组交换过程。
+![](./photo/18.14.png)
