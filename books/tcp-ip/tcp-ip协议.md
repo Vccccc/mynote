@@ -285,7 +285,7 @@ TCP 首部其他两个标志比特--ACK 和 URG--tcpdump 将作特殊显示。
 ![](./photo/18.12.png)
 
 #### 18.6.1 2MSL 等待状态
-TIME\_WAIT 状态也称为 2MSL 等待状态。每个具体 TCP 实现必须选择一个报文段最大
+TIME\_WAIT 状态也称为 2MSL 等待状态。每个具体 TCP 实现必须选择一个报文段最大生存时间 MSL(Maximum Segment Lifttime)。它是任何报文段被丢弃
 
 
 
