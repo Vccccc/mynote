@@ -317,4 +317,4 @@ Our last synchronization mechanism is intended for groups of processes rather th
 
 ![](./photo/2.37.png)
 
-在图 2-37(a) 中可以看到有 4 个进程靠近一个 barrier。这表示它们正在计算，还没到达当前阶段的终点。过了一会，第 1 个进程完成了它在第一个阶段所需的计算，然后它通常调用库例程执行一个 barrier primitive。然后这个进程就被 suspended。又过了一会，第 2 和 第 3 个进程也完成了该阶段，同样地，也执行了 barrier primitive。最后，当最后一个进程 C 
+在图 2-37(a) 中可以看到有 4 个进程靠近一个 barrier。这表示它们正在计算，还没到达当前阶段的终点。过了一会，第 1 个进程完成了它在第一个阶段所需的计算，然后它通常调用库例程执行一个 barrier primitive。然后这个进程就被 suspended。又过了一会，第 2 和 第 3 个进程也完成了该阶段，同样地，也执行了 barrier primitive。最后，当最后一个进程 C hits the barrier，所有进程被释放，如图 2-37(c) 所
