@@ -19,7 +19,40 @@
 ## 动态规划
 ### 线性dp
 #### 最经典单串
-![]
+!["题目"](./photo/300.png)
+
+```c
+class Solution {
+public:
+    int lengthOfLIS(vector<int>& nums) {
+        if(nums.empty())
+        {
+            return 0;
+        }
+        vector<int> dp(nums.size(), 0);
+        dp[0] = 1;
+        for(int i = 1; i < nums.size(); i++)
+        {
+            int length = 0;
+            for(int j = i-1; j >= 0; j--)
+            {
+                if(nums[j] < nums[i] && dp[j] > length)
+                {
+                    length = dp[j];
+                }
+            }
+            dp[i] = length + 1;
+        }
+
+        int maxLength = 0;
+        for(auto num : dp)
+        {
+            maxLength = num > maxLength ? num : maxLength;
+        }
+        return maxLength;
+    }
+};
+```
 ### Binary Tree Inorder traversal
 !["题目"](./photo/94.png)
 ##### 使用递归
