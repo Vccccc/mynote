@@ -311,4 +311,5 @@ void consumer(void)
 }
 ```
 
+Message passing is commonly used in parallel programming systems.
 ### 2.3.9 Barriers
