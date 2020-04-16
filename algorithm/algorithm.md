@@ -19,7 +19,7 @@
 ## 动态规划
 ### 线性dp
 #### 最经典单串
-
+![]
 ### Binary Tree Inorder traversal
 !["题目"](./photo/94.png)
 ##### 使用递归
