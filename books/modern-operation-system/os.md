@@ -313,4 +313,4 @@ void consumer(void)
 
 Message passing is commonly used in parallel programming systems.
 ### 2.3.9 Barriers
-Our last synchronization mechanism is intend
+Our last synchronization mechanism is intended for groups of processes rather than two-process producer-consumer type situations. Some applications are divided into phases
