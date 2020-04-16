@@ -317,4 +317,4 @@ Our last synchronization mechanism is intended for groups of processes rather th
 
 ![](./photo/2.37.png)
 
-在图 2-37(a) 中可以看到有 4 个进程靠近一个 barrier。这表示它们正在计算，还没到达当前阶段的终点。
+在图 2-37(a) 中可以看到有 4 个进程靠近一个 barrier。这表示它们正在计算，还没到达当前阶段的终点。过了一会，第一个进程完成了它在第一个阶段所需的计算
