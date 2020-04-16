@@ -29,6 +29,7 @@ public:
             else if(count == 1)
             {
                 vertices_ = *iter;
+                adj_.resize(vertices_);
             }
             else if(count % 2 == 0)
             {
