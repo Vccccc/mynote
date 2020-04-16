@@ -285,7 +285,7 @@ void producer(void)
     message m;  // message buffer
     while(TRUE)
     {
-        item = produce_item();      // generate something to pu in buffer
+        item = produce_item();      // generate something to put in buffer
         receive(consumer, &m);      // wait for an empty to arrive
         build_messagek(&m, item);   // construct a message to send
         send(consumer, &m);         // send item to consumer
