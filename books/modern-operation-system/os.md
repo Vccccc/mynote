@@ -308,4 +308,7 @@ void consumer(void)
         send(producer, &m);         // send back empty reply
         consume_item(item);         // do something with the item
     }
-}```
+}
+```
+
+### 2.3.9 Barriers
