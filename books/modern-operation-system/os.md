@@ -317,4 +317,4 @@ Our last synchronization mechanism is intended for groups of processes rather th
 
 ![](./photo/2.37.png)
 
-在图 2-37 中可以看到有 4 个
+在图 2-37(a) 中可以看到有 4 个进程靠近一个 barrier。这表示它们正在
