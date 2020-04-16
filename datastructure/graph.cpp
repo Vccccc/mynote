@@ -120,4 +120,5 @@ int main()
              9, 11,
              5, 3});
     cout << g.toString() << endl;
+    return 0;
 }
