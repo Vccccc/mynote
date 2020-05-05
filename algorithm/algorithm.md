@@ -21,6 +21,8 @@
 #### 最经典单串
 !["题目"](./photo/300.png)
 
+##### solution 1
+时间复杂度 O(n^2)
 ```c
 class Solution {
 public:
@@ -50,6 +52,56 @@ public:
             maxLength = num > maxLength ? num : maxLength;
         }
         return maxLength;
+    }
+};
+```
+
+
+##### solution 2 
+时间复杂度 O(nlogn)。arr 数组存储由 nums 元素构成的最长递增子序列。
+```c
+class Solution {
+public:
+    int lengthOfLIS(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> arr(n, 1);
+
+        int length = 0;
+        for(int i = 0; i < n; i++)
+        {
+            int idx = binarySearch(arr, length, nums[i]);
+            if (length == idx)
+            {
+                length++;
+            }
+            arr[idx] = nums[i];
+        }
+        return length;
+    }
+
+    // 返回第一个大于等于 key 的数组元素下标
+    int binarySearch(vector<int>& arr, int length, int key)
+    {
+        int l = 0;
+        int r = length;
+        
+        while(l < r)
+        {
+            int mid = l + (r-l)/2;
+            if (key > arr[mid])
+            {
+                l = mid + 1;
+            }
+            else if (key < arr[mid])
+            {
+                r = mid;
+            }
+            else
+            {
+                return mid;
+            }
+        }
+        return l;
     }
 };
 ```

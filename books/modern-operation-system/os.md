@@ -318,3 +318,13 @@ Our last synchronization mechanism is intended for groups of processes rather th
 ![](./photo/2.37.png)
 
 在图 2-37(a) 中可以看到有 4 个进程靠近一个 barrier。这表示它们正在计算，还没到达当前阶段的终点。过了一会，第 1 个进程完成了它在第一个阶段所需的计算，然后它通常调用库例程执行一个 barrier primitive。然后这个进程就被 suspended。又过了一会，第 2 和 第 3 个进程也完成了该阶段，同样地，也执行了 barrier primitive。最后，当最后一个进程 C hits the barrier，所有进程被释放，如图 2-37(c) 所示。
+
+## 2.4 SCHEDULING
+当计算机是多程序时，同一时间通常会有多个进程或线程在竞争 CPU。这种情况发生于当有多个进程同时处于 ready state。如果只有一个 CPU 可用，那么得选出哪个进程先运行。这个选择的过程称为 **scheduler**，选择的算法称为 **scheduling algoritm**。
+
+许多适用于进程调度的问题同样也适用于线程，虽然有少许不同。当内核管理线程，通常按线程调度，极少或不关心这个线程属于哪个进程。
+
+### 2.4.1 Introduction to Scheduling
+Back in the old days of batch systems with input in the form of card images on a magnetic tape, the scheduling algorithm was simple: just run the next job on the tape. With multiprogramming systems, the scheduling algorithm became more complex because there were generally multiple users waiting for service. Some mainframes still combine batch and timesharing service, requiring the scheduler to decide whether a batch job or an interactive user at a terminal should go next. Because CPU time is a scarce resource on these machines, a good scheduler can make a big difference in perceived performance and user satisfaction. Consequently, a great deal of work has gone into devising clever and efficient scheduling algorithms.
+
+With the advent of personal computers, the situation changed in two ways. First, most of the time there is only one active process. A user entering a document on a word processor is unlikely to be simultaneously compiling a program in the background. When the user types a command to the word processor, the scheduler does not have to do much work to figure out which process to run—the word processor is the only candidate.
