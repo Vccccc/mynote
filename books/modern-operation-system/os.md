@@ -141,8 +141,8 @@ void consumer(void)
     while (TRUE) { /* repeat forever */
         if (count == 0) sleep( ); /* if buffer is empty, got to sleep */
         item = remove_item( ); /* take item out of buffer */
-        count = count ? 1; /* decrement count of items in buffer */
-        if (count == N ? 1) wakeup(producer); /* was buffer full? */
+        count = count - 1; /* decrement count of items in buffer */
+        if (count == N - 1) wakeup(producer); /* was buffer full? */
         consume_item(item); /* pr int item */
     }
 }
