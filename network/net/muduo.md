@@ -31,4 +31,7 @@ virtual Timestamp poll(int timeoutMs, ChannelList* activeChannels) = 0;
 virtual void updateChannel(Channel* channel) = 0;
 virtual void removeChannel(Channel* channel) = 0;
 ```
+
+### EventLoop
+EventLoop 用于
 ## base
