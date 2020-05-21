@@ -33,5 +33,5 @@ virtual void removeChannel(Channel* channel) = 0;
 ```
 
 ### EventLoop
-EventLoop 用于事件循环，通过 Poller 获取事件，然后触发事件
+EventLoop 用于事件循环，循环通过 Poller 获取事件，并调用触发事件的回调函数。
 ## base
