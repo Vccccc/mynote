@@ -36,5 +36,5 @@ virtual void removeChannel(Channel* channel) = 0;
 EventLoop 通过组合 Poller，完成事件循环。EventLoop 循环地从 Poller 获取事件，并调用触发事件的回调函数。
 
 ### Acceptor
-Acceptor 用于建立新的连接。内部成员
+Acceptor 用于建立新的连接。内部成员函数操作了一系列的连接服务器操作，如 bind, listen, accept 等。
 ## base
