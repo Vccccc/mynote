@@ -174,7 +174,7 @@ public:
 class Solution {
 public:
     vector<TreeNode*> generateTrees(int n) {
-// 构建一棵树需要 root 节点和其左右子树
+	// 构建一棵树需要 root 节点和其左右子树
         // 节点的值为 [1, n]，每个值都可作为 root 节点，遍历选择 root 节点可通过递归或循环
         // 当选中 i(1<=i<=n) 为 root 节点时，其左子树的值由 [1,i-1] 构成，右子树的值由[i+1,n]构成
         // 由此看出，每选择一个 root 节点时，其左右子树规模不断减少。构造左右子树需要传入取值范围作为参数。
