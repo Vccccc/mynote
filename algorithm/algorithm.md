@@ -983,6 +983,21 @@ bool isPalindrome(string str)
 ```
 
 ## 洗牌算法
+随机选取 k 个小于 n 的不同随机值
 ```c
+    void shuffle(vector<int>& data, int n, k)
+    {
+        data.resize(n);
+        for(int i = 0; i < n; i++)
+        {
+            data[i] = i;
+        }
 
+        srand(time(null));
+        for(int i = 0; i < k; i++)
+        {
+            int rand = i + rand() % n-i;
+            swap(data[i], data[rand]);
+        }
+    }
 ```
