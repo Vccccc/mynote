@@ -981,3 +981,8 @@ bool isPalindrome(string str)
     return true;
 }
 ```
+
+## 洗牌算法
+```c
+
+```
