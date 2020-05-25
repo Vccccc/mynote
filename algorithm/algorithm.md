@@ -983,11 +983,14 @@ bool isPalindrome(string str)
 ```
 
 ## 洗牌算法
+将一副牌随机打乱
+```c
 
-## 洗牌算法
+```
+### 生成k个小于n的不重复值
 生成 k 个小于 n 的不重复值。
 ```c
-    void shuffle(vector<int>& data, int n, k)
+    void func(vector<int>& data, int n, k)
     {
         data.resize(n);
         for(int i = 0; i < n; i++)
