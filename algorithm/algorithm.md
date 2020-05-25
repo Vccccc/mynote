@@ -983,7 +983,9 @@ bool isPalindrome(string str)
 ```
 
 ## 洗牌算法
-随机选取 k 个小于 n 的不重复值
+
+## 洗牌算法
+生成 k 个小于 n 的不重复值。
 ```c
     void shuffle(vector<int>& data, int n, k)
     {
