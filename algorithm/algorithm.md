@@ -998,7 +998,7 @@ bool isPalindrome(string str)
             data[i] = i;
         }
 
-        srand(time(null));
+        srand(time(nullptr));
         for(int i = 0; i < k; i++)
         {
             int rand = i + rand() % n-i;
