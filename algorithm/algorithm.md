@@ -985,7 +985,16 @@ bool isPalindrome(string str)
 ## 洗牌算法
 将一副牌随机打乱
 ```c
-
+    void shuffle(vector<int>& data)
+    {
+        srand(time(nullptr));
+        int n = data.size();
+        for(int i = 0; i < n; i++)
+        {
+            int rand = i + rand() % n-i;
+            swap(data[i], data[rand]);
+        }
+    }
 ```
 ### 生成k个小于n的不重复值
 生成 k 个小于 n 的不重复值。
