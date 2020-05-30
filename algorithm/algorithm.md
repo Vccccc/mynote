@@ -37,7 +37,8 @@ i：向后寻找非重复元素
 j：指向已知非重复元素最后一位。
 
 两种情况：
-1. nums[i] == nums[j] 时，
+1. nums[i] == nums[j] 时，i 向后寻找非重复元素
+2. nums[i] != nums[j] 时，nums[j]
 ```c
 class Solution {
 public:
