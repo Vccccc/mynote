@@ -35,6 +35,9 @@
 需要两个下标，i 和 j。
 i：向后寻找非重复元素
 j：指向已知非重复元素最后一位。
+
+两种情况：
+1. nums[i] == nums[j] 时，
 ```c
 class Solution {
 public:
