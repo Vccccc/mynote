@@ -23,7 +23,8 @@
 1. 覆盖
 2. 删除标记
 
-#### 
+#### 26 Remove Duplicates from Sorted Array
+![26.png](0)
 ## 动态规划
 ### 线性dp
 #### 最经典单串
