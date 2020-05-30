@@ -27,7 +27,28 @@
 ![26.png](0)
 
 ##### solution
+思路：当元素重复时选择
 ```c
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        if(nums.empty())
+        {
+            return 0;
+        }
+        int length = 1;
+        for(int i = 0, j = 0; i < nums.size(); i++)
+        {
+            if(nums[i] != nums[j])
+            {
+                j++;
+                length++;
+                nums[j] = nums[i];
+            }
+        }
+        return length;
+    }
+};
 ```
 ## 动态规划
 ### 线性dp
