@@ -38,7 +38,7 @@ j：指向已知非重复元素最后一位。
 
 两种情况：
 1. nums[i] == nums[j] 时，i 向后寻找非重复元素
-2. nums[i] != nums[j] 时，nums[j]
+2. nums[i] != nums[j] 时，nums[i] 覆盖删除 nums[j+1]，修正 i, j。
 ```c
 class Solution {
 public:
