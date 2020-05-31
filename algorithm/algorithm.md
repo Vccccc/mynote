@@ -152,7 +152,31 @@ public:
 ```
 
 #### 11 Container With Most Water
-![image.png](3) 
+![11.png](3)
+##### two pointer
+如何计算
+```c
+class Solution {
+public:
+    int maxArea(vector<int>& height) {
+        int res = INT_MIN;
+        int l = 0, r = height.size()-1;
+        while(l < r)
+        {
+            res = max(res, min(height[l], height[r]) * (r-l));
+            if(height[l] < height[r])
+            {
+                l++;
+            }
+            else
+            {
+                r--;
+            }
+        }
+        return res;
+    }
+};
+``` 
 ## 动态规划
 ### 线性dp
 #### 最经典单串
