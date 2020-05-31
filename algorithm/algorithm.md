@@ -157,7 +157,7 @@ public:
 如何计算某个区域水面积大小？取最小边 * 距离。
 
 需要两个下标表示边界。
-l: 左边界，当 height[l] < height[r] 时，l 需要前进，找到一个 l2 
+l: 左边界，当 height[l] < height[r] 时，l 需要前进，找到一个 l2 使得 height[l] < height[l2]，边界[l,r]此时才有可能
 ```c
 class Solution {
 public:
