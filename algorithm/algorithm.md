@@ -158,7 +158,7 @@ public:
 
 需要两个下标表示边界。
 l: 左边界，当 height[l] < height[r] 时，l 需要前进，找到一个 l2 使得 height[l] < height[l2]，边界 [l2,r] 水面积此时才有可能大于边界 [l,r]。
-r: 同理，当
+r: 同理。
 ```c
 class Solution {
 public:
