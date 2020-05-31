@@ -65,7 +65,7 @@ public:
 #### 80 Remove Duplicates from Sorted Array II
 ![80.png](1)
 与 26 题类似，只需引入一个 count 计数。
-因为 j 需要指向已知合法元素最后一位。所以 nums[i] == nums[j] && count < 2 && j < i 时，j 需要修正。
+因为 j 需要指向已知合法元素最后一位。所以 nums[i] == nums[j] && count < 2 && j < i 时，j 需要前进。
 ##### solution
 ```c
 class Solution {
