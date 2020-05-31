@@ -63,6 +63,44 @@ public:
 ```
 
 #### 80 Remove Duplicates from Sorted Array II
+![80.png](1)
+
+##### solution
+```c
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        int length = 0;
+        int count = 0;
+        for(int i = 0, j = 0; i < nums.size(); i++)
+        {
+            if(nums[i] != nums[j])
+            {
+                j++;
+                length++;
+                nums[j] = nums[i];
+                count = 1;
+            }
+            else
+            {
+                if(count < 2)
+                {
+                    count++;
+                    length++;
+                    if (j < i)
+                    {
+                        j++;
+                        nums[j] = nums[i];
+                    }
+                }
+            }    
+        }
+        return length;
+    }
+};
+```
+
+
 
 ## 动态规划
 ### 线性dp
