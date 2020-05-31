@@ -127,7 +127,7 @@ vector<int> res;
 ```
 
 ##### hash table
-
+求和需要两位数相加，一位是 nums[i]，一位是 tar
 ```c
 class Solution {
 public:
