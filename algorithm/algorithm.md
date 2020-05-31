@@ -104,7 +104,7 @@ public:
 #### 1 Two Sum
 ![1.png](2) 
 
-##### solution
+#####  Brute Force
 怎么两数求和？通过两数相加。
 需要两个下标：
 i: 遍历整个数组
@@ -125,6 +125,9 @@ vector<int> res;
         }
         return res;
 ```
+
+##### hash table
+
 ## 动态规划
 ### 线性dp
 #### 最经典单串
