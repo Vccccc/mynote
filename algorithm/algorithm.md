@@ -155,6 +155,7 @@ public:
 ![11.png](3)
 ##### two pointer
 如何计算某个区域水面积大小？取最小边 * 距离。
+当[l,r]
 ```c
 class Solution {
 public:
