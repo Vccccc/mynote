@@ -128,6 +128,29 @@ vector<int> res;
 
 ##### hash table
 
+```c
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int, int> m;
+        vector<int> res;
+
+        for(int i = 0; i < nums.size(); i++)
+        {
+            int complete = target - nums[i];
+            if(m.count(complete))
+            {
+                res.push_back(i);
+                res.push_back(m[complete]);
+                return res;
+            }
+            m[nums[i]] = i;
+        }
+        return res;
+    }
+};
+```
+
 ## 动态规划
 ### 线性dp
 #### 最经典单串
