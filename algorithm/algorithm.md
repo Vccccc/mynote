@@ -106,7 +106,9 @@ public:
 
 ##### solution
 怎么两数求和？通过两数相加。
-
+需要两个下标：
+i: 遍历整个数组
+j: 遍历整个下标大于 i 的数组
 ```c
 vector<int> res;
         for(int i = 0; i < nums.size()-1; i++)
