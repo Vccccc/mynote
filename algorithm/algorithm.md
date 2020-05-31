@@ -127,7 +127,7 @@ vector<int> res;
 ```
 
 ##### hash table
-求和需要两位数相加，一位是 nums[i]，一位是 tar
+求和需要两位数相加，一位是 nums[i]，一位是 target - nums[i]，通过 unordered_map 缓存数组的值和下标，就可以 O(1) 时间
 ```c
 class Solution {
 public:
