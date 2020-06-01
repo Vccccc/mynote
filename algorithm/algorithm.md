@@ -182,7 +182,7 @@ public:
 };
 ``` 
 
-#### Next Permutation
+#### 31 Next Permutation
 ![31.png](0)
 
 ##### solution
