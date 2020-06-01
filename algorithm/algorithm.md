@@ -186,7 +186,7 @@ public:
 ![31.png](0)
 
 ##### solution
-为了重新排列为下一更大数，应该从个、十、百...位
+如果 [a,b] 区间为递减区间，则说明 [a,
 ```c
 class Solution {
 public:
