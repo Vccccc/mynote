@@ -186,7 +186,7 @@ public:
 ![31.png](0)
 
 ##### solution
-如果 [a,b] 区间为递减区间，则说明 [a,
+如果 [a,b] 区间为递减区间，则说明 [a,b] 区间是能最大序列，
 ```c
 class Solution {
 public:
