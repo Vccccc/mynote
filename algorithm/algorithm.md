@@ -181,6 +181,13 @@ public:
     }
 };
 ``` 
+
+#### Next Permutation
+![31.png](0)
+
+##### solution
+
+
 ## 动态规划
 ### 线性dp
 #### 最经典单串
