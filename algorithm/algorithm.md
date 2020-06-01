@@ -230,7 +230,7 @@ public:
 ![15.png](1)
 ##### solution
 难点在于怎么找到唯一的 triplet。
-怎么判断选择已选择过某个数为 a？
+怎么判断已选择过某个数为 a？通过将数组排序，相同的值只做
 ```c
 class Solution {
 public:
