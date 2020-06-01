@@ -229,7 +229,8 @@ public:
 #### 15 3Sum
 ![15.png](1)
 ##### solution
-难点在于怎么找到唯一的 triplet。可以先将数组排序，然后依次选择
+难点在于怎么找到唯一的 triplet。
+怎么判断选择已选择过某个数为 a？
 ```c
 class Solution {
 public:
