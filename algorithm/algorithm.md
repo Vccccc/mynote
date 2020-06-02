@@ -294,9 +294,39 @@ public:
 #### 42 Trapping Rain Water
 ![42.png](2)
 ##### solution
-
+如何计算某个位置
 ```c
+class Solution {
+public:
+    int trap(vector<int>& height) {
+        if(height.empty())
+        {
+            return 0;
+        }
+        int res = 0;
+        int size = height.size();
+        vector<int> left_max(size);
+        vector<int> right_max(size);
 
+        left_max[0] = height[0];
+        for(int i = 1; i < size; i++)
+        {
+            left_max[i] = max(height[i], left_max[i-1]);
+        }
+
+        right_max[size-1] = height[size-1];
+        for(int i = size-2; i >= 0; i--)
+        {
+            right_max[i] = max(height[i], right_max[i+1]);
+        }
+
+        for(int i = 0; i < size; i++)
+        {
+            res += min(left_max[i], right_max[i]) - height[i];
+        }
+        return res;
+    }
+};
 ```
 ## 动态规划
 ### 线性dp
