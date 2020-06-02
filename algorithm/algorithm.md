@@ -291,6 +291,13 @@ public:
 };
 ```
 
+#### 42 Trapping Rain Water
+![42.png](2)
+##### solution
+
+```c
+
+```
 ## 动态规划
 ### 线性dp
 #### 最经典单串
