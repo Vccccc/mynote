@@ -294,7 +294,8 @@ public:
 #### 42 Trapping Rain Water
 ![42.png](2)
 ##### solution
-如何计算某个位置水的面积？找出其左右最高边界，取低边界减去
+如何计算某个位置水的面积？找出其左右最高边界，取低边界减去该位置黑块的高。
+如何找出左右最高边界？如果
 ```c
 class Solution {
 public:
