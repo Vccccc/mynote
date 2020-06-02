@@ -294,7 +294,7 @@ public:
 #### 42 Trapping Rain Water
 ![42.png](2)
 ##### solution
-如何计算某个位置
+如何计算某个位置水的面积？找出其左右边界
 ```c
 class Solution {
 public:
