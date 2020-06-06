@@ -331,7 +331,9 @@ public:
 ```
 
 #### 53 Maximum Subarray
+![](./photo/53.png)
 
+####
 ## 动态规划
 ### 线性dp
 #### 最经典单串
