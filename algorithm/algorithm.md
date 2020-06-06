@@ -333,7 +333,75 @@ public:
 #### 53 Maximum Subarray
 ![](./photo/53.png)
 
-####
+##### divide and conquer
+```c
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        // O(n) solution
+        // int temp = 0;
+        // int sum = INT_MIN;
+        // for (int num : nums)
+        // {
+        //     temp += num;
+        //     sum = temp > sum ? temp : sum;
+        //     if (temp < 0)
+        //     {
+        //         temp = 0;
+        //     }
+        // }2
+        // return sum;
+
+        // dynamic program solution
+        // vector<int> dp(nums.size()+1, INT_MIN);
+        // int sum = INT_MIN;
+        // for(int i = 1; i <= nums.size(); i++)
+        // {
+        //     if(dp[i-1] > 0)
+        //     {
+        //         dp[i] = dp[i-1] + nums[i-1];
+        //     }
+        //     else
+        //     {
+        //         dp[i] = nums[i-1];
+        //     }
+        //     sum = sum > dp[i] ? sum : dp[i];
+        // }
+        // return sum;
+
+        // divide and conquer solution
+
+        return maxSubArray(nums, 0, nums.size()-1);
+    }
+
+    int maxSubArray(vector<int>& nums, int l, int r)
+    {
+        if(r < l)
+        {
+            return INT_MIN;
+        }
+
+        int mid = l + (r - l) / 2;
+        int ml = 0, mr = 0;
+        int lmax = maxSubArray(nums, l, mid-1);
+        int rmax = maxSubArray(nums, mid+1, r);
+
+        for(int i = mid-1, sum = 0; i >= l; i--)
+        {
+            sum += nums[i];
+            ml = max(ml, sum);
+        }
+
+        for(int i = mid+1, sum = 0; i <= r; i++)
+        {
+            sum += nums[i];
+            mr = max(mr, sum);
+        }
+
+        return max(max(lmax, rmax), ml + nums[mid] + mr);
+    }
+};
+```
 ## 动态规划
 ### 线性dp
 #### 最经典单串
