@@ -334,7 +334,7 @@ public:
 ![](./photo/53.png)
 
 ##### divide and conquer
-
+将
 ```c
 class Solution {
 public:
