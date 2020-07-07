@@ -16,6 +16,482 @@
 ```
 
 # LeetCode原题
+## 数组
+数组由三个属性构成：下标、地址、元素。
+
+数组删除操作方式：
+1. 覆盖
+2. 删除标记
+
+#### 26 Remove Duplicates from Sorted Array
+![26.png](0)
+
+##### solution
+思路：当元素重复时选择覆盖删除元素。
+
+如何判断元素重复？当前元素与前一元素对比（需修正，使用下文的 j）。
+如何删除？覆盖删除，向后找到第一个非重复元素覆盖重复元素。
+
+需要两个下标，i 和 j。
+i：向后寻找非重复元素
+j：指向已知非重复元素最后一位。
+
+两种情况：
+1. nums[i] == nums[j] 时，i 向后寻找非重复元素
+2. nums[i] != nums[j] 时，nums[i] 覆盖删除 nums[j+1]，修正 i, j。
+```c
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        if(nums.empty())
+        {
+            return 0;
+        }
+        int length = 1;
+        for(int i = 0, j = 0; i < nums.size(); i++)
+        {
+            if(nums[i] != nums[j])
+            {
+                j++;
+                length++;
+                nums[j] = nums[i];
+            }
+        }
+        return length;
+    }
+};
+```
+
+#### 80 Remove Duplicates from Sorted Array II
+![80.png](1)
+与 26 题类似，只需引入一个 count 计数。
+因为 j 需要指向已知合法元素最后一位。所以 nums[i] == nums[j] && count < 2 && j < i 时，j 需要前进。
+##### solution
+```c
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        int length = 0;
+        int count = 0;
+        for(int i = 0, j = 0; i < nums.size(); i++)
+        {
+            if(nums[i] != nums[j])
+            {
+                j++;
+                length++;
+                nums[j] = nums[i];
+                count = 1;
+            }
+            else
+            {
+                if(count < 2)
+                {
+                    count++;
+                    length++;
+                    if (j < i)
+                    {
+                        j++;
+                        nums[j] = nums[i];
+                    }
+                }
+            }    
+        }
+        return length;
+    }
+};
+```
+
+#### 1 Two Sum
+![1.png](2) 
+
+#####  Brute Force
+怎么两数求和？通过两数相加。
+需要两个下标：
+i: 遍历整个数组
+j: 遍历整个下标大于 i 的数组
+```c
+vector<int> res;
+        for(int i = 0; i < nums.size()-1; i++)
+        {
+            for(int j = i+1; j < nums.size(); j++)
+            {
+                if(nums[i] + nums[j] == target)
+                {
+                    res.push_back(i);
+                    res.push_back(j);
+                    return res;
+                }
+            }
+        }
+        return res;
+```
+
+##### hash table
+求和需要两位数相加，一位是 nums[i]，一位是 target - nums[i]，通过 unordered_map 缓存数组的值和下标，就可以 O(1) 时间判断是否数组存在 tartget-nums[i]。
+```c
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int, int> m;
+        vector<int> res;
+
+        for(int i = 0; i < nums.size(); i++)
+        {
+            int complete = target - nums[i];
+            if(m.count(complete))
+            {
+                res.push_back(i);
+                res.push_back(m[complete]);
+                return res;
+            }
+            m[nums[i]] = i;
+        }
+        return res;
+    }
+};
+```
+
+#### 11 Container With Most Water
+![11.png](3)
+##### two pointer
+如何计算某个区域水面积大小？取最小边 * 距离。
+
+需要两个下标表示边界。
+l: 左边界，当 height[l] < height[r] 时，l 需要前进，找到一个 l2 使得 height[l] < height[l2]，边界 [l2,r] 水面积此时才有可能大于边界 [l,r]。
+r: 同理。
+```c
+class Solution {
+public:
+    int maxArea(vector<int>& height) {
+        int res = INT_MIN;
+        int l = 0, r = height.size()-1;
+        while(l < r)
+        {
+            res = max(res, min(height[l], height[r]) * (r-l));
+            if(height[l] < height[r])
+            {
+                l++;
+            }
+            else
+            {
+                r--;
+            }
+        }
+        return res;
+    }
+};
+``` 
+
+#### 31 Next Permutation
+![31.png](0)
+
+##### solution
+[a,b]区间由后往前增长，只要 [a,b] 不是最大值，就可以将其重排列为下一更大值序列。
+如果 [a,b] 区间为递减区间，则说明 [a,b] 区间是最大值序列，将 [a,b] 区间反转得到最小值序列。要求下一更大值序列，只需由后往前找到一个递减区间，然后从 [a,b] 中取第一个大于 nums[a-1] 的与 nums[a-1] 交换，再将 [a,b] 区间反转即得下一更大值序列。
+```c
+class Solution {
+public:
+    void nextPermutation(vector<int>& nums) {
+        int i = nums.size() - 2;
+        while(i >= 0 && nums[i+1] <= nums[i])
+        {
+            i--;
+        }
+
+        if(i >= 0)
+        {
+            int j = nums.size()-1;
+            while(j > i && nums[j] <= nums[i])
+            {
+                j--;
+            }
+
+            swap(nums[i], nums[j]);
+        }
+        
+        reverse(nums, i+1);
+    }
+
+    void reverse(vector<int>& nums, int start)
+    {
+        int i = start;
+        int j = nums.size()-1;
+        while(i < j)
+        {
+            swap(nums[i], nums[j]);
+            i++;
+            j--;
+        }
+    }
+};
+```
+
+#### 15 3Sum
+![15.png](1)
+##### solution
+难点在于怎么找到唯一的 triplet。
+怎么判断已选择过某个数为 a？通过将数组排序，选择一个值为 a 时，跳过连续相同的值(a)。
+```c
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        vector<vector<int>> res;
+        
+        sort(nums.begin(), nums.end());
+
+        for(int i = 0; i < nums.size(); i++)
+        {
+            int target = -nums[i];
+            int front = i+1;
+            int back = nums.size()-1;
+
+            if(target < 0)
+            {
+                break;
+            }
+
+            while(front < back)
+            {
+                int sum = nums[front] + nums[back];
+                if(sum > target)
+                {
+                    back--;
+                }
+                else if(sum < target)
+                {
+                    front++;
+                }
+                else
+                {
+                    vector<int> triplet(3, 0);
+                    triplet[0] = nums[i];
+                    triplet[1] = nums[front];
+                    triplet[2] = nums[back];
+                    res.push_back(triplet);
+                    
+                    while(front < back && nums[front] == triplet[1] )
+                    {
+                        front++;
+                    }
+
+                    while(front < back && nums[back] == triplet[2])
+                    {
+                        back--;
+                    }
+                }
+            }
+
+            while(i+1 < nums.size() && nums[i] == nums[i+1])
+            {
+                i++;
+            }
+        }
+        return res;
+    }
+};
+```
+
+#### 42 Trapping Rain Water
+![42.png](2)
+##### solution
+如何计算某个位置水的面积？找出其左右最高边界，取低边界减去该位置黑块的高。
+如何找出左右最高边界？左最高边界可以通过动态规划算出。
+```c
+class Solution {
+public:
+    int trap(vector<int>& height) {
+        if(height.empty())
+        {
+            return 0;
+        }
+        int res = 0;
+        int size = height.size();
+        vector<int> left_max(size);
+        vector<int> right_max(size);
+
+        left_max[0] = height[0];
+        for(int i = 1; i < size; i++)
+        {
+            left_max[i] = max(height[i], left_max[i-1]);
+        }
+
+        right_max[size-1] = height[size-1];
+        for(int i = size-2; i >= 0; i--)
+        {
+            right_max[i] = max(height[i], right_max[i+1]);
+        }
+
+        for(int i = 0; i < size; i++)
+        {
+            res += min(left_max[i], right_max[i]) - height[i];
+        }
+        return res;
+    }
+};
+```
+
+#### 53 Maximum Subarray
+![](./photo/53.png)
+
+##### divide and conquer
+将
+```c
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        // O(n) solution
+        // int temp = 0;
+        // int sum = INT_MIN;
+        // for (int num : nums)
+        // {
+        //     temp += num;
+        //     sum = temp > sum ? temp : sum;
+        //     if (temp < 0)
+        //     {
+        //         temp = 0;
+        //     }
+        // }2
+        // return sum;
+
+        // dynamic program solution
+        // vector<int> dp(nums.size()+1, INT_MIN);
+        // int sum = INT_MIN;
+        // for(int i = 1; i <= nums.size(); i++)
+        // {
+        //     if(dp[i-1] > 0)
+        //     {
+        //         dp[i] = dp[i-1] + nums[i-1];
+        //     }
+        //     else
+        //     {
+        //         dp[i] = nums[i-1];
+        //     }
+        //     sum = sum > dp[i] ? sum : dp[i];
+        // }
+        // return sum;
+
+        // divide and conquer solution
+
+        return maxSubArray(nums, 0, nums.size()-1);
+    }
+
+    int maxSubArray(vector<int>& nums, int l, int r)
+    {
+        if(r < l)
+        {
+            return INT_MIN;
+        }
+
+        int mid = l + (r - l) / 2;
+        int ml = 0, mr = 0;
+        int lmax = maxSubArray(nums, l, mid-1);
+        int rmax = maxSubArray(nums, mid+1, r);
+
+        for(int i = mid-1, sum = 0; i >= l; i--)
+        {
+            sum += nums[i];
+            ml = max(ml, sum);
+        }
+
+        for(int i = mid+1, sum = 0; i <= r; i++)
+        {
+            sum += nums[i];
+            mr = max(mr, sum);
+        }
+
+        return max(max(lmax, rmax), ml + nums[mid] + mr);
+    }
+};
+```
+## 动态规划
+### 线性dp
+#### 最经典单串
+!["题目"](./photo/300.png)
+
+##### solution 1
+时间复杂度 O(n^2)
+```c
+class Solution {
+public:
+    int lengthOfLIS(vector<int>& nums) {
+        if(nums.empty())
+        {
+            return 0;
+        }
+        vector<int> dp(nums.size(), 0);
+        dp[0] = 1;
+        for(int i = 1; i < nums.size(); i++)
+        {
+            int length = 0;
+            for(int j = i-1; j >= 0; j--)
+            {
+                if(nums[j] < nums[i] && dp[j] > length)
+                {
+                    length = dp[j];
+                }
+            }
+            dp[i] = length + 1;
+        }
+
+        int maxLength = 0;
+        for(auto num : dp)
+        {
+            maxLength = num > maxLength ? num : maxLength;
+        }
+        return maxLength;
+    }
+};
+```
+
+
+##### solution 2 
+时间复杂度 O(nlogn)。arr 数组存储由 nums 元素构成的最长递增子序列。
+```c
+class Solution {
+public:
+    int lengthOfLIS(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> arr(n, 1);
+
+        int length = 0;
+        for(int i = 0; i < n; i++)
+        {
+            int idx = binarySearch(arr, length, nums[i]);
+            if (length == idx)
+            {
+                length++;
+            }
+            arr[idx] = nums[i];
+        }
+        return length;
+    }
+
+    // 返回第一个大于等于 key 的数组元素下标
+    int binarySearch(vector<int>& arr, int length, int key)
+    {
+        int l = 0;
+        int r = length;
+        
+        while(l < r)
+        {
+            int mid = l + (r-l)/2;
+            if (key > arr[mid])
+            {
+                l = mid + 1;
+            }
+            else if (key < arr[mid])
+            {
+                r = mid;
+            }
+            else
+            {
+                return mid;
+            }
+        }
+        return l;
+    }
+};
+```
 ### Binary Tree Inorder traversal
 !["题目"](./photo/94.png)
 ##### 使用递归
@@ -85,6 +561,10 @@ public:
 class Solution {
 public:
     vector<TreeNode*> generateTrees(int n) {
+	// 构建一棵树需要 root 节点和其左右子树
+        // 节点的值为 [1, n]，每个值都可作为 root 节点，遍历选择 root 节点可通过递归或循环
+        // 当选中 i(1<=i<=n) 为 root 节点时，其左子树的值由 [1,i-1] 构成，右子树的值由[i+1,n]构成
+        // 由此看出，每选择一个 root 节点时，其左右子树规模不断减少。构造左右子树需要传入取值范围作为参数。
         if(n <= 0)
         {
             return vector<TreeNode*>{};
@@ -887,4 +1367,38 @@ bool isPalindrome(string str)
 
     return true;
 }
+```
+
+## 洗牌算法
+将一副牌随机打乱
+```c
+    void shuffle(vector<int>& data)
+    {
+        srand(time(nullptr));
+        int n = data.size();
+        for(int i = 0; i < n; i++)
+        {
+            int rand = i + rand() % n-i;
+            swap(data[i], data[rand]);
+        }
+    }
+```
+### 生成k个小于n的不重复值
+生成 k 个小于 n 的不重复值。
+```c
+    void func(vector<int>& data, int n, k)
+    {
+        data.resize(n);
+        for(int i = 0; i < n; i++)
+        {
+            data[i] = i;
+        }
+
+        srand(time(nullptr));
+        for(int i = 0; i < k; i++)
+        {
+            int rand = i + rand() % n-i;
+            swap(data[i], data[rand]);
+        }
+    }
 ```
