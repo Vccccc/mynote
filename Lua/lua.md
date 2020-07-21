@@ -26,6 +26,8 @@ void lua_call (lua_State *L, int nargs, int nresults);
 
 调用一个函数。
 
+要调用一个函数请遵循以下协议：首先，要调用的函数应该被压入栈；接着，把需要传递给这个函数的参数按正序压入；这是指
+
 ## C API
 ### lua_gettop
 int lua_gettop (lua_State *L);
