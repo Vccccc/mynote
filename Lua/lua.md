@@ -70,4 +70,7 @@ const char *lua_pushliteral (lua_State *L, const char *s);
 
 这个宏等价于 lua_pushstring， 区别仅在于只能在 s 是一个字面量时才能用它。 它会自动给出字符串的长度。
 
-### lua_pus
+### lua_pushstring
+const char *lua_pushstring (lua_State *L, const char *s);
+
+将指针 s 指向的零结尾的字符串压栈。Lua 对这个字符串做一个内部副本（或是复用一个副本）， 因此 s 处的内存在函数返回后，可以释放掉或是立刻重用于其它用途。
