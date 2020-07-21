@@ -26,3 +26,9 @@
 int lua_gettop (lua_State *L);
 返回栈顶元素的索引。 因为索引是从 1 开始编号的， 所以这个结果等于栈上的元素个数； 特别指出，0 表示栈为空。
 
+### lua_error
+int lua_error (lua_State *L);
+以栈顶的值作为错误对象，抛出一个 Lua 错误。 这个函数将做一次长跳转，所以一定不会返回 （参见 luaL_error）。
+
+### luaL_error
+int luaL_error (lua_State *L, const char *fmt, ...);
