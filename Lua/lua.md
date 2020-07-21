@@ -32,8 +32,17 @@ void lua_call (lua_State *L, int nargs, int nresults);
 a = f("how", t.x, 14)
 
 这里是 C 的代码：
-`
-
+```c
+     lua_getglobal(L, "f");                  /* function to be called */
+     lua_pushliteral(L, "how");                       /* 1st argument */
+     lua_getglobal(L, "t");                    /* table to be indexed */
+     lua_getfield(L, -1, "x");        /* push result of t.x (2nd arg) */
+     lua_remove(L, -2);                  /* remove 't' from the stack */
+     lua_pushinteger(L, 14);                          /* 3rd argument */
+     lua_call(L, 3, 1);     /* call 'f' with 3 arguments and 1 result */
+     lua_setglobal(L, "a");                         /* set global 'a' */
+```
+注意上面这段代码是 平衡 的： 到了最后，堆栈恢复成原有的配置。 这是一种良好的编程习惯。
 ## C API
 ### lua_gettop
 int lua_gettop (lua_State *L);
