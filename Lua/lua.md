@@ -21,6 +21,11 @@
      }
 ```
 
+### lua_call
+void lua_call (lua_State *L, int nargs, int nresults);
+
+调用一个函数。
+
 ## C API
 ### lua_gettop
 int lua_gettop (lua_State *L);
