@@ -81,3 +81,6 @@ int lua_getfield (lua_State *L, int index, const char *k);
 把 t[k] 的值压栈， 这里的 t 是索引指向的值。 在 Lua 中，这个函数可能触发对应 "index" 事件对应的元方法。
 
 函数将返回压入值的类型。
+
+### lua_remove
+void lua_remove (lua_State *L, int index);
