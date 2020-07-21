@@ -117,4 +117,12 @@ void lua_rawset (lua_State *L, int index);
 类似于 lua_settable ， 但是是做一次直接赋值（不触发元方法）。
 
 ### lua_pushcclosure
-void
+void lua_pushcclosure (lua_State *L, lua_CFunction fn, int n);
+
+把一个新的 C 闭包压栈。
+
+当创建了一个 C 函数后， 你可以给它关联一些值， 这就是在创建一个 C 闭包； 接下来无论函数何时被调用，这些值都可以被这个函数访问到。 为了将一些值关联到一个 C 函数上， 首先这些值需要先被压入堆栈（如果有多个值，第一个先压）。 接下来调用 lua_pushcclosure 来创建出闭包并把这个 C 函数压到栈上。 参数 n 告之函数有多少个值需要关联到函数上。 lua_pushcclosure 也会把这些值从栈上弹出。
+
+n 的最大值是 255 。
+
+当 n 为零时， 这个函数将创建出一个 轻量 C 函数， 它就是一个指向 C 函数的指针。 这种情况下，不可能抛出内存错误。
