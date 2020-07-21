@@ -75,4 +75,9 @@ const char *lua_pushstring (lua_State *L, const char *s);
 
 将指针 s 指向的零结尾的字符串压栈。Lua 对这个字符串做一个内部副本（或是复用一个副本）， 因此 s 处的内存在函数返回后，可以释放掉或是立刻重用于其它用途。
 
-### lua_
+### lua_getfield
+int lua_getfield (lua_State *L, int index, const char *k);
+
+把 t[k] 的值压栈， 这里的 t 是索引指向的值。 在 Lua 中，这个函数可能触发对应 "index" 事件对应的元方法。
+
+函数将返回压入值的类型。
