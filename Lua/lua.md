@@ -150,3 +150,8 @@ int luaL_loadfile (lua_State *L, const char *filename);
 int luaL_loadfilex (lua_State *L, const char *filename, const char *mode);
 
 把一个文件加载为 Lua 代码块。 这个函数使用 lua_load 加载文件中的数据。 代码块的名字被命名为 filename。 如果 filename 为 NULL， 它从标准输入加载。 如果文件的第一行以 # 打头，则忽略这一行。
+
+mode 字符串的作用同函数 lua_load。
+此函数的返回值和 lua_load 相同， 不过它还可能产生一个叫做 LUA_ERRFILE 的出错码。这种错误发生于无法打开或读入文件时，或是文件的模式错误。
+
+和 lua_load 一样，这个函数仅加载代码块不运行。
