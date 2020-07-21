@@ -190,3 +190,8 @@ lua_pushcfunction 是作为一个宏定义出现的：
 #define lua_pushcfunction(L,f)  lua_pushcclosure(L,f,0)
 
 ### luaL_newmetatable
+int luaL_newmetatable (lua_State *L, const char *tname);
+
+如果注册表中已存在键 tname，返回 0 。 否则， 为用户数据的元表创建一张新表。 向这张表加入 __name = tname 键值对， 并将 [tname] = new table 添加到注册表中， 返回 1 。 （__name项可用于一些错误输出函数。）
+
+这两种情况都会把最终的注册表中关联 tname 的值压栈。
