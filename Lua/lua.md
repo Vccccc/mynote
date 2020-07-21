@@ -133,3 +133,10 @@ int lua_rawgeti (lua_State *L, int index, lua_Integer n);
 把 t[n] 的值压栈， 这里的 t 是指给定索引处的表。 这是一次直接访问；就是说，它不会触发元方法。
 
 返回入栈值的类型。
+
+### lua_setfield
+void lua_setfield (lua_State *L, int index, const char *k);
+
+做一个等价于 t[k] = v 的操作， 这里 t 是给出的索引处的值， 而 v 是栈顶的那个值。
+
+这个函数将把这个值弹出栈。 跟在 Lua 中一样，这个函数可能触发一个 "newindex" 事件的元方法
