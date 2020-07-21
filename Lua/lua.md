@@ -58,3 +58,9 @@ int luaL_error (lua_State *L, const char *fmt, ...);
 抛出一个错误。 错误消息的格式由 fmt 给出。 后面需提供若干参数， 这些参数遵循 lua_pushfstring 中的规则。 如果能获得相关信息，它还会在消息前面加上错误发生时的文件名及行号。
 
 这个函数永远不会返回。 但是在 C 函数中通常遵循惯用法： return luaL_error(args) 。
+
+
+### lua_getglobal
+int lua_getglobal (lua_State *L, const char *name);
+
+把全局变量 name 里的值压栈，返回该值的类型。
