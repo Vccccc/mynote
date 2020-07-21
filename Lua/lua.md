@@ -187,4 +187,4 @@ void lua_pushcfunction (lua_State *L, lua_CFunction f);
 
 lua_pushcfunction 是作为一个宏定义出现的：
 
- #define lua_pushcfunction(L,f)  lua_pushcclosure(L,f,0)
+#define lua_pushcfunction(L,f)  lua_pushcclosure(L,f,0)
