@@ -126,3 +126,5 @@ void lua_pushcclosure (lua_State *L, lua_CFunction fn, int n);
 n 的最大值是 255 。
 
 当 n 为零时， 这个函数将创建出一个 轻量 C 函数， 它就是一个指向 C 函数的指针。 这种情况下，不可能抛出内存错误。
+
+### lua_rawgeti
