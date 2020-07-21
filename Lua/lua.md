@@ -115,3 +115,6 @@ void lua_settable (lua_State *L, int index);
 ### lua_rawset
 void lua_rawset (lua_State *L, int index);
 类似于 lua_settable ， 但是是做一次直接赋值（不触发元方法）。
+
+### lua_pushcclosure
+void
