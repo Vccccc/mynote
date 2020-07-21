@@ -181,3 +181,10 @@ lua_load 的内部会使用栈， 因此 reader 函数必须永远在每次返�
 ### lua_pushcfunction
 void lua_pushcfunction (lua_State *L, lua_CFunction f);
 
+将一个 C 函数压栈。 这个函数接收一个 C 函数指针， 并将一个类型为 function 的 Lua 值压栈。 当这个栈顶的值被调用时，将触发对应的 C 函数。
+
+注册到 Lua 中的任何函数都必须遵循正确的协议来接收参数和返回值
+
+lua_pushcfunction 是作为一个宏定义出现的：
+
+ #define lua_pushcfunction(L,f)  lua_pushcclosure(L,f,0)
