@@ -104,3 +104,10 @@ int luaL_dofile (lua_State *L, const char *filename);
 void *lua_touserdata (lua_State *L, int index);
 
 如果给定索引处的值是一个完全用户数据， 函数返回其内存块的地址。 如果值是一个轻量用户数据， 那么就返回它表示的指针。 否则，返回 NULL 。
+
+### lua_settable
+void lua_settable (lua_State *L, int index);
+
+做一个等价于 t[k] = v 的操作， 这里 t 是给出的索引处的值， v 是栈顶的那个值， k 是栈顶之下的值。
+
+这个函数会将键和值都弹出栈。 跟在 Lua 中一样，这个函数可能触发一个 "newindex" 事件的元方法 
