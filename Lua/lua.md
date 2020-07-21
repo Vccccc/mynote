@@ -99,3 +99,8 @@ int luaL_dofile (lua_State *L, const char *filename);
 加载并运行指定的文件。 它是用下列宏定义出来：
 (luaL_loadfile(L, filename) || lua_pcall(L, 0, LUA_MULTRET, 0))
 如果没有错误，函数返回假； 有错则返回真。
+
+### lua_touserdata
+void *lua_touserdata (lua_State *L, int index);
+
+如果给定索引处的值是一个完全用户数据， 函数返回其内存块的地址。 如果值是一个轻量用户数据， 那么就返回它表示的指针。 否则，返回 NULL 。
