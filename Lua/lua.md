@@ -176,3 +176,8 @@ lua_load 会自动检测代码块是文本的还是二进制的， 然后做对�
 lua_load 的内部会使用栈， 因此 reader 函数必须永远在每次返回时保留栈的原样。
 
 如果返回的函数有上值， 第一个上值会被设置为 保存在注册表、 LUA_RIDX_GLOBALS 索引处的全局环境。 在加载主代码块时，这个上值是 _ENV 变量。 其它上值均被初始化为 nil。
+
+
+### lua_pushcfunction
+void lua_pushcfunction (lua_State *L, lua_CFunction f);
+
