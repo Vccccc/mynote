@@ -86,3 +86,8 @@ int lua_getfield (lua_State *L, int index, const char *k);
 void lua_remove (lua_State *L, int index);
 
 从给定有效索引处移除一个元素， 把这个索引之上的所有元素移下来填补上这个空隙。 不能用伪索引来调用这个函数，因为伪索引并不指向真实的栈上的位置。
+
+### lua_setglobal
+void lua_setglobal (lua_State *L, const char *name);
+
+从堆栈上弹出一个值，并将其设为全局变量 name 的新值。
