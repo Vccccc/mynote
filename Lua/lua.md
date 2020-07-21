@@ -155,3 +155,8 @@ mode 字符串的作用同函数 lua_load。
 此函数的返回值和 lua_load 相同， 不过它还可能产生一个叫做 LUA_ERRFILE 的出错码。这种错误发生于无法打开或读入文件时，或是文件的模式错误。
 
 和 lua_load 一样，这个函数仅加载代码块不运行。
+
+### lua_load
+int lua_load (lua_State *L,lua_Reader reader,void *data,const char *chunkname,const char *mode);
+
+加载一段 Lua 代码块，但不运行它。 如果没有错误， lua_load 把一个编译好的代码块作为一个 Lua 函数压到栈顶。 否则，压入错误消息
