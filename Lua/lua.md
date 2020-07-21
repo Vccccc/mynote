@@ -167,4 +167,10 @@ lua_load 的返回值可以是：
 - LUA_ERRMEM: 内存分配错误
 - LUA_ERRGCMM: 在运行 __gc 元方法时出错了。 （这个错误和代码块加载过程无关，它是由垃圾收集器引发的。）
 
+lua_load 函数使用一个用户提供的 reader 函数来读取代码块（参见 lua_Reader ）。 data 参数会被传入 reader 函数
+
+chunkname 这个参数可以赋予代码块一个名字， 这个名字被用于出错信息和调试信息
+
+lua_load 会自动检测代码块是文本的还是二进制的， 然后做对应的加载操作（参见程序 luac ）。 字符串 mode 的作用和函数 load 一致。 它还可以是 NULL 等价于字符串 "bt"。
+
 
