@@ -140,3 +140,10 @@ void lua_setfield (lua_State *L, int index, const char *k);
 做一个等价于 t[k] = v 的操作， 这里 t 是给出的索引处的值， 而 v 是栈顶的那个值。
 
 这个函数将把这个值弹出栈。 跟在 Lua 中一样，这个函数可能触发一个 "newindex" 事件的元方法
+
+### luaL_loadfile
+int luaL_loadfile (lua_State *L, const char *filename);
+
+等价于 luaL_loadfilex， 其 mode 参数等于 NULL。
+
+### luaL_loadfileX
