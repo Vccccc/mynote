@@ -91,3 +91,11 @@ void lua_remove (lua_State *L, int index);
 void lua_setglobal (lua_State *L, const char *name);
 
 从堆栈上弹出一个值，并将其设为全局变量 name 的新值。
+
+
+### luaL_dofile
+int luaL_dofile (lua_State *L, const char *filename);
+
+加载并运行指定的文件。 它是用下列宏定义出来：
+(luaL_loadfile(L, filename) || lua_pcall(L, 0, LUA_MULTRET, 0))
+如果没有错误，函数返回假； 有错则返回真。
