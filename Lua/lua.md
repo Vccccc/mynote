@@ -111,3 +111,7 @@ void lua_settable (lua_State *L, int index);
 做一个等价于 t[k] = v 的操作， 这里 t 是给出的索引处的值， v 是栈顶的那个值， k 是栈顶之下的值。
 
 这个函数会将键和值都弹出栈。 跟在 Lua 中一样，这个函数可能触发一个 "newindex" 事件的元方法 
+
+### lua_rawset
+void lua_rawset (lua_State *L, int index);
+类似于 lua_settable ， 但是是做一次直接赋值（不触发元方法）。
