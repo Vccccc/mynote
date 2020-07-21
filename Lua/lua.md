@@ -64,3 +64,10 @@ int luaL_error (lua_State *L, const char *fmt, ...);
 int lua_getglobal (lua_State *L, const char *name);
 
 把全局变量 name 里的值压栈，返回该值的类型。
+
+### lua_pushliteral
+const char *lua_pushliteral (lua_State *L, const char *s);
+
+这个宏等价于 lua_pushstring， 区别仅在于只能在 s 是一个字面量时才能用它。 它会自动给出字符串的长度。
+
+### lua_pus
