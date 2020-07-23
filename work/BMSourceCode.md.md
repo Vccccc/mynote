@@ -2,4 +2,4 @@
 
 ## common
 ### item_class
-主要提供 item 的一些接口。
+主要提供访问 item 配置属性的一些接口，如 id()、full_name()。
