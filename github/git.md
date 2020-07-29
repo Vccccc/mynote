@@ -26,7 +26,7 @@ git status: 检查仓库状态。
 
 ##### diff
 git diff: 查看修改比对。
-
+git diff > name.patch: 创建一个名为 name.patch 的补丁
 ##### log
 git log: 查看历史纪录
 
@@ -63,3 +63,7 @@ git branch -d 分支名: 删除分支。
 git merge 分支名: 合并分支
 ##### Create a Branch
 **Branching** is the way to work on different versions of a repository at one time.
+
+
+##### apply
+git apply name.patch: Apply a patch to files and/or to the index
