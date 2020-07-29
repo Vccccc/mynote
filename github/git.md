@@ -37,8 +37,7 @@ git reflog: 查看所有历史纪录。
 git reset --hard HEAD~n: 回滚到第n个版本。
 git reset --hard 版本号: 回滚到版本号。
 
-##### checkout -\- file
-git checkout -\- file: 撤销对file的改动。
+
 
 ##### ssh-keygen -t rsa -C 
 ssh-keygen -t rsa -C “youremail@example.com”: 创建 SSH Key。因为本地Git仓库和github仓库之间的传输是通过SSH加密的，所有要创建 SSH Key。id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。登录github,打开” settings”中的SSH Keys页面，然后点击“Add SSH Key”,填上任意title，在Key文本框里黏贴id_rsa.pub文件的内容
@@ -51,8 +50,9 @@ git push -u origin master: 将本地master分支的最新修改推送到远程�
 
 git push origin master: 将本地master分支的最新修改推送到远程仓库。
 
-##### checkout -b
+##### checkout 
 git checkout -b 分支名: 创建并切换到分支。
+git checkout -\- file: 撤销对file的改动。
 
 ##### branch
 git branch: 显示当前所有分支，*号表示当前所在分支。
