@@ -28,7 +28,7 @@ pthread\_exit, pthread\_join and pthread\_yield.
 一个好的解决 critical regions 的方法需要有一下要求：
 1， 不能存在两个进程同时出于他们的 critical regions
 2， 不能对速度和cpu时间作假设
-3， 进程不处于它的 critical regions时，不会block其他进程 
+3， 进程不处于它的 critical regions时，不会 block 其他进程 
 4， 进程不需要永远等待进入 critical regions
 
 ### 2.3.3 Mutaul Exclusion with Busy Waiting
