@@ -11,8 +11,8 @@ int open(const char* pathname, int flags, .../* mode_t */);
 
 如果 pathname 是一符号链接，会对其解引用。如果发生错误，返回 -1，并将 errno 置为相应的错误标志。参数 flags 为位掩码，用于指定文件的访问模式，可选择下表所示常量之一。
 
-|----|---|
 访问模式|描述
+|----|---|
 O_RDONLY | 以只读方式打开文件
 O_WRONLY | 以只写方式打开文件
 O_RDWR | 以读写方式打开文件
