@@ -2,7 +2,7 @@
 
 ## chapter 4 文件I/O
 ### 4.3 打开一个文件 open
-打开或者创建文件。
+open() 调用既能打开一个已存在的文件，也能创建并打开一个新文件。
 ```c
 // int open(const char *pathname, int flags, mode_t mode)
 // 如果不是创建文件， mode 不用指定
