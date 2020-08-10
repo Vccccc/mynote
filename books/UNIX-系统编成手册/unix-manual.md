@@ -128,7 +128,8 @@ if(close(fd) == -1)
 off_t lseek(int fd, off_t offset, int whence);
 	Returns new file offset if successful, or -1 on error
 ```
-whence 参数
+whence 参数表明应参照哪个基点来解释 offset 参数，应为下列其中之一：
+- SEEK_SET: 将文件偏移量设置为文件头部起始点
 
 
 
