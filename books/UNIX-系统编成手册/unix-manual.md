@@ -138,7 +138,11 @@ whence 参数表明应参照哪个基点来解释 offset 参数，应为下列�
 ## chapter 5 深入探究文件 I/O
 ### 原子操作和竞争条件
 所有系统调用都是以原子操作方式执行的。
-#### 像文件尾部
+#### 像文件尾部追加数据
+```c
+if(lseek(fd, 0, SEEK_END) == -1)
+  errExit("lseek")
+if(write(fd, buf, len) != len)
 
 ## chapter 10 时间
 
