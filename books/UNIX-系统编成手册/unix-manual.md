@@ -9,7 +9,7 @@ int open(const char* pathname, int flags, .../* mode_t */);
 	Returns file descriptor on success, or -1 on error
 ```
 
-如果 pathname 是一符号链接，会对其解引用。
+如果 pathname 是一符号链接，会对其解引用。如果发生错误，返回 -1，并将 errno 置为相应的错误标志。
 ```c
 // int open(const char *pathname, int flags, mode_t mode)
 // 如果不是创建文件， mode 不用指定
