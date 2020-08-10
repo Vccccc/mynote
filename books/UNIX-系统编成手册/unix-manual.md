@@ -125,8 +125,10 @@ if(close(fd) == -1)
 文件打开时，会将文件偏移量设置为指向文件开始，以后每次 read() 或 write() 调用将自动对其进行调整，以指向已读或已写数据后的下一字节。
 
 ```c
-off_
+off_t lseek(int fd, off_t offset, int whence);
+	Returns new file offset if successful, or -1 on error
 ```
+whence 参数
 
 
 
