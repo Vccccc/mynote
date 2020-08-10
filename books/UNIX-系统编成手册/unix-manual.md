@@ -1,7 +1,7 @@
 # UNIX 系统编成手册
 
 ## chapter 4 文件I/O
-### open
+### 4.3 打开一个文件 open
 打开或者创建文件。
 ```c
 // int open(const char *pathname, int flags, mode_t mode)
