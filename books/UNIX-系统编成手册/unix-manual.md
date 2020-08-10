@@ -112,7 +112,11 @@ int close(int fd)
 	Returns 0 on success, or -1 on error
 ```
 
-像其他所有系统调用
+像其他所有系统调用一样，应对 close() 的调用进行错误检查，如下所示。
+```c
+if(close(fd) == -1)
+  perror("close")
+```
 
 ## chapter 10 时间
 
