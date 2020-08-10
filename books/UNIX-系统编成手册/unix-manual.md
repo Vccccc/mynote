@@ -15,7 +15,7 @@ int open(const char* pathname, int flags, .../* mode_t */);
 访问模式|描述
 O_RDONLY | 以只读方式打开文件
 O_WRONLY | 以只写方式打开文件
-O_R
+O_RDWR | 以读写方式打开文件
 ```c
 // int open(const char *pathname, int flags, mode_t mode)
 // 如果不是创建文件， mode 不用指定
