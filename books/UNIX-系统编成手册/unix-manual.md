@@ -6,8 +6,10 @@ open() 调用既能打开一个已存在的文件，也能创建并打开一个�
 
 ```c
 int open(const char* pathname, int flags, .../* mode_t */);
-	Re
+	Returns file descriptor on success, or -1 on error
 ```
+
+如果 pathname 是一符号链接，会对其解引用。
 ```c
 // int open(const char *pathname, int flags, mode_t mode)
 // 如果不是创建文件， mode 不用指定
