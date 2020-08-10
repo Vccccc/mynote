@@ -139,10 +139,13 @@ whence 参数表明应参照哪个基点来解释 offset 参数，应为下列�
 ### 原子操作和竞争条件
 所有系统调用都是以原子操作方式执行的。
 #### 像文件尾部追加数据
+多个进程同时向同一个文件（例如，全局日志文件）尾部添加数据。
 ```c
 if(lseek(fd, 0, SEEK_END) == -1)
   errExit("lseek")
 if(write(fd, buf, len) != len)
+  fatal("failed wirte")
+```
 
 ## chapter 10 时间
 
