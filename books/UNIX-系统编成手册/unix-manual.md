@@ -104,7 +104,8 @@ hello
 wolrd
 
 ```
-
+### 4.6 关闭文件 close()
+close() 系统调用关闭一个打开的文件
 
 ## chapter 10 时间
 
