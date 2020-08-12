@@ -167,6 +167,8 @@ if(flags == -1)
 if(flags & O_SYNC) // 测试文件是否以同步写方式打开
   print("writes are synchronized\n");
 ```
+
+判断文件的访问模式有一点复杂，这是因为 O_RDONLY(0)、O_WRONLY(1) 和 O_RDWR(2)
 ## chapter 10 时间
 
 两种时间类型：
