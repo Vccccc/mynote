@@ -151,8 +151,11 @@ if(write(fd, buf, len) != len)
 
 ### 5.2 文件控制操作 fcntl()
 fcntl() 系统调用对一个打开的文件描述符执行一系列控制操作。
-`
-
+```c
+int fcntl(int fd, int cmd, ...);
+	Returns on success depends on cmd, or -1 on error
+```
+fcntl()的第三个参数以省略号来
 ## chapter 10 时间
 
 两种时间类型：
