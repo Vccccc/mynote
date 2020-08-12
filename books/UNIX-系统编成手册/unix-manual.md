@@ -155,7 +155,9 @@ fcntl() 系统调用对一个打开的文件描述符执行一系列控制操作
 int fcntl(int fd, int cmd, ...);
 	Returns on success depends on cmd, or -1 on error
 ```
-fcntl()的第三个参数以省略号来
+fcntl()的第三个参数以省略号来表示，这意味着可以将其设置为不同的类型，或者加以省略。内核会依据 cmd 参数的值来确定该参数的数据类型。
+
+### 5.3 打开文件的状态标志
 ## chapter 10 时间
 
 两种时间类型：
