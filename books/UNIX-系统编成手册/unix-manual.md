@@ -172,7 +172,8 @@ if(flags & O_SYNC) // 测试文件是否以同步写方式打开
 ```c
 accessMode = flags & O_ACCMODE;
 if(accessMode == O_WRONLY || accessMode == O_RDWR)
-  printf("file is 
+  printf("file is writable\n");
+```
 ## chapter 10 时间
 
 两种时间类型：
