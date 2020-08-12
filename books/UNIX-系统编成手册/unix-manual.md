@@ -200,6 +200,9 @@ if(fcntl(fd, F_SETFL, flags) == -1)
 - 控制文件描述符操作的一组标志。（目前，此类标志仅定义了一个，即 close-on-exec 标志）
 - 对打开文件句柄的引用。
 内核对所有打开的文件维护有一个系统级的描述表格（open file description table）。有时，也称之为打开文件表（open file table），并将表中各条目成为打开文件句柄（open file handle）。一个打开文件句柄存储了与一个打开文件相关的全部信息，如下所示：
+- 当前文件偏移量
+- 打开文件时所使用的状态标志（即，open() 的 flags 参数）
+- 文件访问模式（如调用 open
 
 
 
