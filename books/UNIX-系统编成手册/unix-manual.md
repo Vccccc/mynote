@@ -174,6 +174,9 @@ accessMode = flags & O_ACCMODE;
 if(accessMode == O_WRONLY || accessMode == O_RDWR)
   printf("file is writable\n");
 ```
+
+使用 fcntl() 修改文件状态标志，尤其适用于如下场景。
+- 文件不是由调用程序打开的，所有程序
 ## chapter 10 时间
 
 两种时间类型：
