@@ -186,7 +186,9 @@ flags = fcntl(fd, F_GETFL);
 if(flags == -1)
   errExit("fcntl");
 flags |= O_APPEND;
-if(fcntl(fd, 
+if(fcntl(fd, F_SETFL, flags) == -1)
+  errExit("fcntl");
+```
 
 ## chapter 10 时间
 
