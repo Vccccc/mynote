@@ -165,6 +165,7 @@ flags = fcntl(fd, F_GETFL); // 第三个参数不需要
 if(flags == -1)
   errExit("fcntl");
 if(flags & O_SYNC) // 测试文件是否以同步写方式打开
+  print("writes are synchronized\n");
 ```
 ## chapter 10 时间
 
