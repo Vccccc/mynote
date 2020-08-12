@@ -168,7 +168,11 @@ if(flags & O_SYNC) // 测试文件是否以同步写方式打开
   print("writes are synchronized\n");
 ```
 
-判断文件的访问模式有一点复杂，这是因为 O_RDONLY(0)、O_WRONLY(1) 和 O_RDWR(2) 这 3 个常量并不与打开文件状态标志中的单个比特位相应。因此，要判定访问模式，需使用掩码 O_ACCMODE 与 flag 相与，将结果与
+判断文件的访问模式有一点复杂，这是因为 O_RDONLY(0)、O_WRONLY(1) 和 O_RDWR(2) 这 3 个常量并不与打开文件状态标志中的单个比特位相应。因此，要判定访问模式，需使用掩码 O_ACCMODE 与 flag 相与，将结果与 3 个常量进行比对。示例代码如下：
+```c
+accessMode = flags & O_ACCMODE;
+if(accessMode == O_WRONLY || accessMode == O_RDWR)
+  printf("file is 
 ## chapter 10 时间
 
 两种时间类型：
