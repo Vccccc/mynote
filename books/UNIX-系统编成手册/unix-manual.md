@@ -161,7 +161,10 @@ fcntl()的第三个参数以省略号来表示，这意味着可以将其设置�
 fcntl() 的用途之一是针对一个打开的文件，获取或修改其访问模式和状态标志（这些值是通过指定 open() 调用的 flag 参数来设置的）。获取这些设置，应将 fcntl() 的 cmd 参数设置为 F_GETFL。
 ```c
 int flags, accessMode;
-flags = fcntl(fd, F_GETFL); // 
+flags = fcntl(fd, F_GETFL); // 第三个参数不需要
+if(flags == -1)
+  errExit("fcntl");
+if(flags & O_SYNC) // 测试文件是否以同步写方式打开
 ```
 ## chapter 10 时间
 
