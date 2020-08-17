@@ -320,4 +320,4 @@ void consumer(void)
 
 ![](./photo/2.39.png)
 
-如图 2-39（a），花费大部分时间在 computing 的情况
+如图 2-39（a），花费大部分时间在 computing 的情况称为 compute-bound。如图 2-39（b），花费大部分时间在等待 I/O 的情况称为 I/O-bound。
