@@ -316,6 +316,6 @@ void consumer(void)
 
 ## 2.4 SCHEDULING
 ### Process Behavior
-如图 2-39 所示，Nearly all processes alternate bursts of computing with (disk or network) I/O requests。通常是 CPU 不停地运行一段时间，然后一个系统调用发起读写文件的请求。当读写请求完成时，CPU 就继续运行知道它需要更多数据或写入更多数据
+如图 2-39 所示，Nearly all processes alternate bursts of computing with (disk or network) I/O requests。通常是 CPU 不停地运行一段时间，然后一个系统调用发起读写文件的请求。当读写请求完成时，CPU 就继续运行直到它需要更多数据或写入更多数据。注意，有些 I/O activiites 
 
 ![](./photo/2.39.png)
