@@ -316,6 +316,6 @@ void consumer(void)
 
 ## 2.4 SCHEDULING
 ### Process Behavior
-如图 2-39 所示，Nearly all processes alternate bursts of computing with (disk or network) I/O requests。通常是 CPU 不停地运行，然后一个系统调用发起读写文件的请求，当读写请求
+如图 2-39 所示，Nearly all processes alternate bursts of computing with (disk or network) I/O requests。通常是 CPU 不停地运行，然后一个系统调用发起读写文件的请求，当读写请求完成时
 
 ![](./photo/2.39.png)
