@@ -320,4 +320,4 @@ void consumer(void)
 
 ![](./photo/2.39.png)
 
-如图 2-39（a）
+如图 2-39（a），花费大部分时间在 computing 的情况
