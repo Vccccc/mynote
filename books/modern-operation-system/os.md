@@ -316,3 +316,4 @@ void consumer(void)
 
 ## 2.4 SCHEDULING
 ### Process Behavior
+如图 2-39 所示，所有进程交替
