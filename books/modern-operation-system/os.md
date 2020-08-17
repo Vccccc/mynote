@@ -309,3 +309,5 @@ void consumer(void)
         consume_item(item);         // do something with the item
     }
 }```
+
+## 2.4 SCHEDULING
