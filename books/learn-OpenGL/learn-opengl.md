@@ -1,2 +1,3 @@
 # learn-opengl 笔记
-[](https://learnopengl-cn.readthedocs.io/zh/latest/）
+
+["书籍地址"](https://learnopengl-cn.readthedocs.io/zh/latest/）
