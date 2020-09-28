@@ -320,4 +320,4 @@ void consumer(void)
 
 ![](./photo/2.39.png)
 
-如图 2-39（a），花费大部分时间在 computing 的情况称为 compute-bound。如图 2-39（b），花费大部分时间在等待 I/O 的情况称为 I/O-bound。compute-bound 通常含有更长的 CPU bursts，和少量的 I/O 等待。
+如图 2-39（a），花费大部分时间在 computing 的情况称为 compute-bound。如图 2-39（b），花费大部分时间在等待 I/O 的情况称为 I/O-bound。compute-bound 进程通常含有更长的 CPU bursts，和少量的 I/O 等待。I/O-bound 进程之所以为 I/O-bound 不是因为它含有更长的
