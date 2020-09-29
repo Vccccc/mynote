@@ -335,4 +335,4 @@ void consumer(void)
 2. Interactive
 3. Real Time
 
-Batch system 仍然广泛应用在商业世界，用于工资账单、库存、应收账款、应付账款、利息计算（银行）、
+Batch system 仍然广泛应用在商业世界，用于工资账单、库存、应收账款、应付账款、利息计算（银行）、索赔处理（保险公司）以及其他
