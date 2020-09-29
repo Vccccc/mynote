@@ -335,4 +335,4 @@ void consumer(void)
 2. Interactive
 3. Real Time
 
-
+Batch system 仍然广泛应用在商业世界，
