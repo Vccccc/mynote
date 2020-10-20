@@ -40,6 +40,7 @@ add_executable(<name> [WIN32] [MACOSX_BUNDLE]
 **eg.**
 add_executable(my_project 1.cpp 2.cpp)
 
+# gdb
 ### Preparation
 1. Compile with the -g option.
 	Example. Compile the program printch.cpp:
