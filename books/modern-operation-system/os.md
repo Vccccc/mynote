@@ -342,4 +342,4 @@ Batch system 仍然广泛应用在商业世界，用于工资账单、库存、�
 在受 real-time 限制的系统中，抢占有时是不需要的，因为进程不会运行时段不会太长，它们通常很快完成工作然后阻塞。interactive 系统和 real-time 系统的区别是，real-time 系统只运行旨在促进现有应用程序的程序。interactive 系统更为通用，可以运行任意非协作甚至是恶意的程序。
 
 ### Scheduling Algorithm Goals
-为了设计一个调度算法，需要考虑一个好的算法应该做什么。有些目标依赖于环境（batch, interactive, or real time），但有些目标
+为了设计一个调度算法，需要考虑一个好的算法应该做什么。有些目标依赖于环境（batch, interactive, or real time），但有些目标适用于所有情况。
