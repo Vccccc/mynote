@@ -141,4 +141,7 @@ CEGUI 使用各种不同的数据文件，在最初可能对所有这些文件�
 #### Font
 字体文件定义了在 CEGUI 中使用的字体。 当前可以定义两种类型的字体：
 - FreeTypeFont：这是一种基于标准字体文件的字体（例如 True-type '.ttf'字体）。通过.font XML 文件中的属性Type =“FreeType” 指定 FreeTypeFont。
-- PixmapFont：
+- PixmapFont：这种类型的字体基于 Imageset，该 Imageset 为字体字形定义了 Image，并且最好将其视为位图字体。通过.font XML 文件中的属性 Type =“Pixmap” 指定一个PixmapFont。
+
+#### LookNFeel
+
