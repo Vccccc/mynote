@@ -259,3 +259,7 @@ fWnd->setPosition( UVector2( UDim( 0.25f, 0.0f ), UDim( 0.25f, 0.0f ) ) );
 fWnd->setSize( USize( UDim( 0.5f, 0.0f ), UDim( 0.5f, 0.0f ) ) );
 ```
 
+最后，我们为 frame 窗口的标题栏设置标题：
+```c
+fWnd->setText( "Hello World!" );
+```
