@@ -198,3 +198,6 @@ CEGUI::System::getSingleton().getDefaultGUIContext().
 ```
 
 ## Creating a CEGUI Window
+本教程的目的是向您展示如何创建一个简单的窗口并将其显示在屏幕上。
+
+### Introduction to window and widget concepts
