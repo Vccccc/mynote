@@ -196,3 +196,5 @@ CEGUI::System::getSingleton().getDefaultGUIContext().setDefaultFont( "DejaVuSans
 CEGUI::System::getSingleton().getDefaultGUIContext().
     getMouseCursor().setDefaultImage( "TaharezLook/MouseArrow" );
 ```
+
+## Creating a CEGUI Window
