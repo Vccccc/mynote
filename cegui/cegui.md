@@ -213,4 +213,9 @@ CEGUI 中可用于窗口的许多设置和属性都沿窗口层次结构传递�
 让我们创建一个窗口。
 可以通过 C++代码 和 XML 布局文件两种方法来实现。每种方法将在下面讨论。
 
-####
+#### GUI Creation via C++ code
+CEGUI 中的所有窗口都是由 WindowManager 单例对象创建的。 您可以通过 WindowManager::getSingleton 函数访问此对象：
+```c
+using namespace CEGUI;
+WindowManager& wmgr = WindowManager::getSingleton();
+```
