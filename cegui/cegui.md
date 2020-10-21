@@ -183,4 +183,5 @@ CEGUI::SchemeManager::getSingleton().createFromFile( "TaharezLook.scheme" );
 CEGUI::FontManager::getSingleton().createFromFile( "DejaVuSans-10.font" );
 ```
 
-在上面的代码（和 CEGUI 示例中）中，假定资源组位置和默认组均已设置。默认情况下，CEGUI 的源包，SDK 和其他分发形式随附了TaharezLook.scheme 文件（本教程中用作示例）以及相应的图像集，字体和looknfeel文件（包括DejaVuSans-10.font）。 因此，取决于安装CEGUI的方式，这些文件可能已在您的系统上可用（例如，在Linux系统上的/ usr / share / cegui / datafiles中）。 如果您下载了源软件包或从存储库中获取了CEGUI，则这些文件应位于CEGUI文件夹的datafiles /文件夹中，该文件夹是默认文件夹以及CEGUI SampleBrowser在Windows上用于示例的结构。
+在上面的代码（和 CEGUI 示例中）中，假定资源组位置和默认组均已设置。默认情况下，CEGUI 的源包，SDK 和其他分发形式随附了TaharezLook.scheme 文件（本教程中用作示例）以及相应的
+ imageset，font 和 looknfeel 文件（包括DejaVuSans-10.font）。 因此，取决于安装 CEGUI 的方式，这些文件可能已在您的系统上可用（例如，在Linux系统上的/usr/share/cegui/datafiles中）。 如果您下载了源软件包或从存储库中获取了 CEGUI，则这些文件应位于CEGUI文件夹的datafiles/文件夹中，该文件夹是默认文件夹以及CEGUI SampleBrowser在Windows上用于示例的结构。
