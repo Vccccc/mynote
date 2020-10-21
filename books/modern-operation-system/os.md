@@ -349,6 +349,7 @@ Batch system 仍然广泛应用在商业世界，用于工资账单、库存、�
 	- Balance：保持系统各个部分都在忙
 - Batch systems
 	- Throughput：每小时最大化工作
-	- Turnaround time：
+	- Turnaround time：minimize time between submission and termination
+	- CPU utilization：
 
 
