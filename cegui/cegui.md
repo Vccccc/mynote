@@ -244,3 +244,11 @@ FrameWindow* fWnd = static_cast<FrameWindow*>(
     wmgr.createWindow( "TaharezLook/FrameWindow", "testWindow" ));
 ```
 在这里，我们正在创建一个 “TaharezLook/FrameWindow” 窗口。 该名称使用整个系统中的另一种约定，即窗口类型以小部件集的名称为前缀（如果要加载 WindowsLook 方案，则可以创建“ WindowsLook/FrameWindow”对象）。我们为新窗口赋予了简单的测试名称 “testWindow”。 最后需要注意的是强制转换的使用，这是必需的，因为 WindowManager::createWindow 函数始终返回Window 类型。在这种情况下（以及许多其他情况下），基本的Window指针就足够了，但是有时您需要访问子类中引入的函数，因此在使用 CEGUI 时，如所示的那样进行强制转换很常见。
+
+为了使系统能够在新窗口中执行有用的操作，我们必须执行一些附加步骤。
+首先，我们必须将窗口附加到上面建立的 root 窗口中：
+```c
+myRoot->addChild( fWnd );
+```
+
+现在，我们可以为窗口设置初始位置和大小。 CEGUI使用“统一”坐标系统，可以同时使用相对（比例）和绝对（偏移）分量-这就是为什么您将看到的每个坐标都有两个部分的原因。 有关此概念的稍微扩展，请参阅“统一坐标系”，它是CEGUI Falagard外观系统的一部分。 回到示例：
