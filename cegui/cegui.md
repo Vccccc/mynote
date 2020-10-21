@@ -8,3 +8,5 @@ CE GUI 笔记
 - 每一帧调用函数 CEGUI::System::renderAllGUIContexts 进行渲染。
 
 当然也需要加载一些数据及执行其他基础的初始化，这些在后面提及。
+
+## 使用 ResourceProviders 加载数据
