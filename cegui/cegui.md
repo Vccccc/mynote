@@ -104,3 +104,18 @@ rp->setResourceGroupDirectory("schemas", "../datafiles/xml_schemas/");
 ```
 
 现在，我们有了一组资源组，并为其设置了目标目录。 最后，要使系统使用这些目录，我们设置要使用的默认资源组：
+```c
+// set the default resource groups to be used
+CEGUI::ImageManager::setImagesetDefaultResourceGroup("imagesets");
+CEGUI::Font::setDefaultResourceGroup("fonts");
+CEGUI::Scheme::setDefaultResourceGroup("schemes");
+CEGUI::WidgetLookManager::setDefaultResourceGroup("looknfeels");
+CEGUI::WindowManager::setDefaultResourceGroup("layouts");
+CEGUI::ScriptModule::setDefaultResourceGroup("lua_scripts");
+// setup default group for validation schemas
+CEGUI::XMLParser* parser = CEGUI::System::getSingleton().getXMLParser();
+if (parser->isPropertyPresent("SchemaDefaultResourceGroup"))
+    parser->setProperty("SchemaDefaultResourceGroup", "schemas");
+```
+
+### 总结
