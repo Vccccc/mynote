@@ -73,7 +73,7 @@ void ImageManager::setImagesetDefaultResourceGroup(const String& resourceGroup);
 指定的资源组将用作加载图像集 XML 文件和图像纹理文件的默认资源组。
 
 ### XercesParser 默认资源组
-对于 XercesParser，有一个特殊的资源组设置，用于指定在哪里可以找到用于 XML 模式验证的 .xsd 模式文件。 对于这种特殊情况，您可以使用 PropertySet 接口并访问一个名为SchemaDefaultResourceGroup 的属性。 使用属性接口主要是为了避免直接与基于 xerces xml 的解析器模块链接，以设置默认模式资源组的需要。
+对于 XercesParser，有一个特殊的资源组设置，用于指定在哪里可以找到用于 XML 模式验证的 .xsd 模式文件。 对于这种特殊情况，您可以使用 PropertySet 接口并访问一个名为SchemaDefaultResourceGroup 的属性。 使用属性接口主要是为了避免直接与基于 xerces xml 的解析器模块链接以设置默认模式资源组的需要。
 
 因为您可能无法提前知道实际使用的是哪个XML解析器模块，因此可能不知道该属性是否存在，所以在设置属性之前应检查属性是否存在。 这比检查XML分析器ID字符串中的“ Xerces”更好，因为它使您可以与任何将来也可以提供验证的分析器模块无缝地工作（只要它公开相同的属性）。
 
