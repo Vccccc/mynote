@@ -46,4 +46,8 @@ ImageManager::getSingleton().loadImageset(
 ### 指定默认资源组
 表示可加载资源的每个核心系统类都有静态成员来设置和获取默认资源组。 加载给定类所需的特定数据文件时，将使用此资源组。
 
-对于每个资源消耗类，静态成员的名称都相同（特殊例外是ImageManager和基于xerces-c的XML paser-参见下文）：
+对于每个 resource consuming classe，静态成员的名称都相同（特殊例外是 ImageManager 和基于 xerces-c 的 XML paser-参见下文）：
+```c
+const String& getDefaultResourceGroup();
+void setDefaultResourceGroup(const String& groupname);
+```
