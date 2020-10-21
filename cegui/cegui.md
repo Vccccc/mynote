@@ -243,3 +243,4 @@ GUIContext::setRootWindow 函数用于指定一个窗口，以用作给定 GUICo
 FrameWindow* fWnd = static_cast<FrameWindow*>(
     wmgr.createWindow( "TaharezLook/FrameWindow", "testWindow" ));
 ```
+在这里，我们正在创建一个 “TaharezLook/FrameWindow” 窗口。 该名称使用整个系统中的另一种约定，即窗口类型以小部件集的名称为前缀（如果要加载WindowsLook方案，则可以创建“ WindowsLook / FrameWindow”对象）。 我们为新窗口赋予了简单的测试名称“ testWindow”。 最后需要注意的是强制转换的使用，这是必需的，因为WindowManager :: createWindow函数始终返回Window类型。 在这种情况下（以及许多其他情况下），基本的Window指针就足够了，但是有时您需要访问子类中引入的函数，因此在使用CEGUI时，如所示的那样进行强制转换很常见。
