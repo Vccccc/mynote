@@ -11,4 +11,4 @@ CE GUI 笔记
 
 ## 使用 ResourceProviders 加载数据
 ### 什么是 ResourceProviders 
-CEGUI 使用一个 ResourceProvider 对象提供一个桥梁在 CEGUI library 和 外部
+CEGUI 使用一个 ResourceProvider 对象在 CEGUI library 和 外部文件加载系统之间提供一个桥梁。
