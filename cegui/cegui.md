@@ -38,3 +38,5 @@ rp->setResourceGroupDirectory("imagesets", "./mygame/datafiles/gui/imagesets/");
 ImageManager::getSingleton().loadImageset(
     "WindowsLook.imageset", "imagesets");
 ```
+
+稍后将向您展示如何为每种资源类型设置默认资源组，然后在加载资源时不必指定组。
