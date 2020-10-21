@@ -170,5 +170,15 @@ CEGUI 的 Config 文件支持使您可以指定所有系统默认值，要加载
 - LookNFeel
 - Scheme
 
-从上面的描述中可能已经了解到，Scheme 文件的好处是它可以自动为您加载其他文件。 在本教程中，我们将加载一个方案文件和一个字体文件-假定该方案自动为我们加载了 Imageset 和
- LookNFeel。 加载方案和字体文件的操作如下：
+从上面的描述中可能已经了解到，Scheme 文件的好处是它可以自动为您加载其他文件。 在本教程中，我们将加载一个 Scheme 文件和一个 Font 文件，假定该 Scheme 自动为我们加载了 Imageset 和 LookNFeel。 加载 Scheme 和 Font 文件的操作如下：
+```c
+// create (load) the TaharezLook scheme file
+// (this auto-loads the TaharezLook looknfeel and imageset files)
+CEGUI::SchemeManager::getSingleton().createFromFile( "TaharezLook.scheme" );
+// create (load) a font.
+// The first font loaded automatically becomes the default font, but note
+// that the scheme might have already loaded a font, so there may already
+// be a default set - if we want the "DejaVuSans-10" font to definitely
+// be the default, we should set the default explicitly afterwards.
+CEGUI::FontManager::getSingleton().createFromFile( "DejaVuSans-10.font" );
+```
