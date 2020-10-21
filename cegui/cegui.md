@@ -149,4 +149,4 @@ LookNFeel 文件构成 CEGUI 外观系统的主要部分。 每个文件都将�
 #### Scheme
 Scheme 文件在很大程度上是将其他数据文件和资源分组在一起，并定义它们之间的某些相互作用，并形成一个单一点来加载 CEGUI 窗口和小部件的“外观”的一种手段。 Scheme 可以包含以下一项或多项：
 - Imageset 指定一个 Imageset 文件，用于作为 Scheme 的一部分加载。
-- 
+-  Font 指定一个 Font文件，用于作为 Scheme 的一部分加载。
