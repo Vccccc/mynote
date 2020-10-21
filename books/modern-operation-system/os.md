@@ -353,7 +353,9 @@ Batch system 仍然广泛应用在商业世界，用于工资账单、库存、�
 	- CPU utilization：keep the CPU busy all the time
 - Interactive systems
 	- Response time：快速响应请求
-	- Proportionality：
+	- Proportionality：满足用户的期望
+- 
+
 
 
 
