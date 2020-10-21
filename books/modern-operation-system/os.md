@@ -346,5 +346,5 @@ Batch system 仍然广泛应用在商业世界，用于工资账单、库存、�
 - All systems
 	- Fairness：所有进程公平地共享 CPU
 	- Policy enforcement：保证 policy 被执行
-	- Balance：维持系统各个部分
+	- Balance：保持系统各个部分忙
 
