@@ -164,3 +164,10 @@ CEGUI 的 Config 文件支持使您可以指定所有系统默认值，要加载
  对象的代码之外的 C++ 代码行。
 
 ### Loading the Basic Files
+为了使一切正常运行，您需要加载一些文件。所需的典型文件集为：
+- Imageset
+- Font
+- LookNFeel
+- Scheme
+
+
