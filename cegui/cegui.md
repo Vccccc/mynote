@@ -51,3 +51,9 @@ ImageManager::getSingleton().loadImageset(
 const String& getDefaultResourceGroup();
 void setDefaultResourceGroup(const String& groupname);
 ```
+
+以下是核心资源加载类及其加载的资源的列表：
+- CEGUI::Font : Font xml and freetype loadable font files.
+- CEGUI::Scheme : Scheme xml files
+- CEGUI::WindowManager : Window layout xml files.
+- 
