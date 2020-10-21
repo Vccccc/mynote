@@ -345,5 +345,6 @@ Batch system 仍然广泛应用在商业世界，用于工资账单、库存、�
 为了设计一个调度算法，需要考虑一个好的算法应该做什么。有些目标依赖于环境（batch, interactive, or real time），但有些目标适用于所有情况。下面罗列了一些目标：
 - All systems
 	- Fairness：所有进程公平地共享 CPU
-	- Policy enforcement：
+	- Policy enforcement：保证 policy 被执行
+	- Balance：维持系统各个部分
 
