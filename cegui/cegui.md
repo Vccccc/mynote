@@ -85,4 +85,5 @@ if (parser->isPropertyPresent("SchemaDefaultResourceGroup"))
     parser->setProperty("SchemaDefaultResourceGroup", "schemas");
 ```
 
-### 
+### 完整例子
+最后，我们将展示如何执行资源组及其目标目录的初始化，以访问CEGUI随附的datafiles目录中的数据文件，以及如何分配用于所有资源类型的默认组。
