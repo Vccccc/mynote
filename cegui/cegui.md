@@ -70,4 +70,4 @@ const String& ImageManager::getImagesetDefaultResourceGroup();
 void ImageManager::setImagesetDefaultResourceGroup(const String& resourceGroup);
 ```
 
-指定的资源组将用作加载图像集XML文件和图像纹理文件的默认资源组。
+指定的资源组将用作加载图像集 XML 文件和图像纹理文件的默认资源组。
