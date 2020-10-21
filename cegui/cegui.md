@@ -64,8 +64,10 @@ void setDefaultResourceGroup(const String& groupname);
 最后要考虑的一件事是 ResourceProvider 类也有一个默认资源组。 这应该被视为全局或默认值；每当特定的资源加载类没有默认值时就使用它。 如果将所有数据都放在一个目录中，这将很有用。
 
 ### ImageManager 默认资源组
-由于没有额外的 Imageset 类（一个 Imageset 现在只是从 xml 文件加载在一起的一组图像），因此用于加载这些文件的默认组是在 CEGUI::ImageManager 类上设置的，并且使用与“ 上面提到的“标准”，您需要的功能被命名为：
+由于没有额外的 Imageset 类（一个 Imageset 现在只是从 xml 文件加载在一起的一组图像），因此用于加载这些文件的默认组是在 CEGUI::ImageManager 类上设置的，并且使用与上面提到的“标准”，您需要的功能被命名为：
 ```c
 const String& ImageManager::getImagesetDefaultResourceGroup();
 void ImageManager::setImagesetDefaultResourceGroup(const String& resourceGroup);
 ```
+
+指定的资源组将用作加载图像集XML文件和图像纹理文件的默认资源组。
