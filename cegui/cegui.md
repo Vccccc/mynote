@@ -220,4 +220,4 @@ using namespace CEGUI;
 WindowManager& wmgr = WindowManager::getSingleton();
 ```
 
-通常，您将在 GUI 布局中使用称为 DefaultWindow 的“root”窗口。 这不是必需的，但强烈建议这样做，因为它在输入处理方面有两个有用的好处，并且符合CEGUI的公认用法。 此外，一旦开始添加更多顶级窗口，它就可以帮助简化布局。
+通常，您将在 GUI 布局中使用 DefaultWindow 的作为 “root” 窗口。 这不是必需的，但强烈建议这样做，因为它在输入处理方面有两个有用的好处，并且符合CEGUI的公认用法。 此外，一旦开始添加更多顶级窗口，它就可以帮助简化布局。
