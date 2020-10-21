@@ -235,4 +235,5 @@ WindowManager::createWindow 函数采用两个字符串作为其参数。在本�
 
 GUIContext::setRootWindow 函数用于指定一个窗口，以用作给定 GUIContext 的 GUI 的 root 窗口。这将替换任何当前的 root 窗口，尽管要注意，先前的窗口层次实际上并没有被销毁，它只是从 GUIContext 中分离出来的。您可以通过使用 GUIContext::setRootWindow 函数在 GUI “页面” 之间进行轻松地切换。
 
-现在，您已经创建了第一个窗口并将其附加到 GUIContext。系统在绘制 GUI 时将使用此窗口作为GUI的 。 但是，如果您要使用此代码编译一个简单的程序，您仍然看不到任何内容。 是什么赋予了？ 您的应用程序没有任何问题，我们上面创建的DefaultWindow完全不可见！ 这就是使DefaultWindow非常适合用作根窗口的原因。 它用作空白画布，可以在其上附加其他窗口和小部件。 现在就开始吧...
+现在，您已经创建了第一个窗口并将其附加到 GUIContext。系统在绘制 GUI 时将使用此窗口作为 GUI 的 root。但是，如果您要使用此代码编译一个简单的程序，您仍然看不到任何内容。是什么呢？您的应用程序没有任何问题，我们上面创建的 DefaultWindow
+ 完全不可见！这就是使 DefaultWindow 非常适合用作 root 窗口的原因。它用作空白画布，可以在其上附加其他窗口和小部件。 
