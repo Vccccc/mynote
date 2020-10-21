@@ -132,7 +132,7 @@ CEGUI 使用各种不同的数据文件，在最初可能对所有这些文件�
 使用此特定解析器的优点是它提供架构验证。模式验证是一种可以检查传入 XML 数据以确保其格式正确并包含所需信息的方法。为了使此验证有效，需要一些其他文件-称为 scheme 文件（不要与下面描述的 CEGUI 自己的 scheme 文件混淆）。可以在 CEGUI 发行版的datafiles/xml_schema/ 目录中找到用于验证 CEGUI XML 的模式文件，文件扩展名为.xsd。
 
 现在，您需要知道的主要事情是，在使用基于 Xerces-C++ 的 XML
- 解析器时，这些 .xsd 文件必须可用于 ResourceProvider 系统；例如，最好通过在包含模式文件的目录设置资源组， 并将该组设置为加载模式文件时 CEGUI::XercesParser 使用的默认值。（有关如何执行此操作的详细信息，请参见 2 - 使用 ResourceProviders 加载数据 ）
+ 解析器时，这些 .xsd 文件必须可用于 ResourceProvider 系统；例如，最好通过在包含 scheme 文件的目录设置资源组， 并将该组设置为加载 scheme 文件时 CEGUI::XercesParser 使用的默认值。（有关如何执行此操作的详细信息，请参见 2 - 使用 ResourceProviders 加载数据 ）
 
 ### The Data Files
 如前所述，CEGUI 中的大多数数据文件都是基于 XML 的。 数据文件通常不使用通用的 “ .xml” 文件扩展名，而是根据文件实际表示的名称来命名。 例如，.imageset（用于 Imageset ）和.font（用于 Font ）（但是，该命名约定不是系统的要求-您可以随意使用任何方式命名文件）。 现在对每种文件类型的用途进行非常简短的概述。
