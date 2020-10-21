@@ -17,4 +17,4 @@ CEGUI 使用一个 ResourceProvider 对象在 CEGUI library 和 外部文件加�
  DefaultResourceProvider 为 CEGUI 的默认 resource provider，为那些还没有或不需要更复杂的功能的人提供一些基本功能。除了提供 CEGUI 实际加载文件数据所需的功能外，DefaultResourceProvider 还对 “资源组” 提供了基本支持。资源组基本上是给系统上的目录位置标签。这样一来，便可以对目录中的文件进行逻辑分组，然后可以通过简单的标签而不是硬编码的路径来引用这些位置。这意味着如果您需要更改某些数据文件的位置，则只需要更新资源组的位置，而不是更新整个代码和XML文件中的路径信息。
 
 ### 指定资源组和目录
-DefaultResourceProvider 可以使你定义任意数量命名的资源组和每个组指定一个访问目录。当前资源组只支持一个目录与其
+DefaultResourceProvider 可以使你定义任意数量命名的资源组和每个组指定一个访问目录。你可以创建一个资源组为 “imagesets”，当前资源组只支持一个目录与其关联。
