@@ -130,4 +130,4 @@ CEGUI 使用各种不同的数据文件，在最初可能对所有这些文件�
 
 #### Schema Validation with Xerces-C++
 现在，您需要知道的主要事情是，在使用基于 Xerces-C++ 的 XML
- 解析器时，这些 .xsd 文件必须可用于 ResourceProvider 系统；例如，最好通过在包含模式文件的目录中设置资源组并将该组设置为加载模式文件时 CEGUI :: XercesParser使用的默认值来最好地实现
+ 解析器时，这些 .xsd 文件必须可用于 ResourceProvider 系统；例如，最好通过在包含模式文件的目录中设置资源组并将该组设置为加载模式文件时 CEGUI::XercesParser 使用的默认值来最好地实现
