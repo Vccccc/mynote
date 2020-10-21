@@ -122,3 +122,4 @@ if (parser->isPropertyPresent("SchemaDefaultResourceGroup"))
 这是 CEGUI 使用的 ResouceProvider 系统的简要介绍。 您已经了解了如何通过 CEGUI 的 DefaultResourceProvider 创建和使用资源组，以及如何为 CEGUI 使用的每种资源类型指定默认资源组。
 
 ## Data Files and Defaults Initialisation
+CEGUI 使用各种不同的数据文件，并且-至少在最初-可能对所有这些文件的确切含义以及它们之间的相互关系有些困惑。 此外，还有一些系统范围的默认值-尽管在技术上不需要设置，但是您几乎肯定会希望使用CEGUI为大多数应用程序设置。
