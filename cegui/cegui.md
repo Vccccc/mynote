@@ -290,3 +290,6 @@ fWnd->setText( "Hello World!" );
 ```
 
 Window 元素显示了到 WindowManager::createWindow 函数的明显映射，它们具有直接对应于前面讨论的参数的类型和名称。
+
+Window 元素的嵌套用于将某些窗口附加到其他窗口。请注意，布局文件中可能只有一个 “root” 级窗口，这是另一个原因，您通常会看到 DefaultWindow 用作放置其他窗口和小部件的画布。
+
