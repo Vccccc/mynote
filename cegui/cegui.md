@@ -201,3 +201,7 @@ CEGUI::System::getSingleton().getDefaultGUIContext().
 本教程的目的是向您展示如何创建一个简单的窗口并将其显示在屏幕上。
 
 ### Introduction to window and widget concepts
+在开始学习本教程的内容之前，您必须首先考虑一些基本概念。
+
+#### Every widget is a window
+这是使用 CEGUI 时必须掌握的最核心的概念。系统中的每个小部件都从相同的 Window 基类派生。因此，出于本教程的目的，每当我提到一个窗口时，相同的想法都可以轻松地应用于按钮或滚动条小部件。
