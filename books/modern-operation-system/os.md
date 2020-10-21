@@ -358,7 +358,7 @@ Batch system 仍然广泛应用在商业世界，用于工资账单、库存、�
 	- Meeting deadlines：避免丢失数据
 	- Predictability：避免多媒体系统的质量下降
 
-
+在所有情况下，公平是最重要的。
 
 
 
