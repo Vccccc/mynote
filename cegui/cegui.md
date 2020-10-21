@@ -233,4 +233,4 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 
 WindowManager::createWindow 函数采用两个字符串作为其参数。在本示例中，第一个“DefaultWindow”告诉系统您要创建的窗口的类型或类。通常，可用窗口是在加载 scheme 文件时注册的窗口，尽管某些窗口（例如 DefaultWindow）是全局类型，并且始终可用。在此示例中，第二个参数“root”是将分配给窗口的名称。请注意，将 root 窗口命名为“root”不是必需的，而是常见的约定。
 
-GUIContext::setRootWindow 函数用于指定一个窗口，以用作给定 GUIContext 的 GUI 根。 这将替换任何当前的根窗口，尽管要注意，先前的窗口层次实际上并没有被破坏-它只是从GUIContext中分离出来的-您可以通过使用GUIContext :: setRootWindow函数在GUI“页面”之间进行切换来轻松地在它们之间切换。
+GUIContext::setRootWindow 函数用于指定一个窗口，以用作给定 GUIContext 的 GUI 的 root。 这将替换任何当前的根窗口，尽管要注意，先前的窗口层次实际上并没有被破坏-它只是从GUIContext中分离出来的-您可以通过使用GUIContext :: setRootWindow函数在GUI“页面”之间进行切换来轻松地在它们之间切换。
