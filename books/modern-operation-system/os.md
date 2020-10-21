@@ -354,7 +354,9 @@ Batch system 仍然广泛应用在商业世界，用于工资账单、库存、�
 - Interactive systems
 	- Response time：快速响应请求
 	- Proportionality：满足用户的期望
-- 
+- Real-time systems
+	- Meeting deadlines：避免丢失数据
+	- Predictability：
 
 
 
