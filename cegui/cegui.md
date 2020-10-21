@@ -14,4 +14,4 @@ CE GUI 笔记
 CEGUI 使用一个 ResourceProvider 对象在 CEGUI library 和 外部文件加载系统（可能是当前机器的文件系统，或其他如 Ogre3D 和 Irrlicht 引擎提供的资源管理子系统）之间提供一个桥梁。通过提供 ResourceProvider 接口的自定义实现，可以为 CEGUI 无缝地集成所有这些系统。
 
 ### DefaultResourceProvider
- DefaultResourceProvider CEGUI 的 resource provider 默认为那些还没有或不需要更复杂的替代方法的人提供一些基本功能
+ DefaultResourceProvider 为 CEGUI 的默认 resource provider，为那些还没有或不需要更复杂的替代方法的人提供一些基本功能
