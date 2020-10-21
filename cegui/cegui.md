@@ -28,4 +28,12 @@ ImageManager::getSingleton().loadImageset(
 
 在初始化时，你需要在默认 resource provider 中设置一个资源组，如：
 ```c
+DefaultResourceProvider* rp = static_cast<DefaultResourceProvider*>(
+    CEGUI::System::getSingleton().getResourceProvider());
+rp->setResourceGroupDirectory("imagesets", "./mygame/datafiles/gui/imagesets/");
+```
+
+在后续的代码中，当你需要加载一个 imageset 时，只需要做：
+```c
+
 ```
