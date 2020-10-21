@@ -270,3 +270,5 @@ fWnd->setText( "Hello World!" );
 请注意，现在您已将 FrameWindow “testWindow” 附加到DefaultWindow “root”。因此，现在将是提及 CEGUI 的名称路径的好时机。随着布局变得更加复杂，您通常需要在给定已知起点（通常是 root 窗口）的情况下访问某些子窗口，这就是 CEGUI 的名称路径的亮点。每个窗口都有一个名称路径，该路径基本上是所有由斜杠分隔的祖先窗口的名称。在我们的示例中，FrameWindow 的名称路径为 “root/testWindow”。您可以通过其名称路径和 CEGUI::Window::getChild 函数访问层次结构中的任何窗口。请求子窗口时，请注意，您指定的路径不包含起点，因此要从 “root” 访问 FrameWindow，您需要访问 “testWindow” 而不是 “root/testWindow”，但是如果 FrameWindow 有，例如，附加到它的名为 “myButton” 的按钮可以从根目录访问该按钮，您将使用名称路径 “testWindow/myButton” 调用 Window::getChild。
 
 #### XML layouts
+上面所有这些都很好，但是有一个主要缺点。每当您希望调整 GUI
+ 布局时，都需要编辑代码并重新编译。 这很快就会变旧，所以您真正想要的是能够在外部指定GUI布局，并使代码通过文件加载该布局。 这是CEGUI布局XML文件的目的。
