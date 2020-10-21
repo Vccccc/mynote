@@ -144,4 +144,4 @@ CEGUI 使用各种不同的数据文件，在最初可能对所有这些文件�
 - PixmapFont：这种类型的字体基于 Imageset，该 Imageset 为字体字形定义了 Image，并且最好将其视为位图字体。通过.font XML 文件中的属性 Type =“Pixmap” 指定一个PixmapFont。
 
 #### LookNFeel
-LookNFeel 文件构成 CEGUI 外观系统的主要部分。 每个文件都将包含一个或多个 WidgetLook 定义，这些定义向系统描述了各种图像和子窗口小部件组件，它们的位置，其他属性值等等。 这些WidgetLook 规范随后绑定到系统中的具体元素，以形成最终表示为 CEGUI中 的窗口和小部件的东西。
+LookNFeel 文件构成 CEGUI 外观系统的主要部分。 每个文件都将包含一个或多个 WidgetLook 定义，这些定义向系统描述了各种图像和子窗口小部件组件，它们的位置，其他属性值等等。 这些WidgetLook 规范随后绑定到系统中的具体元素，最终表示为 CEGUI中 的窗口和小部件的东西。
