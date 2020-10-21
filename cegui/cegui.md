@@ -251,4 +251,11 @@ FrameWindow* fWnd = static_cast<FrameWindow*>(
 myRoot->addChild( fWnd );
 ```
 
-现在，我们可以为窗口设置初始位置和大小。CEGUI 使用“统一”坐标系统，可以同时使用相对（比例）和绝对（偏移）分量。这就是为什么您将看到的每个坐标都有两个部分的原因。 有关此概念的稍微扩展，请参阅“统一坐标系”，它是CEGUI Falagard外观系统的一部分。 回到示例：
+现在，我们可以为窗口设置初始位置和大小。CEGUI 使用“统一”坐标系统，可以同时使用相对（比例）和绝对（偏移）分量。这就是为什么您将看到的每个坐标都有两个部分的原因。
+```c
+// position a quarter of the way in from the top-left of parent.
+fWnd->setPosition( UVector2( UDim( 0.25f, 0.0f ), UDim( 0.25f, 0.0f ) ) );
+// set size to be half the size of the parent
+fWnd->setSize( USize( UDim( 0.5f, 0.0f ), UDim( 0.5f, 0.0f ) ) );
+```
+
