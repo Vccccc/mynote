@@ -188,3 +188,6 @@ CEGUI::FontManager::getSingleton().createFromFile( "DejaVuSans-10.font" );
 
 ### System Defaults Initialisation
 最后，您需要为系统指定一些默认选项。这样可以确保当窗口或窗口小部件未指定其自身的首选项时，系统始终具有可用的字体和鼠标光标。
+```c
+CEGUI::System::getSingleton().getDefaultGUIContext().setDefaultFont( "DejaVuSans-10" );
+```
