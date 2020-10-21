@@ -35,5 +35,6 @@ rp->setResourceGroupDirectory("imagesets", "./mygame/datafiles/gui/imagesets/");
 
 在后续的代码中，当你需要加载一个 imageset 时，只需要做：
 ```c
-
+ImageManager::getSingleton().loadImageset(
+    "WindowsLook.imageset", "imagesets");
 ```
