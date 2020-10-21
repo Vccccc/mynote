@@ -183,4 +183,4 @@ CEGUI::SchemeManager::getSingleton().createFromFile( "TaharezLook.scheme" );
 CEGUI::FontManager::getSingleton().createFromFile( "DejaVuSans-10.font" );
 ```
 
-在上面的代码（和 CEGUI 示例中）中，假定资源组位置和默认组均已设置
+在上面的代码（和 CEGUI 示例中）中，假定资源组位置和默认组均已设置。
