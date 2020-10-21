@@ -289,4 +289,4 @@ fWnd->setText( "Hello World!" );
 </GUILayout>
 ```
 
-Window元素显示了到WindowManager :: createWindow函数的明显映射-它们具有直接对应于前面讨论的参数的类型和名称。
+Window 元素显示了到 WindowManager::createWindow 函数的明显映射-它们具有直接对应于前面讨论的参数的类型和名称。
