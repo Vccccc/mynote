@@ -295,3 +295,9 @@ Window 元素的嵌套用于将某些窗口附加到其他窗口。请注意，�
 
 Property 元素用于在要定义的 Window 上设置属性。每个窗口/小部件类都有许多可用的属性，并且每个类还从其父类继承所有属性。
 
+如果保存为名为 “test.layout” 的文件，则可以加载此布局并将其设置为 GUIContext 的 root，如下所示：
+```c
+using namespace CEGUI;
+Window* myRoot = WindowManager::getSingleton().loadLayoutFromFile( "test.layout" );
+System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
+```
