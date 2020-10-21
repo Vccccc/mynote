@@ -191,3 +191,8 @@ CEGUI::FontManager::getSingleton().createFromFile( "DejaVuSans-10.font" );
 ```c
 CEGUI::System::getSingleton().getDefaultGUIContext().setDefaultFont( "DejaVuSans-10" );
 ```
+通常将设置的另一个默认对象是鼠标光标。 这样可以确保当您将鼠标移到没有设置其自己的光标的任何元素上时，光标不会消失。 为初始的默认GUIContext设置默认鼠标光标的代码如下：
+```c
+CEGUI::System::getSingleton().getDefaultGUIContext().
+    getMouseCursor().setDefaultImage( "TaharezLook/MouseArrow" );
+```
