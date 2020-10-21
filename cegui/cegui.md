@@ -59,3 +59,6 @@ void setDefaultResourceGroup(const String& groupname);
 - CEGUI::WidgetLookManager : LookNFeel xml files
 - CEGUI::ScriptModule : Script files in whichever scripted langauge.
 
+
+> 注意
+
