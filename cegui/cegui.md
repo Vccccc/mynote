@@ -86,4 +86,4 @@ if (parser->isPropertyPresent("SchemaDefaultResourceGroup"))
 ```
 
 ### 完整例子
-最后，我们将展示如何执行资源组及其目标目录的初始化，以访问CEGUI 随附的 datafiles 目录中的数据文件，以及如何分配用于所有资源类型的默认组。
+最后，我们将展示如何执行资源组及其目标目录的初始化，以访问CEGUI 随附的 datafiles 目录中的数据文件，以及如何分配用于所有资源类型的默认组。在初始化核心 CEGUI::System 对象之后，我们指定一组资源组及其目标目录（假设工作目录将是CEGUI包内的“ bin”目录：
