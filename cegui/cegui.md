@@ -126,4 +126,6 @@ CEGUI 使用各种不同的数据文件，在最初可能对所有这些文件�
  CEGUI 为大多数应用程序设置。
 
 ### Font, Imageset, LookNFeel, Scheme, XSD? It's all XML!
-除图形图像文件，脚本语言文件和可加载模块（.dll /.so文件等）外，CEGUI所使用的所有数据文件均基于XML。 实际上，这使我们遇到了您可能遇到的第一个潜在障碍：.xsd模式文件。
+除图形图像文件，脚本语言文件和可加载模块（.dll /.so文件等）外，CEGUI 所使用的所有数据文件均基于 XML。 实际上，这使我们遇到了您可能遇到的第一个潜在障碍：.xsd模式文件。
+
+#### Schema Validation with Xerces-C++
