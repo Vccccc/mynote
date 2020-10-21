@@ -19,4 +19,4 @@ CEGUI 使用一个 ResourceProvider 对象在 CEGUI library 和 外部文件加�
 ### 指定资源组和目录
 DefaultResourceProvider 可以使你定义任意数量命名的资源组和每个组指定一个访问目录。你可以创建一个资源组为 “imagesets”，然后分配一个目录给它，比如“./mygame/datafiles/gui/imagesets/”。当通过 ImageManager 加载一个 Imageset 时，你需要指定一个资源组如 “imagesets”，然后系统会在前面定义的位置“./mygame/datafiles/gui/imagesets/”查找。注意，当前资源组只支持一个目录与其关联。
 
-下面是一个例子。
+下面是一个例子。为了避免通过一个显式
