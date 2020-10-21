@@ -230,3 +230,5 @@ WindowManager& wmgr = WindowManager::getSingleton();
 Window* myRoot = wmgr.createWindow( "DefaultWindow", "root" );
 System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 ```
+
+WindowManager::createWindow 函数采用两个字符串作为其参数。在本示例中，第一个“DefaultWindow”告诉系统您要创建的窗口的类型或类。通常，可用窗口是在加载 scheme 文件时注册的窗口，尽管某些窗口（例如 DefaultWindow）是全局类型，并且始终可用。 在此示例中，第二个参数“ root”是将分配给窗口的名称。 请注意，将根窗口命名为“ root”不是必需的，而是常见的约定。
