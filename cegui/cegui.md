@@ -102,3 +102,5 @@ rp->setResourceGroupDirectory("lua_scripts", "../datafiles/lua_scripts/");
 // specify the schemas location
 rp->setResourceGroupDirectory("schemas", "../datafiles/xml_schemas/");
 ```
+
+现在，我们有了一组资源组，并为其设置了目标目录。 最后，要使系统使用这些目录，我们设置要使用的默认资源组：
