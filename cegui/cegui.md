@@ -237,3 +237,9 @@ GUIContext::setRootWindow 函数用于指定一个窗口，以用作给定 GUICo
 
 现在，您已经创建了第一个窗口并将其附加到 GUIContext。系统在绘制 GUI 时将使用此窗口作为 GUI 的 root。但是，如果您要使用此代码编译一个简单的程序，您仍然看不到任何内容。是什么呢？您的应用程序没有任何问题，我们上面创建的 DefaultWindow
  完全不可见！这就是使 DefaultWindow 非常适合用作 root 窗口的原因。它用作空白画布，可以在其上附加其他窗口和小部件。 
+
+在这里，我们将创建一个 frame 窗口；这是一个窗口，其功能类似于桌面 UI 上的窗口，它具有标题栏并且可以移动和调整大小。
+```c
+FrameWindow* fWnd = static_cast<FrameWindow*>(
+    wmgr.createWindow( "TaharezLook/FrameWindow", "testWindow" ));
+```
