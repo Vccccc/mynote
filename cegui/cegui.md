@@ -56,4 +56,6 @@ void setDefaultResourceGroup(const String& groupname);
 - CEGUI::Font : Font xml and freetype loadable font files.
 - CEGUI::Scheme : Scheme xml files
 - CEGUI::WindowManager : Window layout xml files.
-- 
+- CEGUI::WidgetLookManager : LookNFeel xml files
+- CEGUI::ScriptModule : Script files in whichever scripted langauge.
+
