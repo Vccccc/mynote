@@ -273,4 +273,18 @@ fWnd->setText( "Hello World!" );
 上面所有这些都很好，但是有一个主要缺点。每当您希望调整 GUI
  布局时，都需要编辑代码并重新编译。这很快就会变旧，所以您真正想要的是能够在外部指定 GUI 布局，并使代码通过文件加载该布局。这是 CEGUI 布局 XML 文件的目的。
 
-系统支持XML布局文件，可以通过 WindowManager::loadWindowLayout 函数加载该文件。此函数为您创建所有窗口，并返回指向已加载层次结构的 root 窗口的指针，这是分配为 GUI root 的理想选择！
+系统支持XML布局文件，可以通过 WindowManager::loadWindowLayout 函数加载该文件。此函数为您创建所有窗口，并返回指向已加载层次结构的 root 窗口的指针。
+
+因此，首先我们需要一个布局文件。以下保存为文本文件的 XML 是等效于我们上面讨论的代码的布局文件：
+```c
+<?xml version="1.0" ?>
+<GUILayout version="4">
+    <Window type="DefaultWindow" name="root">
+        <Window type="TaharezLook/FrameWindow" name="testWindow">
+            <Property name="Position" value="{ {0.25, 0}, {0.25, 0} }" />
+            <Property name="Size" value="{ {0.5, 0}, {0.5, 0} }" />
+            <Property name="Text" value="Hello World!" />
+        </Window>
+    </Window>
+</GUILayout>
+```
