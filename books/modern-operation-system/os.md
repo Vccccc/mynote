@@ -346,10 +346,13 @@ Batch system 仍然广泛应用在商业世界，用于工资账单、库存、�
 - All systems
 	- Fairness：所有进程公平地共享 CPU
 	- Policy enforcement：保证 policy 被执行
-	- Balance：保持系统各个部分都在忙
+	- Balance：keeping all parts of the system busy
 - Batch systems
 	- Throughput：每小时最大化工作
 	- Turnaround time：minimize time between submission and termination
-	- CPU utilization：
+	- CPU utilization：keep the CPU busy all the time
+- Interactive systems
+	- Response time：快速
+
 
 
