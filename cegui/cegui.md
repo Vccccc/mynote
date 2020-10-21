@@ -138,4 +138,6 @@ CEGUI 使用各种不同的数据文件，在最初可能对所有这些文件�
 #### Imageset
 图像集是某些源表面上的命名区域的集合，例如图像文件或纹理。 在CEGUI术语中，每个命名区域都是一个 Image，并且是 CEGUI 使用的基本图像级别。 通过修改源图像文件或纹理内容，或通过修改Imageset 文件中已定义区域的区域，您可以轻松地更改CEGUI绘制内容的外观。
 
-#### 
+#### Font
+字体文件定义了在 CEGUI 中使用的字体。 当前可以定义两种类型的字体：
+- FreeTypeFont：这是一种基于标准字体文件的字体（例如True-type'.ttf'字体）。 通过.font XML文件中的属性Type =“ FreeType”指定FreeTypeFont。
