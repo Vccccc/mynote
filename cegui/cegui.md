@@ -86,4 +86,19 @@ if (parser->isPropertyPresent("SchemaDefaultResourceGroup"))
 ```
 
 ### 完整例子
-最后，我们将展示如何执行资源组及其目标目录的初始化，以访问CEGUI 随附的 datafiles 目录中的数据文件，以及如何分配用于所有资源类型的默认组。在初始化核心 CEGUI::System 对象之后，我们指定一组资源组及其目标目录（假设工作目录将是CEGUI包内的“ bin”目录：
+最后，我们将展示如何执行资源组及其目标目录的初始化，以访问CEGUI 随附的 datafiles 目录中的数据文件，以及如何分配用于所有资源类型的默认组。在初始化核心 CEGUI::System 对象之后，我们指定一组资源组及其目标目录（假设工作目录是 CEGUI
+ 包内的 “bin” 目录：
+```c
+// initialise the required dirs for the DefaultResourceProvider
+CEGUI::DefaultResourceProvider* rp = static_cast<CEGUI::DefaultResourceProvider*>
+    (CEGUI::System::getSingleton().getResourceProvider());
+rp->setResourceGroupDirectory("schemes", "../datafiles/schemes/");
+rp->setResourceGroupDirectory("imagesets", "../datafiles/imagesets/");
+rp->setResourceGroupDirectory("fonts", "../datafiles/fonts/");
+rp->setResourceGroupDirectory("layouts", "../datafiles/layouts/");
+rp->setResourceGroupDirectory("looknfeels", "../datafiles/looknfeel/");
+rp->setResourceGroupDirectory("lua_scripts", "../datafiles/lua_scripts/");
+// This is only really needed if you are using Xerces and need to
+// specify the schemas location
+rp->setResourceGroupDirectory("schemas", "../datafiles/xml_schemas/");
+```
