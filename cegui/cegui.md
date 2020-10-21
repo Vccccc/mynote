@@ -160,4 +160,4 @@ Scheme 文件在很大程度上是将其他数据文件和资源分组在一起�
 Layout 文件包含窗口布局的 XML 表示形式。 每个嵌套的“ Window” 元素定义要创建的窗口或小部件，“Property” 元素定义每个定义的窗口的所需设置和属性值。
 
 #### Config
-CEGUI 的 Config 文件支持使您可以指定所有系统默认值，要加载的初始资源以及要执行的初始化和终止脚本文件（使用ScriptModule 时），而无需编写 C++ 代码行创建Renderer和 系统对象。
+CEGUI 的 Config 文件支持使您可以指定所有系统默认值，要加载的初始资源以及要执行的初始化和终止脚本文件（使用ScriptModule 时），而无需编写 C++ 代码行创建 Renderer 和System 对象。
