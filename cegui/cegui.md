@@ -267,4 +267,4 @@ fWnd->setText( "Hello World!" );
 编译到应用程序中后，您现在将在显示中间看到一个简单的 frame
  窗口。
 
-请注意，现在您已将 FrameWindow “testWindow” 附加到DefaultWindow “root”。因此，现在将是提及 CEGUI 的名称路径的好时机。随着布局变得更加复杂，您通常需要在给定已知起点（通常是 root 窗口）的情况下访问某些子窗口，这就是 CEGUI 的名称路径的亮点。每个窗口都有一个名称路径，该路径基本上是所有由斜杠分隔的祖先窗口的名称。在我们的示例中，FrameWindow 的名称路径为 “root/testWindow”。您可以通过其名称路径和 CEGUI::Window::getChild 函数访问层次结构中的任何窗口。请求子窗口时，请注意，您指定的路径不包含起点，因此要从“根”访问FrameWindow，您需要子“ testWindow”而不是“ root / testWindow”，但是如果FrameWindow有，例如，附加到它的名为“ myButton”的按钮可以从根目录访问该按钮，您将使用名称路径“ testWindow / myButton”调用Window :: getChild
+请注意，现在您已将 FrameWindow “testWindow” 附加到DefaultWindow “root”。因此，现在将是提及 CEGUI 的名称路径的好时机。随着布局变得更加复杂，您通常需要在给定已知起点（通常是 root 窗口）的情况下访问某些子窗口，这就是 CEGUI 的名称路径的亮点。每个窗口都有一个名称路径，该路径基本上是所有由斜杠分隔的祖先窗口的名称。在我们的示例中，FrameWindow 的名称路径为 “root/testWindow”。您可以通过其名称路径和 CEGUI::Window::getChild 函数访问层次结构中的任何窗口。请求子窗口时，请注意，您指定的路径不包含起点，因此要从 “root” 访问 FrameWindow，您需要子“ testWindow”而不是“ root / testWindow”，但是如果FrameWindow有，例如，附加到它的名为“ myButton”的按钮可以从根目录访问该按钮，您将使用名称路径“ testWindow / myButton”调用Window :: getChild
