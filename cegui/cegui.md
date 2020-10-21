@@ -263,3 +263,6 @@ fWnd->setSize( USize( UDim( 0.5f, 0.0f ), UDim( 0.5f, 0.0f ) ) );
 ```c
 fWnd->setText( "Hello World!" );
 ```
+
+编译到应用程序中后，您现在将在显示中间看到一个简单的 frame
+ 窗口。
