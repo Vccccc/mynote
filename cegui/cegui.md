@@ -9,7 +9,7 @@ CE GUI 笔记
 
 当然也需要加载一些数据及执行其他基础的初始化，这些在后面提及。
 
-## 使用 ResourceProviders 加载数据
+## 2 - 使用 ResourceProviders 加载数据
 ### 什么是 ResourceProviders 
 CEGUI 使用一个 ResourceProvider 对象在 CEGUI library 和 外部文件加载系统（可能是当前机器的文件系统，或其他如 Ogre3D 和 Irrlicht 引擎提供的资源管理子系统）之间提供一个桥梁。通过提供 ResourceProvider 接口的自定义实现，可以为 CEGUI 无缝地集成所有这些系统。
 
@@ -121,7 +121,7 @@ if (parser->isPropertyPresent("SchemaDefaultResourceGroup"))
 ### 总结
 这是 CEGUI 使用的 ResouceProvider 系统的简要介绍。 您已经了解了如何通过 CEGUI 的 DefaultResourceProvider 创建和使用资源组，以及如何为 CEGUI 使用的每种资源类型指定默认资源组。
 
-## Data Files and Defaults Initialisation
+## 3 - Data Files and Defaults Initialisation
 CEGUI 使用各种不同的数据文件，在最初可能对所有这些文件的确切含义以及它们之间的相互关系有些困惑。 此外，还有一些系统范围的默认值-尽管在技术上不需要设置，但是您几乎肯定会希望使用
  CEGUI 为大多数应用程序设置。
 
