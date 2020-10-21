@@ -161,4 +161,6 @@ Layout 文件包含窗口布局的 XML 表示形式。 每个嵌套的“ Window
 
 #### Config
 CEGUI 的 Config 文件支持使您可以指定所有系统默认值，要加载的初始资源以及要执行的初始化和终止脚本文件（使用ScriptModule 时），而无需编写超出创建 Renderer 和 System
- 对象的代码的 C++ 代码行。
+ 对象的代码之外的 C++ 代码行。
+
+### Loading the Basic Files
