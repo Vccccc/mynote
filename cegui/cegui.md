@@ -61,4 +61,4 @@ void setDefaultResourceGroup(const String& groupname);
 
 
 > 注意
-
+最后要考虑的一件事是 ResourceProvider 类也有一个默认资源组。 这应该被视为全局或默认值每当特定的资源加载类没有默认值时就使用它。 如果将所有数据都放在一个目录中，这将很有用。
