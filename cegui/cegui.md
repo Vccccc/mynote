@@ -358,8 +358,16 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 	- \<Property>元素可能包含要用作值的文本内容。
 
 #### \<Event> Element
+- Purpose：
+	- Event 元素用于在 GUI 元素和脚本函数之间创建绑定。
+- Attributes：
+- Usage：
 
 
 
+#### \<Event> Element
+- Purpose：
+- Attributes：
+- Usage：
 
 
