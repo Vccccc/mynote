@@ -476,11 +476,12 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 		- XMLSchema
 	- group：指定资源组标识符，用作指定资源类型的默认组。 必填属性。
 - Usage：
-	- \<DefaultResourceGroup> 元素只能显示为<CEGUIConfig>元素的子元素。
+	- \<DefaultResourceGroup> 元素只能作为 \<CEGUIConfig>元素的子元素。
+	- \<DefaultResourceGroup> 元素可能不包含任何子元素
 
-#### \<>
+#### \<Scripting>
 - Purpose：
-	- 
+	- 指定将自动执行的启动和关闭脚本。 仅在使用脚本模块时有效。 脚本必须对所使用的语言有效！ 如果此元素出现多次，则仅使用最后一次出现。
 - Attributes：
 	- 
 - Usage：
