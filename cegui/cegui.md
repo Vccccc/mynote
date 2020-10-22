@@ -357,6 +357,9 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 	- \<Property> 元素不包含任何子元素
 	- \<Property>元素可能包含要用作值的文本内容。
 
+#### \<Event> Element
+
+
 
 
 
