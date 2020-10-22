@@ -444,7 +444,7 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 		- Insane
 - Usage：
 	- \<Logging> 元素只能作为 \<CEGUIConfig> 元素的子元素出现
-	- \<Logging> 元素可能不包含任何其他子元素
+	- \<Logging> 元素可能不包含任何子元素
 
 #### \<AutoLoad>
 - Purpose：
@@ -460,20 +460,29 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 	- pattern：指定将与资源组位置中的文件匹配的文件名模式。 可选属性，默认为“*”（所有文件）。
 - Usage：
 	- \<AutoLoad> 元素只能作为 \<CEGUIConfig> 元素的子元素。
-	- \<AutoLoad> 元素可能不包含任何
+	- \<AutoLoad> 元素可能不包含任何子元素
+
+#### \<ResourceDirectory>
+- Purpose：
+	- 
+- Attributes：
+	- 
+- Usage：
+	- 
 
 #### \<>
 - Purpose：
+	- 
 - Attributes：
+	- 
 - Usage：
-
-#### \<>
-- Purpose：
-- Attributes：
-- Usage：
+	- 
 
 
 #### \<>
 - Purpose：
+	- 
 - Attributes：
+	- 
 - Usage：
+	- 
