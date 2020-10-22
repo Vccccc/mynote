@@ -318,4 +318,7 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 
 #### \<GUILayout> Element
 - Purpose：
-	- \<GUILayout>是 XML 布局文件中的根元素
+	- \<GUILayout> 是 XML 布局文件中的根元素
+- Attributes：
+	- version：指定源文件的版本
+
