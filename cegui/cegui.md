@@ -307,3 +307,7 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 
 ## Layout XML files
 布局XML文件定义了要创建的基于窗口的对象的层次结构，其中包含每个窗口的属性和事件绑定信息。
+
+### Layout Element List:
+- <AutoWindow> Element
+- 
