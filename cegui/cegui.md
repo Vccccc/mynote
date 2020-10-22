@@ -376,10 +376,11 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 	- resourceGroup：指定在加载“filename”属性中给定的文件时传递给 ResourceProvider 的资源组标识符。 可选属性，默认为 WindowManager 默认组。
 - Usage：
 	- \<LayoutImport> 元素可以作为 \<Window> 和 \<AutoWindow> 元素的子元素
-	- 
+	- \<LayoutImport> 元素可能不包含任何子元素
 
 #### \<AutoWindow> Element
 - Purpose：
+	- \<AutoWindow>元素用于将属性设置，事件和其他内容定位到当前窗口（或AutoWindow）的自动创建的子窗口上。
 - Attributes：
 - Usage：
 
