@@ -413,9 +413,12 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 - \<DefaultTooltip>
 
 #### \<CEGUIConfig>
-- Purpose：\<CEGUIConfig> 是
-- Attributes：
+- Purpose：\<CEGUIConfig> 是配置文件的根元素
+- Attributes：None
 - Usage：
+	- \<CEGUIConfig> 是配置文件的根元素
+	- \<CEGUIConfig> 可能包含以下子元素
+		- 
 
 #### \<>
 - Purpose：
