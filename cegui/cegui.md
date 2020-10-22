@@ -500,4 +500,29 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 	- \<DefaultXMLParser> 元素可能不包含任何子元素
 
 
+#### \<>
+- Purpose：
+	-
+- Attributes：
+	-
+- Usage：
+	- 	
+
+
+#### \<>
+- Purpose：
+	-
+- Attributes：
+	-
+- Usage：
+
+#### \<>
+- Purpose：
+	-
+- Attributes：
+	-
+- Usage：
+	- 
+
+
 
