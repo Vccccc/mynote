@@ -543,5 +543,6 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 - Attributes：
 	- name：Specifies the name of the window to be set as the initial gui sheet. Required attribute.
 - Usage：
-	- 
+	- \<DefaultGUISheet> 元素只能作为 \<CEGUIConfig>元素的子元素。
+	- \<DefaultGUISheet> 元素可能不包含任何子元素
 
