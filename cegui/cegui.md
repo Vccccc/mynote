@@ -329,7 +329,7 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 
 #### \<Window> Element
 - Purpose：
-	- \<Window> 元素是 XML 布局文件中的根元素
+	- \<Window> 元素用于指定要创建的窗口对象被创建
 - Attributes：
 	- version：应该在所有源文件指定版本，当前版本为：4
 - Usage：
