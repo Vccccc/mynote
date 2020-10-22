@@ -332,9 +332,10 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 	- \<Window> 元素用于指定要创建的新窗口对象
 - Attributes：
 	- type：指定要创建的窗口的类型。这可能是指具体的窗口类型，别名或 falagard 映射类型。必填属性。
+	- name：指定要提供窗口的名称。 窗口名称在系统中必须唯一。 可选属性，如果未指定该属性，则会自动生成一个名称。
 - Usage：
-	- \<GUILayout> 元素是 XML 布局文件中的根元素
-	- \<GUILayout> 元素必须至少包含一个 /<Window> 元素
+	- \<Window> 可能显示为以下内容的子元素
+		- \<GUILayout> 元素必须至少包含一个 /<Window> 元素
 	- \<GUILayout> 元素不能作为其他元素的子元素
 
 
