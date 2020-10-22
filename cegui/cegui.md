@@ -487,12 +487,12 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 	- terminateScript：指定终止脚本的名称。 指示的脚本将在系统销毁之前被调用。 可选属性，默认为none。
 - Usage：
 	- \<Scripting> 元素只能作为 \<CEGUIConfig>元素的子元素。
-	- 
+	- \<Scripting> 元素可能不包含任何子元素
 
 
-#### \<>
+#### \<DefaultXMLParser>
 - Purpose：
-	- 
+	- 指定要使用的默认 XMLParser 模块的名称。 由于配置文件是XML，因此我们实际上已经加载了解析器，这是将解析器替换为其他模块的一种方式。 如果此元素出现多次，则仅使用最后一次出现。
 - Attributes：
 	- 
 - Usage：
