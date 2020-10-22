@@ -519,11 +519,11 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 	- \<DefaultFont> 元素只能作为 \<CEGUIConfig>元素的子元素。
 	- \<DefaultFont> 元素可能不包含任何子元素
 
-#### \<>
+#### \<DefaultMouseCursor>
 - Purpose：
-	-
+	- 设置系统默认的鼠标光标图像。 如果此元素出现多次，则仅使用最后一次出现。
 - Attributes：
-	-
+	- imageset：指定包含要用作默认鼠标光标的图像的 Imageset 的名称。 必填属性
 - Usage：
 	- 
 #### \<>
