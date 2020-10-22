@@ -28,6 +28,11 @@ Falagard 扩展不仅限于 ‘looknfeel’ XML 文件。且包含核心库中�
 
 ##### UDim
 ###### UDim Definition
+Unified 系统的基本构件是 UDim。 此类型表示某种单一维度，并定义为：
+```c
+UDim(scale, offset)
+```
+这里：
 
 
 
