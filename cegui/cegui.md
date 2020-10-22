@@ -353,7 +353,9 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 	- name：指定要设置的属性的名称。 必填属性
 	- value：指定要在属性上设置的值。 可选属性，如果未指定该属性，则应通过元素文本内容给出要设置的值。
 - Usage：
-	- \<Property> 元素可以作为 \<Window> 的子元素
+	- \<Property> 元素可以作为 \<Window> 和 \<AutoWindow> 元素的子元素
+	- \<Property> 元素不包含任何子元素
+	- 
 
 
 
