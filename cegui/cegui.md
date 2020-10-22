@@ -335,7 +335,9 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 	- name：指定要提供窗口的名称。 窗口名称在系统中必须唯一。 可选属性，如果未指定该属性，则会自动生成一个名称。
 - Usage：
 	- \<Window> 可能显示为以下内容的子元素
-		- \<GUILayout> 元素必须至少包含一个 /<Window> 元素
+		- \<GUILayout> 元素
+		- \<Window> 元素
+		- \<AutoWindow> 元素
 	- \<GUILayout> 元素不能作为其他元素的子元素
 
 
