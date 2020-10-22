@@ -437,8 +437,13 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 	- 指定要使用的日志文件名和日志记录级别。 如果此元素出现多次，则最后一次出现作为最终使用的设置。
 - Attributes：
 	- filename：指定用于日志文件的名称。 可选属性，默认为“ CEGUI.log”
-	- level：
+	- level：指定日志记录级别。 可选属性，默认为“Standard”。 否则必须设置为以下之一：
+		- Errors
+		- Standard
+		- Informative
+		- Insane
 - Usage：
+	- 
 
 #### \<>
 - Purpose：
