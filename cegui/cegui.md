@@ -347,6 +347,10 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 		- 最后，任意数量的 <Property> 元素（again）
 
 #### \<Property> Element
+- Purpose：
+	- <Property>元素用于设置由包含的<Window>元素创建的Window的属性。
+- Attributes：
+- Usage：
 
 
 
