@@ -450,7 +450,14 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 - Purpose：
 	- 指定一批要自动加载的资源
 - Attributes：
-	- type：指定要加载的资源的类型。 需要
+	- type：指定要加载的资源的类型。 必填属性，必须为以下值之一：
+		- Imageset
+		- Font
+		- Scheme
+		- LookNFeel
+		- Layout
+	- 
+
 - Usage：
 
 #### \<>
