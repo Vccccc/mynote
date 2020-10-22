@@ -323,7 +323,7 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 	- version：应该在所有源文件指定版本，当前版本为：4
 - Usage：
 	- \<GUILayout> 元素是 XML 布局文件中的根元素
-	- \<GUILayout> 元素必须至少包含一个 /<Window> 元素
+	- \<GUILayout> 元素必须至少包含一个 \<Window> 元素
 	- \<GUILayout> 元素不能作为其他元素的子元素
 
 
