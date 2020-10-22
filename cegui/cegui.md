@@ -306,3 +306,4 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 最终结果与之前的 C++ 代码完全相同，不同之处在于，现在您可以修改和增强GUI布局，而无需不断编辑和重新编译应用程序代码。
 
 ## Layout XML files
+布局XML文件定义了要创建的基于窗口的对象的层次结构，其中包含每个窗口的属性和事件绑定信息。
