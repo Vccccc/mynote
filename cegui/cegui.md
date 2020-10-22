@@ -24,6 +24,11 @@ Falagard 扩展不仅限于 ‘looknfeel’ XML 文件。且包含核心库中�
 - Conclusion
 
 #### The Unified Co-ordinate System
+作为 Falagard 系统的一部分，CEGUI 有效地用新的“Unified”坐标系统代替了相对或绝对坐标的旧的“或”方法。 使用此新系统，每个坐标可以指定相对父元素和绝对像素分量。 由于大多数人对此概念不屑一顾，因此我将使用示例来介绍这些概念。
+
+
+
+
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
