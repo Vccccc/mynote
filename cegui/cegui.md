@@ -373,8 +373,10 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 	- \<LayoutImport> 元素用于引用（导入）另一个布局文件。导入布局的根窗口将附加到发生导入的窗口。
 - Attributes：
 	- filename：指定要导入的 xml 布局文件的路径。 必填属性。
-	- resourceGroup：指定在加载“filename”属性中给定的文件时传递给ResourceProvider的资源组标识符。 可选属性，默认为 WindowManager 默认组。
+	- resourceGroup：指定在加载“filename”属性中给定的文件时传递给 ResourceProvider 的资源组标识符。 可选属性，默认为 WindowManager 默认组。
 - Usage：
+	- \<LayoutImport> 元素可以作为 \<Window> 和 \<AutoWindow> 元素的子元素
+	- 
 
 #### \<AutoWindow> Element
 - Purpose：
