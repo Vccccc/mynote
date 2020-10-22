@@ -476,7 +476,7 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 		- XMLSchema
 	- group：指定资源组标识符，用作指定资源类型的默认组。 必填属性。
 - Usage：
-	- 
+	- \<DefaultResourceGroup> 元素只能显示为<CEGUIConfig>元素的子元素。
 
 #### \<>
 - Purpose：
