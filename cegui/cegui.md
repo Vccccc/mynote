@@ -399,4 +399,19 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 ## Configuration XML files
 config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信息。
 ### Config Element List
+- \<AutoLoad>
+- \<CEGUIConfig>
+- \<DefaultFont>
+- \<DefaultGUISheet>
+- \<DefaultImageCodec>
+- \<DefaultMouseCursor>
+- \<DefaultResourceGroup>
+- \<DefaultXMLParser>
+- \<Logging>
+- \<ResourceDirectory>
+- \<Scripting>
+- \<DefaultTooltip>
+
+#### \<CEGUIConfig>
+- Purpose：
 - 
