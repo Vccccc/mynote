@@ -463,10 +463,9 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 	- \<AutoLoad> 元素可能不包含任何子元素
 
 #### \<ResourceDirectory>
-- Purpose：
-	- 
+- Purpose：设置指定资源类型的默认资源组
 - Attributes：
-	- 
+	- type：指定要为其设置默认资源组的资源的类型。 可选属性，默认为“默认”（全局默认组）。 如果指定，则必须是以下之一：
 - Usage：
 	- 
 
