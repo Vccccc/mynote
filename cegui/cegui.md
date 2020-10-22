@@ -361,7 +361,7 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 - Purpose：
 	- Event 元素用于在 GUI 元素和脚本函数之间创建绑定。
 - Attributes：
-	- name：指定将由 Function 属性指定的处理程序订阅的事件的名称。 必填属性。
+	- name：指定将订阅的由 Function 属性指定的处理程序事件的名称。 必填属性。
 	- function：指定要订阅由 Name 属性指定的事件的脚本函数的名称。 必填属性。
 - Usage：
 
