@@ -340,6 +340,7 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 		- \<AutoWindow> 元素
 	- \<Window> 元素可能包含以下子元素：
 		- 
+		- 
 
 
 
