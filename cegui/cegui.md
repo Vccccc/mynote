@@ -500,11 +500,11 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 	- \<DefaultXMLParser> 元素可能不包含任何子元素
 
 
-#### \<>
+#### \<DefaultImageCodec>
 - Purpose：
-	-
+	- 指定用于加载图像文件的默认 ImageCodec 的名称。 如果此元素出现多次，则仅使用最后一次出现
 - Attributes：
-	-
+	- name：指定要使用的 ImageCodec 模块的名称。 必填属性。
 - Usage：
 	- 	
 
@@ -523,6 +523,18 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 	-
 - Usage：
 	- 
-
-
+#### \<>
+- Purpose：
+	-
+- Attributes：
+	-
+- Usage：
+	- 
+#### \<>
+- Purpose：
+	-
+- Attributes：
+	-
+- Usage：
+	- 
 
