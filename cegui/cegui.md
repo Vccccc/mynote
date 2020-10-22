@@ -434,7 +434,7 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 
 #### \<Logging>
 - Purpose：
-	- 
+	- 指定要使用的日志文件名和日志记录级别。 如果此元素出现多次，则最后一次出现是最终使用的设置。
 - Attributes：
 - Usage：
 
