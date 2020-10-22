@@ -506,14 +506,15 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 - Attributes：
 	- name：指定要使用的 ImageCodec 模块的名称。 必填属性。
 - Usage：
-	- 	
+	- \<DefaultImageCodec> 元素只能作为 \<CEGUIConfig>元素的子元素。
+	- \<DefaultImageCodec> 元素可能不包含任何子元素
 
 
-#### \<>
+#### \<DefaultFont>
 - Purpose：
-	-
+	- 设置系统默认字体的名称。 如果此元素出现多次，则仅使用最后一次出现。
 - Attributes：
-	-
+	- name：指定用作默认字体的字体名称。 必填属性
 - Usage：
 
 #### \<>
