@@ -384,5 +384,6 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 - Attributes：
 	- namePath：指定目标自动窗口的名称路径。 必填属性。
 - Usage：
-
+	- \<AutoWindow> 可能作为以下内容的子元素
+		- 
 
