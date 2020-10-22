@@ -380,8 +380,9 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 
 #### \<AutoWindow> Element
 - Purpose：
-	- \<AutoWindow>元素用于将属性设置，事件和其他内容定位到当前窗口（或AutoWindow）的自动创建的子窗口上。
+	- \<AutoWindow>元素用于将属性设置，事件和其他内容定位到当前窗口（或 AutoWindow）的自动创建的子窗口上。
 - Attributes：
+	- namePath：指定目标自动窗口的名称路径。 必填属性。
 - Usage：
 
 
