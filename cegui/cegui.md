@@ -339,8 +339,10 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 		- \<Window> 元素
 		- \<AutoWindow> 元素
 	- \<Window> 元素可能包含以下子元素：
-		- 
-		- 
+		- 任意数量的 <LayoutImport> 元素。Followed by,
+		- 任意数量的 <Property> 元素。Followed by,
+		- 任意数量的 <Event> 元素。Followed by,
+		- 任意数量的 <Window> 元素
 
 
 
