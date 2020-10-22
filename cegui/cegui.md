@@ -429,10 +429,12 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 		- \<DefaultMouseCursor> elements.
 		- \<DefaultTooltip> elements.
 		- \<DefaultGUISheet> elements.
-	- 
+	- \<CEGUIConfig> 不能作为任意元素的子元素
 
-#### \<>
+
+#### \<Logging>
 - Purpose：
+	- 
 - Attributes：
 - Usage：
 
