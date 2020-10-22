@@ -459,6 +459,8 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 	- group：指定加载文件时传递给 ResourceProvider 的资源组标识符。 可选属性，默认为正在加载的资源类型的默认组。
 	- pattern：指定将与资源组位置中的文件匹配的文件名模式。 可选属性，默认为“*”（所有文件）。
 - Usage：
+	- \<AutoLoad> 元素只能作为 \<CEGUIConfig> 元素的子元素。
+	- \<AutoLoad> 元素可能不包含任何
 
 #### \<>
 - Purpose：
