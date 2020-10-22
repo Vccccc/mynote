@@ -539,9 +539,9 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 	- \<DefaultTooltip> 元素可能不包含任何子元素
 #### \<DefaultGUISheet>
 - Purpose：
-	- 将初始 gui 表设置为命名窗口（该窗口必须存在，因此应通过<AutoLoad>元素加载）。 如果此元素出现多次，则仅使用最后一次出现
+	- Sets the initial gui sheet to the named window (the window must exist, so should be loaded via the \<AutoLoad> element)。 如果此元素出现多次，则仅使用最后一次出现
 - Attributes：
-	-
+	- name：Specifies the name of the window to be set as the initial gui sheet. Required attribute.
 - Usage：
 	- 
 
