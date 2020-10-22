@@ -516,6 +516,8 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 - Attributes：
 	- name：指定用作默认字体的字体名称。 必填属性
 - Usage：
+	- \<DefaultFont> 元素只能作为 \<CEGUIConfig>元素的子元素。
+	- \<DefaultFont> 元素可能不包含任何子元素
 
 #### \<>
 - Purpose：
