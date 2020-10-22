@@ -456,7 +456,7 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 		- Scheme
 		- LookNFeel
 		- Layout
-	- 
+	- group：指定加载文件时传递给ResourceProvider的资源组标识符。 可选属性，默认为正在加载的资源类型的默认组。
 
 - Usage：
 
