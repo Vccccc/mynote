@@ -329,9 +329,9 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 
 #### \<Window> Element
 - Purpose：
-	- \<Window> 元素用于指定要创建的窗口对象被创建
+	- \<Window> 元素用于指定要创建的新窗口对象
 - Attributes：
-	- version：应该在所有源文件指定版本，当前版本为：4
+	- type：指定要创建的窗口的类型。这可能是指具体的窗口类型，别名或 falagard 映射类型。必填属性。
 - Usage：
 	- \<GUILayout> 元素是 XML 布局文件中的根元素
 	- \<GUILayout> 元素必须至少包含一个 /<Window> 元素
