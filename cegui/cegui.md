@@ -14,6 +14,16 @@ Falagard 扩展不仅限于 ‘looknfeel’ XML 文件。且包含核心库中�
 
 一旦在方案中定义了新类型并加载了新类型，就可以在通过 WindowManager单例创建窗口或窗口小部件时指定该新类型名称的名称，就像对其他任何窗口小部件类型一样。与使用旧的“programmed”窗口小部件类型相比，使用“skinned”窗口小部件无需考虑其他问题。
 
+### Section Contents
+- The Unified Co-ordinate System
+- The UDim type
+- The UVector2 type
+- The URect type
+- Window Alignments
+- Falagard in Schemes
+- Conclusion
+
+#### The Unified Co-ordinate System
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
