@@ -355,7 +355,7 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 - Usage：
 	- \<Property> 元素可以作为 \<Window> 和 \<AutoWindow> 元素的子元素
 	- \<Property> 元素不包含任何子元素
-	- 
+	- \<Property>元素可能包含要用作值的文本内容。
 
 
 
