@@ -443,7 +443,8 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 		- Informative
 		- Insane
 - Usage：
-	- 
+	- \<Logging> 元素只能作为 \<CEGUIConfig> 元素的子元素出现
+	- \<Logging> 元素可能不包含
 
 #### \<>
 - Purpose：
