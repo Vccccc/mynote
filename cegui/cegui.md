@@ -346,7 +346,7 @@ System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
 		- 任意数量的 <AutoWindow> 元素
 		- 最后，任意数量的 <Property> 元素（again）
 
-
+#### \<Property> Element
 
 
 
