@@ -533,12 +533,13 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 - Purpose：
 	- 设置用于系统默认工具提示的窗口类型名称。 如果此元素出现多次，则仅使用最后一次出现。
 - Attributes：
-	- name
+	- name：指定要用作系统默认工具提示的基于工具提示的窗口类型的类型名称。 必填属性
 - Usage：
-	- 
-#### \<>
+	- \<DefaultTooltip> 元素只能作为 \<CEGUIConfig>元素的子元素。
+	- \<DefaultTooltip> 元素可能不包含任何子元素
+#### \<DefaultGUISheet>
 - Purpose：
-	-
+	- 将初始 gui 表设置为命名窗口（该窗口必须存在，因此应通过<AutoLoad>元素加载）。 如果此元素出现多次，则仅使用最后一次出现
 - Attributes：
 	-
 - Usage：
