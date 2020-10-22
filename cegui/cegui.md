@@ -474,7 +474,7 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 		- Layout
 		- Script
 		- XMLSchema
-	- group：
+	- group：指定资源组标识符，用作指定资源类型的默认组。 必填属性。
 - Usage：
 	- 
 
