@@ -526,12 +526,14 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 	- imageset：指定包含要用作默认鼠标光标的图像的 Imageset 的名称。 必填属性
 	- image：在 imageset 属性中指定的 imagset 中指定图像的名称，以用作默认鼠标光标图像。 必填属性。
 - Usage：
-	- 
-#### \<>
+	- \<DefaultMouseCursor> 元素只能作为 \<CEGUIConfig>元素的子元素。
+	- \<DefaultMouseCursor> 元素可能不包含任何子元素
+
+#### \<DefaultTooltip>
 - Purpose：
-	-
+	- 设置用于系统默认工具提示的窗口类型名称。 如果此元素出现多次，则仅使用最后一次出现。
 - Attributes：
-	-
+	- name
 - Usage：
 	- 
 #### \<>
