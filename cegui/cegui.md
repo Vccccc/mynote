@@ -43,7 +43,10 @@ The CEGUI scheme system is the means by which you to specify how the system is t
 Falagard 系统的主要部分之一是称为 CEGUICoreWindowRendererSet 的窗口渲染器模块（在 linux 系统上将命名为libCEGUICoreWindowRendererSet.so，在 Win32 系统上将命名为CEGUICoreWindowRendererSet.dll）。该模块包含一组预定义的窗口渲染器类，这些类将采取措施将从皮肤定义 XML 文件加载的皮肤数据转换为将小部件视觉表现输出到显示器所需的渲染操作和布局调整。
 
 必须先将其加载到系统中，然后才能使用 CEGUICoreWindowRendererSet
- 模块。 为此，通常将在一个 scheme  XML 文件中指定它，以便系统可以使用它。 可以使用方案文件中的一行XML来完成，例如：
+ 模块。 为此，通常将在一个 scheme XML 文件中指定它，以便系统可以使用它。 可以使用 scheme 文件中的一行 XML 来完成，例如：
+```c
+<WindowRendererSet Filename="CEGUICoreWindowRendererSet" />
+```
 
 
 ## 1 - 初始化 CEGUI
