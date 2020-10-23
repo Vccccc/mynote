@@ -121,7 +121,7 @@ Before we can start adding widget skins, or WidgetLooks as they are known in the
   </StateImagery>
 </WidgetLook>
 ```
-为了指定用于小部件的渲染，我们使用 ImagerySection 元素。 每个图像部分都有一个名称； 稍后使用此名称将“图像”部分“包括”在为每个状态图像定义定义的图层中。
+为了指定用于小部件的渲染，我们使用 ImagerySection 元素。 每个图像部分都有一个名称；此名称后面用于“include”图像部分
 
 对于我们的按钮，我们将为每个按钮状态提供一个图像部分。 我们可以将这些轮廓添加到我们现有的，正在进行的，小部件外观中
 
