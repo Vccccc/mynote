@@ -62,7 +62,7 @@ scheme 的\<LookNFeel> XML 元素是通常使 CEGUI 加载包含小部件外观�
 可以根据需要指定任意数量的 LookNFeel 元素。 这允许您以最适合您的应用程序的方式配置 XML 文件。 这可能意味着所有窗口小部件元素的所有外观定义都将放入一个文件中，也可能意味着您有多个文件，每个文件中都具有一个窗口小部件外观定义，或者它可以位于两个极端之间的任何位置-取决于您。
 
 ### FalagardMapping Elements
-CEGUI 方案系统支持 \<FalagardMapping> 元素，该元素在系统内创建新的具体窗口或窗口小部件类型。 这是通过创建将基本窗口小部件类型，窗口渲染器类型和命名窗口小部件“LookNFeel”联系在一起的命名别名来实现的。 在这里，“LookNFeel”是指单个窗口小部件外观，而不是整个“ looknfeel” XML 文件。 基本的窗口小部件类型通常是 CEGUI 库提供的核心系统窗口小部件之一，尽管任何在系统中注册了具体 WindowFactory 的窗口类型都是候选的，这允许使用自定义窗口小部件扩展系统。 窗口渲染器类型通常是加载 CEGUICoreWindowRendererSet 模块时注册的窗口渲染器之一的名称，这也不是必需的-使用的窗口渲染器可以为您自己编写的窗口渲染器。 您在 XML looknfeel 文件中指定的名称为“ LookNFeel”（通过 WidgetLook 元素）
+CEGUI 方案系统支持 \<FalagardMapping> 元素，该元素在系统内创建新的具体窗口或窗口小部件类型。 这是通过创建将基本窗口小部件类型，窗口渲染器类型和命名窗口小部件“LookNFeel”联系在一起的命名别名来实现的。 在这里，“LookNFeel”是指单个窗口小部件外观，而不是整个“ looknfeel” XML 文件。 基本的窗口小部件类型通常是 CEGUI 库提供的核心系统窗口小部件之一，尽管任何在系统中注册了具体 WindowFactory 的窗口类型都是候选的，这允许使用自定义窗口小部件扩展系统。 窗口渲染器类型通常是加载 CEGUICoreWindowRendererSet 模块时注册的窗口渲染器之一的名称，这也不是必需的-使用的窗口渲染器可以为您自己编写的窗口渲染器。 “LookNFeel” 为您在 XML looknfeel 文件中指定的（通过 WidgetLook 元素）
 
 映射示例：
 ```c
