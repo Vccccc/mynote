@@ -207,6 +207,32 @@ TaharezLook 的图像为每个按钮状态提供了三个部分（“禁用”�
 
 在这里，我们使用1.0的比例值来表示我们希望小部件的完整高度。
 
+现在，我们已经为第一张图像完成了区域定义，如下所示：
+```c
+<ImageryComponent>
+  <Area>
+    <Dim type="LeftEdge">
+      <AbsoluteDim value="0" />
+    </Dim>
+    <Dim type="TopEdge">
+      <AbsoluteDim value="0" />
+    </Dim>
+    <Dim type="Width">
+      <ImageDim
+        imageset="TaharezLook"
+        image="ButtonLeftNormal"
+        dimension="Width"
+      />
+    </Dim>
+    <Dim type="Height">
+      <UnifiedDim scale="1.0" type="Height" />
+    </Dim>
+  </Area>
+</ImageryComponent>
+```
+
+我们在这里要做的下一件事是告诉系统应该绘制哪个图像，这是通过使用Image元素完成的，并且应该将其放置在区域定义之后：
+
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
 - 创建基于 CEGUI::Renderer 对象实例
