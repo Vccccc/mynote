@@ -84,7 +84,7 @@ Window* wnd = wMgr.createWindow("FunkyLook/Button", "myFunkyButton");
 
 ### Introduction to Falagard 'looknfeel' XML
 #### Before we begin: An empty skin
-在开始向系统XML文件中添加窗口小部件外观或WidgetLooks（在系统中众所周知）之前，我们需要初始化基本文件大纲。 这是非常琐碎的，看起来像这样：
+Before we can start adding widget skins, or WidgetLooks as they are known in the system, to our XML file, we need the basic file outline initialised. This is extremely trivial, and looks like this:
 ```c
 <?xml version="1.0" ?>
 <Falagard version="7">
@@ -92,6 +92,8 @@ Window* wnd = wMgr.createWindow("FunkyLook/Button", "myFunkyButton");
 ```
 我们将在 \<Falagard> \</Falagard> 对之间放置 WidgetLook 定义。 可以在这些标记中指定所需数量的子元素，因此我们所有的定义都可以放入一个文件中（在大多数情况下，这最终会变成一个非常大的文件！）
 
+#### Starting Simple: A Button
+毫无疑问，不起眼的按钮是我们有可能看到的最常见的小部件。 没有这个主力军，任何UI几乎都是无用的。 因此，这是我们将开始的地方。
 
 
 ## 1 - 初始化 CEGUI
