@@ -421,7 +421,7 @@ RightEdge= widgetWidth-rightEndWidth
 
 Hover 状态和 Pushed 状态的定义方式相似。 只需将名称“ normal_imagery” 替换为该状态相应的图像部分的名称即可。
 
-
+但是，Disabled状态有所不同。我们没有针对该状态的任何特定图像，因此我们将重新使用normal_imagery，但是将指定一些颜色以使按钮显得更暗。 这是通过将Colors元素嵌入Section元素中来完成的，如此处所示：
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
