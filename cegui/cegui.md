@@ -288,6 +288,16 @@ TaharezLook 的图像为每个按钮状态提供了三个部分（“禁用”�
 <Image imageset="TaharezLook" image="ButtonRightNormal" />
 ```
 
+然后是垂直格式选项：
+```c
+<VertFormat type="Stretched" />
+```
+
+最后，我们添加了水平格式化选项，该选项告诉系统将该图像在定义区域的右边缘对齐：
+```c
+<HorzFormat type="RightAligned" />
+```
+
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
 - 创建基于 CEGUI::Renderer 对象实例
