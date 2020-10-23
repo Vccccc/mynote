@@ -82,6 +82,9 @@ Window* wnd = wMgr.createWindow("FunkyLook/Button", "myFunkyButton");
 ```
 在这里，我们创建新窗口小部件的实例，并将其命名为“ myFunkyButton”。 现在，该小部件可以附加到其他窗口，并且通常与任何“普通”小部件一样使用。
 
+### Introduction to Falagard 'looknfeel' XML
+
+
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
 - 创建基于 CEGUI::Renderer 对象实例
