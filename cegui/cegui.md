@@ -51,7 +51,7 @@ Falagard 系统的主要部分之一是称为 CEGUICoreWindowRendererSet 的窗�
 CEGUICoreWindowRendererSet 模块的关键在于，对于每种小部件基本类型，它都定义了各种必需的元素和状态。 这些必需的项需要在您的looknfeel XML 文件的小部件外观定义中定义。 它们使系统能够以逻辑方式使用您的皮肤图像和相关数据。
 
 ### LookNFeel Elements
-
+scheme 的\<LookNFeel> XML 元素是通常使 CEGUI 加载包含小部件外观定义的 XML“looknfeel” 文件的方法。 可以通过代码手动加载这些文件，但是预计大多数用户将使用该方案系统。 LookNFeel元素应出现在任何Font或Imageset元素之后，但应出现在所有WindowSet元素之前。
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
