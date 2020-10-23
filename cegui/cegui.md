@@ -2,7 +2,7 @@
 CE GUI 笔记
 
 ## Falagard skinning system for CEGUI
-
+## Introduction and overview
 ### What is the Falagard Skinning System?
 CEGUI 的 Falagard 外观系统一部分由对 CEGUI 基础库的一组增强组成，一部分由称为 “CEGUICoreWindowRendererSet” 的窗口渲染器模块组成。 这些元素组合在一起，旨在使创建 CEGUI 窗口和窗口小部件元素的自定义皮肤或“外观”更加容易。
 
