@@ -340,7 +340,15 @@ middleWidth = widgetWidth-(leftEndWidth+rightEndWidth)
 
 但是，由于该区域可以接受宽度或右边缘坐标，因此我们可以通过指定右边缘坐标而不是宽度来稍微简化一下。 此中间图像的右边缘位置将等于小部件的宽度，减去右端图像的宽度。 因此，我们需要做的最终计算是：
 ```c
-RightEdge= widgetWidth-(leftEndWidth+rightEndWidth)
+RightEdge= widgetWidth-rightEndWidth
+```
+
+两种计算的结果是相同的，因此我们将尽可能使用更简单的选项。 由于我们需要执行一些计算，因此要以 XML 进行指定，我们首先从 OperatorDim 元素开始，该元素指定我们需要执行的数学运算：
+```c
+<Dim type="RightEdge">
+  <OperatorDim op="Subtract">
+  </OperatorDim>
+</Dim>
 ```
 
 ## 1 - 初始化 CEGUI
