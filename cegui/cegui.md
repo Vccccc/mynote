@@ -48,6 +48,7 @@ Falagard 系统的主要部分之一是称为 CEGUICoreWindowRendererSet 的窗�
 <WindowRendererSet Filename="CEGUICoreWindowRendererSet" />
 ```
 
+CEGUICoreWindowRendererSet 模块的关键在于，对于每种小部件基本类型，它都定义了各种必需的元素和状态。 这些必需的项需要在您的looknfeel XML文件的小部件外观定义中定义。 它们使系统能够以逻辑方式使用您的皮肤图像和相关数据。
 
 
 
