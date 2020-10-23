@@ -452,7 +452,7 @@ Hover 状态和 Pushed 状态的定义方式相似。 只需将名称“ normal_
 ...
 ```
 
-TextComponent的定义与ImageryComponent的定义极为相似。 我们为文本和所需的格式指定一个区域。 我们还可以选择指定Text元素，该元素用于显式设置要绘制的字体和/或文本字符串。 没有这些显式设置，这些项目将从基本窗口小部件本身获取。
+TextComponent 的定义与 ImageryComponent 的定义极为相似。 我们为文本和所需的格式指定一个区域。我们还可以选择指定 Text 元素，该元素用于显式设置要绘制的字体和(或)文本字符串。 没有这些显式设置，这些项目将从基本窗口小部件本身获取。
 
 我们希望标签在小部件的整个区域内居中，因此我们需要使用定义整个小部件的区域（如上所示，因此此处不再赘述。）
 
@@ -466,7 +466,21 @@ TextComponent的定义与ImageryComponent的定义极为相似。 我们为文�
 <HorzFormat type="WordWrapCentreAligned" />
 ```
 
-
+标签图像部分的最终定义如下所示：
+```c
+<ImagerySection name="label">
+  <TextComponent>
+    <Area>
+      <Dim type="LeftEdge"><AbsoluteDim value="0" /></Dim>
+      <Dim type="TopEdge"><AbsoluteDim value="0" /></Dim>
+      <Dim type="Width"><UnifiedDim scale="1" type="Width" /></Dim>
+      <Dim type="Height"><UnifiedDim scale="1" type="Height" /></Dim>
+    </Area>
+    <VertFormat type="CentreAligned" />
+    <HorzFormat type="WordWrapCentreAligned" />
+  </TextComponent>
+</ImagerySection>
+```
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
