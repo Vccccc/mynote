@@ -170,7 +170,7 @@ TaharezLook 的图像为每个按钮状态提供了三个部分（“禁用”�
 我们将从将图像放置在按钮的左端开始。 这是放置最简单的组件，因为其位置被称为（0，0）。 为了指定这些绝对值，我们使用AbsoluteDim元素。
 
 我们开始使用 Dim 元素并使用 AbsoluteDim 子元素来定义要使用的值来定义图像区域所需的尺寸：
-```
+```c
 <ImageryComponent>
   <Area>
     <Dim type="LeftEdge">
@@ -183,6 +183,18 @@ TaharezLook 的图像为每个按钮状态提供了三个部分（“禁用”�
 </ImageryComponent>
 ```
 
+我们定义了左边缘和上边缘，以使图像具有位置。 接下来，我们将指定尺寸以建立区域大小。
+
+我们希望区域的宽度来自源图像本身，为此，我们使用ImageDim元素，并告诉它访问将用于此组件的图像：
+```c
+<Dim type="Width">
+  <ImageDim
+    imageset="TaharezLook"
+    image="ButtonLeftNormal"
+    dimension="Width"
+  />
+</Dim>
+```
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
