@@ -374,9 +374,37 @@ RightEdge= widgetWidth-rightEndWidth
 </Dim>
 ```
 
-可以在尺寸规格内链接其他数学运算。 使用链接在一起形成一个表达式树的两个OperatorDim元素，可以进行原始宽度计算。 该系统足够灵活，以这种方式可以表达使用支持的运算符的任何表达式。
+可以在尺寸规格内链接其他数学运算。 使用链接在一起形成一个表达式树的两个 OperatorDim 元素，可以进行原始宽度计算。 该系统足够灵活，以这种方式可以表达使用支持的运算符的任何表达式。
 
-
+无论如何，我稍微离题了。 让我们回到我们的按钮图像。 现在，我们有足够的信息来定义按钮的中间部分，如下所示：
+```c
+<ImageryComponent>
+  <Area>
+    <Dim type="LeftEdge">
+      <ImageDim
+        imageset="TaharezLook"
+        image="ButtonLeftNormal"
+        dimension="Width"
+      />
+    </Dim>
+    <Dim type="TopEdge"><AbsoluteDim value="0" /></Dim>
+    <Dim type="RightEdge">
+      <OperatorDim op="Subtract">
+        <UnifiedDim scale="1" type="Width" />
+        <ImageDim
+          imageset="TaharezLook"
+          image="ButtonRightNormal"
+          dimension="Width"
+        />
+      </OperatorDim>
+    </Dim>
+    <Dim type="Height"><UnifiedDim scale="1" type="Height" /></Dim>
+  </Area>
+  <Image imageset="TaharezLook" image="ButtonMiddleNormal" />
+  <VertFormat type="Stretched" />
+  <HorzFormat type="Stretched" />
+</ImageryComponent>
+```
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
