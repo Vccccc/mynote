@@ -274,7 +274,19 @@ TaharezLook 的图像为每个按钮状态提供了三个部分（“禁用”�
 我们将设置的下一个图像是右端。 为了展示另一种图像放置方法，而不是精确定义图像将出现的区域，这里我们将目标区域定义为覆盖整个窗口小部件，并使用图像对齐格式在窗口小部件的右侧绘制图像。
 
 指定整个窗口小部件的区域定义可能会用很多，看起来像这样：
-`
+```c
+<Area>
+  <Dim type="LeftEdge"><AbsoluteDim value="0" /></Dim>
+  <Dim type="TopEdge"><AbsoluteDim value="0" /></Dim>
+  <Dim type="Width"><UnifiedDim scale="1" type="Width" /></Dim>
+  <Dim type="Height"><UnifiedDim scale="1" type="Height" /></Dim>
+</Area>
+```
+
+接下来是图像规范：
+```c
+<Image imageset="TaharezLook" image="ButtonRightNormal" />
+```
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
