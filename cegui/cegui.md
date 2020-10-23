@@ -298,6 +298,20 @@ TaharezLook 的图像为每个按钮状态提供了三个部分（“禁用”�
 <HorzFormat type="RightAligned" />
 ```
 
+现在，右端图像的完整定义如下所示：
+```c
+<ImageryComponent>
+  <Area>
+    <Dim type="LeftEdge"><AbsoluteDim value="0" /></Dim>
+    <Dim type="TopEdge"><AbsoluteDim value="0" /></Dim>
+    <Dim type="Width"><UnifiedDim scale="1" type="Width" /></Dim>
+    <Dim type="Height"><UnifiedDim scale="1" type="Height" /></Dim>
+  </Area>
+  <Image imageset="TaharezLook" image="ButtonRightNormal" />
+  <VertFormat type="Stretched" />
+  <HorzFormat type="RightAligned" />
+</ImageryComponent>
+```
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
 - 创建基于 CEGUI::Renderer 对象实例
