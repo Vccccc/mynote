@@ -36,7 +36,10 @@ UDim(scale, offset)
 - 'scale' 表示父元素的某个比例，其中父元素是其他 Window 或可获取的总显示量，通常为0到1.0之间的值。 比例值对应于 pre-unified 系统下的相对坐标
 - 'offset' 代表任意数量的像素。对于位置值，offset 表示像素偏移，对于大小值，offset 表示多个额外像素（基本上像填充值）。偏移值对应于 pre-unified 系统下的绝对坐标。
 
-##
+### Falagard in Schemes
+The CEGUI scheme system is the means by which you to specify how the system is to load your XML skin definition files, known as 'looknfeel' files, and how these skins are to be mapped to window renderers and widget base classes to create new concrete widget types.
+
+
 
 
 
