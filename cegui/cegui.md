@@ -238,7 +238,7 @@ TaharezLook 的图像为每个按钮状态提供了三个部分（“禁用”�
 ...
 ```
 
-我们需要添加到此 ImageryComponent 定义的最后一个元素是VertFormat元素。 使用此方法，我们将告诉系统垂直拉伸图像，以使其覆盖我们定义区域的整个高度：
+我们需要添加到此 ImageryComponent 定义的最后一个元素是 VertFormat 元素。 使用此方法，我们将告诉系统垂直拉伸图像，以使其覆盖我们定义区域的整个高度：
 ```c
 ...
 <VertFormat type="Stretched" />
@@ -270,6 +270,9 @@ TaharezLook 的图像为每个按钮状态提供了三个部分（“禁用”�
   <VertFormat type="Stretched" />
 </ImageryComponent>
 ```
+
+
+
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
