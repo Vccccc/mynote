@@ -406,7 +406,7 @@ RightEdge= widgetWidth-rightEndWidth
 </ImageryComponent>
 ```
 
-这样就完成了 normal_imagery 部分中的图像。 现在，您可以以相同的方式添加其他两个部分，只需适当地替换用于悬停和推送图像的图像名称-其他所有操作将与您对普通图像所做的完全相同。
+这样就完成了 normal_imagery 部分中的图像。 现在，您可以以相同的方式添加其他两个部分，只需适当地替换用于 hover 和 pushed 图像的图像名称-其他所有操作将与您对普通图像所做的完全相同。
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
