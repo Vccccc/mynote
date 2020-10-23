@@ -169,7 +169,19 @@ TaharezLook 的图像为每个按钮状态提供了三个部分（“禁用”�
 ```
 我们将从将图像放置在按钮的左端开始。 这是放置最简单的组件，因为其位置被称为（0，0）。 为了指定这些绝对值，我们使用AbsoluteDim元素。
 
-
+我们开始使用 Dim 元素并使用 AbsoluteDim 子元素来定义要使用的值来定义图像区域所需的尺寸：
+```
+<ImageryComponent>
+  <Area>
+    <Dim type="LeftEdge">
+      <AbsoluteDim value="0" />
+    </Dim>
+    <Dim type="TopEdge">
+      <AbsoluteDim value="0" />
+    </Dim>
+  </Area>
+</ImageryComponent>
+```
 
 
 ## 1 - 初始化 CEGUI
