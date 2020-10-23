@@ -419,6 +419,9 @@ RightEdge= widgetWidth-rightEndWidth
 </StateImagery>
 ```
 
+Hover 状态和 Pushed 状态的定义方式相似。 只需将名称“ normal_imagery” 替换为该状态相应的图像部分的名称即可。
+
+
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
