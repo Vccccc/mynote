@@ -83,6 +83,11 @@ Window* wnd = wMgr.createWindow("FunkyLook/Button", "myFunkyButton");
 在这里，我们创建新窗口小部件的实例，并将其命名为“ myFunkyButton”。 现在，该小部件可以附加到其他窗口，并且通常与任何“普通”小部件一样使用。
 
 ### Introduction to Falagard 'looknfeel' XML
+#### Before we begin: An empty skin
+在开始向系统XML文件中添加窗口小部件外观或WidgetLooks（在系统中众所周知）之前，我们需要初始化基本文件大纲。 这是非常琐碎的，看起来像这样
+
+
+
 
 
 ## 1 - 初始化 CEGUI
@@ -629,4 +634,5 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 - Usage：
 	- \<DefaultGUISheet> 元素只能作为 \<CEGUIConfig>元素的子元素。
 	- \<DefaultGUISheet> 元素可能不包含任何子元素
+
 
