@@ -121,9 +121,29 @@ Before we can start adding widget skins, or WidgetLooks as they are known in the
   </StateImagery>
 </WidgetLook>
 ```
-为了指定用于小部件的渲染，我们使用 ImagerySection 元素。 每个图像部分都有一个名称；此名称后面用于“include”图层的图像部分为每个状态的图像定义定义的
+为了指定用于小部件的渲染，我们使用 ImagerySection 元素。 每个图像部分都有一个名称；此名称后面用于“include”图层的图像部分，图层为每个状态的图像定义定义的
 
 对于我们的按钮，我们将为每个按钮状态提供一个图像部分。 我们可以将这些轮廓添加到我们现有的，正在进行的，小部件外观中
+```c
+<WidgetLook name="TaharezLook/Button">
+  <ImagerySection name="normal_imagery">
+  </ImagerySection>
+  <ImagerySection name="hover_imagery">
+  </ImagerySection>
+  <ImagerySection name="pushed_imagery">
+  </ImagerySection>
+  <StateImagery name="Normal">
+  </StateImagery>
+  <StateImagery name="Hover">
+  </StateImagery>
+  <StateImagery name="Pushed">
+  </StateImagery>
+  <StateImagery name="PushedOff">
+  </StateImagery>
+  <StateImagery name="Disabled">
+  </StateImagery>
+</WidgetLook>
+```
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
