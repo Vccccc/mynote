@@ -351,6 +351,16 @@ RightEdge= widgetWidth-rightEndWidth
 </Dim>
 ```
 
+接下来，我们将指定第一个操作数，它将是要定义的操作的左侧。 在此示例中，这将是小部件的宽度：
+```c
+<Dim type="RightEdge">
+  <OperatorDim op="Subtract">
+  <UnifiedDim scale="1" type="Width" />
+  </OperatorDim>
+</Dim>
+```
+
+
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
 - 创建基于 CEGUI::Renderer 对象实例
