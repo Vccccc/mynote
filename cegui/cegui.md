@@ -360,7 +360,7 @@ RightEdge= widgetWidth-rightEndWidth
 </Dim>
 ```
 
-要完成尺寸说明，我们只需插入第二个 *Dim 元素即可告诉系统要减去的内容。 在这种情况下，它是最右端图像的宽度，因此我们将为此使用ImageDim元素。 此尺寸的最终规格如下所示：
+要完成尺寸规格，我们只需插入第二个 *Dim 元素即可告诉系统要减去的内容。 在这种情况下，它是最右端图像的宽度，因此我们将为此使用ImageDim 元素。 此尺寸的最终规格如下所示：
 ```c
 <Dim type="RightEdge">
   <OperatorDim op="Subtract">
