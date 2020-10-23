@@ -93,8 +93,13 @@ Before we can start adding widget skins, or WidgetLooks as they are known in the
 我们将在 \<Falagard> \</Falagard> 对之间放置 WidgetLook 定义。 可以在这些标记中指定所需数量的子元素，因此我们所有的定义都可以放入一个文件中（在大多数情况下，这最终会变成一个非常大的文件！）
 
 #### Starting Simple: A Button
-毫无疑问，不起眼的按钮是我们有可能看到的最常见的小部件。 没有这个主力军，任何UI几乎都是无用的。 因此，这是我们将开始的地方。
+毫无疑问，不起眼的按钮是我们有可能看到的最常见的小部件。 没有这个主力军，任何 UI 几乎都是无用的。 因此，这是我们将开始的地方。
 
+要定义任何小部件外观，请使用 WidgetLook 元素，并使用 name 属性为要定义的小部件类型指定名称。 因此，我们首先将以下空WidgetLook添加到我们的初始外观文件中：
+```c
+<WidgetLook name="TaharezLook/Button">
+</WidgetLook>
+```
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
