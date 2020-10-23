@@ -360,7 +360,7 @@ RightEdge= widgetWidth-rightEndWidth
 </Dim>
 ```
 
-要完成尺寸规格，我们只需插入第二个 *Dim 元素即可告诉系统要减去的内容。 在这种情况下，它是最右端图像的宽度，因此我们将为此使用ImageDim 元素。 此尺寸的最终规格如下所示：
+要完成尺寸规格计算，我们只需插入第二个 *Dim 元素即可告诉系统要减去的内容。在这种情况下，它是最右端图像的宽度，因此我们将为此使用 ImageDim 元素。 此尺寸的最终规格如下所示：
 ```c
 <Dim type="RightEdge">
   <OperatorDim op="Subtract">
@@ -373,6 +373,10 @@ RightEdge= widgetWidth-rightEndWidth
   </OperatorDim>
 </Dim>
 ```
+
+可以在尺寸规格内链接其他数学运算。 使用链接在一起形成一个表达式树的两个OperatorDim元素，可以进行原始宽度计算。 该系统足够灵活，以这种方式可以表达使用支持的运算符的任何表达式。
+
+
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
