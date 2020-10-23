@@ -100,12 +100,13 @@ Before we can start adding widget skins, or WidgetLooks as they are known in the
 <WidgetLook name="TaharezLook/Button">
 </WidgetLook>
 ```
-从Falagard / Button窗口渲染器的参考中可以看到，我们需要为多种状态指定图像，即：
+从 Falagard/Button 窗口渲染器的参考中可以看到，我们需要为多种状态指定图像，即：
 - Normal
 - Hover
 - Pushed
 - Disabled
 
+由于我们现在知道了小部件需要哪些状态，因此最好为这些小部件添加框架。 这有效地使 WidgetLook 完整且可用，尽管由于我们尚未定义任何图像，因此现阶段显然不会对其进行任何绘制。 因此，我们为所需状态添加了空的StateImagery元素，最终得到了以下结果：
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
