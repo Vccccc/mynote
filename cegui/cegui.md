@@ -482,7 +482,7 @@ TextComponent 的定义与 ImageryComponent 的定义极为相似。 我们为�
 </ImagerySection>
 ```
 
-现在剩下的就是将其添加到状态图像的图层规范中。 正常状态现在看起来像这样（“Hover ”和“Pushed”非常相似）：
+现在剩下的就是将其添加到状态图像的图层规范中。 正常状态现在看起来像这样（“Hover”和“Pushed”非常相似）：
 ```c
 <StateImagery name="Normal">
   <Layer>
@@ -491,6 +491,32 @@ TextComponent 的定义与 ImageryComponent 的定义极为相似。 我们为�
   </Layer>
 </StateImagery>
 ```
+
+对于 Disabled，我们再次指定一些其他颜色：
+```c
+<StateImagery name="Disabled">
+  <Layer>
+    <Section section="normal_imagery">
+      <Colours
+        topLeft="FF7F7F7F"
+        topRight="FF7F7F7F"
+        bottomLeft="FF7F7F7F"
+        bottomRight="FF7F7F7F"
+      />
+    </Section>
+    <Section section="label">
+      <Colours
+        topLeft="FF7F7F7F"
+        topRight="FF7F7F7F"
+        bottomLeft="FF7F7F7F"
+        bottomRight="FF7F7F7F"
+      />
+    </Section>
+  </Layer>
+</StateImagery>
+```
+
+到此结束了入门教程。 有关此示例的完整示例以及所有其他WidgetLook规范，请参阅以下目录中CEGUI发行版中的示例“ looknfeel”文件：cegui/ datafiles / looknfeel /
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
 - 创建基于 CEGUI::Renderer 对象实例
