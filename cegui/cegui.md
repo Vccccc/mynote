@@ -40,7 +40,7 @@ UDim(scale, offset)
 The CEGUI scheme system is the means by which you to specify how the system is to load your XML skin definition files, known as 'looknfeel' files, and how these skins are to be mapped to window renderers and widget base classes to create new concrete widget types.
 
 #### The CEGUICoreWindowRendererSet module
-Falagard 系统的主要部分之一是称为 CEGUICoreWindowRendererSet 的窗口渲染器模块（在 linux 系统上将命名为libCEGUICoreWindowRendererSet.so，在 Win32 系统上将命名为CEGUICoreWindowRendererSet.dll）。该模块包含一组预定义的窗口渲染器类，这些类将采取措施将从皮肤定义XML文件加载的皮肤数据转换为将小部件视觉表示输出到显示器所需的渲染操作和布局调整。
+Falagard 系统的主要部分之一是称为 CEGUICoreWindowRendererSet 的窗口渲染器模块（在 linux 系统上将命名为libCEGUICoreWindowRendererSet.so，在 Win32 系统上将命名为CEGUICoreWindowRendererSet.dll）。该模块包含一组预定义的窗口渲染器类，这些类将采取措施将从皮肤定义 XML 文件加载的皮肤数据转换为将小部件视觉表示输出到显示器所需的渲染操作和布局调整。
 
 
 
