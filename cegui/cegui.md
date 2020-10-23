@@ -73,6 +73,13 @@ CEGUI 方案系统支持 \<FalagardMapping> 元素，该元素在系统内创建
     LookNFeel="MyButtonSkin"
 />
 ```
+在此示例中，将创建一个名为“FunkyLook/Button”的新窗口小部件类型。 新的小部件基于“CEGUI/PushButton”基本类型，使用名为“Falagard/ Button”的窗口渲染器，并应用由加载的名为“ MyButtonSkin”的WidgetLook定义的外观。 一旦加载了具有此映射的方案，您就可以在系统中使用新类型：
+```c
+// Get access to the main window manager
+CEGUI::WindowManager wMgr& = CEGUI::WindowManager::getSingleton();
+// Create a new widget
+Window* wnd = wMgr.createWindow("FunkyLook/Button", "myFunkyButton");
+```
 
 
 ## 1 - 初始化 CEGUI
