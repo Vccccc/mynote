@@ -106,7 +106,24 @@ Before we can start adding widget skins, or WidgetLooks as they are known in the
 - Pushed
 - Disabled
 
-由于我们现在知道了小部件需要哪些状态，因此最好为这些小部件添加框架。 这有效地使 WidgetLook 完整且可用，尽管由于我们尚未定义任何图像，因此现阶段显然不会对其进行任何绘制。 因此，我们为所需状态添加了空的StateImagery元素，最终得到了以下结果：
+由于我们现在知道了小部件需要哪些状态，因此最好为这些小部件添加框架。 这有效地使 WidgetLook 完整且可用，尽管由于我们尚未定义任何图像，因此现阶段显然不会对其进行任何绘制。 因此，我们为所需状态添加了空的 StateImagery 元素，最终得到了以下结果：
+```c
+<WidgetLook name="TaharezLook/Button">
+  <StateImagery name="Normal">
+  </StateImagery>
+  <StateImagery name="Hover">
+  </StateImagery>
+  <StateImagery name="Pushed">
+  </StateImagery>
+  <StateImagery name="PushedOff">
+  </StateImagery>
+  <StateImagery name="Disabled">
+  </StateImagery>
+</WidgetLook>
+```
+为了指定用于小部件的渲染，我们使用 ImagerySection 元素。 每个图像部分都有一个名称； 稍后使用此名称将“图像”部分“包括”在为每个状态图像定义定义的图层中。
+
+对于我们的按钮，我们将为每个按钮状态提供一个图像部分。 我们可以将这些轮廓添加到我们现有的，正在进行的，小部件外观中
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
