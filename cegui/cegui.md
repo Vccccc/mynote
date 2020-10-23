@@ -231,7 +231,19 @@ TaharezLook 的图像为每个按钮状态提供了三个部分（“禁用”�
 </ImageryComponent>
 ```
 
-我们在这里要做的下一件事是告诉系统应该绘制哪个图像，这是通过使用Image元素完成的，并且应该将其放置在区域定义之后：
+我们在这里要做的下一件事是告诉系统应该绘制哪个图像，这是通过使用Image 元素完成的，并且应该将其放置在区域定义之后：
+```c
+...
+<Image imageset="TaharezLook" image="ButtonLeftNormal" />
+...
+```
+
+我们需要添加到此ImageryComponent定义的最后一个元素是VertFormat元素。 使用此方法，我们将告诉系统垂直拉伸图像，以使其覆盖我们定义区域的整个高度：
+```c
+...
+<Image imageset="TaharezLook" image="ButtonLeftNormal" />
+...
+```
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
