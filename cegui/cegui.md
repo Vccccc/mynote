@@ -90,7 +90,7 @@ Window* wnd = wMgr.createWindow("FunkyLook/Button", "myFunkyButton");
 <Falagard version="7">
 </Falagard>
 ```
-我们将在、\<Falagard> </ Falagard>对之间放置WidgetLook定义。 可以在这些标记中指定所需数量的子元素，因此我们所有的定义都可以放入一个文件中（在大多数情况下，这最终会变成一个非常大的文件！）
+我们将在 \<Falagard> \</Falagard> 对之间放置 WidgetLook 定义。 可以在这些标记中指定所需数量的子元素，因此我们所有的定义都可以放入一个文件中（在大多数情况下，这最终会变成一个非常大的文件！）
 
 
 
