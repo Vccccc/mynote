@@ -313,9 +313,23 @@ TaharezLook 的图像为每个按钮状态提供了三个部分（“禁用”�
 </ImageryComponent>
 ```
 
-我们需要在“normal_imagery” section 放置的最后一个图像是中间
- section。 请记住，我们希望该图像占据两个末端之间的空间。 实现此目的的主要部分是正确定义图像的目标区域。
+我们需要在“normal_imagery” 部分 放置的最后一个图像是中间部分。 请记住，我们希望该图像占据两个末端之间的空间。 实现此目的的主要部分是正确定义图像的目标区域。
 
+中间部分的图像定义的垂直方面将与两端相同，因此不再赘述。
+
+我们需要做的第一件事就是告诉系统中间部分的左边缘应该出现在哪里。 我们知道中间部分的图像的左边缘需要与左部分的图像的右边缘连接。 为此，我们可以使用ImageDim元素获取左端图像的宽度，并将其用作中间部分区域左边缘的坐标：
+```c
+<Area>
+  <Dim type="LeftEdge">
+    <ImageDim
+      imageset="TaharezLook"
+      image="ButtonLeftNormal"
+      dimension="Width"
+    />
+  </Dim>
+  ...
+</Area>
+```
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
 - 创建基于 CEGUI::Renderer 对象实例
