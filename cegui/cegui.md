@@ -49,6 +49,8 @@ Falagard 系统的主要部分之一是称为 CEGUICoreWindowRendererSet 的窗�
 ```
 
 
+
+
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
 - 创建基于 CEGUI::Renderer 对象实例
