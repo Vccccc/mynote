@@ -238,11 +238,37 @@ TaharezLook 的图像为每个按钮状态提供了三个部分（“禁用”�
 ...
 ```
 
-我们需要添加到此ImageryComponent定义的最后一个元素是VertFormat元素。 使用此方法，我们将告诉系统垂直拉伸图像，以使其覆盖我们定义区域的整个高度：
+我们需要添加到此 ImageryComponent 定义的最后一个元素是VertFormat元素。 使用此方法，我们将告诉系统垂直拉伸图像，以使其覆盖我们定义区域的整个高度：
 ```c
 ...
-<Image imageset="TaharezLook" image="ButtonLeftNormal" />
+<VertFormat type="Stretched" />
 ...
+```
+
+这样就完成了按钮左端的定义，该组件的最终 xml 如下所示：
+```c
+<ImageryComponent>
+  <Area>
+    <Dim type="LeftEdge">
+      <AbsoluteDim value="0" />
+    </Dim>
+    <Dim type="TopEdge">
+      <AbsoluteDim value="0" />
+    </Dim>
+    <Dim type="Width">
+      <ImageDim
+        imageset="TaharezLook"
+        image="ButtonLeftNormal"
+        dimension="Width"
+      />
+    </Dim>
+    <Dim type="Height">
+      <UnifiedDim scale="1.0" type="Height" />
+    </Dim>
+  </Area>
+  <Image imageset="TaharezLook" image="ButtonLeftNormal" />
+  <VertFormat type="Stretched" />
+</ImageryComponent>
 ```
 
 ## 1 - 初始化 CEGUI
