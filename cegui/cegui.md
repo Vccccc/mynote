@@ -196,6 +196,16 @@ TaharezLook 的图像为每个按钮状态提供了三个部分（“禁用”�
 </Dim>
 ```
 
+这告诉系统，对于要定义的区域的宽度，请使用TaharezLook图像集中名为ButtonLeftNormal的图像的宽度。
+
+我们区域的最后一部分是高度。 这是另一种容易指定的事情，因为我们希望高度与所定义的小部件的整个高度相同。 为此，我们可以使用UnifiedDim元素或WidgetDim元素。 我们将在此处使用UnifiedDim，因为它不需要按名称查找小部件，因此可能更经济：
+```c
+<Dim type="Height">
+  <UnifiedDim scale="1.0" type="Height" />
+</Dim>
+```
+
+
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
 - 创建基于 CEGUI::Renderer 对象实例
