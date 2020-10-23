@@ -516,7 +516,7 @@ TextComponent 的定义与 ImageryComponent 的定义极为相似。 我们为�
 </StateImagery>
 ```
 
-到此结束了入门教程。 有关此示例的完整示例以及所有其他WidgetLook规范，请参阅以下目录中CEGUI发行版中的示例“ looknfeel”文件：cegui/ datafiles / looknfeel /
+到此结束了入门教程。 有关此示例的完整示例以及所有其他 WidgetLook 规范，请参阅以下目录中 CEGUI 发行版中的示例“looknfeel”文件：cegui/datafiles/looknfeel/
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
 - 创建基于 CEGUI::Renderer 对象实例
