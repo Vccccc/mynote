@@ -482,6 +482,15 @@ TextComponent 的定义与 ImageryComponent 的定义极为相似。 我们为�
 </ImagerySection>
 ```
 
+现在剩下的就是将其添加到状态图像的图层规范中。 正常状态现在看起来像这样（“Hover ”和“Pushed”非常相似）：
+```c
+<StateImagery name="Normal">
+  <Layer>
+    <Section section="normal_imagery" />
+    <Section section="label" />
+  </Layer>
+</StateImagery>
+```
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
 - 创建基于 CEGUI::Renderer 对象实例
