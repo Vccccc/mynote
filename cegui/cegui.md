@@ -437,8 +437,13 @@ Hover 状态和 Pushed 状态的定义方式相似。 只需将名称“ normal_
 </StateImagery>
 ```
 
+现在，我们有了一个不错的按钮，其中为所有必需状态定义了图像。 缺少一件事-我们需要在按钮上放置一些标签文本。
 
+要指定文本，请使用TextComponent元素，该元素在ImagerySection中的位置与ImageryComponent元素相同。 我们可以在定义的每个图像部分中放置一个TextComponent来显示标签，但这是浪费的重复。 更好的方法是定义一个图像部分，其中仅包含标签，然后我们可以将其重新用于所有状态。
 
+因此，首先定义包含的ImagerySection：
+```c
+```
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
 - 创建基于 CEGUI::Renderer 对象实例
