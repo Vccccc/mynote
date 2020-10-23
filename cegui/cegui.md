@@ -2,8 +2,8 @@
 CE GUI 笔记
 
 ## Falagard skinning system for CEGUI
-## Introduction and overview
-### What is the Falagard Skinning System?
+### Introduction and overview
+#### What is the Falagard Skinning System?
 CEGUI 的 Falagard 外观系统一部分由对 CEGUI 基础库的一组增强组成，一部分由称为 “CEGUICoreWindowRendererSet” 的窗口渲染器模块组成。 这些元素组合在一起，旨在使创建 CEGUI 窗口和窗口小部件元素的自定义皮肤或“外观”更加容易。
 
 Falagard 系统旨在允许通过 XML 文件而不是 C++或脚本代码（以前是这样做的唯一方法）指定小部件图像规范，子小部件布局和默认属性初始化程序。
@@ -14,7 +14,7 @@ Falagard 扩展不仅限于 ‘looknfeel’ XML 文件。且包含核心库中�
 
 一旦在方案中定义了新类型并加载了新类型，就可以在通过 WindowManager单例创建窗口或窗口小部件时指定该新类型名称的名称，就像对其他任何窗口小部件类型一样。与使用旧的“programmed”窗口小部件类型相比，使用“skinned”窗口小部件无需考虑其他问题。
 
-### Section Contents
+#### Section Contents
 - The Unified Co-ordinate System
 - The UDim type
 - The UVector2 type
@@ -23,11 +23,11 @@ Falagard 扩展不仅限于 ‘looknfeel’ XML 文件。且包含核心库中�
 - Falagard in Schemes
 - Conclusion
 
-#### The Unified Co-ordinate System
+##### The Unified Co-ordinate System
 作为 Falagard 系统的一部分，CEGUI 有效地用新的“Unified”坐标系统代替了相对或绝对坐标的旧方法。 使用此新系统，每个坐标可以指定相对父元素和绝对像素分量。由于大多数人对此概念不屑一顾，因此我将使用示例来介绍这些概念。
 
-##### UDim
-###### UDim Definition
+###### UDim
+####### UDim Definition
 Unified 系统的基本构件是 UDim。 此类型表示某种单一维度，并定义为：
 ```c
 UDim(scale, offset)
@@ -36,10 +36,10 @@ UDim(scale, offset)
 - 'scale' 表示父元素的某个比例，其中父元素是其他 Window 或可获取的总显示量，通常为0到1.0之间的值。 比例值对应于 pre-unified 系统下的相对坐标
 - 'offset' 代表任意数量的像素。对于位置值，offset 表示像素偏移，对于大小值，offset 表示多个额外像素（基本上像填充值）。偏移值对应于 pre-unified 系统下的绝对坐标。
 
-### Falagard in Schemes
+#### Falagard in Schemes
 The CEGUI scheme system is the means by which you to specify how the system is to load your XML skin definition files, known as 'looknfeel' files, and how these skins are to be mapped to window renderers and widget base classes to create new concrete widget types.
 
-#### The CEGUICoreWindowRendererSet module
+##### The CEGUICoreWindowRendererSet module
 Falagard 系统的主要部分之一是称为 CEGUICoreWindowRendererSet 的窗口渲染器模块（在 linux 系统上将命名为libCEGUICoreWindowRendererSet.so，在 Win32 系统上将命名为CEGUICoreWindowRendererSet.dll）。该模块包含一组预定义的窗口渲染器类，这些类将采取措施将从皮肤定义 XML 文件加载的皮肤数据转换为将小部件视觉表现输出到显示器所需的渲染操作和布局调整。
 
 必须先将其加载到系统中，然后才能使用 CEGUICoreWindowRendererSet
@@ -50,7 +50,7 @@ Falagard 系统的主要部分之一是称为 CEGUICoreWindowRendererSet 的窗�
 
 CEGUICoreWindowRendererSet 模块的关键在于，对于每种小部件基本类型，它都定义了各种必需的元素和状态。 这些必需的项需要在您的looknfeel XML 文件的小部件外观定义中定义。 它们使系统能够以逻辑方式使用您的皮肤图像和相关数据。
 
-### LookNFeel Elements
+#### LookNFeel Elements
 scheme 的\<LookNFeel> XML 元素是通常使 CEGUI 加载包含小部件外观定义的 XML“looknfeel” 文件的方法。 可以通过代码手动加载这些文件，但是预计大多数用户将使用该 scheme 系统。 LookNFeel 元素应出现在任何 Font 或 Imageset 元素之后，但应出现在所有 WindowSet 元素之前。
 
 以下是如何使用 LookNFeel 元素的示例：
@@ -61,7 +61,7 @@ scheme 的\<LookNFeel> XML 元素是通常使 CEGUI 加载包含小部件外观�
 
 可以根据需要指定任意数量的 LookNFeel 元素。 这允许您以最适合您的应用程序的方式配置 XML 文件。 这可能意味着所有窗口小部件元素的所有外观定义都将放入一个文件中，也可能意味着您有多个文件，每个文件中都具有一个窗口小部件外观定义，或者它可以位于两个极端之间的任何位置-取决于您。
 
-### FalagardMapping Elements
+#### FalagardMapping Elements
 CEGUI 方案系统支持 \<FalagardMapping> 元素，该元素在系统内创建新的具体窗口或窗口小部件类型。 这是通过创建将基本窗口小部件类型，窗口渲染器类型和命名窗口小部件“LookNFeel”联系在一起的命名别名来实现的。 在这里，“LookNFeel”是指单个窗口小部件外观，而不是整个“ looknfeel” XML 文件。 基本的窗口小部件类型通常是 CEGUI 库提供的核心系统窗口小部件之一，尽管任何在系统中注册了具体 WindowFactory 的窗口类型都是候选的，这允许使用自定义窗口小部件扩展系统。 窗口渲染器类型通常是加载 CEGUICoreWindowRendererSet 模块时注册的窗口渲染器之一的名称，这也不是必需的-使用的窗口渲染器可以为您自己编写的窗口渲染器。 “LookNFeel” 为您在 XML looknfeel 文件中所指定（通过 WidgetLook 元素）
 
 映射示例：
