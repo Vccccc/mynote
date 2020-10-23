@@ -146,7 +146,7 @@ Before we can start adding widget skins, or WidgetLooks as they are known in the
 ```
 现在我们可以开始为每个部分定义 ImageyComponents 了。 这将告诉系统我们希望按钮如何出现在屏幕上
 
-TaharezLook 的图像为每个按钮状态提供了三个部分（“禁用”除外；为此，我们将仅重新使用“ normal_imagery”并使用一些不同的颜色！）。 可用的图像部分为我们提供了一个左端，一个右端和一个中间部分。
+TaharezLook 的图像为每个按钮状态提供了三个部分（“禁用”除外；为此，我们将仅重新使用“normal_imagery”并使用一些不同的颜色！）。 可用的图像部分为我们提供了一个左端，一个右端和一个中间部分。
 
 ## 1 - 初始化 CEGUI
 为了 CEGUI 初始化和渲染需要三个步骤：
