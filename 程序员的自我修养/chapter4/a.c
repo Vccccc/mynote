@@ -1,6 +1,5 @@
 /* a.c */
 extern int shared;
-extern int swap;
 
 int main()
 {
