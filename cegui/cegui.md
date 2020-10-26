@@ -1063,3 +1063,4 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 	- \<DefaultGUISheet> 元素可能不包含任何子元素
 
 
+## Imageset XML files
