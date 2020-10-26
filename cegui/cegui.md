@@ -1089,3 +1089,7 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 	- \<Imageset> 元素是 imageset 文件的根元素
 	- \<Imageset> 元素可以包含任意个 \<Image>
 	- \<Imageset> 元素不能作为任何元素的子元素
+
+### \<Image> Element
+- Purpose：定义图像集的单个组件图像。
+	- 
