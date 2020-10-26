@@ -1094,4 +1094,5 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 - Purpose：定义图像集的单个组件图像。
 - Attributes：
 	- name：指定将用于在 Imageset 中标识图像的名称。 必填属性。
-	- xPos：
+	- xPos：指定源表面上图像左上角的 X 像素坐标。 必填属性。
+	- yPos：指定源表面上图像左上角的 Y 像素坐标。 必填属性。
