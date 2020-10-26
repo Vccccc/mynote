@@ -1069,4 +1069,5 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 
 ### \<Imageset> Element
 - Purpose：
-	- 
+	- <Imageset>元素是XML imagesset定义文件中的根元素
+- 
