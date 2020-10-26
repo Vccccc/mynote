@@ -1073,4 +1073,6 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 - Attributes：
 	- version：指定资源文件的版本。 应该为所有文件指定，当前的 CEGUI 图像集版本为：2
 	- name：指定将在 CEGUI 系统中分配给 Imageset 的名称。 必填属性。
-	- imagefile
+	- imagefile：指定包含图像集图像的图像文件的路径。 必填属性
+	- resourceGroup：指定在加载 Imagefile 属性中给定的文件时传递给 ResourceProvider 的资源组标识符。 可选属性，默认为Imageset 默认组。
+	- autoScaled：
