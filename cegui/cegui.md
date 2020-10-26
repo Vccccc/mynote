@@ -1064,3 +1064,4 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 
 
 ## Imageset XML files
+图像集是某些源表面上的命名区域的集合，例如图像文件或纹理。 在CEGUI术语中，每个命名区域都是一个Image，并且是CEGUI使用的基本图像级别。
