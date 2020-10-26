@@ -1085,5 +1085,7 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 	- nativeHorzRes：启用“autoScaled”后，指定 horizontal 屏幕分辨率，该分辨率将导致像素从源图像到目标表面，不缩放，一对一映射。 可选属性，默认为640。
 	- nativeVertRes：启用“autoScaled”后，指定 vertical 
  屏幕分辨率，该分辨率将导致像素从源图像到目标表面，不缩放，一对一映射。 可选属性，默认为480。
-- Usage：\<Imageset> 元素是 imagese
+- Usage：
+	- \<Imageset> 元素是 imageset 文件的根元素
+	- \<Imageset> 元素可以包含多个
 	- 
