@@ -1083,5 +1083,5 @@ config XML 文件定义了 CEGUI 在系统创建时使用的设置和配置信�
 		- true - 垂直和水平缩放因子的计算方法如上所述，图像高度和宽度分别缩放。 无法保持长宽比。
 		- false - 不会执行图像的自动缩放。 可选属性，默认为false。
 	- nativeHorzRes：启用“autoScaled”后，指定 horizontal 屏幕分辨率，该分辨率将导致像素从源图像到目标表面，不缩放，一对一映射。 可选属性，默认为640。
-	- nativeVertRes：启用“autoScaled”后，指定 horizontal 
+	- nativeVertRes：启用“autoScaled”后，指定 vertical 
  屏幕分辨率，该分辨率将导致像素从源图像到目标表面，不缩放，一对一映射。 可选属性，默认为480。
