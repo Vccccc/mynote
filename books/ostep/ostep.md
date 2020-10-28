@@ -57,7 +57,7 @@ A process can be in one of three states:
 >**Blocked**: In the blocked state, a process has performed some kind of operation that makes it not ready to run until some other event takes    place. A common example: when a process initiates an I/O request to a disk, it becomes blocked and thus some other process can use the processor.  
 
 **Figure 4.2: Process: State Transitions**
-!["Figure 4.2: Process: State Transitions"](./photo/Figure4.2.png)
+!["Figure 4.2: Process: State Transitions"](./photo/tmp.png)
 
 ### 4.5 Data Structures
 The OS has some key data structures that track various relevant pieces of information. To track the state of each process, for example, the OS likely keep some kind of **process list** for all process that are ready and some additional information to track which process is currently running. The OS must also track, in some way, blocked processes; when an I/O event completes, the OS should make sure to wake the correct process and ready it to run again.
