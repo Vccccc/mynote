@@ -1,4 +1,4 @@
-# Operating Systems in Three Easy Pieces 读书笔记
+# Operating Systems in Three Easy Pieces Note
 
 ## Chapter 2 Introduction to Operating Systems
 ##### What did the processor do?
