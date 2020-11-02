@@ -119,5 +119,12 @@ time. The basic idea is simple: run one process for a little while, then
 run another one, and so forth. By time sharing the CPU in this manner,
 virtualization is achieved.
 
-
+There are a few challenges, however, in building such virtualization
+machinery. The first is performance: how can we implement virtualization without adding excessive overhead to the system? The second is
+control: how can we run processes efficiently while retaining control over
+the CPU? Control is particularly important to the OS, as it is in charge of
+resources; without control, a process could simply run forever and take
+over the machine, or access information that it should not be allowed to
+access. Obtaining high performance while maintaining control is thus
+one of the central challenges in building an operating system
 ## 5 Interlude: Process API
