@@ -113,5 +113,11 @@ Operating systems are replete with various important data structures that we wil
 • A process list contains information about all processes in the system. Each entry is found in what is sometimes called a process control block (PCB), which is really just a structure that contains information about a specific process.
 ## Virtualization
 ### Limited Direct Execution
-为了虚拟化 CPU，操作系统需要使得在 CPU 上运行的程序看起来同时在运行
+In order to virtualize the CPU, the operating system needs to somehow
+share the physical CPU among many jobs running seemingly at the same
+time. The basic idea is simple: run one process for a little while, then
+run another one, and so forth. By time sharing the CPU in this manner,
+virtualization is achieved.
+
+
 ## 5 Interlude: Process API
