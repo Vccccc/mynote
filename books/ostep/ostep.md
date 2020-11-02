@@ -113,5 +113,5 @@ Operating systems are replete with various important data structures that we wil
 • A process list contains information about all processes in the system. Each entry is found in what is sometimes called a process control block (PCB), which is really just a structure that contains information about a specific process.
 ## Virtualization
 ### Limited Direct Execution
-为了虚拟化 CPU，操作系统需要使得
+为了虚拟化 CPU，操作系统需要使得在 CPU 上运行的程序看起来同时在运行
 ## 5 Interlude: Process API
