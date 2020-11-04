@@ -145,5 +145,11 @@ L13 resw 100 ; 储存空间为100个字
 址是32位。 这儿有几个例子：
 
 ```
-
+1 mov al, [L1] ; 复制L1里的字节数据到AL
+2 mov eax, L1 ; EAX = 字节变量L1代表的地址
+3 mov [L1], ah ; 把AH拷贝到字节变量L1
+4 mov eax, [L6] ; 复制L6里的双字数据到 EAX
+5 add eax, [L6] ; EAX = EAX + L6里的双字数据
+6 add [L6], eax ; L6 = L6里的双字数据 + EAX
+7 mov al, [L6] ; 拷贝L6里的数据的第一个字节到AL
 ```
