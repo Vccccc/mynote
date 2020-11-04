@@ -30,3 +30,6 @@ EAX | EAX可拆分为EAH,EAL
 EBX | EBX可拆分为EBH,EBL
 ECX | ECX可拆分为ECH,ECL
 EDX | EDX可拆分为EDH,EDL
+
+#### 指令操作数
+
