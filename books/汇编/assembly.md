@@ -62,5 +62,8 @@ add al, ah ; al = al + ah
 sub bx, 10 ; bx = bx - 10
 sub ebx, edi ; ebx = ebx - edi
 
-;
+;INC 和DEC 指令将值加1或减1。 因为1是一个暗指的操作数， INC 和DEC的
+机器代码比等价的ADD和SUB指令要少。
+inc ecx ; ecx++
+dec dl ; dl--
 ```
