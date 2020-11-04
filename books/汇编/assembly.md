@@ -57,5 +57,10 @@ src指定的数据拷贝到了dest。一个指令的两个操作数不能同时�
 ```
 mov eax, 3 ; 将3存入 EAX 寄存器(3是一个立即数)。
 mov bx, ax ; 将AX的值存入到BX寄存器。
+add eax, 4 ; eax = eax + 4
+add al, ah ; al = al + ah
+sub bx, 10 ; bx = bx - 10
+sub ebx, edi ; ebx = ebx - edi
 
+;
 ```
