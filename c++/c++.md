@@ -222,4 +222,4 @@ Flags controlling how #includes are resolved to files.
 - prvalue (“pure” rvalue)是一个表达式，其求值为以下之一
 	- 计算某个运算符的操作数的值或为 void 表达式（这种纯右值没有结果对象）
 	- 初始化某个对象或位域（称这种纯右值有一个结果对象）。除了 decltype 外，所有类和数组的纯右值都有结果对象，即使它被舍弃也是如此。结果对象可以是变量，通过 new-expression 创建的对象，通过 Temporary materialization 实现的临时对象或其成员。
-- xvalue (an “eXpiring” value)
+- xvalue (an “eXpiring” value) 是一个表示对象或者位域资源可以复用的 glvalue
