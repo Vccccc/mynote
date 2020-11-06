@@ -223,4 +223,5 @@ Flags controlling how #includes are resolved to files.
 	- 计算某个运算符的操作数的值或为 void 表达式（这种纯右值没有结果对象）
 	- 初始化某个对象或位域（称这种纯右值有一个结果对象）。除了 decltype 外，所有类和数组的纯右值都有结果对象，即使它被舍弃也是如此。结果对象可以是变量，通过 new-expression 创建的对象，通过 Temporary materialization 实现的临时对象或其成员。
 - xvalue (an “eXpiring” value) 是一个表示对象或者位域资源可以重新被使用的 glvalue
-- 左值 (lvalue)（如此称呼的历史原因是，左值可以出现于赋值表达式的左边）是非 xvalue 的 glva
+- 左值 (lvalue)（如此称呼的历史原因是，左值可以出现于赋值表达式的左边）是非 xvalue 的 glvalue
+- 右值 (rvalue)（如此称呼的历史原因是，右值可以出现于赋值表达式的右边）是 prvalue 或 xvalue 
