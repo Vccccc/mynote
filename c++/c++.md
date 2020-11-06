@@ -221,4 +221,4 @@ Flags controlling how #includes are resolved to files.
 - glvalue (“generalized” lvalue) 是一个表达式，其求值确定一个对象、位域或函数。
 - prvalue (“pure” rvalue)是一个表达式，其求值为以下之一
 	- 计算某个运算符的操作数的值或为 void 表达式（这种纯右值没有结果对象）
-	- 
+	- 初始化某个对象或位域（称这种纯右值有一个结果对象）。所有类和数组的纯右值都有结果对象，即使它被舍弃也是如此。在某些语境中，将发生临时量实质化，以创建作为其结果对象的临时量
