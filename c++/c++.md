@@ -220,5 +220,5 @@ Flags controlling how #includes are resolved to files.
 每个 C++ 表达式（带有操作数的操作符、字面量、变量名等）可按照两种独立的特性加以辨别：类型和值类别 (value category)。每个表达式都具有某种非引用类型，且每个表达式只属于三种基本值类别中的一种：纯右值 (prvalue)、亡值 (xvalue)、左值 (lvalue)。
 - glvalue (“generalized” lvalue) 是一个表达式，其求值确定一个对象、位域或函数。
 - prvalue (“pure” rvalue)是一个表达式，其求值为以下之一
-	- 计算一个与对象无关的值
+	- 计算某个运算符的操作数的值或为 void 表达式（这种纯右值没有结果对象）
 	- 
