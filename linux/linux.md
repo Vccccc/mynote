@@ -173,5 +173,5 @@ Note: There is no glibc wrapper for this system call
 - 总进程：230 total，运行：1 running，休眠：176 sleeping，停止：0 stopped，僵尸进程：0 zombie
 
 第三行，cpu 状态信息
-- 
+- 2.7 us（user space）：用户空间占 CPU 的百分比
 
