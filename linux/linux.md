@@ -182,8 +182,8 @@ Note: There is no glibc wrapper for this system call
 - 1,7 si（Software Interrupts）：软中断占用 CPU 的百分比
 
 第四行，内存状态
-- 2221828 buff/cache：缓存的内存量
-可用内存=free+buffer+cached
+- 2221828 buff/cache：用作内核缓存的内存量
+
 
 第五行，swap 交换分区信息
-- 6270524 avail Mem：
+- 6270524 avail Mem：缓冲的交换区总量。
