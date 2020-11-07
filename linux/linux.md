@@ -196,6 +196,7 @@ Note: There is no glibc wrapper for this system call
 - PID：进程 id
 - USER：进程所有者
 - PR：进程优先级
-- NI：nice 值。
+- NI：nice 值。负值表示高优先级，正值表示低优先级
+- VIRT：进程使用地虚拟内存总量，单位 kb。VIRT = SWAP + RES
 
 
