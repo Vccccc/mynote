@@ -163,4 +163,7 @@ Note: There is no glibc wrapper for this system call
 ![](./photo/top.png)
 
 第一行，任务队列信息，同 uptime 命令的执行结果
-- xits
+- 系统时间：14：06：54
+- 运行时间：up 52 min
+- 当前登陆用户：1 user
+- 负载均衡（uptime）
