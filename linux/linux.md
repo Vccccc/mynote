@@ -186,4 +186,4 @@ Note: There is no glibc wrapper for this system call
 可用内存=free+buffer+cached
 
 第五行，swap 交换分区信息
-- 6270524 availd
+- 6270524 avail Mem：
