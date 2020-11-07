@@ -183,3 +183,4 @@ Note: There is no glibc wrapper for this system call
 
 第四行，内存状态
 - 2221828 buff/cache：缓冲的交换区总量
+可用内存=free+buffer+cached
