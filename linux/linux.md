@@ -204,6 +204,6 @@ Note: There is no glibc wrapper for this system call
 - %CPU：上次更新到现在的 CPU 时间占用百分比
 - %MEM：进程使用的物理内存百分比
 - TIME+：进程使用的 CPU 时间总计，单位 1/100 秒。
-- COMMAND：进程
+- COMMAND：进程名称（命令名/命令行）
 
 
