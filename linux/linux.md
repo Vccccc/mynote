@@ -166,4 +166,5 @@ Note: There is no glibc wrapper for this system call
 - 系统时间：14：06：54
 - 运行时间：up 52 min
 - 当前登陆用户：1 user
-- 负载均衡（uptime）
+- 负载均衡（uptime）load average：0.36,0.63,0.85
+	- average 后面的三个数分别为
