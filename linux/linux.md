@@ -159,3 +159,4 @@ Note: There is no glibc wrapper for this system call
 输出所有环境变量
 
 ## CPU 占用率高排查
+使用 top 命令查看
