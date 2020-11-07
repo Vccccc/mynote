@@ -200,6 +200,6 @@ Note: There is no glibc wrapper for this system call
 - VIRT：进程使用地虚拟内存总量，单位 kb。VIRT = SWAP + RES
 - RES：进程使用的、未被换出的物理内存大小，单位 kb。RES = CODE + DATA
 - SHR：共享内存大小，单位 kb
-- 
+- S：进程状态。D=不可中断的睡眠状态，R=运行，S=睡眠，T=跟踪/停止
 
 
