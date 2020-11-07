@@ -179,5 +179,5 @@ Note: There is no glibc wrapper for this system call
 - 90.8 id（idolt）：空闲 CPU 的百分比
 - 0.0 wa（wait）：IO 等待占用 CPU 的百分比
 - 0.0 hi（Hardware IRQ）：硬中断占用 CPU 的百分比
-- 0.0 si（Soft
+- 1,7 si（Software Interrupts）：软中断占用 CPU 的百分比
 
