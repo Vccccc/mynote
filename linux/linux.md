@@ -170,4 +170,8 @@ Note: There is no glibc wrapper for this system call
 	- average 后面的三个数分别是1分钟、5分钟、15分钟的负载情况。load average 数据是每隔5秒钟检查一次活跃的进程数，然后按特定算法计算出的数值。如果这个数除以逻辑 CPU 的数量，结果高于5的时候就表明系统在超负荷运转了
 
 第二行，Tasks--任务（进程）
-- 总进程：230 total，运行：1 running，休眠 176，停止：0
+- 总进程：230 total，运行：1 running，休眠：176 sleeping，停止：0 stopped，僵尸进程：0 zombie
+
+第三行，cpu 状态信息
+- 
+
