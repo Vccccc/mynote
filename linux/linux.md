@@ -186,4 +186,4 @@ Note: There is no glibc wrapper for this system call
 
 
 第五行，swap 交换分区信息
-- 6270524 avail Mem：缓冲的交换区总量。
+- 6270524 avail Mem：缓冲的交换区总量。内存中的内容被换出到交换区，而后又被换入到内存，但使用过的交换区尚未被覆盖，
