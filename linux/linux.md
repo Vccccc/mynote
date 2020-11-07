@@ -150,4 +150,12 @@ multithreaded process, all threads have the  same  PID,  but each one has a uniq
 Note: There is no glibc wrapper for this system call
 ```
 
+
+## grub模式
+通过开机启动按shitf键进入grub模式，然后按c键进入文字界面。
+
+## 命令行
+#### env
+输出所有环境变量
+
 ## CPU 占用率高排查
