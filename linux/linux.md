@@ -198,5 +198,8 @@ Note: There is no glibc wrapper for this system call
 - PR：进程优先级
 - NI：nice 值。负值表示高优先级，正值表示低优先级
 - VIRT：进程使用地虚拟内存总量，单位 kb。VIRT = SWAP + RES
+- RES：进程使用的、未被换出的物理内存大小，单位 kb。RES = CODE + DATA
+- SHR：共享内存大小，单位 kb
+- 
 
 
