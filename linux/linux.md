@@ -162,3 +162,5 @@ Note: There is no glibc wrapper for this system call
 使用 top 命令查看程序运行情况
 ![](./photo/top.png)
 
+第一行，任务队列信息，同 uptime 命令的执行结果
+- xits
