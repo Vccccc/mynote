@@ -176,6 +176,8 @@ Note: There is no glibc wrapper for this system call
 - 2.7 us（user space）：用户空间占用 CPU 的百分比
 - 4.8 sy（sysctl）：内核空间占用 CPU 的百分比
 - 0.0 ni：改变过优先级的进程占用 CPU 的百分比
-- 90.8 id（idolt）：空间 CPU 的百分比
+- 90.8 id（idolt）：空闲 CPU 的百分比
 - 0.0 wa（wait）：IO 等待占用 CPU 的百分比
+- 0.0 hi（Hardware IRQ）：硬中断占用 CPU 的百分比
+- 0.0 si（Soft
 
