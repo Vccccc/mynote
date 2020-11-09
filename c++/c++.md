@@ -225,3 +225,7 @@ Flags controlling how #includes are resolved to files.
 - xvalue (an “eXpiring” value) 是一个表示对象或者位域资源可以重新被使用的 glvalue
 - 左值 (lvalue)（如此称呼的历史原因是，左值可以出现于赋值表达式的左边）是非 xvalue 的 glvalue
 - 右值 (rvalue)（如此称呼的历史原因是，右值可以出现于赋值表达式的右边）是 prvalue 或 xvalue 
+
+## SFINAE
+“Substitution Failure Is Not An Error”
+
