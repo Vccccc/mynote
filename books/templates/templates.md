@@ -94,7 +94,12 @@ T max(T a, T b);
 tempate<typename T1, typename T2, typename RT>
 RE max(T1 a, T2 b);
 ```
-然而，因为返回类型不作为类型推导的一部分（推导可视作重载解析的一部分：不基于返回值类型的处理（即函数签名与返回值无关），唯一的例外 conversion operator members 的返回值类型），和 RT 不出现在
+然而，因为返回类型不作为类型推导的一部分（推导可视作重载解析的一部分：不基于返回值类型的处理（即函数签名与返回值无关），唯一的例外 conversion operator members 的返回值类型），和 RT 不出现在调用参数中，所以不能推导 RT 的类型。
+
+结论是，必须显式地指明模板参数列表，比如：
+```
+
+```
 
 
 
