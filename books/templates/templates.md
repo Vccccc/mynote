@@ -43,3 +43,7 @@ max("hello", s); // ERROR：T 可以推导为 char const[6] 或 string
 	> max<double>(4, 7.2); // OK
 3. 用不同的模板参数
 
+#### Type Deduction for Default Arguments
+对于默认参数类型推导
+
+
