@@ -27,6 +27,6 @@ T max(T a, T b)
 int i = 17;
 int arr[4];
 
-max(1, arr); // ERROR：声明1，OK：声明2。声明1中 arr 类型为 const
+max(&i, arr); // ERROR：声明1，OK：声明2。声明1中 arr 类型为 int const&[4]，声明2中类型为 int*
 ```
 
