@@ -141,4 +141,9 @@ auto max(T1 a, T2 b) -> typename decay<decltype(true?a:b)>::type
 }
 ```
 
-注意，每个 auto 类型实例化时都会退化。这同样作用于 auto 声明的返回值类型。auto 类型的返回值行为同下面的代码一样，
+注意，每个 auto 类型实例化时都会退化。这同样作用于 auto 声明的返回值类型。auto 类型的返回值行为同下面的代码一样，a 是声明为 i 的退化类型 int：
+```
+int i = 42;
+int const& ir = i; // ir refers to i
+
+```
