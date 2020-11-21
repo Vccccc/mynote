@@ -81,5 +81,8 @@ C++ 提供了一些方法处理这个问题：
 - 采用第三个模板参数作为返回值
 - 让编译器决定返回值
 - 声明返回值为两个参数的“common type”
+### 1.3.1 Template Parameters for Return Types
+
+
 
 
