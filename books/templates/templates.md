@@ -5,4 +5,4 @@ templates are "compiled" in two phrase:
 	- 语法错误，比如缺少分号（；）
 	- 使用与模板参数无关的未知的 names（type names，function names，...）
 	- 与模板参数无关的静态断言（static assertion）
-2.
+2. 实例化时
