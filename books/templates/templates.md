@@ -41,5 +41,5 @@ max("hello", s); // ERROR：T 可以推导为 char const[6] 或 string
 	> max(static_cast<double>(4), 7.2); // OK
 2. 显示指定 T 的类型，防止编译器类型推导
 	> max<double>(4, 7.2); // OK
-3. 
+3. 用不同的模板参数
 
