@@ -16,10 +16,17 @@ Note that automatic type conversions are limited during type deduction:
 - 当声明调用参数为值时，只有支持无用的转换（decay）：忽略 const，volatile 修饰，引用类型转换成引用类型，raw array 或者函数转换成指针。用相同的模板参数 T 声明的两个参数退化后类型（decayed type）必须一致。
 
 ```
-
 // 声明1
+template<typename T>
+T max(T const& a, T const& b)
+
+// 声明2
 template<typename T>
 T max(T a, T b)
 
+int i = 17;
+int arr[4];
 
+max(1, arr); // 声明1
 ```
+
