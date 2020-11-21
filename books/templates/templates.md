@@ -145,5 +145,5 @@ auto max(T1 a, T2 b) -> typename decay<decltype(true?a:b)>::type
 ```
 int i = 42;
 int const& ir = i; // ir refers to i
-
+auto a = ir; // a is declared as new object of type int
 ```
