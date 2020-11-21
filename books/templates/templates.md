@@ -140,3 +140,5 @@ auto max(T1 a, T2 b) -> typename decay<decltype(true?a:b)>::type
  return b < a ? a : b;
 }
 ```
+
+注意，每个 auto 类型实例化都会退化
