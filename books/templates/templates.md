@@ -92,7 +92,7 @@ T max(T a, T b);
 在模板参数和调用参数没有关联时和模板参数不能判断时，调用模板函数时必须显式地指明模板参数的类型。比如，可以通过第三个模板参数作为函数的返回值：
 ```
 tempate<typename T1, typename T2, typename RT>
-RE max(T1 a, T2 b);
+RT max(T1 a, T2 b);
 ```
 然而，因为返回类型不作为类型推导的一部分（推导可视作重载解析的一部分：不基于返回值类型的处理（即函数签名与返回值无关），唯一的例外 conversion operator members 的返回值类型），和 RT 不出现在调用参数中，所以不能推导 RT 的类型。
 
@@ -102,8 +102,9 @@ RE max(T1 a, T2 b);
 ```
 到现在为之，所以的例子中函数模板参数要么全部，要么都没有显式地指定。另外的方法是只显式指定第一个参数，剩余的参数通过类型推导处理。通常，必须显式地指定所有不能隐式判断的参数。因此，可以改变模板参数的顺序，使调用者只需指定返回值类型。
 ```
-tempate<typename T1, typename T2>
-RE max(T1 a, T2 b);
+tempate<typename RT, typename T1, typename T2>
+RT max(T1 a, T2 b);
+::max<double>(4,7.2); // OK，返回值类型为 double，T1 和 T2 通过推导
 ```
 
 
