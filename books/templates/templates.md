@@ -8,4 +8,4 @@ templates are "compiled" in two phrase:
 2. 实例化时，再次检测所有与模板参数相关的代码。
 
 #### Compiling and Linking
-Two-Phase Translation 导致一个问题：当一个模板函数实例化时，编译器需要直到它的定义
+Two-Phase Translation 导致一个问题：当一个模板函数实例化时，编译器需要知道它的定义，通常普通函数编译和链接
