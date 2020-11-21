@@ -30,5 +30,10 @@ int arr[4];
 max(&i, arr); // ERROR：声明1，OK：声明2。声明1中 arr 类型为 int const&[4]，声明2中类型为 int*
 ```
 
-如下
+如下调用也是错误的：
+```
+max(4, 7.2); // ERROR：T 可以推导为 int 或 double
+string s;
+max("hello", s); //
+```
 
