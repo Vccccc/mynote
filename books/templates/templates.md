@@ -111,5 +111,12 @@ RT max(T1 a, T2 b);
 
 
 ### 1.3.2 Deducing the Return Type
-如果返回值类型依赖于模板参数，最简单和最好的办法是通过编译器推导出返回类型。自从 C++14 起，可以不用
+如果返回值类型依赖于模板参数，最简单和最好的办法是通过编译器推导出返回类型。自从 C++14 起，可以不用声明任何返回值类型（但还是声明返回值类型为 auto）。：
+```
+template<typename T1, typename T2>
+auto max(T1 a, T2 b)
+{
+ return b < a ? a : b;
+
+```
 
