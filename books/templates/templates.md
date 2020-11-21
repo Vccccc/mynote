@@ -71,8 +71,10 @@ f(); // OK
 template<typename T1, typename T2>
 T1 max(T1 a, T2 b)
 {
-  return b < a ? a :
+  return b < a ? a : b;
 }
+auto m = ::max(4, 7.2); // OK，但是返回值类型为第一个参数定义
 ```
+使用两个不同参数
 
 
