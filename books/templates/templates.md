@@ -12,4 +12,4 @@ Two-Phase Translation 导致一个问题：当一个模板函数实例化时，�
 
 #### Type conversions During Type Deduction
 Note that automatic type conversions are limited during type deduction:
-- 当声明调用参数为引用时，类型推导连无用的转化
+- 当声明调用参数为引用时，类型推导连无用的转化也不允许。用相同的模板参数 T 声明的两个参数类型
