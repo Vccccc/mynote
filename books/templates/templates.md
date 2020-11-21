@@ -127,4 +127,8 @@ auto max(T1 a, T2 b)
 template<typename T1, typename T2>
 auto max(T1 a, T2 b) -> decltype(b<a?a:b);
 ```
-是一个声明，所以编译器可以在编译期通过操作符 ?: 的规则找出 max() 的返回值类型。不需要匹配实现。实际上，使用 true 
+是一个声明，所以编译器可以在编译期通过操作符 ?: 的规则找出 max() 的返回值类型。不需要匹配实现。实际上，在声明中使用 true 作为 ?: 的条件判断已经足够了。
+```
+template<typename T1, typename T2>
+auto max(T1 a, T2 b) -> decltype(true?a:b);
+```
