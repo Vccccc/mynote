@@ -62,7 +62,8 @@ f(); // OK
 ## 1.3 Multiple Template Parameters
 函数模板有两部分不同的参数：
 1. 模板参数（Templates parameters）在尖括号中声明
-	> template<typename T> // T 是模板参数
-2. 
+	> template\<typename T> // T 是模板参数
+2. 调用参数（Call parameters）在圆括号中声明：
+	> T max(T a, T b) // a 
 
 
