@@ -11,4 +11,5 @@ templates are "compiled" in two phrase:
 Two-Phase Translation 导致一个问题：当一个模板函数实例化时，编译器需要知道它的定义，通常普通函数编译和链接只需知道声明即可，但模板参数不同。所以，需要在头文件中实现模板。
 
 #### Type conversions During Type Deduction
-Note that automatic type conversions are limited d
+Note that automatic type conversions are limited during type deduction:
+- 当声明调用
