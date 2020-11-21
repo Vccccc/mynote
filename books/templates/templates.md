@@ -44,6 +44,12 @@ max("hello", s); // ERROR：T 可以推导为 char const[6] 或 string
 3. 用不同的模板参数
 
 #### Type Deduction for Default Arguments
-对于默认参数类型推导
+对于默认调用参数不支持类型推导。比如：
+```
+template<typename T>
+void f(T = "");
+f(1); // OK
+f(); // ERROR:
+```
 
 
