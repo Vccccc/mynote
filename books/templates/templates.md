@@ -37,5 +37,7 @@ string s;
 max("hello", s); // ERROR：T 可以推导为 char const[6] 或 string
 ```
 有三种办法可以处理错误：
-1. 转换
+1. 转换参数使得类型匹配
+	> max(static_cast<double>(4), 7.2); // OK
+2. 
 
