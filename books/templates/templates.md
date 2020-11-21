@@ -34,6 +34,8 @@ max(&i, arr); // ERROR：声明1，OK：声明2。声明1中 arr 类型为 int c
 ```
 max(4, 7.2); // ERROR：T 可以推导为 int 或 double
 string s;
-max("hello", s); //
+max("hello", s); // ERROR：T 可以推导为 char const[6] 或 string
 ```
+有三种办法可以处理错误：
+1. 转换
 
