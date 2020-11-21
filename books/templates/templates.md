@@ -122,3 +122,8 @@ auto max(T1 a, T2 b)
 
 如果 a 和 b 是两种不同的算术类型，那么 common arithmetic type 被返回。
 
+注意：
+```
+template<typename T1, typename T2>
+auto max(T1 a, T2 b) -> decltype(b<a?a:b);
+```
