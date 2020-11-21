@@ -91,8 +91,8 @@ T max(T a, T b);
 
 在模板参数和调用参数没有关联时和模板参数不能判断时，调用模板函数时必须显式地指明模板参数的类型。比如，可以通过第三个模板参数作为函数的返回值：
 ```
-tempate<typename T, typename T2, typename>
-T max(T a, T b);
+tempate<typename T1, typename T2, typename RT>
+RE max(T1 a, T2 b);
 ```
 
 
