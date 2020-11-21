@@ -100,6 +100,6 @@ RE max(T1 a, T2 b);
 ```
 ::max<int,double,double>(4,7.2); // OK，但太繁琐
 ```
-
+到现在为之，所以的例子要么是
 
 
