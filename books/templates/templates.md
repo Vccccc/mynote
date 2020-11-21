@@ -64,6 +64,8 @@ f(); // OK
 1. 模板参数（Templates parameters）在尖括号中声明
 	> template\<typename T> // T 是模板参数
 2. 调用参数（Call parameters）在圆括号中声明：
-	> T max(T a, T b) // a 
+	> T max(T a, T b) // a 和 b 是调用参数
+
+可以拥有多个模板参数，比如使用两个定义 max 
 
 
