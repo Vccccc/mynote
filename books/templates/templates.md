@@ -6,3 +6,6 @@ templates are "compiled" in two phrase:
 	- 使用与模板参数无关的未知的 names（type names，function names，...）
 	- 与模板参数无关的静态断言（static assertion）
 2. 实例化时，再次检测所有与模板参数相关的代码。
+
+#### Compiling and Linking
+
