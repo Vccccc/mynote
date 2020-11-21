@@ -56,7 +56,7 @@ f(); // ERROR：不能推导 T
 template<typename T = string>
 void f(T = "");
 f(1); // OK
-f(); // ERROR：不能推导 T
+f(); // OK
 ```
 
 
