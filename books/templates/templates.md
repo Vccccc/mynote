@@ -94,7 +94,7 @@ T max(T a, T b);
 tempate<typename T1, typename T2, typename RT>
 RE max(T1 a, T2 b);
 ```
-然而，返回类型不作为类型推导的一部分（推导可视作重载解析的一部分：不基于返回值类型的处理，唯一的）。
+然而，返回类型不作为类型推导的一部分（推导可视作重载解析的一部分：不基于返回值类型的处理，唯一的例外 conversion operator members 的返回值类型）。
 
 
 
