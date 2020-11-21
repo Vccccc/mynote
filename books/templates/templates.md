@@ -59,6 +59,8 @@ f(1); // OK
 f(); // OK
 ```
 
-## 1.3 Multiple Template
+## 1.3 Multiple Template Parameters
+函数模板有两部分不同的参数：
+1. 模板参数（Templates parameters）
 
 
