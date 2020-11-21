@@ -120,4 +120,4 @@ auto max(T1 a, T2 b)
 }
 ```
 
-如果 a 和 b 是两种不同算术
+如果 a 和 b 是两种不同的算术类型，那么 common arithmetic type 被返回。
