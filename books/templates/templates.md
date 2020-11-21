@@ -132,3 +132,4 @@ auto max(T1 a, T2 b) -> decltype(b<a?a:b);
 template<typename T1, typename T2>
 auto max(T1 a, T2 b) -> decltype(true?a:b);
 ```
+然而，这里有个巨大的陷阱：返回值类型可能会是一个引用类型，因为某些条件下 T
