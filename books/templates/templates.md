@@ -89,5 +89,7 @@ T max(T a, T b);
 ::max<double>(4, 7.2); 
 ```
 
+在模板
+
 
 
