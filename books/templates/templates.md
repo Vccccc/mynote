@@ -49,7 +49,14 @@ max("hello", s); // ERROR：T 可以推导为 char const[6] 或 string
 template<typename T>
 void f(T = "");
 f(1); // OK
-f(); // ERROR:
+f(); // ERROR：不能推导 T
+```
+为了支持这个例子，可以声明默认模板参数：
+```
+template<typename T = string>
+void f(T = "");
+f(1); // OK
+f(); // ERROR：不能推导 T
 ```
 
 
