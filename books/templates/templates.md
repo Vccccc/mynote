@@ -286,5 +286,27 @@ int main()
 
 一个有趣的例子是使得重载最大值模板函数能够只显式地指定返回值类型：
 ```
+#include <iostream>
+using namespace std;
 
+template<typename T1, typename T2>
+auto max(T1  a, T2  b)
+{
+    cout << "function template\n";
+    return b < a ? a : b;
+}
+
+template<typename RT,typename T1, typename T2>
+RT max(T1  a, T2  b)
+{
+    cout << "RT function template\n";
+    return b < a ? a : b;
+}
+
+int main()
+{
+    auto a = ::max(4, 7.2); // use first template
+    auto b = ::max<long double>(7.2,4);// use second template
+    //auto c = ::max<int>(4, 7.2); // ERROR:both function tempa
+}
 ```
