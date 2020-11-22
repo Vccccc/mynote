@@ -149,4 +149,4 @@ auto a = ir; // a is declared as new object of type int
 ```
 
 ### 1.3.3 Return Type as Common Type
-自从 C++11 起，标准库提供了一种途径去指定选择“the more general type”。std::common_type<>::type 产生
+自从 C++11 起，标准库提供了一种途径去指定选择“the more general type”。std::common_type<>::type 产生两个或多个不同类型的
