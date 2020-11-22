@@ -270,5 +270,6 @@ int main()
 如果模板可以产生更匹配的函数，那么选择模板。如第二个和第三个调用所示：
 ```
 ::max(7.0, 42.0);// calls max<double>(by argument deduction)
-::max('a', 'b');
+::max('a', 'b');// calls max<char> (by argument deduction)
 ```
+这里模板是更好的匹配，因为不需要
