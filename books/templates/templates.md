@@ -227,4 +227,6 @@ max(i, l); // returns long(default argument of template parameter for return typ
 max<int>(4, 42); // returns int as explicity requested
 ```
 
-然而，这个方法只有在需要“自然”的默认模板参数才有意义。我们需要的是默认模板参数依赖于其他的模板参数。
+然而，这个方法只有在需要“自然”的默认模板参数才有意义。我们需要的是默认模板参数依赖于其他的模板参数。技术上这是可行的，在 26.5.1 小节讨论，但这个技术依赖于 type traits 和更复杂的声明。
+
+由于这些
