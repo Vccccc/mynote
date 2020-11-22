@@ -232,4 +232,5 @@ max<int>(4, 42); // returns int as explicity requested
 由于这些原因，最简单和最好的方法是让编译期推导返回值类型，如同 1.3.2 小节那样。
 
 ## Overloading Function Templates
-如同普通函数，函数模板也可以被重载。
+如同普通函数，函数模板也可以被重载。这里我们讨论关于模板函数的重载规则。
+
