@@ -170,4 +170,5 @@ std::common_type_t<T1, T2> // equivalent since C++14
 ```
 
 ## 1.4 Default Template Arguments
-对于模板参数可以定义默认值，其称为默认模板参数。默认模板参数甚至可以
+对于模板参数可以定义默认值，其称为默认模板参数。默认模板参数甚至可以引用之前的模板参数。
+
