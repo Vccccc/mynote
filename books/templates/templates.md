@@ -174,5 +174,11 @@ std::common_type_t<T1, T2> // equivalent since C++14
 
 如果希望合并上述方法使得其具有通过多个参数类型来定义返回值类型的功能，可以通过一个具有 common type 的模板参数 RT 作为默认模板参数。同样，这也有多种途径：
 ```
-
+#include <type_traits>
+template<typename T1, typename T2, 
+typename RT=decay_t<decltype(true?T1():T2())>
+std::common_type_t<T1,T2> max(T1 a, T2, b)
+{
+  return b < a ? a : b;
+}
 ```
