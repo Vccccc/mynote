@@ -336,7 +336,7 @@ T* max(T* a, T* b)
 char const* max(char const* a, char const* b)
 {
     cout << "C-strings\n";
-    return *b < *a ? a : b;
+    return strcmp(b,a) ? a : b;
 }
 
 int main()
