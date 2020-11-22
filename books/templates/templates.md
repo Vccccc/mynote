@@ -405,3 +405,32 @@ auto m2 = ::max(s1, s2, s3);
 相反，对于第一个调用，不会产生这个问题。因为这些临时变量（7，42 和 68）是在 main() 中创建，它们直到 main() 语句结束才被销毁。
 
 这是唯一一个例子由于重载解析规则导致代码行为和预期不符。此外，需要保证所有重载的版本在调用前声明。因为当一个相应的函数调用时，不是所有的重载函数都可以被看到。比如，定义 three-argument 版本但没有看到 two-argument 版本。
+
+对于 ints 造成 three-argume
+```
+#include <iostream>
+#include <cstring>
+using namespace std;
+// maximum of two values of any type:
+template <typename T>
+T  max(T  a, T  b)
+{
+    cout << "max<T>()\n";
+    return b < a ? a : b;
+}
+// maximum of two values of any type:
+template <typename T>
+T  max(T  a, T  b, T  c)
+{
+    return ::max(::max(a,b), c);  // uses the template version even for ints
+}                                 // because the following declaration comes too late: 
+int max(int a, int b)
+{
+    cout << "max(int,int)\n";
+    return b < a ? a : b;
+}
+int main()
+{
+    ::max(7,42,68);
+}
+```
