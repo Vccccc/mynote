@@ -360,7 +360,7 @@ int main()
 
 ```
 
-注意，在所有 max() 的重载中参数都是传值。通常而言，这是一个好注意，不去改变超过重载函数模板所需要的东西。你应该限制改变参数数量或者限制改变为显式地指定模板参数。否则，会有一些预期之外的事发生。比如，如果实现了参数传引用的 max() 模板，然后重载参数传值的 C-strings，你就不能使用 three-argument 版本的 max 去计算三个 C-strings
+注意，在所有 max() 的重载中参数都是传值。通常而言，这是一个好注意，不去改变超过重载函数模板所需要的东西。你应该限制改变参数数量或者限制改变为显式地指定模板参数。否则，会有一些预期之外的事发生。比如，如果实现了参数传引用的 max() 模板，然后重载参数传值的 C-strings，你就不能使用 three-argument 版本的 max() 去计算三个 C-strings：
 ```
 #include <iostream>
 #include <cstring>
@@ -394,4 +394,9 @@ int main()
     char const* s3 = "c";
     //auto m2 = ::max(s1, s2, s3); // run-time ERROR(undefined behavior)
 }
+```
+
+问题出现在以下语句：
+```
+auto m2 = ::max(s1, s2, s3);
 ```
