@@ -272,4 +272,6 @@ int main()
 ::max(7.0, 42.0);// calls max<double>(by argument deduction)
 ::max('a', 'b');// calls max<char> (by argument deduction)
 ```
-这里模板是更好的匹配，因为不需要
+这里模板是更好的匹配，因为不需要从 double 或 char 到 int 的转换。
+
+同样可以显式地指定一个空的模板参数列表。这个语法
