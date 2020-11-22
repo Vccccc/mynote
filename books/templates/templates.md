@@ -406,7 +406,7 @@ auto m2 = ::max(s1, s2, s3);
 
 这是唯一一个例子由于重载解析规则导致代码行为和预期不符。此外，需要保证所有重载的版本在调用前声明。因为当一个相应的函数调用时，不是所有的重载函数都可以被看到。比如，定义 three-argument 版本但没有看到 two-argument 版本。
 
-对于 ints 造成 three-argume
+对于 ints 造成 three-argument 版本使用 two-argument template：
 ```
 #include <iostream>
 #include <cstring>
