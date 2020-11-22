@@ -153,5 +153,10 @@ auto a = ir; // a is declared as new object of type int
 ```
 #include <type_traits>
 template<typename T1, typename T2>
-std::common_type_t
+std::common_type_t<T1,T2> max(T1 a, T2, b)
+{
+  return b < a ? a : b;
+}
 ```
+
+std::common_type 是 type trait，定义在 <type_traits> 中，
