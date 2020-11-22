@@ -310,4 +310,4 @@ int main()
     //auto c = ::max<int>(4, 7.2); // ERROR:both function templates match
 }
 ```
-当两个模板都匹配时，重载解析处理选择
+当两个模板都匹配时，重载解析处理选择报错。所以重载函数模板时，必须保证对于每个
