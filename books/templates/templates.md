@@ -207,3 +207,4 @@ auto a = ::max(4,7.2);
 auto b = ::max<double, int, long double>(7.2,4);
 ```
 
+然而这会有个问题，我们需要指定三个类型才指定返回值类型。
