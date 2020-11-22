@@ -149,4 +149,4 @@ auto a = ir; // a is declared as new object of type int
 ```
 
 ### 1.3.3 Return Type as Common Type
-自从 C++11 起，
+自从 C++11 起，标准库提供了
