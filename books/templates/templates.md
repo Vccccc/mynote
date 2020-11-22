@@ -283,3 +283,5 @@ int main()
 ```
 ::max('a', 42.7); // only the nontemplate function allows nontrivival conversions
 ```
+
+一个有趣的例子是使得
