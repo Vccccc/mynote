@@ -185,4 +185,15 @@ RT max(T1 a, T2, b)
 
 再次提醒，通过使用 decay_t 去保证返回类型不为引用。这种实现方法要求对于传入的类型能够调用默认构造函数。此外还有另一种方法，通过使用 std::declval，但是这会使得声明更加复杂。
 
-同样地可以使用 common_type<> 的 type trait 去指定默认值
+同样地可以使用 common_type<> 的 type trait 去指定返回类型的默认值
+```
+#include <type_traits>
+template<typename T1, typename T2, 
+typename RT=common_type_t<T1,T2>>
+RT max(T1 a, T2, b)
+{
+  return b < a ? a : b;
+}
+```
+
+同样记住，co
