@@ -279,3 +279,4 @@ int main()
 ::max<>(7,42);//calls max<int> (by argument deduction)
 ```
 
+因为自动类型
