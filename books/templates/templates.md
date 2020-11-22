@@ -226,3 +226,5 @@ long l;
 max(i, l); // returns long(default argument of template parameter for return type)
 max<int>(4, 42); // returns int as explicity requested
 ```
+
+然而，这个方法只有在需要“自然”的
