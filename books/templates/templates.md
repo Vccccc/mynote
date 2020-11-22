@@ -236,5 +236,30 @@ max<int>(4, 42); // returns int as explicity requested
 
 下面的程序展示了模板函数的重载：
 ```
+#include <iostream>
+using namespace std;
+
+template<typename T>
+auto max(T  a, T  b)
+{
+    cout << "function template\n";
+    return b < a ? a : b;
+}
+
+int max(int a, int b)
+{
+    cout << "ordinary function\n";
+    return b < a ? a : b;
+}
+
+int main()
+{
+    ::max(7, 42); // calls the nontemplate for two ints
+    ::max(7.0, 42.0); // calls max<double>(by argument deduction)
+    ::max('a', 'b'); // calls max<char> (by argument deduction)
+    ::max<>(7, 42); // calls max<int> (by argument deduction)
+    ::max<double>(7,42); // calls max<double> (no argument deduction)
+    ::max('a', 42.7); // calls the nontemplate for two ints
+}
 
 ```
