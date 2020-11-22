@@ -214,4 +214,8 @@ RT max(T1 a, T2, b)
 {
   return b < a ? a : b;
 }
+
+// 编译通过，但要实现模板指针特化
+template<>
+long max<long, int*, int*>(int*  a, int*  b)
 ```
