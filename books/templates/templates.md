@@ -177,8 +177,10 @@ std::common_type_t<T1, T2> // equivalent since C++14
 #include <type_traits>
 template<typename T1, typename T2, 
 typename RT=decay_t<decltype(true?T1():T2())>
-std::common_type_t<T1,T2> max(T1 a, T2, b)
+RT max(T1 a, T2, b)
 {
   return b < a ? a : b;
 }
 ```
+
+再次提醒，通过使用 decay_t 去保证返回类型不为引用。
