@@ -159,4 +159,7 @@ std::common_type_t<T1,T2> max(T1 a, T2, b)
 }
 ```
 
-std::common_type 是 type trait，定义在 <type_traits> 中，其产生一个拥有 type memb
+std::common_type 是 type trait，定义在 <type_traits> 中，其产生一个拥有 type member 的结构体。核心用法是：
+```
+typename std::common_type<T1, T2>::type // since C++11
+```
