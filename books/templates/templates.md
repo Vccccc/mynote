@@ -267,4 +267,8 @@ int main()
 ```
 ::max(7, 42); // both int values math the nontemplate function perfectly
 ```
-如果模板可以产生更匹配的函数，那么选择模板。
+如果模板可以产生更匹配的函数，那么选择模板。如第二个和第三个调用所示：
+```
+::max(7.0, 42.0);// calls max<double>(by argument deduction)
+::max('a', 'b');
+```
