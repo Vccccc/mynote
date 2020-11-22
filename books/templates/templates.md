@@ -284,4 +284,7 @@ int main()
 ::max('a', 42.7); // only the nontemplate function allows nontrivival conversions
 ```
 
-一个有趣的例子是使得
+一个有趣的例子是使得重载最大值模板函数能够只显式地指定返回值类型：
+```
+
+```
