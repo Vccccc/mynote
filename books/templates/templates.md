@@ -234,3 +234,7 @@ max<int>(4, 42); // returns int as explicity requested
 ## Overloading Function Templates
 如同普通函数，函数模板也可以被重载。这里我们讨论关于模板函数的重载规则。
 
+下面的程序展示了模板函数的重载：
+```
+
+```
