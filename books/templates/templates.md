@@ -307,6 +307,7 @@ int main()
 {
     auto a = ::max(4, 7.2); // use first template
     auto b = ::max<long double>(7.2,4);// use second template
-    //auto c = ::max<int>(4, 7.2); // ERROR:both function tempa
+    //auto c = ::max<int>(4, 7.2); // ERROR:both function templates match
 }
 ```
+
