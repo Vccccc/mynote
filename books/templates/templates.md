@@ -169,4 +169,4 @@ typename std::common_type<T1, T2>::type // since C++11
 std::common_type_t<T1, T2> // equivalent since C++14
 ```
 
-## 1.4 D
+## 1.4 Default Template Arguments
