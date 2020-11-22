@@ -361,3 +361,37 @@ int main()
 ```
 
 注意，在所有 max() 的重载中参数都是传值。通常而言，这是一个好注意，不去改变超过重载函数模板所需要的东西。
+```
+#include <iostream>
+#include <cstring>
+using namespace std;
+// maximum of two values of any type:
+template <typename T>
+T const& max(T const& a, T const& b)
+{
+    cout << "maximum of two values of any type\n";
+    return b < a ? a : b;
+}
+// maximum of two C-strings(call-by-value):
+char const* max(char const* a, char const* b)
+{
+    cout << "maximum of two C-strings(call-by-value)\n";
+    return strcmp(b, a) ? a : b;
+}
+// maximum of three values of any type(call-by-reference):
+template <typename T>
+T const& max(T const& a, T const& b, T const& c)
+{
+    cout << "maximum of three values of any type(call-by-reference)\n";
+    return ::max(::max(a,b), c); // error if max(a,b) uses call-by-value
+}
+
+int main()
+{
+    auto m1 = ::max(7,42,68); // OK
+    char const* s1 = "a";
+    char const* s2 = "b";
+    char const* s3 = "c";
+    //auto m2 = ::max(s1, s2, s3); // run-time ERROR(undefined behavior)
+}
+```
