@@ -165,3 +165,6 @@ typename std::common_type<T1, T2>::type // since C++11
 ```
 
 到了 C++14 可以简单地添加后缀，省略 typename 和 ::type 去获取类型：
+```
+std::common_type_t<T1, T2> // equivalent since C++14
+```
