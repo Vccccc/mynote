@@ -163,3 +163,5 @@ std::common_type 是 type trait，定义在 <type_traits> 中，其产生一个�
 ```
 typename std::common_type<T1, T2>::type // since C++11
 ```
+
+到了 C++14 可以简单地添加后缀，省略 typename 和 ::type 去获取类型：
