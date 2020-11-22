@@ -310,4 +310,4 @@ int main()
     //auto c = ::max<int>(4, 7.2); // ERROR:both function templates match
 }
 ```
-
+当两个模板都匹配时，重载解析处理选择
