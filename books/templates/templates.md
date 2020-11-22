@@ -221,5 +221,8 @@ long max<long, int*, int*>(int*  a, int*  b)
 ```
 在这样的定义中，比如可以这样调用：
 ```
-
+int i;
+long l;
+max(i, l); // returns long(default argument of template parameter for return type)
+max<int>(4, 42); // returns int as explicity requested
 ```
