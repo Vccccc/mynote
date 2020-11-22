@@ -279,4 +279,7 @@ int main()
 ::max<>(7,42);//calls max<int> (by argument deduction)
 ```
 
-因为自动类型转换不被模板参数推导所考虑而被普通函数所考虑，所以最后一个调用了非模板函数（'a' 和 42.7 都被
+因为自动类型转换不被模板参数推导所考虑而被普通函数所考虑，所以最后一个调用了非模板函数（'a' 和 42.7 都被转换成 int）：
+```
+::max('a', 42.7); // only the nontemplate function allows nontrivival conversions
+```
