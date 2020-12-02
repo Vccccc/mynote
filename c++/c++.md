@@ -248,4 +248,9 @@ int x = 0;
 f(x);                   // call f with an int
 ```
 
-对于函数调用 f(x)，T 会被推导为 int，而 ParamType 则被推导为 const int&
+对于函数调用 f(x)，T 会被推导为 int，而 ParamType 则被推导为 const int&。
+
+很容易误以为 T 与实参 x 的类型肯定相同，特别是在上面这个例子里它们都为 int。然而这只是凑巧罢了。T 的类型推导不仅依赖于 expr 的类型，还取决于 ParamType。ParamType 取三种不同的类型时，T 的类型推导过程都不同：
+- ParamType 是指针或引用类型，但不是通用引用(universal reference)，如 const T&、T*。
+- ParamType 是通用引用类型，如 T&& param。
+- ParamType 不是指针也不是引用，如 T param。
