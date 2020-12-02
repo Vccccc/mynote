@@ -232,5 +232,20 @@ Flags controlling how #includes are resolved to files.
 # 模板类型推导
 ## 一个例子
 ```
+template<typename T>
+void f(ParamType param);
+
+f(expr);
+```
+
+在编译时，编译器会利用 expr 包含的信息推导两个类型：一个给 T，一个给 ParamType。这两个类型常常是不一样的，因为 ParamType 往往带有诸如 const 和 & 之类的修饰符。如：
 
 ```
+template<typename T>
+void f(const T& param); // ParamType is const T&
+
+int x = 0;
+f(x);                   // call f with an int
+```
+
+对于函数调用 f(x)，T 会被推导为 int，而 ParamType 则被推导为 const int&
