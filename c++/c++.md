@@ -308,3 +308,12 @@ f(rx);  // rx is lvalue, so T is const int&, param's type is also const int&
 
 f(27);  // 27 is rvalue, so T is int, param's type is therefore int&&
 ```
+
+## 当形参既非指针也非引用类型
+当 ParamType 既不是指针也不是引用，我们便在传值(pass-by-value)：
+```
+template<typename T>
+void f(T param);    // param is now passed by value
+```
+
+这意味着 param 是实参的一份拷贝，一个新的对象。因此工作过程为：
