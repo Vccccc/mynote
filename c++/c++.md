@@ -260,3 +260,12 @@ f(x);                   // call f with an int
 最简单的推导情况是 ParamType 为指针或引用类型，而非通用引用。在这种情况下，类型推导如下工作：
 1. 如果 expr 的类型是引用，则忽略引用。
 2. 接着将 expr 的类型与 ParamType 相匹配，以决定 T 的类型。
+
+```
+template<typename T>
+void f(T& param);       // param is a reference
+
+int x = 27;             // x is an int
+const int cx = x;       // cx is a const int
+const int& rx = x;      // rx is a reference to x as a const int
+```
