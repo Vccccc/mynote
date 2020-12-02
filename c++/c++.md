@@ -283,3 +283,5 @@ f(p);	    // T is int*, param's type is int*
 ```
 
 如果我们将函数的形参列表改为 const T& param，则对于上面三个调用来说，T 的类型都被推导为 int。特别地，对于第一个调用，param 的类型为 const int&。其他调用的 param 的类型则无变化。
+
+## 当形参是通用引用类型
