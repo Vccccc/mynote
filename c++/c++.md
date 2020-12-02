@@ -287,3 +287,24 @@ f(p);	    // T is int*, param's type is int*
 如果我们将引用换为指针，即 const T* param，则对于 T 而言，推导结果不变，但对于 param 的类型而言，则从引用转变为指针类型。
 
 ## 当形参是通用引用类型
+当形参是指针或引用类型时，模板类型推导过程很直接，没有理解的难点。然而当形参是通用引用类型 T&& 时，事情就变得比较复杂。在这种情况下，模板类型推导如下工作：
+- 如果 expr 是左值(lvalue)，则 T 和 ParamType 都被推导为左值引用。注意，仅在这种情况 T 才会被推导为引用类型。另外，尽管形参的定义是 T&& param，但 param 本身是一个参数变量，因此它的类型是左值而不是右值。所有的形参都是左值类型。
+- 如果 expr 是右值(rvalue)，按之前论述的第一种情形处理（即形参是指针或引用类型时的处理方式）。
+
+看看例子：
+```
+template<typename T>
+void f(T&& param);      // param is now a universal reference
+
+int x = 27;             // as before
+const int cx = x;       // as before
+const int& rx = x;      // as before
+
+f(x);   // x is lvalue, so T is int&, param's type is also int&
+
+f(cx);  // cx is lvalue, so T is const int&, param's type is also const int&
+
+f(rx);  // rx is lvalue, so T is const int&, param's type is also const int&
+
+f(27);  // 27 is rvalue, so T is int, param's type is therefore int&&
+```
