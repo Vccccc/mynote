@@ -317,3 +317,15 @@ void f(T param);    // param is now passed by value
 ```
 
 这意味着 param 是实参的一份拷贝，一个新的对象。因此工作过程为：
+1. 像之前一样，如果 expr 的类型是引用，则忽略引用部分。
+2. 如果忽略引用性质后，expr 是 const，则把 const 也忽略。如果还用 volatile 修饰了，则也忽略 volatile。
+
+
+因此，对于这三个调用，推导结果就很清晰了：
+```
+f(x);   // T's and param's type are both int
+
+f(cx);  // T's and param's type are again both int
+
+f(rx);  // T's and param's type are still both int
+```
