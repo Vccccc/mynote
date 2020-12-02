@@ -273,5 +273,13 @@ int* p = &x;		// p is a pointer to x as a int*
 
 在下面这些函数调用中，为 param 和 T 推导出的类型如注释所言：
 ```
+f(x);       // T is int, param's type is int&
 
+f(cx);      // T is const int, param's type is const int&
+
+f(rx);      // T is const int, param's type is const int&
+
+f(p);	    // T is int*, param's type is int*
 ```
+
+如果我们将函数的形参列表改为 const T& param，则对于上面三个调用来说，T 的类型都被推导为 int。特别地，对于第一个调用，param 的类型为 const int&。其他调用的 param 的类型则无变化。
