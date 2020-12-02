@@ -254,3 +254,8 @@ f(x);                   // call f with an int
 - ParamType 是指针或引用类型，但不是通用引用(universal reference)，如 const T&、T*。
 - ParamType 是通用引用类型，如 T&& param。
 - ParamType 不是指针也不是引用，如 T param。
+
+## 函数形参定义对模板类型推导的影响
+### 当形参是指针或引用类型
+最简单的推导情况是 ParamType 为指针或引用类型，而非通用引用。在这种情况下，类型推导如下工作：
+1. 
