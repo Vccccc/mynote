@@ -268,4 +268,10 @@ void f(T& param);       // param is a reference
 int x = 27;             // x is an int
 const int cx = x;       // cx is a const int
 const int& rx = x;      // rx is a reference to x as a const int
+int* p = &x;		// p is a pointer to x as a int*
+```
+
+在下面这些函数调用中，为 param 和 T 推导出的类型如注释所言：
+```
+
 ```
