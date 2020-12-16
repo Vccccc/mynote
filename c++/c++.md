@@ -344,4 +344,10 @@ T 和 param 会被推导为什么类型？由于数组形参会退化(decay)为�
 
 然而如果我们修改一下函数 f 的形参定义，则情况又有所不同：
 ```
+template<typename T>
+void f(T& param);
+
+f(str);     // pass array to f   
 ```
+
+这里为 T 和 param 推导出来的类型分别是 const char[7] 和 const char (&)[7]。原因是 C++ 允许传递数组引用。将上述代表编译链接，你会得到如下链接错误：
