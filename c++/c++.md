@@ -352,4 +352,18 @@ f(str);     // pass array to f
 
 这里为 T 和 param 推导出来的类型分别是 const char[7] 和 const char (&)[7]。原因是 C++ 允许传递数组引用。
 
-## 二级标题
+## 函数参数
+由于函数会退化为函数指针，因此它的推导情况与数组的推导情况是同样的：
+```
+void foo(int, double);  // foo is a function: type is void(int, double)
+
+template<typename T>
+void f1(T param);
+
+template<typename T>
+void f2(T& param);
+
+f1(foo);    // param deduced as ptr-to-func: type is void (*)(int, double)
+
+f2(foo);    // param deduced as ref-to-func: type is void (&)(int, double)
+```
