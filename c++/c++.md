@@ -329,3 +329,5 @@ f(cx);  // T's and param's type are again both int
 
 f(rx);  // T's and param's type are still both int
 ```
+
+尽管 cx 和 rx 都代表 const 值，但 param 却不是。因为实参虽然无法修改，但我们可以修改其拷贝，因此 param 不为 const 是很显然的事情。但需要注意，当传递的是 pointer-to-const 时，如 const char*，param 的类型会被推导为 const char*。如果我们拷贝一个指向 const 的指针后自动得到指向 non-const 的指针，我们肯定想打人:)。
