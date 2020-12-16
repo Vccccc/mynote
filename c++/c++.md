@@ -333,3 +333,15 @@ f(rx);  // T's and param's type are still both int
 尽管 cx 和 rx 都代表 const 值，但 param 却不是。因为实参虽然无法修改，但我们可以修改其拷贝，因此 param 不为 const 是很显然的事情。但需要注意，当传递的是 pointer-to-const 时，如 const char*，param 的类型会被推导为 const char*。如果我们拷贝一个指向 const 的指针后自动得到指向 non-const 的指针，我们肯定想打人:)。
 
 ## 数组参数
+当向情形三定义的函数 f 传递一个数组实参时，会发生什么？
+```
+const char str[] = "foobar";    // str's type is const char[7]
+const char* pstr = str;         // array decay to pointer
+
+f(str);    // ???
+```
+T 和 param 会被推导为什么类型？由于数组形参会退化(decay)为指向其第一个元素的指针，因此 T 和 param 会被推导为 const char* 类型。
+
+然而如果我们修改一下函数 f 的形参定义，则情况又有所不同：
+```
+```
