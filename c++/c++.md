@@ -367,3 +367,9 @@ f1(foo);    // param deduced as ptr-to-func: type is void (*)(int, double)
 
 f2(foo);    // param deduced as ref-to-func: type is void (&)(int, double)
 ```
+
+## 总结
+- 在模板类型推导时，引用类型实参会被当成非引用类型的，即忽略引用性。
+- 为通用引用类型形参推导类型时，左值实参会被特殊对待。
+- 为值传递类型形参推导类型时，const 和 volatile 实参会被当成 non-const 和 non-volatile。
+- 在模板类型推导时，数组或函数实参会退化为指针，除非它们被用于初始化引用。
