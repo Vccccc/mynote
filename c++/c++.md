@@ -350,4 +350,6 @@ void f(T& param);
 f(str);     // pass array to f   
 ```
 
-这里为 T 和 param 推导出来的类型分别是 const char[7] 和 const char (&)[7]。原因是 C++ 允许传递数组引用。将上述代表编译链接，你会得到如下链接错误：
+这里为 T 和 param 推导出来的类型分别是 const char[7] 和 const char (&)[7]。原因是 C++ 允许传递数组引用。
+
+## 二级标题
