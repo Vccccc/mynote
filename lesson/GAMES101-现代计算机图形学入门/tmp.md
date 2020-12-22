@@ -1,4 +1,4 @@
-$\vec{a}\cdot\vec{b} = \|\vec{a}\|\|\vec{b}\|\cdot\cos\theta$
+$\vec{a}\cdot\vec{b} = \|\vec{a}\|\|\vec{b}\|\cdot\cos\theta = x_1^2x_2^2  + y_1^2y_2^2$
 
 $\cos\theta = \frac{\vec{a}\cdot\vec{b}}{\|\vec{a}\|\|\vec{b}\|}$
 
