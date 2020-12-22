@@ -1,12 +1,10 @@
-假设：
-$
-\vec{a}=(x_1,y_1),\vec{b}=(x_2,y_2)
-$
-则
-$
-\vec{a}+\vec{b}=(x_1+x_2,y_1+y_2)
-$
+$\vec{a}\cdot\vec{b} = \|\vec{a}\|\|\vec{b}\|\cdot\cos\theta$
 
+$\cos\theta = \frac{\vec{a}\cdot\vec{b}}{\|\vec{a}\|\|\vec{b}\|}$
+
+$\cos\theta = \hat{a}\cdot\hat{b}$
+
+$\vec{a}\cdot\vec{b} = \|\vec{a}\|\|\vec{b}\|\cdot\cos\theta = x_1^2x_2^2  + y_1^2y_2^2$ 推导证明如下：
 $
-\vec{a}-\vec{b}=(x_1-x_2,y_1-y_2)
+\because \cos A = \frac{b^2 + c^2 - a^2}{2\cdot b c}
 $
