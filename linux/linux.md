@@ -207,3 +207,9 @@ Note: There is no glibc wrapper for this system call
 - COMMAND：进程名称（命令名/命令行）
 
 
+# Linux APi
+## 文件
+### 打开文件
+```
+
+```
