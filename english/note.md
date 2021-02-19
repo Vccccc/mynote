@@ -1,4 +1,4 @@
-[](https://www.gingersoftware.com/content/grammar-rules/verbs/)
+[ref](https://www.gingersoftware.com/content/grammar-rules/verbs/)
 ## Preposition
 ### What is a preposition?
 **A preposition is a word used to link nouns, pronouns, or phrases to other words within a sentence.** they act to connect the people, objects, time and positions of a sentence. **Prepositions are usually short words, and they are normally placed directly in front of nouns. In some cases, you'll find preposition in front of gerund verbs.**
