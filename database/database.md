@@ -1,1 +1,4 @@
-["ref"](https://www.zhihu.com/question/24696366/answer/29189700)
+[ref](https://www.zhihu.com/question/24696366/answer/29189700)
+# 范式
+范式：
+
