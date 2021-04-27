@@ -6,4 +6,4 @@
 1NF的定义为：符合1NF的关系中的每个属性都不可再分。
 
 
-
+![ref](https://www.zhihu.com/question/24696366/answer/29189700)
