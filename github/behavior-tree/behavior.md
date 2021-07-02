@@ -1,2 +1,2 @@
 # Node
-|Node Type|
+![](./photo/1.png)
